@@ -28,10 +28,19 @@ drives_file = open("drives.txt", "r")
 drives_data = drives_file.read()
 drives_data_into_list = drives_data.split("\n")
 
+# Traits List Transformation
+traits_file = open("traits.txt", "r")
+traits_data = traits_file.read()
+traits_data_into_list = traits_data.split("\n")
 
-def random_with_list(list, weighting=None):
-    if weighting:
+
+def random_with_list(list, weighting=None, selected_count=None):
+    if weighting and selected_count:
+        return random.choices(list, weights=weighting, k=selected_count)
+    elif weighting:
         return random.choices(list, weights=weighting)[0]
+    elif selected_count:
+        return random.choices(list, k=selected_count)
     else:
         return random.choices(list)[0]
 
@@ -44,6 +53,7 @@ def main():
     gender = random_with_list(gender_list)
     character_profile["Name"] = random_with_global(gender, "_name_list")
     character_profile["Gender"] = gender
+    character_profile["Traits"] = random_with_list(traits_data_into_list, selected_count=3)
     character_profile["Drive"] = random_with_list(drives_data_into_list)
     character_profile["Pantheon"] = given_pantheon
     character_profile["Attitude towards player"] = random_with_list(attitude_list, weighting=(2, 4, 10, 20, 30, 15, 30, 20, 10, 4, 2))
