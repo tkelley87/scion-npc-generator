@@ -5,12 +5,11 @@ character_profile = {}
 given_pantheon = sys.argv[1]
 npc_type = sys.argv[2]
 human = sys.argv[3]
+is_name_generic = sys.argv[4]
 gender_list = ["male", "female"]
 male_name_list = ["Thomas", "James"]
 female_name_list = ["Susan", "Allison"]
 attitude_list = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
-norse_creature_types = ["Dökkálfar", "Ljósálfar"]
-greek_creature_types = ["Centaur", "Minotaur"]
 cult_types = ["Coven", "Guild", "Family Tradition", "Historian", "Mystery Society", "Reliquarian", "Social Club",
               "Temple", "No"]
 mook_base_stats = {"Primary Pool": 5, "Secondary Pool": 4, "Desperation Pool": 2, "Health": 1, "Defense": 1,
@@ -23,15 +22,10 @@ monster_base_stats = {"Primary Pool": 11, "Secondary Pool": 9, "Desperation Pool
                       "Initiative": 9}
 
 
-# Drives List Transformation
-drives_file = open("drives.txt", "r")
-drives_data = drives_file.read()
-drives_data_into_list = drives_data.split("\n")
-
-# Traits List Transformation
-traits_file = open("traits.txt", "r")
-traits_data = traits_file.read()
-traits_data_into_list = traits_data.split("\n")
+def file_list_into_var(filepath):
+    file = open(filepath, "r")
+    file_data = file.read()
+    return file_data.split("\n")
 
 
 def random_with_list(list, weighting=None, selected_count=None):
@@ -45,22 +39,27 @@ def random_with_list(list, weighting=None, selected_count=None):
         return random.choices(list)[0]
 
 
-def random_with_global(global_variable, list_name):
-    return random.choice(globals()[global_variable + list_name])
-
-
 def main():
     gender = random_with_list(gender_list)
-    character_profile["Name"] = random_with_global(gender, "_name_list")
+    drives_data_into_list = file_list_into_var("drives.txt")
+    traits_data_into_list = file_list_into_var("traits.txt")
+    creature_list = file_list_into_var("creatures_folder/{}_creatures.txt".format(given_pantheon))
+    if is_name_generic == 'yes':
+        name_list = file_list_into_var("names_folder/generic_{}_names.txt".format(gender))
+    else:
+        name_list = file_list_into_var("names_folder/{}_{}_names.txt".format(given_pantheon, gender))
+    character_profile["Name"] = random_with_list(name_list)
     character_profile["Gender"] = gender
     character_profile["Traits"] = random_with_list(traits_data_into_list, selected_count=3)
     character_profile["Drive"] = random_with_list(drives_data_into_list)
     character_profile["Pantheon"] = given_pantheon
-    character_profile["Attitude towards player"] = random_with_list(attitude_list, weighting=(2, 4, 10, 20, 30, 15, 30, 20, 10, 4, 2))
+    character_profile["Attitude towards player"] = random_with_list(attitude_list, weighting=(2, 4, 10, 20, 30, 15, 30,
+                                                                                              20, 10, 4, 2))
     if human == 'yes':
-        character_profile["Apart of Cult?"] = random_with_list(cult_types, weighting=(2, 20, 3, 20, 10, 15, 40, 40, 150))
+        character_profile["Apart of Cult?"] = random_with_list(cult_types, weighting=(2, 20, 3, 20, 10, 15, 40, 40,
+                                                                                      150))
     else:
-        character_profile["Creature Type"] = random_with_global(given_pantheon, "_creature_types")
+        character_profile["Creature Type"] = random_with_list(creature_list)
     character_profile["Stats"] = globals()[npc_type + "_base_stats"]
     print(character_profile)
 
