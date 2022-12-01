@@ -1,12 +1,21 @@
-from flask import Flask
+from flask import Flask, request
+from flask_cors import CORS
 
-api = Flask(__name__)
+app = Flask(__name__)
+cors = CORS(app, resources={r"/form": {"origins": "*"}})
 
-@api.route('/profile')
-def my_profile():
-    response_body = {
-        "name": "Nagato",
-        "about" :"Hello! I'm a full stack developer that loves python and javascript"
-    }
 
+@app.route("/form", methods=["POST", "OPTIONS"])
+def form():
+    print(request)
+    pantheon = request.json["pantheon"]
+    type = request.json["type"]
+    human = request.json["human"]
+
+    response_body = {"pantheon": pantheon, "type": type, "human": human}
+    print(response_body)
     return response_body
+
+@app.route("/")
+def helloWorld():
+   return "Hello, cross-origin-world"
