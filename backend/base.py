@@ -15,7 +15,3 @@ def form():
     response_body = {"pantheon": pantheon, "type": type, "human": human}
     print(response_body)
     return response_body
-
-@app.route("/")
-def helloWorld():
-   return "Hello, cross-origin-world"
