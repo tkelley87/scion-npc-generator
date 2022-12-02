@@ -7,8 +7,6 @@ npc_type = sys.argv[2]
 human = sys.argv[3]
 is_name_generic = sys.argv[4]
 gender_list = ["male", "female"]
-male_name_list = ["Thomas", "James"]
-female_name_list = ["Susan", "Allison"]
 attitude_list = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
 cult_types = ["Coven", "Guild", "Family Tradition", "Historian", "Mystery Society", "Reliquarian", "Social Club",
               "Temple", "No"]
