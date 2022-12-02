@@ -1,62 +1,31 @@
+// React
 import { useState } from "react";
-import axios from "axios";
-import logo from "./logo.svg";
-import "./App.css";
+
+// Component imports
+import Form from "./Components/Form";
+
+/**
+ * most basic level:
+ * web page with 2 options
+ * pantheon: norse, greek
+ * type: mook, professional
+ * human: yes, no
+ */
 
 function App() {
-  // new line start
-  const [profileData, setProfileData] = useState(null);
+  // State - TODO change these names
+  const [npcGenerators, setNpcGenerator] = useState([]);
 
-  function getData() {
-    axios({
-      method: "GET",
-      url: "/profile",
-    })
-      .then((response) => {
-        const res = response.data;
-        setProfileData({
-          profile_name: res.name,
-          about_me: res.about,
-        });
-      })
-      .catch((error) => {
-        if (error.response) {
-          console.log(error.response);
-          console.log(error.response.status);
-          console.log(error.response.headers);
-        }
-      });
-  }
-  //end of new line
+  const insertedArticle = (option) => {
+    const npcOptions = [...npcGenerators, option];
+    setNpcGenerator(npcOptions);
+    console.log(option);
+  };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-        {/* new line start*/}
-        <p>To get your profile details: </p>
-        <button onClick={getData}>Click me</button>
-        {profileData && (
-          <div>
-            <p>Profile name: {profileData.profile_name}</p>
-            <p>About me: {profileData.about_me}</p>
-          </div>
-        )}
-        {/* end of new line */}
-      </header>
-    </div>
+    <>
+      <Form insertedArticle={insertedArticle} />
+    </>
   );
 }
 
