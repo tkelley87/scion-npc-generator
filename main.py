@@ -39,8 +39,8 @@ def random_with_list(list, weighting=None, selected_count=None):
 
 def main():
     gender = random_with_list(gender_list)
-    drives_data_into_list = file_list_into_var("drives.txt")
-    traits_data_into_list = file_list_into_var("traits.txt")
+    drives_data_into_list = file_list_into_var("npc_stats/drives.txt")
+    traits_data_into_list = file_list_into_var("npc_stats/traits.txt")
     creature_list = file_list_into_var("creatures_folder/{}_creatures.txt".format(given_pantheon))
     if is_name_generic == 'yes':
         name_list = file_list_into_var("names_folder/generic_{}_names.txt".format(gender))
