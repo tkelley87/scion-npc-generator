@@ -30,15 +30,15 @@ def file_list_into_var(filepath, file_type):
         return json.load(file)
 
 
-def random_with_list(list, weighting=None, selected_count=None):
+def random_with_list(given_list, weighting=None, selected_count=None):
     if weighting and selected_count:
-        return random.choices(list, weights=weighting, k=selected_count)
+        return random.choices(given_list, weights=weighting, k=selected_count)
     elif weighting:
-        return random.choices(list, weights=weighting)[0]
+        return random.choices(given_list, weights=weighting)[0]
     elif selected_count:
-        return random.choices(list, k=selected_count)
+        return random.choices(given_list, k=selected_count)
     else:
-        return random.choices(list)[0]
+        return random.choices(given_list)[0]
 
 
 def main():
