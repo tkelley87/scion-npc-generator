@@ -5,12 +5,13 @@ import APIService from "../Components/APIService";
 
 const Form = (props) => {
   // State
-  const [pantheon, setPantheon] = useState("");
-  const [type, setType] = useState("");
-  const [human, setHuman] = useState(null);
+  const [pantheon, setPantheon] = useState("norse");
+  const [type, setType] = useState("mook");
+  const [human, setHuman] = useState("yes");
+  const [nameGeneric, setNameGeneric] = useState("yes");
 
   const insertArticle = () => {
-    APIService.InsertForm({ pantheon, type, human })
+    APIService.InsertForm({ pantheon, type, human, nameGeneric })
       .then((response) => props.insertedArticle(response))
       .catch((error) => console.log("error", error));
   };
@@ -18,9 +19,6 @@ const Form = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     insertArticle();
-    setPantheon("");
-    setType("");
-    setHuman(null);
   };
 
   return (
@@ -31,7 +29,7 @@ const Form = (props) => {
         </label>
         <select onChange={(e) => setPantheon(e.target.value)}>
           <option value="norse">Norse</option>
-          <option value="greek">Greek</option>
+          <option value="theoi">Theoi</option>
         </select>
 
         <label htmlFor="type" className="form-label">
@@ -46,6 +44,14 @@ const Form = (props) => {
           Human
         </label>
         <select onChange={(e) => setHuman(e.target.value)}>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label htmlFor="nameGeneric" className="form-label">
+          Is name generic?
+        </label>
+        <select onChange={(e) => setNameGeneric(e.target.value)}>
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
