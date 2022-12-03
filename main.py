@@ -1,5 +1,6 @@
 import sys
 import random
+import json
 
 character_profile = {}
 given_pantheon = sys.argv[1]
@@ -20,10 +21,13 @@ monster_base_stats = {"Primary Pool": 11, "Secondary Pool": 9, "Desperation Pool
                       "Initiative": 9}
 
 
-def file_list_into_var(filepath):
+def file_list_into_var(filepath, file_type):
     file = open(filepath, "r")
-    file_data = file.read()
-    return file_data.split("\n")
+    if file_type == 'txt':
+        file_data = file.read()
+        return file_data.split("\n")
+    elif file_type == 'json':
+        return json.load(file)
 
 
 def random_with_list(list, weighting=None, selected_count=None):
@@ -39,13 +43,14 @@ def random_with_list(list, weighting=None, selected_count=None):
 
 def main():
     gender = random_with_list(gender_list)
-    drives_data_into_list = file_list_into_var("npc_stats/drives.txt")
-    traits_data_into_list = file_list_into_var("npc_stats/traits.txt")
-    creature_list = file_list_into_var("creatures_folder/{}_creatures.txt".format(given_pantheon))
+    drives_data_into_list = file_list_into_var("npc_stats/drives.txt", "txt")
+    traits_data_into_list = file_list_into_var("npc_stats/traits.txt", "txt")
+    creature_list = file_list_into_var("creatures_folder/{}_creatures.txt".format(given_pantheon), "txt")
+    npc_base_stats = file_list_into_var("npc_stats/base_stats.json", "json")
     if is_name_generic == 'yes':
-        name_list = file_list_into_var("names_folder/generic_{}_names.txt".format(gender))
+        name_list = file_list_into_var("names_folder/generic_{}_names.txt".format(gender), "txt")
     else:
-        name_list = file_list_into_var("names_folder/{}_{}_names.txt".format(given_pantheon, gender))
+        name_list = file_list_into_var("names_folder/{}_{}_names.txt".format(given_pantheon, gender), "txt")
     character_profile["Name"] = random_with_list(name_list)
     character_profile["Gender"] = gender
     character_profile["Traits"] = random_with_list(traits_data_into_list, selected_count=3)
@@ -58,7 +63,7 @@ def main():
                                                                                       150))
     else:
         character_profile["Creature Type"] = random_with_list(creature_list)
-    character_profile["Stats"] = globals()[npc_type + "_base_stats"]
+    character_profile["Stats"] = npc_base_stats[npc_type]
     print(character_profile)
 
 
