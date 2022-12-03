@@ -1,15 +1,16 @@
 {
-  "Physical": [{
-    "Dread Gaze": {
-      "Description": "When the Antagonist makes eye contact with another character (which, if used in combat, requires a roll — successes must exceed the target’s Defense), she may functionally incapacitate that character. However, the Antagonist cannot take mixed actions while using this Flair, and cannot Move without using a basic action — otherwise, she loses eye contact, and her target is freed.",
-      "Cost": "None",
-      "Duration": "Varies",
-      "Subject": "One Character",
-      "Range": "Short",
-      "Action": "Simple",
-      "Cooldown": "Immediate"
-    }
-  },
+  "Physical": [
+    {
+      "Dread Gaze": {
+        "Description": "When the Antagonist makes eye contact with another character (which, if used in combat, requires a roll — successes must exceed the target’s Defense), she may functionally incapacitate that character. However, the Antagonist cannot take mixed actions while using this Flair, and cannot Move without using a basic action — otherwise, she loses eye contact, and her target is freed.",
+        "Cost": "None",
+        "Duration": "Varies",
+        "Subject": "One Character",
+        "Range": "Short",
+        "Action": "Simple",
+        "Cooldown": "Immediate"
+      }
+    },
     {
       "Seeing Red": {
         "Description": "This adds a general +1 Enhancement to Close Combat rolls, which rises to +2 if the Antagonist has only a single Health box remaining.",
@@ -121,17 +122,6 @@
       }
     },
     {
-      "Sorcery": {
-        "Description": "Choose a Purview. The Antagonist may channel that Purview to create marvels, at a cost of 1 Tension.",
-        "Cost": "1 Tension",
-        "Duration": "Varies",
-        "Subject": "Varies",
-        "Range": "Varies",
-        "Action": "Varies",
-        "Cooldown": "One scene"
-      }
-    },
-    {
       "Thousand Faces": {
         "Description": "The Antagonist is able to imitate another being’s face. Choose the means and requirements by which they do so when this Flair is assigned, which may be as simple as being able to see the target and as demanding as needing to consume the target’s heart or liver first. The transformation may last for only a scene or it may be a permanent theft of form. For all intents and purposes, the Antagonist becomes the character she is copying. While she retains her own dice pools, Qualities, and Flairs, she cannot be identified as an impostor through ordinary means. An Empathy roll, contested by the Antagonist with an appropriate Pool, is required for close acquaintances to realize something is wrong, but anything deeper will require Occult knowledge. If Thousand Faces is used to target a player character, it costs 1 Tension.",
         "Cost": "None; or 1 Tension",
@@ -140,17 +130,6 @@
         "Range": "Self",
         "Action": "Simple",
         "Cooldown": "Variable; see description"
-      }
-    },
-    {
-      "I Have Friends": {
-        "Description": "The Antagonist summons a number of Mook Archetype Antagonists equal to the number of player characters to aid them in combat.",
-        "Cost": "None",
-        "Duration": "Instant",
-        "Subject": "Summoned Mooks",
-        "Range": "Self",
-        "Action": "Reflexive",
-        "Cooldown": "5 rounds; or the summoned Mooks are all defeated."
       }
     },
     {
@@ -174,7 +153,22 @@
         "Action": "Simple",
         "Cooldown": "Antagonist numbers are reduced to half or less of what they were when this Flair was used previously."
       }
-    },
+    }
+  ],
+  "Social": [
+    {
+      "Hypnotic Charm": {
+        "Description": "The Antagonist’s charms become preternaturally potent for a brief instant — long enough to convince another character of just about anything. The effective Scale of whatever she is asking for is considered to be two lower than it actually is. The other character will realize relatively quickly that they’ve been had, but it’s more than long enough for the Antagonist to make her getaway.",
+        "Cost": "None",
+        "Duration": "Five minutes",
+        "Subject": "One character",
+        "Range": "Short",
+        "Action": "Simple",
+        "Cooldown": "One scene; or the target successfully\nresists the Antagonist’s influence."
+      }
+    }
+  ],
+  "Professional": [
     {
       "Share And Share Alike": {
         "Description": "The Antagonist shares one of her Qualities (chosen when this Flair is assigned) with other Antagonists within near range for the duration of the scene. If she is Taken Out, the effects of this Flair fade.",
@@ -187,17 +181,29 @@
       }
     }
   ],
-  "Social": [{
-    "Hypnotic Charm": {
-      "Description": "The Antagonist’s charms become preternaturally potent for a brief instant — long enough to convince another character of just about anything. The effective Scale of whatever she is asking for is considered to be two lower than it actually is. The other character will realize relatively quickly that they’ve been had, but it’s more than long enough for the Antagonist to make her getaway.",
-      "Cost": "None",
-      "Duration": "Five minutes",
-      "Subject": "One character",
-      "Range": "Short",
-      "Action": "Simple",
-      "Cooldown": "One scene; or the target successfully\nresists the Antagonist’s influence."
-    }
-  },
+  "Villain": [
+    {
+      "Sorcery": {
+        "Description": "Choose a Purview. The Antagonist may channel that Purview to create marvels, at a cost of 1 Tension.",
+        "Cost": "1 Tension",
+        "Duration": "Varies",
+        "Subject": "Varies",
+        "Range": "Varies",
+        "Action": "Varies",
+        "Cooldown": "One scene"
+      }
+    },
+    {
+      "I Have Friends": {
+        "Description": "The Antagonist summons a number of Mook Archetype Antagonists equal to the number of player characters to aid them in combat.",
+        "Cost": "None",
+        "Duration": "Instant",
+        "Subject": "Summoned Mooks",
+        "Range": "Self",
+        "Action": "Reflexive",
+        "Cooldown": "5 rounds; or the summoned Mooks are all defeated."
+      }
+    },
     {
       "Like A Sieve": {
         "Description": "The interrogation is a familiar scene — one person trying to get information out of the other. Sometimes, however, the subject of the interrogation is the one in control, leading the questioner on to reveal more than they meant to. Antagonists with this Flair, when interrogated or otherwise directly investigated, learn more from the player characters than they do from the Antagonist. The Storyguide may ask a single question on the Antagonists’ behalf, and the players must answer truthfully — whatever their answer is becomes known to the Antagonist.",

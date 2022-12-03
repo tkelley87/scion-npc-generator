@@ -21,6 +21,7 @@ cult_types = [
     "No",
 ]
 
+
 def file_list_into_var(filepath, file_type):
     file = open(filepath, "r")
     if file_type == "txt":
@@ -39,6 +40,10 @@ def random_with_list(given_list, weighting=None, selected_count=None):
         return random.choices(given_list, k=selected_count)
     else:
         return random.choices(given_list)[0]
+
+
+def add_qualities_and_flairs(npc_archetype):
+    return npc_archetype
 
 
 @app.route("/form", methods=["POST", "OPTIONS"])
@@ -83,6 +88,6 @@ def main():
         character_profile["Creature Type"] = random_with_list(creature_list)
     character_profile["Stats"] = npc_base_stats[npc_type]
     character_profile["Qualities"] = qualities_list["Combat"][random.randint(0, len(qualities_list["Combat"])-1)]
-    character_profile["Flairs"] = flairs_list["Physical"][random.randint(0, len(flairs_list["Physical"])-1)]
+    character_profile["Flairs"] = flairs_list["Villain"][random.randint(0, len(flairs_list["Villain"])-1)]
     print(character_profile)
     return character_profile
