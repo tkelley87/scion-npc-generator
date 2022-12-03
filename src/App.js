@@ -19,7 +19,6 @@ function App() {
   const insertedArticle = (option) => {
     const npcOptions = [...npcGenerators, option];
     setNpcGenerator(npcOptions);
-    console.log(option);
   };
 
   return (
