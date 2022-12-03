@@ -20,39 +20,6 @@ cult_types = [
     "Temple",
     "No",
 ]
-mook_base_stats = {
-    "Primary Pool": 5,
-    "Secondary Pool": 4,
-    "Desperation Pool": 2,
-    "Health": 1,
-    "Defense": 1,
-    "Initiative": 3,
-}
-professional_base_stats = {
-    "Primary Pool": 7,
-    "Secondary Pool": 5,
-    "Desperation Pool": 3,
-    "Health": 2,
-    "Defense": 2,
-    "Initiative": 5,
-}
-villain_base_stats = {
-    "Primary Pool": 9,
-    "Secondary Pool": 7,
-    "Desperation Pool": 5,
-    "Health": 4,
-    "Defense": 3,
-    "Initiative": 7,
-}
-monster_base_stats = {
-    "Primary Pool": 11,
-    "Secondary Pool": 9,
-    "Desperation Pool": 5,
-    "Health": 6,
-    "Defense": 4,
-    "Initiative": 9,
-}
-
 
 def file_list_into_var(filepath, file_type):
     file = open(filepath, "r")
