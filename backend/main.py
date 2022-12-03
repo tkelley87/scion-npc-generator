@@ -47,6 +47,8 @@ def main():
     traits_data_into_list = file_list_into_var("npc_stats/traits.txt", "txt")
     creature_list = file_list_into_var("creatures_folder/{}_creatures.txt".format(given_pantheon), "txt")
     npc_base_stats = file_list_into_var("npc_stats/base_stats.json", "json")
+    qualities_list = file_list_into_var("npc_stats/qualities.json", "json")
+    flairs_list = file_list_into_var("npc_stats/flairs.json", "json")
     if is_name_generic == 'yes':
         name_list = file_list_into_var("names_folder/generic_{}_names.txt".format(gender), "txt")
     else:
@@ -64,6 +66,8 @@ def main():
     else:
         character_profile["Creature Type"] = random_with_list(creature_list)
     character_profile["Stats"] = npc_base_stats[npc_type]
+    character_profile["Qualities"] = qualities_list["Good Qualities"][random.randint(0, len(qualities_list["Good Qualities"])-1)]
+    character_profile["Flairs"] = flairs_list["Good Qualities"][random.randint(0, len(flairs_list["Good Qualities"])-1)]
     print(character_profile)
 
 

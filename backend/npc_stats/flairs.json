@@ -1,0 +1,7 @@
+{
+  "Good Qualities": [
+    {"Group Tactics": "If the leader is taken out, remove this Quality from all other Antagonists under their command. Antagonists with Group Tactics receive +1 Defense, +1 Health, and a +1 Enhancement to any combat action when two or more Antagonists with Group Tactics attack a single target during the same turn."},
+    {"Martial Artist": "Mortal Martial Artists receive a +1 Enhancement to Barehanded Combat. Select a specific weapon, such as a tonfa or a sword. This weapon counts as barehanded for the purposes of this Enhancement. They also receive +1 Defense and +1 Health."},
+    {"Natural Weapon": "Some beings are possessed of natural weaponry, such as claws, teeth, armored tails, horns, and so on. Such weapons cannot be disarmed without a (likely very gruesome) stunt."}
+  ]
+}
