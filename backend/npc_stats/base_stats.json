@@ -1,5 +1,5 @@
 {
-  "mook": {
+  "Mook": {
     "Primary Pool": 5,
     "Secondary Pool": 4,
     "Desperation Pool": 2,
@@ -10,7 +10,7 @@
     "Flairs": 1,
     "Drawbacks": 0
   },
-  "professional": {
+  "Professional": {
     "Primary Pool": 7,
     "Secondary Pool": 5,
     "Desperation Pool": 3,
@@ -21,7 +21,7 @@
     "Flairs": 2,
     "Drawbacks": 1
   },
-  "villain": {
+  "Villain": {
     "Primary Pool": 9,
     "Secondary Pool": 7,
     "Desperation Pool": 5,
@@ -32,7 +32,7 @@
     "Flairs": 3,
     "Drawbacks": 1
   },
-  "monster": {
+  "Monster": {
     "Primary Pool": 11,
     "Secondary Pool": 9,
     "Desperation Pool": 5,

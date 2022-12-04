@@ -62,6 +62,9 @@
   ],
   "Drawbacks": [
     {
+      "Vulnerability": "Choose a source of damage — for example, fire, salt, silver, etc. When the Antagonist takes any damage from this source, mark a second Health box as well.  If attack is a critical strike, mark four Health boxes instead of two."
+    },
+    {
       "Helpless Fascination": "The Antagonist is fascinated by a certain object, condition, or type of individual, and when confronted with one must roll her Desperation Pool to avoid becoming entranced. Entranced Antagonists suffer the effects of the Dread Gaze Flair (p. 149) until the triggering stimulus is removed."
     },
     {
@@ -78,9 +81,6 @@
     },
     {
       "Unnatural Hunger/Behavior": "The Antagonist is compelled to do something or consume something outside the bounds of what is considered normal. To resist this impulse (for example, to attempt to hide their true nature), the Antagonist must succeed on a difficulty 2 Desperation Pool roll. Failure does not necessarily mean immediate indulgence (this is left to the Storyguide’s discretion), but some behavioral quirk shines through. An Occult roll (difficulty 2) is necessary to discern the Antagonist’s nature if the  Antagonist attempts to restrain themselves; if they indulge, the roll is difficulty 1 instead. If the Antagonist has one or more Flairs on Cooldown, indulgence of the Antagonist’s Unnatural Hunger counts as satisfying one Cooldown condition —  Storyguide’s pick."
-    },
-    {
-      "Vulnerability": "Choose a source of damage — for example, fire, salt, silver, etc. When the Antagonist takes any damage from this source, mark a second Health box as well.  If attack is a critical strike, mark four Health boxes instead of two."
     }
   ]
 }

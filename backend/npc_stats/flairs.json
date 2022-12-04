@@ -164,11 +164,11 @@
         "Subject": "One character",
         "Range": "Short",
         "Action": "Simple",
-        "Cooldown": "One scene; or the target successfully\nresists the Antagonist’s influence."
+        "Cooldown": "One scene; or the target successfully resists the Antagonist’s influence."
       }
     }
   ],
-  "Professional": [
+  "Professional_Combat": [
     {
       "Share And Share Alike": {
         "Description": "The Antagonist shares one of her Qualities (chosen when this Flair is assigned) with other Antagonists within near range for the duration of the scene. If she is Taken Out, the effects of this Flair fade.",
@@ -181,7 +181,8 @@
       }
     }
   ],
-  "Villain": [
+  "Professional_Social": [],
+  "Villain_Combat": [
     {
       "Sorcery": {
         "Description": "Choose a Purview. The Antagonist may channel that Purview to create marvels, at a cost of 1 Tension.",
@@ -203,7 +204,9 @@
         "Action": "Reflexive",
         "Cooldown": "5 rounds; or the summoned Mooks are all defeated."
       }
-    },
+    }
+  ],
+  "Villain_Social": [
     {
       "Like A Sieve": {
         "Description": "The interrogation is a familiar scene — one person trying to get information out of the other. Sometimes, however, the subject of the interrogation is the one in control, leading the questioner on to reveal more than they meant to. Antagonists with this Flair, when interrogated or otherwise directly investigated, learn more from the player characters than they do from the Antagonist. The Storyguide may ask a single question on the Antagonists’ behalf, and the players must answer truthfully — whatever their answer is becomes known to the Antagonist.",

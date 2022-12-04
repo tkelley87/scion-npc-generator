@@ -48,6 +48,13 @@ def add_qualities_and_flairs(npc_base_stats, npc_archetype, quality_type_from_st
         return []
 
 
+def combine_lists(*given_lists):
+    combined_list = []
+    for current_list in given_lists:
+        combined_list.extend(current_list)
+    return combined_list
+
+
 def main():
     gender = random_with_list(gender_list)
     drives_data_into_list = file_list_into_var("npc_stats/drives.txt", "txt")
@@ -56,12 +63,21 @@ def main():
     npc_base_stats = file_list_into_var("npc_stats/base_stats.json", "json")
     qualities_list = file_list_into_var("npc_stats/qualities.json", "json")
     flairs_list = file_list_into_var("npc_stats/flairs.json", "json")
+    if npc_type == "Mook":
+        combined_flairs_list = flairs_list
+    elif npc_type == "Professional":
+        combined_flairs_list = {npc_favored_arena: combine_lists(flairs_list[npc_favored_arena],
+                                                                 flairs_list["Professional_" + npc_favored_arena])}
+    else:
+        combined_flairs_list = {npc_favored_arena: combine_lists(flairs_list[npc_favored_arena],
+                                             flairs_list["Professional_" + npc_favored_arena],
+                                             flairs_list["Villain_" + npc_favored_arena])}
     if is_name_generic == 'yes':
         name_list = file_list_into_var("names_folder/generic_{}_names.txt".format(gender), "txt")
     else:
         name_list = file_list_into_var("names_folder/{}_{}_names.txt".format(given_pantheon, gender), "txt")
     character_profile["Name"] = random_with_list(name_list)
-    character_profile["Gender"] = gender
+    character_profile["Gender"] = gender.capitalize()
     character_profile["Traits"] = random_with_list(traits_data_into_list, selected_count=3)
     character_profile["Drive"] = random_with_list(drives_data_into_list)
     character_profile["Pantheon"] = given_pantheon
@@ -75,24 +91,47 @@ def main():
     character_profile["Stats"] = npc_base_stats[npc_type]
     character_profile["Drawbacks"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Drawbacks", "Drawbacks",
                                                               qualities_list, "Full")
-    if npc_favored_arena == "all_combat":
+    if npc_favored_arena == "Combat":
         character_profile["Qualities"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Qualities", "Combat",
                                                                   qualities_list, "Full")
-    elif npc_favored_arena == "all_social":
+    elif npc_favored_arena == "Social":
         character_profile["Qualities"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Qualities", "Social",
                                                                   qualities_list, "Full")
-    elif npc_favored_arena == "combat_focused":
+    elif npc_favored_arena == "Combat_focused":
         character_profile["Qualities"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Qualities", "Combat",
                                                                   qualities_list,  "Major")
         character_profile["Qualities"] += add_qualities_and_flairs(npc_base_stats, npc_type, "Qualities", "Social",
                                                                    qualities_list, "Minor")
-    elif npc_favored_arena == "social_focused":
+    elif npc_favored_arena == "Social_focused":
         character_profile["Qualities"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Qualities", "Social",
                                                                   qualities_list, "Major")
         character_profile["Qualities"] += add_qualities_and_flairs(npc_base_stats, npc_type, "Qualities", "Combat",
                                                                    qualities_list, "Minor")
-    character_profile["Flairs"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Flairs", "Combat",
-                                                           flairs_list, "Minor")
+    if npc_favored_arena == "Combat":
+        character_profile["Flairs"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Flairs", "Combat",
+                                                               combined_flairs_list, "Full")
+    elif npc_favored_arena == "Social":
+        character_profile["Flairs"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Flairs", "Social",
+                                                               combined_flairs_list, "Full")
+    elif npc_favored_arena == "Combat_focused":
+        character_profile["Flairs"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Flairs", "Combat",
+                                                               combined_flairs_list,  "Major")
+        character_profile["Flairs"] += add_qualities_and_flairs(npc_base_stats, npc_type, "Flairs", "Social",
+                                                                combined_flairs_list, "Minor")
+    elif npc_favored_arena == "Social_focused":
+        character_profile["Flairs"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Flairs", "Social",
+                                                               combined_flairs_list, "Major")
+        character_profile["Flairs"] += add_qualities_and_flairs(npc_base_stats, npc_type, "Flairs", "Combat",
+                                                                combined_flairs_list, "Minor")
+    add_vulnerability = any("Incorporeality" in d for d in
+                            character_profile["Qualities"]) and not any("Vulnerability" in d for d in
+                                                                        character_profile["Drawbacks"])
+    if add_vulnerability:
+        character_profile["Drawbacks"].append(qualities_list["Drawbacks"][0])
+    vulnerability_exists = any("Vulnerability" in d for d in character_profile["Drawbacks"])
+    if vulnerability_exists:
+        vulnerability_list = file_list_into_var("npc_stats/vulnerabilities.txt", "txt")
+        character_profile["Vulnerability"] = random_with_list(vulnerability_list)
     print(character_profile)
 
 
