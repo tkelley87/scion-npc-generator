@@ -7,6 +7,7 @@ given_pantheon = sys.argv[1]
 npc_type = sys.argv[2]
 human = sys.argv[3]
 is_name_generic = sys.argv[4]
+npc_favored_arena = sys.argv[5]
 gender_list = ["male", "female"]
 attitude_list = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
 cult_types = ["Coven", "Guild", "Family Tradition", "Historian", "Mystery Society", "Reliquarian", "Social Club",
@@ -33,8 +34,18 @@ def random_with_list(given_list, weighting=None, selected_count=None):
         return random.choices(given_list)[0]
 
 
-def add_qualities_and_flairs(npc_archetype):
-    return npc_archetype
+def add_qualities_and_flairs(npc_base_stats, npc_archetype, quality_type_from_stats, quality_from_list, qualities_list,
+                             count_amount):
+    quality_type_count = npc_base_stats[npc_archetype][quality_type_from_stats]
+    if quality_type_count > 0:
+        if count_amount == "Full":
+            return random.choices(qualities_list[quality_from_list], k=quality_type_count)
+        elif count_amount == "Major":
+            return random.choices(qualities_list[quality_from_list], k=quality_type_count-1)
+        elif count_amount == "Minor":
+            return random.choices(qualities_list[quality_from_list], k=1)
+    else:
+        return []
 
 
 def main():
@@ -62,8 +73,26 @@ def main():
     else:
         character_profile["Creature Type"] = random_with_list(creature_list)
     character_profile["Stats"] = npc_base_stats[npc_type]
-    character_profile["Qualities"] = qualities_list["Combat"][random.randint(0, len(qualities_list["Combat"])-1)]
-    character_profile["Flairs"] = flairs_list["Villain"][random.randint(0, len(flairs_list["Villain"])-1)]
+    character_profile["Drawbacks"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Drawbacks", "Drawbacks",
+                                                              qualities_list, "Full")
+    if npc_favored_arena == "all_combat":
+        character_profile["Qualities"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Qualities", "Combat",
+                                                                  qualities_list, "Full")
+    elif npc_favored_arena == "all_social":
+        character_profile["Qualities"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Qualities", "Social",
+                                                                  qualities_list, "Full")
+    elif npc_favored_arena == "combat_focused":
+        character_profile["Qualities"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Qualities", "Combat",
+                                                                  qualities_list,  "Major")
+        character_profile["Qualities"] += add_qualities_and_flairs(npc_base_stats, npc_type, "Qualities", "Social",
+                                                                   qualities_list, "Minor")
+    elif npc_favored_arena == "social_focused":
+        character_profile["Qualities"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Qualities", "Social",
+                                                                  qualities_list, "Major")
+        character_profile["Qualities"] += add_qualities_and_flairs(npc_base_stats, npc_type, "Qualities", "Combat",
+                                                                   qualities_list, "Minor")
+    character_profile["Flairs"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Flairs", "Combat",
+                                                           flairs_list, "Minor")
     print(character_profile)
 
 
