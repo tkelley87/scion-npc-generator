@@ -1,86 +1,138 @@
 {
   "Combat": [
     {
-      "Group Tactics": "If the leader is taken out, remove this Quality from all other Antagonists under their command. Antagonists with Group Tactics receive +1 Defense, +1 Health, and a +1 Enhancement to any combat action when two or more Antagonists with Group Tactics attack a single target during the same turn."
+      "Group Tactics": {
+        "Description": "If the leader is taken out, remove this Quality from all other Antagonists under their command. Antagonists with Group Tactics receive +1 Defense, +1 Health, and a +1 Enhancement to any combat action when two or more Antagonists with Group Tactics attack a single target during the same turn."
+      }
     },
     {
-      "Martial Artist": "Mortal Martial Artists receive a +1 Enhancement to Barehanded Combat. Select a specific weapon, such as a tonfa or a sword. This weapon counts as barehanded for the purposes of this Enhancement. They also receive +1 Defense and +1 Health."
+      "Martial Artist": {
+        "Description": "Mortal Martial Artists receive a +1 Enhancement to Barehanded Combat. Select a specific weapon, such as a tonfa or a sword. This weapon counts as barehanded for the purposes of this Enhancement. They also receive +1 Defense and +1 Health."
+      }
     },
     {
-      "Natural Weapon": "Some beings are possessed of natural weaponry, such as claws, teeth, armored tails, horns, and so on. Such weapons cannot be disarmed without a (likely very gruesome) stunt."
+      "Natural Weapon": {
+        "Description": "Some beings are possessed of natural weaponry, such as claws, teeth, armored tails, horns, and so on. Such weapons cannot be disarmed without a (likely very gruesome) stunt."
+      }
     },
     {
-      "Sniper": "However, as a consequence of keeping their enemies at arms’ length, they are somewhat less accustomed to physical punishment, and have −1 Health as a result.  All ranged weapons wielded by Snipers consider their range to be one greater than it actually is."
+      "Sniper": {
+        "Description": "However, as a consequence of keeping their enemies at arms’ length, they are somewhat less accustomed to physical punishment, and have −1 Health as a result.  All ranged weapons wielded by Snipers consider their range to be one greater than it actually is."
+      }
     },
     {
-      "Super Soldier": "In any case, a  Super Soldier is an extremely dangerous foe, and likely to be a master of whatever techniques she has devoted herself to. She receives a +1 Enhancement to any Combat  Ability, +1 Armor (choose Hard or Soft), and +2 Health."
+      "Super Soldier": {
+        "Description": "In any case, a  Super Soldier is an extremely dangerous foe, and likely to be a master of whatever techniques she has devoted herself to. She receives a +1 Enhancement to any Combat  Ability, +1 Armor (choose Hard or Soft), and +2 Health."
+      }
     },
     {
-      "Twitchy": "The Antagonist’s Initiative Pool receives a +2 Enhancement."
+      "Twitchy": {
+        "Description": "The Antagonist’s Initiative Pool receives a +2 Enhancement."
+      }
     },
     {
-      "Heavily Armored": "The Antagonist has +3 Armor. Split this between Hard and Soft Armor."
+      "Heavily Armored": {
+        "Description": "The Antagonist has +3 Armor. Split this between Hard and Soft Armor."
+      }
     },
     {
-      "Invulnerability": "Choose a source of damage, such as toxins, fire, electricity, and so on. The Antagonist does not take Health damage from this source."
+      "Invulnerability": {
+        "Description": "Choose a source of damage, such as toxins, fire, electricity, and so on. The Antagonist does not take Health damage from this source."
+      }
     },
     {
-      "Shroud": "All attacks made against shrouded characters suffer a +2 Complication to the Inflict Damage Stunt."
+      "Shroud": {
+        "Description": "All attacks made against shrouded characters suffer a +2 Complication to the Inflict Damage Stunt."
+      }
     },
     {
-      "Stand Tall": "Attempts to employ the Knock Down Stunt against this  Antagonist suffer a +2 Complication."
+      "Stand Tall": {
+        "Description": "Attempts to employ the Knock Down Stunt against this  Antagonist suffer a +2 Complication."
+      }
     },
     {
-      "Cross Training": "Any mixed actions the Antagonist undertakes use the higher of the two Pools, not the lower."
+      "Cross Training": {
+        "Description": "Any mixed actions the Antagonist undertakes use the higher of the two Pools, not the lower."
+      }
     },
     {
-      "Subterranean Movement": "The Antagonist may elect to move through the ground rather than over it. Digging into the ground or emerging from under the ground is a basic action. While underground, she cannot be attacked; however, she cannot attack others without emerging. If she emerges beneath another character, treat this as an attack at close range and halve the Antagonist’s Defense until her next turn. If the Antagonist wishes, she may Disengage by digging into the ground and tunneling away, and cannot be followed unless her pursuer also has some means of doing so."
+      "Subterranean Movement": {
+        "Description": "The Antagonist may elect to move through the ground rather than over it. Digging into the ground or emerging from under the ground is a basic action. While underground, she cannot be attacked; however, she cannot attack others without emerging. If she emerges beneath another character, treat this as an attack at close range and halve the Antagonist’s Defense until her next turn. If the Antagonist wishes, she may Disengage by digging into the ground and tunneling away, and cannot be followed unless her pursuer also has some means of doing so."
+      }
     },
     {
-      "Sure Footed": "Difficult Terrain doesn’t affect the movement of this  Antagonist."
+      "Sure Footed": {
+        "Description": "Difficult Terrain doesn’t affect the movement of this  Antagonist."
+      }
     },
     {
-      "Toxic": "The Antagonist is poisonous or venomous. Choose a vector for the toxin (touch, consumption, fluid transfer, aerosol, etc.), and select the Poisoned Condition (p. 125).  Aerosol toxins require the target to be within close range of the point of origin. All others require either a successful attack roll or a roll to trick the target into exposure."
+      "Toxic": {
+        "Description": "The Antagonist is poisonous or venomous. Choose a vector for the toxin (touch, consumption, fluid transfer, aerosol, etc.), and select the Poisoned Condition (p. 125).  Aerosol toxins require the target to be within close range of the point of origin. All others require either a successful attack roll or a roll to trick the target into exposure."
+      }
     },
     {
-      "Incorporeality": "Antagonists with this Quality cannot be damaged by ordinary means, and may pass through objects, walls, or other obstructions. Antagonists with this Quality must take the Vulnerability Quality — this source of damage is capable of affecting the Antagonist."
+      "Incorporeality": {
+        "Description": "Antagonists with this Quality cannot be damaged by ordinary means, and may pass through objects, walls, or other obstructions. Antagonists with this Quality must take the Vulnerability Quality — this source of damage is capable of affecting the Antagonist."
+      }
     }
   ],
   "Social": [
     {
-      "A Cage of Words": "Any attempts to Influence the character though reason or debate are at +2 difficulty. Additionally, if a character fails such a roll, they gain the Befuddled Condition for a scene, as they try to work out what was just said."
+      "A Cage of Words": {
+        "Description": "Any attempts to Influence the character though reason or debate are at +2 difficulty. Additionally, if a character fails such a roll, they gain the Befuddled Condition for a scene, as they try to work out what was just said."
+      }
     },
     {
-      "Center of Gravity": "The Antagonist is the center of the social scene, and effectively controls the discourse. Attempts to shift attitude above the Antagonist’s own Attitude towards that character suffer a +2 Complication."
+      "Center of Gravity": {
+        "Description": "The Antagonist is the center of the social scene, and effectively controls the discourse. Attempts to shift attitude above the Antagonist’s own Attitude towards that character suffer a +2 Complication."
+      }
     },
     {
-      "Institutional Disbelief": "Any attempts to evoke a mundane  Path to gain resources or leads for investigating or dealing with them automatically fail. Players may attempt to lie, mislead, or otherwise conceal the nature of their request, but must make an appropriate roll to do so, with a difficulty of 2. Should they succeed, they must still keep things quiet — retaliation may occur if the truth comes out. Explicitly supernatural or Pantheon  Paths are unaffected by this Quality."
+      "Institutional Disbelief": {
+        "Description": "Any attempts to evoke a mundane  Path to gain resources or leads for investigating or dealing with them automatically fail. Players may attempt to lie, mislead, or otherwise conceal the nature of their request, but must make an appropriate roll to do so, with a difficulty of 2. Should they succeed, they must still keep things quiet — retaliation may occur if the truth comes out. Explicitly supernatural or Pantheon  Paths are unaffected by this Quality."
+      }
     },
     {
-      "Slothful Resilience": "The Antagonist is either unwilling or unable to consider action. Consider the Scale to be two higher than it normally could be for the purposes of Influencing this  Antagonist, to a maximum of five."
+      "Slothful Resilience": {
+        "Description": "The Antagonist is either unwilling or unable to consider action. Consider the Scale to be two higher than it normally could be for the purposes of Influencing this  Antagonist, to a maximum of five."
+      }
     }
   ],
   "Drawbacks": [
     {
-      "Vulnerability": "Choose a source of damage — for example, fire, salt, silver, etc. When the Antagonist takes any damage from this source, mark a second Health box as well.  If attack is a critical strike, mark four Health boxes instead of two."
+      "Vulnerability": {
+        "Description": "Choose a source of damage — for example, fire, salt, silver, etc. When the Antagonist takes any damage from this source, mark a second Health box as well.  If attack is a critical strike, mark four Health boxes instead of two."
+      }
     },
     {
-      "Helpless Fascination": "The Antagonist is fascinated by a certain object, condition, or type of individual, and when confronted with one must roll her Desperation Pool to avoid becoming entranced. Entranced Antagonists suffer the effects of the Dread Gaze Flair (p. 149) until the triggering stimulus is removed."
+      "Helpless Fascination": {
+        "Description": "The Antagonist is fascinated by a certain object, condition, or type of individual, and when confronted with one must roll her Desperation Pool to avoid becoming entranced. Entranced Antagonists suffer the effects of the Dread Gaze Flair (p. 149) until the triggering stimulus is removed."
+      }
     },
     {
-      "Honor Bound": "The Antagonist is bound by oaths freely given; once she’s made a promise, she must uphold it. She may try to weasel out on a technicality — this is not only acceptable, it is encouraged — but the letter of the oath cannot be contravened."
+      "Honor Bound": {
+        "Description": "The Antagonist is bound by oaths freely given; once she’s made a promise, she must uphold it. She may try to weasel out on a technicality — this is not only acceptable, it is encouraged — but the letter of the oath cannot be contravened."
+      }
     },
     {
-      "Imperfect Disguise": "The Antagonist may be able to hide most of her supernatural qualities, but something still shows. This results in a distinguishing feature that may give them away, be it behavioral or physical — huldrefolk have a tail, for example. Spotting the feature and correctly identifying it requires a Difficulty 2 Occult roll."
+      "Imperfect Disguise": {
+        "Description": "The Antagonist may be able to hide most of her supernatural qualities, but something still shows. This results in a distinguishing feature that may give them away, be it behavioral or physical — huldrefolk have a tail, for example. Spotting the feature and correctly identifying it requires a Difficulty 2 Occult roll."
+      }
     },
     {
-      "Keystone": "The Antagonist’s life force is bound to an object, person, or element. Should the Antagonist’s Keystone be removed, damaged, or otherwise negated, apply the following effects: −2 Defense, −2 Health. The Health track cannot be reduced below 1; all other Traits cannot be reduced below zero. If the Antagonist has already taken damage, remove empty Health boxes first. If the Antagonist has no Health boxes remaining afterwards, she is Taken Out."
+      "Keystone": {
+        "Description": "The Antagonist’s life force is bound to an object, person, or element. Should the Antagonist’s Keystone be removed, damaged, or otherwise negated, apply the following effects: −2 Defense, −2 Health. The Health track cannot be reduced below 1; all other Traits cannot be reduced below zero. If the Antagonist has already taken damage, remove empty Health boxes first. If the Antagonist has no Health boxes remaining afterwards, she is Taken Out."
+      }
     },
     {
-      "Miasmic Presence": "The Antagonist’s very presence contaminates The  World in some way, clearly showing the work of the unusual and mythic. A ghost’s presence may cause mirrors to tarnish or shadows to lengthen unnaturally, while a vampire might cause holy symbols to burst into flame. Select the condition and effect when this Quality is assigned — any character, if successful on an Occult roll (difficulty 2), may immediately recognize the presence of the specific kind of creature she is dealing with."
+      "Miasmic Presence": {
+        "Description": "The Antagonist’s very presence contaminates The  World in some way, clearly showing the work of the unusual and mythic. A ghost’s presence may cause mirrors to tarnish or shadows to lengthen unnaturally, while a vampire might cause holy symbols to burst into flame. Select the condition and effect when this Quality is assigned — any character, if successful on an Occult roll (difficulty 2), may immediately recognize the presence of the specific kind of creature she is dealing with."
+      }
     },
     {
-      "Unnatural Hunger/Behavior": "The Antagonist is compelled to do something or consume something outside the bounds of what is considered normal. To resist this impulse (for example, to attempt to hide their true nature), the Antagonist must succeed on a difficulty 2 Desperation Pool roll. Failure does not necessarily mean immediate indulgence (this is left to the Storyguide’s discretion), but some behavioral quirk shines through. An Occult roll (difficulty 2) is necessary to discern the Antagonist’s nature if the  Antagonist attempts to restrain themselves; if they indulge, the roll is difficulty 1 instead. If the Antagonist has one or more Flairs on Cooldown, indulgence of the Antagonist’s Unnatural Hunger counts as satisfying one Cooldown condition —  Storyguide’s pick."
+      "Unnatural Hunger/Behavior": {
+        "Description": "The Antagonist is compelled to do something or consume something outside the bounds of what is considered normal. To resist this impulse (for example, to attempt to hide their true nature), the Antagonist must succeed on a difficulty 2 Desperation Pool roll. Failure does not necessarily mean immediate indulgence (this is left to the Storyguide’s discretion), but some behavioral quirk shines through. An Occult roll (difficulty 2) is necessary to discern the Antagonist’s nature if the  Antagonist attempts to restrain themselves; if they indulge, the roll is difficulty 1 instead. If the Antagonist has one or more Flairs on Cooldown, indulgence of the Antagonist’s Unnatural Hunger counts as satisfying one Cooldown condition —  Storyguide’s pick."
+      }
     }
   ]
 }

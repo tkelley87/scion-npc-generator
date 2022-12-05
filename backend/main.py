@@ -75,6 +75,8 @@ def main():
         name_list = file_list_into_var("names_folder/generic_{}_names.txt".format(gender), "txt")
     else:
         name_list = file_list_into_var("names_folder/{}_{}_names.txt".format(given_pantheon, gender), "txt")
+    if npc_type == "Professional" and npc_favored_arena == "Social":
+        npc_base_stats[npc_type]["Flairs"] = 1
     character_profile["Name"] = random_with_list(name_list)
     character_profile["Gender"] = gender.capitalize()
     character_profile["Traits"] = random_with_list(traits_data_into_list, selected_count=3)
