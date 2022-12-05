@@ -74,9 +74,9 @@ Following this guide: [https://dev.to/nagatodev/how-to-connect-flask-to-reactjs-
 
 ### Setting up project venv
 1) Setup Python Virtual Environment
-    - `python3 -m venv env`
+    - `python3 -m venv venv`
 2) You can activate it by running
-    - `source env/bin/activate`
+    - `source venv/bin/activate`
 3) Installing packages from requirements.txt
     - `pip install -r requirements.txt`
 
