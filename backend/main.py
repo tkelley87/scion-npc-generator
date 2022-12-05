@@ -8,6 +8,7 @@ npc_type = sys.argv[2]
 human = sys.argv[3]
 is_name_generic = sys.argv[4]
 npc_favored_arena = sys.argv[5]
+shortened_npc_favored_arena = sys.argv[5].split("_")[0]
 gender_list = ["male", "female"]
 attitude_list = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
 cult_types = ["Coven", "Guild", "Family Tradition", "Historian", "Mystery Society", "Reliquarian", "Social Club",
@@ -27,11 +28,11 @@ def random_with_list(given_list, weighting=None, selected_count=None):
     if weighting and selected_count:
         return random.choices(given_list, weights=weighting, k=selected_count)
     elif weighting:
-        return random.choices(given_list, weights=weighting)[0]
+        return random.choices(given_list, weights=weighting, k=1)[0]
     elif selected_count:
-        return random.choices(given_list, k=selected_count)
+        return random.sample(given_list, k=selected_count)
     else:
-        return random.choices(given_list)[0]
+        return random.sample(given_list, k=1)[0]
 
 
 def add_qualities_and_flairs(npc_base_stats, npc_archetype, quality_type_from_stats, quality_from_list, qualities_list,
@@ -39,20 +40,13 @@ def add_qualities_and_flairs(npc_base_stats, npc_archetype, quality_type_from_st
     quality_type_count = npc_base_stats[npc_archetype][quality_type_from_stats]
     if quality_type_count > 0:
         if count_amount == "Full":
-            return random.choices(qualities_list[quality_from_list], k=quality_type_count)
+            return random.sample(qualities_list[quality_from_list], k=quality_type_count)
         elif count_amount == "Major":
-            return random.choices(qualities_list[quality_from_list], k=quality_type_count-1)
+            return random.sample(qualities_list[quality_from_list], k=quality_type_count-1)
         elif count_amount == "Minor":
-            return random.choices(qualities_list[quality_from_list], k=1)
+            return random.sample(qualities_list[quality_from_list], k=1)
     else:
         return []
-
-
-def combine_lists(*given_lists):
-    combined_list = []
-    for current_list in given_lists:
-        combined_list.extend(current_list)
-    return combined_list
 
 
 def main():
@@ -63,15 +57,20 @@ def main():
     npc_base_stats = file_list_into_var("npc_stats/base_stats.json", "json")
     qualities_list = file_list_into_var("npc_stats/qualities.json", "json")
     flairs_list = file_list_into_var("npc_stats/flairs.json", "json")
+    if shortened_npc_favored_arena == "Combat":
+        nonfavored_arena = "Social"
+    if shortened_npc_favored_arena == "Social":
+        nonfavored_arena = "Combat"
     if npc_type == "Mook":
-        combined_flairs_list = flairs_list
+        pass
     elif npc_type == "Professional":
-        combined_flairs_list = {npc_favored_arena: combine_lists(flairs_list[npc_favored_arena],
-                                                                 flairs_list["Professional_" + npc_favored_arena])}
+        flairs_list[shortened_npc_favored_arena].extend(flairs_list["Professional_" + shortened_npc_favored_arena])
+        flairs_list[nonfavored_arena].extend(flairs_list["Professional_" + nonfavored_arena])
     else:
-        combined_flairs_list = {npc_favored_arena: combine_lists(flairs_list[npc_favored_arena],
-                                             flairs_list["Professional_" + npc_favored_arena],
-                                             flairs_list["Villain_" + npc_favored_arena])}
+        flairs_list[shortened_npc_favored_arena].extend(flairs_list["Professional_" + shortened_npc_favored_arena])
+        flairs_list[shortened_npc_favored_arena].extend(flairs_list["Villain_" + shortened_npc_favored_arena])
+        flairs_list[nonfavored_arena].extend(flairs_list["Professional_" + nonfavored_arena])
+        flairs_list[nonfavored_arena].extend(flairs_list["Villain_" + nonfavored_arena])
     if is_name_generic == 'yes':
         name_list = file_list_into_var("names_folder/generic_{}_names.txt".format(gender), "txt")
     else:
@@ -109,20 +108,20 @@ def main():
                                                                    qualities_list, "Minor")
     if npc_favored_arena == "Combat":
         character_profile["Flairs"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Flairs", "Combat",
-                                                               combined_flairs_list, "Full")
+                                                               flairs_list, "Full")
     elif npc_favored_arena == "Social":
         character_profile["Flairs"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Flairs", "Social",
-                                                               combined_flairs_list, "Full")
+                                                               flairs_list, "Full")
     elif npc_favored_arena == "Combat_focused":
         character_profile["Flairs"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Flairs", "Combat",
-                                                               combined_flairs_list,  "Major")
+                                                               flairs_list,  "Major")
         character_profile["Flairs"] += add_qualities_and_flairs(npc_base_stats, npc_type, "Flairs", "Social",
-                                                                combined_flairs_list, "Minor")
+                                                                flairs_list, "Minor")
     elif npc_favored_arena == "Social_focused":
         character_profile["Flairs"] = add_qualities_and_flairs(npc_base_stats, npc_type, "Flairs", "Social",
-                                                               combined_flairs_list, "Major")
+                                                               flairs_list, "Major")
         character_profile["Flairs"] += add_qualities_and_flairs(npc_base_stats, npc_type, "Flairs", "Combat",
-                                                                combined_flairs_list, "Minor")
+                                                                flairs_list, "Minor")
     add_vulnerability = any("Incorporeality" in d for d in
                             character_profile["Qualities"]) and not any("Vulnerability" in d for d in
                                                                         character_profile["Drawbacks"])
