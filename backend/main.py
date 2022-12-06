@@ -136,6 +136,9 @@ def main():
     sorcery_exists = any("Sorcery" in d for d in character_profile["Flairs"])
     if sorcery_exists:
         sorcery_list = file_list_into_var("npc_stats/purviews.json", "json")
+        pantheon_sorcery_list = file_list_into_var("npc_stats/pantheon_purviews.json", "json")
+        pantheon_purview_sorcery = {given_pantheon: pantheon_sorcery_list[given_pantheon]}
+        sorcery_list.update(pantheon_purview_sorcery)
         sorcery_key = random.choices(list(sorcery_list))[0]
         sorcery_value = sorcery_list[sorcery_key]
         character_profile["Sorcery"] = {sorcery_key: sorcery_value}
@@ -143,10 +146,10 @@ def main():
         if "Base Stat Changes" in quality[next(iter(quality))]:
             stats_changes = quality[next(iter(quality))]["Base Stat Changes"]
             for item in stats_changes.items():
-                if item[0] != "Enhancement":
+                if item[0] in character_profile["Stats"]:
                     character_profile["Stats"][item[0]] += item[1]
                 else:
-                    character_profile["Stats"]["Enhancement"] = item[1]
+                    character_profile["Stats"][item[0]] = item[1]
     print(character_profile)
 
 

@@ -1,0 +1,202 @@
+{
+  "norse": {
+    "Name": "Wyrd",
+    "Innate Power": "",
+    "Cast the Runes": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Spin the Thread": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "deva": {
+    "Name": "Yoga",
+    "Innate Power": "",
+    "Devotion's Reward": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Eyes of Knowledge": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "kami": {
+    "Name": "Yaoyorozu-No-Kamigami",
+    "Innate Power": "",
+    "Appeasing the Kami": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "The Watchful Spirit": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "orisha": {
+    "Name": "Cheval/Gun",
+    "Innate Power": "",
+    "Dance with the Divine": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Mounting the Horse": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "monitou": {
+    "Name": "Dodaem",
+    "Innate Power": "",
+    "Dream Quest": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Sacred Medicine": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "netjar": {
+    "Name": "Wyrd",
+    "Innate Power": "",
+    "Ren Harvest": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Sekhem Blaze": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "shen": {
+    "Name": "Tianming",
+    "Innate Power": "",
+    "Celestial Promotion": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Vermillion Tape": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "teotl": {
+    "Name": "Nextlahualli",
+    "Innate Power": "",
+    "Flesh of the World": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Repay the Debt": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "theoi": {
+    "Name": "Metamorphosis",
+    "Innate Power": "",
+    "Change Shape": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Transfigure": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "tuatha": {
+    "Name": "Geasa",
+    "Innate Power": "",
+    "Lay Geis": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Tongue of the Bard": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  }
+}
