@@ -30,14 +30,14 @@ This NPC has a patch of discolored skin around an old scar. They were poisoned b
 This NPC always has some red stain on their hands. Surely its just tomato sauce... right?
 This NPC always smells like farm animals.
 This NPC has a peg leg.
-This NPC has fingers instead of on each hand.
+This NPC has 4 fingers instead of 5 on each hand.
 This NPC is INCREDIBLY beautiful. People often do double-takes of them as they walk by.
 This NPC has a deep, baritone voice.
 This NPC smells TERRIBLE.
 This NPS has a beehive hair style.
 The NPC has hair changing color according to their mood following an accident involving wild magic.
 This NPC dresses like a slob, and tends to wear the same clothes for weeks.
-This NPC is missing fingers from a farming accident.
+This NPC is missing 2 fingers from a farming accident.
 This NPC is missing a finger in a kitchen accident.
 This NPC has a distinctive slave tattoo.
 This NPC has an abormally long nose.

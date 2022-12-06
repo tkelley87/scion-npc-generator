@@ -129,6 +129,12 @@ def main():
                                                                         character_profile["Drawbacks"])
     if add_vulnerability:
         character_profile["Drawbacks"].append(qualities_list["Drawbacks"][0])
+    toxic_exists = any("Toxic" in d for d in character_profile["Qualities"])
+    if toxic_exists:
+        toxic_vectors = file_list_into_var("npc_stats/toxic_vectors.txt", "txt")
+        character_profile["Toxic"] = {"Vector": random_with_list(toxic_vectors), "Duration": "Successes in Rounds",
+                                      "Condition": "Inflict Damage Stunt",
+                                      "Note": "Simple action Resolve + Sta roll to end effect early"}
     vulnerability_exists = any("Vulnerability" in d for d in character_profile["Drawbacks"])
     if vulnerability_exists:
         vulnerability_list = file_list_into_var("npc_stats/vulnerabilities.txt", "txt")
