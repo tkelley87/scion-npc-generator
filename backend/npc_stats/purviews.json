@@ -1,8 +1,8 @@
 {
   "Artistry": {
-    "Innate Power": "",
+    "Innate Power": "You can express yourself through an\nartistic performance to communicate with those who experience\nit as though you were speaking to them, even if they don’t share a language. This can also bypass Complications\nthat would apply to rolls made through ordinary conversation,\nlike trying to avoid being overheard, but not to the\nspecific art form you use. Only the intended recipient of the\nmessage (which can be “everyone”) can perceive it.",
     "Enthralling Performance": {
-      "Description": "",
+      "Description": "No one can look away from your art. When you\nput on a performance, all affected targets in range\nthat witnesses your performance cannot stop paying\nattention to you. If they wish to take another action,\nthey must do it as a mixed action combined with an\nIntegrity + Resolve roll at Difficulty 2. Putting on a\nperformance with this Boon is a complex action that\ncan last multiple rounds, but doesn’t require a roll.",
       "Duration": "Indefinite",
       "Subject": "All characters",
       "Clash": "Presence + Legend vs. Composure + Legend",
@@ -10,398 +10,335 @@
       "Action": "Complex"
     },
     "Heartfelt Expression": {
-      "Description": "",
+      "Description": "Your emotions overflow into the souls of your audience.\nWhen you perform or create a work of art,\nyou can instill it with your current emotional state or\nthe personal feelings that inspired it. Any affected\ncharacter that witnesses the performance or artwork\nis deeply affected, raising their Attitude by one\npoint. This does not stack with other magical Attitude\nbonuses.",
       "Duration": "Indefinite",
       "Subject": "All characters",
       "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Range": "Short",
+      "Action": "Reflexive"
     },
     "Muse's Kiss": {
-      "Description": "",
+      "Description": "You breathe inspiration into a character’s heart, granting\nthem Enhancement 3 when they roll to create art, put on\na performance, or some other creative and expressive\nactivity. You can set a single requirement the character\nmust meet to maintain your blessing, like “tithe a tenth of\nyour earnings to my cult” or “spend eight hours a day\nwriting,” which ends this Boon immediately if it is not met.\nThis Boon is free to use on trivial targets.",
       "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Subject": "One character",
+      "Range": "Short",
+      "Action": "Simple"
     }
   },
   "Beasts": {
-    "Innate Power": "",
+    "Innate Power": "Animals will never attack or harm you,\nunless they are compelled by magic or Legendary creatures\nthemselves.",
     "Animal Aspect": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You choose an animal and emulate one of its iconic\ntraits. Pick one of the following benefits: Mobility: You can swim like a dolphin, burrow\nlike a termite, or emulate flight with graceful\nleaps. You can ignore any dangerous or\ndifficult terrain) or complicated passages,\nbarriers, or hazards that form of movement\ncould reasonably bypass. Senses: Choose a specific circumstance in\nwhich the animal’s senses give an advantage\n— an eagle’s eyes can see clearly from far\naway, a bat can echolocate in total darkness,\nwhile a dog can track by scent for miles. You\nhave Enhancement 3 on sense-based rolls\nwhere that advantage applies. Other: Pick a miscellaneous trait, like an\noctopus’s camouflage, an anglerfish’s\nbioluminescence, or a peacock’s magnificent\nplumage. You either have Enhancement 2 on\nactions that trait benefits, or ignore up to 3\npoints of Complication it negates, whichever\nbest represents the chosen trait.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Action": "Reflexive"
     },
     "Leader of the Pack": {
-      "Description": "",
+      "Description": "You can speak to and understand all animals. Animals\nthat don’t have a Legend rating treat their Attitude\ntowards you as one point higher when determining\nwhether you can persuade them to take on a task. This\ndoes not stack with other magical Attitude bonuses. Once you reclaim the Legend from this Boon, your\nanimal helpers will still try to complete your requests,\nbut may become distractible or less reliable, at the\nStoryguide’s discretion.",
       "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Subject": "Self",
+      "Action": "Simple"
     },
     "Tooth and Claw": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "Choose an animal whose natural ferocity you wish to\nevoke. Your brawling attacks gain the Lethal tag and up\nto three points of other weapon tags appropriate to the\nchosen animal, such as Grappling and Piercing for an\nalligator’s bite or Pushing and Piercing for a rhino’s charge.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Action": "Reflexive"
     }
   },
   "Beauty": {
-    "Innate Power": "",
+    "Innate Power": "You may attempt a Feat of Scale when\nyou roll to influence a character using your beauty, appearance,\nand body language. This includes seduction, but also cutting someone down with a withering glare or using body\nlanguage to convince a guard you’re not a threat.",
     "Draw Back the Mask": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You can bestow blessings that reveal a person’s true\nbeauty, or curses that mar them with ugliness. Your\nblessing or curse takes the form of a Condition imposed\non one character, or on all trivial targets within\nrange. Using this Boon on trivial targets is free. A blessed character may use their beauty once per\nscene to add Enhancement 2 on any roll made with\na Social Attribute. This Condition resolves once its\nbenefit has been applied a total of your (Legend + 1)\ntimes. A cursed character suffers a +2 Complication on\nall Social rolls where their distorted appearance is\na disadvantage. This Condition can be resolved by\nmaking a sincere and heartfelt apology to someone\nthe target has wronged in a significant way, or with\ncurse-breaking magic.",
+      "Duration": "Condition",
+      "Subject": "One character",
+      "Range": "Short",
+      "Action": "Simple"
     },
     "Lasting Impression": {
-      "Description": "",
+      "Description": "You know how to flaunt your looks to kindle an irresistible\ninfatuation. This takes the form of a Condition that\nyou can impose on either a single target, or on all trivial\ntargets within range. The Condition raises the target’s\nAttitude towards you by two points, which does not\nstack with other magical Attitude bonuses. It can be resolved\nby enjoying a moment of physical intimacy (e.g.\nsex, a passionate kiss, a really good hug) with you, or\nwhen you reject the target’s advances. Reclaiming the\nLegend imbued in this Boon also resolves the Condition.",
       "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Subject": "One character",
       "Range": "Medium",
-      "Action": "Complex"
+      "Action": "Simple"
     },
     "Visage Great and Terrible": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "The line between beauty and monstrosity is drawn by\nyour hand. Your very appearance instills your enemies\nwith the absolute terror of confronting your divinity.\nTrivial targets automatically flee from you, while other\ncharacters face a +2 Complication on any action that\ndoes not somehow help them flee your presence.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Action": "Reflexive"
     }
   },
   "Chaos": {
-    "Innate Power": "",
+    "Innate Power": "You walk untouched through chaotic\nsituations, taking no harm from random or haphazard dangers\nsuch as debris in a tornado, a freak traffic accident, or\nbeing trampled by shoppers on Black Friday. This does not\nprotect you from damage that results from an action performed\nwith intent to cause harm, like gunfire in a shootout,\nor environmental situations. This immunity extends to any\nnon-magical dangerous terrain, unless a character in the\nscene actively created that peril with intent to harm. You\nstill face any Complications that such situations would normally\nimpose — you’re simply guaranteed to come through\nunscathed.",
     "Hornet's Nest": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Description": "You create an instant riot. All trivial characters in range,\nplus up to (Legend x 3) non-trivial mortals, will stop whatever they’re doing and create a wild and disruptive\nfrenzy, mob, or protest — whichever is most appropriate\nto the circumstances. If the Storyguide has specific plans\nfor what a mortal character is doing in the scene (for\nexample, the hired security you’re trying to distract with\na riot), he can declare them unavailable as targets. You\nhave no control over the mob, but they’re reckless and\nloud and provide a good distraction.",
+      "Duration": "One Scene",
+      "Subject": "Multiple characters",
       "Range": "Medium",
-      "Action": "Complex"
+      "Action": "Simple"
     },
     "No Masters": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Description": "You strip a character of their authority over others. This\nsuppresses any positive Attitudes or Bonds that any other\ncharacter within long range has towards the target\nbased on any kind of political, social, or economic authority\nhe holds over them for the duration of the scene.\nNegative emotions are unaffected — employees may\nlose all loyalty they have to their boss, but they’ll still\ncarry the resentment from long hours or shitty wages.\nUsing this Boon on a trivial character is free.",
+      "Duration": "One Scene",
+      "Subject": "One characters",
+      "Clash": "Manipulation + Legend vs. Composure + Legend",
       "Range": "Medium",
-      "Action": "Complex"
+      "Action": "Simple"
     },
     "Overwhelming Chaos": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You overload a machine’s gears or a person’s mind\nwith concentrated entropy. A targeted character must\nstruggle simply to maintain coherent thought. On each\nturn, if they wish to take an action, they must combine\nit with a Stamina + Athletics roll at Difficulty 2. Nontrivial\ncharacters are rendered catatonic for the scene. Machines up to the size of a car can be targeted, breaking\ndown completely until they receive maintenance. This\ndamage is permanent, but the Scion cannot reclaim the\nLegend imbued in this Boon until the next scene.",
+      "Duration": "One Scene",
+      "Subject": "One machine or character",
+      "Range": "Short",
+      "Action": "Simple"
     }
   },
   "Darkness": {
-    "Innate Power": "",
+    "Innate Power": "You can see in total darkness, even\nmagical darkness. You can also see into someone’s dreams\nby watching them while they sleep.",
     "Blinding Veil": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You can strip away the vision of any number of\ncharacters in range, imposing a blinded Condition on\nthem for one scene. If you choose only trivial targets to\nblind, using this Boon is free.",
+      "Duration": "One Scene",
+      "Subject": "Multiple characters",
+      "Range": "Short",
+      "Action": "Simple"
     },
     "Dream Weaver": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You shape a dream, and send it after someone you\nknow — not necessarily personally, but at least well\nenough to provide a unique description. The next time\nthat character goes to sleep, this Boon triggers. You can\nmake an influence roll against the target by shaping\nand controlling the events and appearance of their\ndream. You choose how you appear in their dream,\nwhich may allow you to avoid a negative Attitude\ntowards you or exploit a Bond or Attitude towards another\ncharacter. If you appear as yourself, the intimacy\nof the dream still raises their Attitude by one point. This\ndoesn’t stack with other magical Attitude bonuses.",
+      "Duration": "Until the target next sleeps",
+      "Subject": "One characters",
+      "Range": "Long",
+      "Action": "Simple"
     },
     "Night's Caress": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You can lull a character to sleep over the course of\na few seconds, as long as they are not in combat or\na similarly high-stakes situation. They remain asleep\nuntil at least the end of the scene unless attacked by\nenemies or magically awakened. You can put multiple\ntrivial targets to sleep as long as they are in this Boon’s\nrange, and can do so even in combat.",
+      "Duration": "One Scene",
+      "Subject": "One characters",
+      "Range": "Short",
+      "Action": "Simple"
     }
   },
   "Death": {
-    "Innate Power": "",
+    "Innate Power": "You can see and communicate with\nghosts, shades, and other forms of the undead that are normally\nimperceptible or incomprehensible (the Storyguide\nshould feel free to send plot hooks your way in the form of\nthe dead seeking favors or aid). In addition, you can perceive\nentryways to the Underworld.",
     "Unquiet Dead": {
-      "Description": "",
+      "Description": "You can cause a corpse to speak, or summon a person’s\nghost, shade, or other culturally appropriate remnant\n(Scion: Origin, p. 31) from the site of their grave for one\nscene. The corpse or shade cannot act except to speak,\nbut you can try to influence it just like anyone else. It\nstarts with Attitude 3 towards you. The undead retains all\nmemories it had in life, except for a blank space of about\nfive minutes leading up to the time of their death. As long\nas you imbue Legend in this boon, the undead’s answers provide Enhancement 3 on any applicable rolls, such as\ntracking down the person who killed them. You can only use this Boon on the same undead once\nper session.",
       "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Subject": "One corpse or ghost",
+      "Action": "Simple"
     },
     "The Way of All Flesh": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You sap a character’s life force. All attacks against this\ngain the Aggravated tag for one scene. When they\ntake damage, they treat their (Defense + Armor) total\nas one point lower than it actually is to determine the\nInjury Complication. Alternatively, this Boon can be used to destroy or\nbanish all trivial undead targets in range. Doing so is\nfree.",
+      "Duration": "One scene or Instant",
+      "Subject": "One characters",
+      "Range": "Short",
+      "Action": "Simple"
     },
     "Your Fault": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Description": "You burden a character with the guilt of knowing they\nwere responsible for the last death they witnessed\n(attending a funeral or reading about a death on the\nmedia counts). This is a Condition, with precise effects\nthat depend on that character’s personality and their\nrelation to the deceased. A political activist who feels\nresponsible for assassinating an opposition party\ncandidate might have a hard time not bragging about\nit, while someone who thinks they let the love of their\nlife die will be devastated. As a default, the Condition\nincreases the difficulty of all actions that character\ntakes by +2, except actions that have the potential\nto harm them or otherwise traumatically expiate their\nguilt. The Condition resolves when the affected character\nconfesses their responsibility to someone who\ntrusts them or when you reclaim the Legend imbued in\nthis Boon.",
+      "Duration": "Condition",
+      "Subject": "One character",
       "Range": "Medium",
-      "Action": "Complex"
+      "Action": "Simple"
     }
   },
   "Deception": {
-    "Innate Power": "",
+    "Innate Power": "Other characters face a +3 Complication\non all Empathy rolls and Assess Attitude rolls against you.\nIf they don’t spend enough successes to overcome the\nComplication, you choose the result they get.",
     "Ephemera": {
-      "Description": "",
+      "Description": "You create an illusory image of a person, animal, or\nobject, up to the size of a car. The illusion is lifelike\nand seems completely authentic — a person breathes,\na car’s engine throbs, a fire gives off heat — but it\nhas no physical substance and cannot exert force or\ncause harm. It can move, but must remain within this\nBoon’s range. A non-trivial character who wins the\nClash of Wills can see through the illusion. Attempts\nto touch or physically interact with an illusion go right\nthrough it, letting anyone who sees this recognize it as\nunreal in the absence of extraordinary circumstances.",
       "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Clash": "Manipulation + Legend vs. Cunning + Legend",
+      "Action": "Simple"
     },
     "False History": {
-      "Description": "",
+      "Description": "You can make a single, discrete change to the substantive\ncontent of a character’s memories of the last\nfive minutes or so, such as “me and my friends were\nnever here,” “all you saw were some feral dogs,”\nor “the room you were in was ornately furnished.”\nOnce you reclaim the Legend, their memory reverts\nto normal. You can alter trivial characters’ memories\npermanently, and only need to imbue Legend until the\nend of the scene to do so.",
       "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Subject": "One character",
+      "Clash": "Manipulation + Legend vs. Resolve + Legend",
+      "Range": "Close",
+      "Action": "Simple"
     },
     "Walk Unnoticed": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You slough off your identity and vanish. You do not\nbecome literally invisible — instead, people’s minds\nsimply fail to process any distinguishing information\nabout you. A non-trivial character that wins the Clash\nof Wills can see through this, but still cannot distinguish\nyour identity or any identifying features, and\nface a +3 Complication on rolls to notice you.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Clash": "Manipulation + Legend vs. Cunning + Legend",
+      "Action": "Reflexive"
     }
   },
   "Earth": {
-    "Innate Power": "",
+    "Innate Power": "As long as you are standing on the\nground (the bottom floor of a building counts) or an earthen\nsurface, you cannot be forcibly moved from your location\nby any amount of physical force, and gain Enhancement 1\non Might and Stamina rolls.",
     "Shaping Hand": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You can shape and mold stone, metal, and other\nearthen substances with your bare hands as though\nit were as malleable as clay. When this assists in an\naction, like climbing a sheer cliff overhang or pulling\na steel wall open, you gain Enhancement 3.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Action": "Simple"
     },
     "Skin Like Stone": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "Your soft armor rating increases by one. If you aren’t\nwearing any armor (or other protective gear that\nprovides a soft armor rating), it increases by three\ninstead.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Action": "Reflexive"
     },
     "Stony Heart": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You can harden someone’s heart, setting them in their\nways against impassioned pleas for help or sweet\nwords of seduction. This imposes a +3 Complication\non any Social actions targeting the character whose\nheart was hardened, unless the Storyguide determines\nthat the interaction is completely devoid of any appeal\nto emotion. She can use this Boon on herself or her\nallies to fend off the blandishments of others, or use it\nto undermine other character’s attempts at intrigue.",
+      "Duration": "One Scene",
+      "Subject": "Self or One Character",
+      "Range": "Short",
+      "Action": "Reflexive"
     }
   },
   "Epic Dexterity": {
-    "Innate Power": "",
+    "Innate Power": "So long as you continue to move towards\na destination, you walk, run, or leap with effortless\ngrace. Any surfaces solid or liquid hold your weight as if\nyou weighed no more than a feather, and you may effortlessly\nscale or descend vertical surfaces without a need for\na handhold.",
     "The Falling Star": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "Your speed is a powerful asset in battle. In combat, you\ncan use your reflexive Move action to cross two range\nbands, and gain Enhancement 3 on rolls to Disengage.\nYou cannot take damage from falling.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Action": "Reflexive"
     },
     "Heavenly Stride": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You can cross great distances in a scant matter of minutes,\nzooming past passersby in a blur of motion. Add\nEnhancement 3 on Rush actions and any action you\ntake in a race. Once per scene, you may make a Feat\nof Scale to enhance any action based on physical\nspeed without having to pay a point of Legend.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Action": "Reflexive"
     },
     "Unerring Flight": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "In your precise hands, ranged weapons become extraordinarily\ndeadly. You may make a ranged attack\nagainst any enemy in your line of sight, even out to\nextreme range. You can roll the attack with Dexterity\nin place of the Attribute normally associated with that\nrange band, and do not face an increased difficulty\nfor using weapons with the Ranged or Long Range tag\nat any range band. You can use this boon to attack an\nenemy behind full cover.",
+      "Duration": "Instant",
+      "Subject": "Self",
+      "Action": "Reflexive"
     }
   },
   "Epic Stamina": {
-    "Innate Power": "",
+    "Innate Power": "You are immune to poison and disease\nunless they come from a source whose Legend is equal or\ngreater than yours, and never face Complications or risk\ndeath from hunger, thirst, or exhaustion.",
     "Adamant Body": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "Your skin becomes as hard as adamant, granting you\n+1 soft armor and the benefit of the Resistant armor\ntag against a specific type of damage, such as bullets,\nfire, or acid. When you purchase this boon, choose one kind of\ndamage that you are naturally resistant to. You can\nuse it to resist the chosen damage type without having\nto imbue Legend in it.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Action": "Reflexive, when applied"
     },
     "Put Your Back Into It": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You labor with tenfold endurance, enhancing a Complex\naction to perform strenuous physical labor or other exercise.\nAny time you roll a Physical Attribute as part of the\naction, you may roll two times, keeping the higher result.",
+      "Duration": "Until the task is complete",
+      "Subject": "Self",
+      "Action": "Reflexive"
     },
     "Unbreakable": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You are beyond injury. When you are hit and an\nenemy uses an Inflict Damage Stunt, spend 1 Legend\nto negate it. This Boon can also be used to defend\nagainst being affected by any other Condition based\non debilitating injury or physical incapacity, such as a\nSevered Limb or Broken Spine.",
+      "Duration": "Instant",
+      "Subject": "Self",
+      "Action": "Reflexive"
     }
   },
   "Epic Strength": {
-    "Innate Power": "",
+    "Innate Power": "You have +1 Scale for purposes of lifting,\nbreaking, or carrying large objects. You can use Might\nin place of Presence for intimidation, seduction, or building\nBonds of camaraderie.",
     "Heavy Lifter": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "Add Enhancement 3 on rolls to lift or carry heavy objects.\nWhen you attack by throwing an improvised weapon, the\nrange increases by a single band and it gains the Arcing\ntag. You choose whether it’s Bashing or Lethal.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Action": "Reflexive"
     },
     "A World of Glass": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You are capable of tearing down walls, ripping up\nconcrete, or rendering brick structures to powder in\nmoments. Once per scene, you may make a Feat of\nScale to enhance any Might-based action without\nhaving to pay a point of Legend.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Action": "Ordinary"
     },
     "Pistons for Fists": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "Your Close Combat and Athletics attack rolls strike\nwith incredible force. On a hit, you can either send an\nopponent flying back one range band, or knock him\nprone. Felled enemies must succeed on a Dexterity +\nAthletics roll at Difficulty 3 to Rise from Prone even if you\nare not threatening them. This attack can scatter a group\nof trivial targets, gaining the Shockwave tag as long as\nall characters in the targeted range band are trivial.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Action": "Reflexive"
     }
   },
   "Fertility": {
-    "Innate Power": "",
+    "Innate Power": "Once per session, you can radiate\nan aura of vitality, causing flowers and other plant life to\nbloom and grow. All allies out to long range may resolve\na single Bruised or Injured Condition. This cannot heal\nMaimed Conditions.",
     "Blessed Harvest": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You can confer great vitality on another character with\nthe fruits of Fertility. To use this Boon, you must prepare\na meal that your target eats, offer them support in a\nfamilial role, or share a moment of physical intimacy.\nThis blessing takes the form of a Condition. Once\nper scene, the target may call upon the blessing to\nadd Enhancement 3 on a roll made with a Force or\nResilience Attribute. This Condition resolves once its\nbenefit has been applied a total of (your Legend + 1)\ntimes. A Scion who benefits from this condition may call on it\nto undertake a Feat of Scale without having to spend\na point of Legend. Doing so resolves the condition.",
+      "Duration": "Condition",
+      "Subject": "One character",
+      "Range": "Close",
+      "Action": "Simple"
     },
     "Favor of Nature": {
-      "Description": "",
+      "Description": "Yours is the power to bless or blight, granting or withholding\nthe nature’s favor at your whim. This Boon can be\nused on a contiguous piece of land that is recognized as\na single locale by human reckoning — “the Hampstead\nFarm” or “this forest” would be valid targets, but “the 312\nacres of land around me” would not. pg 250",
       "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Subject": "One piece of land or one family",
+      "Range": "Close",
+      "Action": "Simple"
     },
     "Hand of Blight": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Description": "Invoking the negative aspects of Fertility, you afflict\nyour target with a curse of uncontrolled growth,\ncausing them to develop spontaneous cancers and\nmalignant growths. They suffer the Blighted Condition,\nadding +2 Difficulty on all physical actions they\nattempt. Resolving this Condition requires magical\nhealing or extensive mundane treatment such as a\ncourse of chemotherapy. This Boon can be used to\ntarget multiple trivial characters within range for free. At your option, trivial targets may die on the spot from\nagonizingly rapid cancerous growth over the course\nof the scene.",
+      "Duration": "Condition",
+      "Subject": "One character",
       "Range": "Medium",
-      "Action": "Complex"
+      "Action": "Simple"
     }
   },
   "Fire": {
-    "Innate Power": "",
+    "Innate Power": "You and your personal belongings\ncannot take damage or suffer any form of harm from fire,\nheat, or smoke inhalation. You can walk through wildfires\nor industrial microwaves unharmed, swim in magma for as\nlong as you can hold your breath, and perform similar feats of\nfireproof heroism. Extreme cold is likewise harmless to you.",
     "Eternal Flame": {
-      "Description": "",
+      "Description": "You imbue a fire with a spark of your divine power,\nmaking it a part of yourself. The flame expands,\nspreading out to the size of a large campfire if smaller.\nIt burns indefinitely without needing additional fuel\nand can’t be extinguished by non-magical means. As\na Simple action, you can extend your senses through\nthe fire, letting you see, hear, and smell things as\nthough you were there. Previous uses of this Boon end\nif you use it to bless a new fire.",
       "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Subject": "One Fire",
       "Range": "Medium",
-      "Action": "Complex"
+      "Action": "Simple"
     },
     "Heaven's Fire": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You gain the ability to attack enemies with fire. Each\nScion can choose a unique manifestation of Fire for\ntheir attack: throwing firebolts, heat ray vision, or triggering\nspontaneous combustion with an incantation or\na finger snap. You can make these attacks as Simple\nactions for the scene, rolled with Athletics + Dexterity.\nThey have the Aggravated, Ranged, and Pushing\ntags.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Action": "Reflexive"
     },
     "Muse of Fire": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You inspire another character with flames of enlightenment\nand creativity. The next Cunning, Presence,\nor Intellect roll they make gains Enhancement 3.\nHowever, if they don’t find the opportunity to make\nan applicable roll before the end of the scene, the\ninner fire overwhelms them, imposing a Condition that\nraises the difficulty of any Social or Mental actions\nby 1 unless that character is completely open and\nhonest about everything on their mind. Expressing\na deeply personal truth, a potentially provocative\nopinion, or something similarly inflammatory resolves\nthe Condition.",
+      "Duration": "One scene or Condition",
+      "Subject": "One character",
+      "Range": "Short",
+      "Action": "Simple"
     }
   },
   "Forge": {
-    "Innate Power": "",
+    "Innate Power": "Your handiwork is infallible. Whenever\none of your craft projects would suffer Flaws due to the\nComplications of delicate work or any other source, subtract\none point from the total amount of Flaws, down to a minimum\nof 0.",
     "Celestial Artifice": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You lower the Tier of a crafting project (Scion:\nOrigin, p. 76) by 1. This doesn’t let you undertake\nprojects of a Tier you normally couldn’t accomplish.",
+      "Duration": "Until project is completed",
+      "Subject": "Self",
+      "Action": "Reflexive"
     },
     "Reclaim from Ruin": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You can repair an item no matter how badly it is ruined.\nYou can recreate items from their remains alone,\nup to the level of outright reversing entropy — reconstructing\na burnt book from a pile of ashes, repairing\na sword melted to slag by a dragon’s fiery breath, or\nretrieving files from a hard drive that’s been through a\nnuclear detonation.",
+      "Duration": "Until project is completed",
+      "Subject": "Self",
+      "Action": "Reflexive"
     },
     "While the Iron is Hot": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "Where others see a box of scraps, you see potential.\nAdd Enhancement 3 on a roll to jury-rig a craft\nproject. You can roll to rig together contraptions that\na mortal would normally be unable to attempt due to\nfeasibility constraints. As long as it is notionally possible\nthat you could complete the project with (Legend)\ndays of ordinary work, you can roll to attempt it.",
+      "Duration": "Instant",
+      "Subject": "Self",
+      "Action": "Reflexive"
     }
   },
   "Fortune": {
-    "Innate Power": "",
+    "Innate Power": "You can sense the presence of\nFatebindings when you interact with someone. If you later\nmeet the other “half” of a binding that you have already\nsensed, you can tell the two characters are bound together.\nYou can also sense when a Prophet or Sorcerer manipulates\nFate with their Knacks or other powers, identifying them\nas the one responsible even if the effect cannot normally be\nperceived.",
     "Divination": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Description": "You divine a character’s luck in the near future. Out of\ncharacter, you decide whether they will enjoy good\nor suffer bad luck as a Condition. Once per scene,\nbefore that character makes a roll, you can declare\nthat their luck intervenes — good luck lowers the\ntarget number by 1, while bad luck increases it by 1. You can invoke their luck even if your character is not\nin the scene. A character’s good luck runs out once this benefit has\nbeen applied a total of your (Legend + 1) times. Bad\nluck runs out at the end of a scene where a failure on\nthe penalized roll led to significant consequences, or\nif the victim accepts a botch offered by the Storyguide\non any action.",
+      "Duration": "Condition",
+      "Subject": "One character",
       "Range": "Medium",
-      "Action": "Complex"
+      "Action": "Simple"
     },
     "Fateful Connection": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You invoke the Fatebinding of a character tied to you\nto cause them to appear in the narrative and provide\na benefit based on their Fatebinding role without it\ncounting against the usual once per episode limit.\nSynchronicity arranges for that character to be near\nenough to arrive rapidly with a completely plausible\nexplanation — maybe they’re visiting their family, or\nstalking you, or their plane had to make an emergency\nlanding nearby. If the Storyguide agrees, this can even\nbring characters into Terra Incognitae and other realms\nof existence (maybe they tripped through a portal).",
+      "Duration": "Instant",
+      "Subject": "One character Fatebound to you",
+      "Range": "Infinite",
+      "Action": "Simple"
     },
     "Nine Lives": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "Your luck is strong enough to survive impossible\naccidents and deadly firefights. You add +1 Defense\nagainst attacks and have Enhancement 2 on any roll\nwhere you could suffer physical harm as a direct result\nof failing it.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Action": "Simple"
     }
   },
   "Frost": {
