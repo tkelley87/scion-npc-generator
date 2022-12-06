@@ -88,6 +88,5 @@ def main():
         character_profile["Creature Type"] = random_with_list(creature_list)
     character_profile["Stats"] = npc_base_stats[npc_type]
     character_profile["Qualities"] = qualities_list["Combat"][random.randint(0, len(qualities_list["Combat"])-1)]
-    character_profile["Flairs"] = flairs_list["Villain"][random.randint(0, len(flairs_list["Villain"])-1)]
     print(character_profile)
     return character_profile

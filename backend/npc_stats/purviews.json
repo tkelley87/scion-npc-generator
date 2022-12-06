@@ -1,0 +1,758 @@
+{
+  "Artistry": {
+    "Innate Power": "",
+    "Enthralling Performance": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Heartfelt Expression": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Muse's Kiss": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Beasts": {
+    "Innate Power": "",
+    "Animal Aspect": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Leader of the Pack": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Tooth and Claw": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Beauty": {
+    "Innate Power": "",
+    "Draw Back the Mask": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Lasting Impression": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Visage Great and Terrible": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Chaos": {
+    "Innate Power": "",
+    "Hornet's Nest": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "No Masters": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Overwhelming Chaos": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Darkness": {
+    "Innate Power": "",
+    "Blinding Veil": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Dream Weaver": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Night's Caress": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Death": {
+    "Innate Power": "",
+    "Unquiet Dead": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "The Way of All Flesh": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Your Fault": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Deception": {
+    "Innate Power": "",
+    "Ephemera": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "False History": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Walk Unnoticed": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Earth": {
+    "Innate Power": "",
+    "Shaping Hand": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Skin Like Stone": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Stony Heart": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Epic Dexterity": {
+    "Innate Power": "",
+    "The Falling Star": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Heavenly Stride": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Unerring Flight": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Epic Stamina": {
+    "Innate Power": "",
+    "Adamant Body": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Put Your Back Into It": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Unbreakable": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Epic Strength": {
+    "Innate Power": "",
+    "Heavy Lifter": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "A World of Glass": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Pistons for Fists": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Fertility": {
+    "Innate Power": "",
+    "Blessed Harvest": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Favor of Nature": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Hand of Blight": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Fire": {
+    "Innate Power": "",
+    "Eternal Flame": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Heaven's Fire": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Muse of Fire": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Forge": {
+    "Innate Power": "",
+    "Celestial Artifice": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Reclaim from Ruin": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "While the Iron is Hot": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Fortune": {
+    "Innate Power": "",
+    "Divination": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Fateful Connection": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Nine Lives": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Frost": {
+    "Innate Power": "",
+    "Cooler Heads": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Flash Freeze": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Glacial Pace": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Health": {
+    "Innate Power": "",
+    "Healing Hands": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Flawless Diagnosis": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Master of Disease": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Journeys": {
+    "Innate Power": "",
+    "Chariot of the Gods": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Here There Be Dragons": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Unbarred Passage": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Moon": {
+    "Innate Power": "",
+    "Enchanting Evening": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Phase Cloak": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Three-Faced Moon": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Order": {
+    "Innate Power": "",
+    "Code of Heaven": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Divine Right": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Nothing but the Truth": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Passion": {
+    "Innate Power": "",
+    "Blurt it Out": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Irresistible Impulse": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Tugging at Heartstrings": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Prosperity": {
+    "Innate Power": "",
+    "All that Glitters": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Blessed Wealth": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Divine Providence": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Sky": {
+    "Innate Power": "",
+    "Bolt from the Blue": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Flight": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Voice of Seven Thunders": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Stars": {
+    "Innate Power": "",
+    "Cosmic Perspective": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Guiding Star": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Starry Path": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Sun": {
+    "Innate Power": "",
+    "Blinding Glory": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Hope Reborn": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Penetrating Glare": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "War": {
+    "Innate Power": "",
+    "Herald of Victory": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Marching Orders": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Understanding the Battlefield": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Water": {
+    "Innate Power": "",
+    "Changing Tides": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Reborn in the Depths": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Sink Hopes": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  },
+  "Wild": {
+    "Innate Power": "",
+    "Call of the Wild": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Lay of the Land": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    },
+    "Overgrowth": {
+      "Description": "",
+      "Duration": "Indefinite",
+      "Subject": "All characters",
+      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Range": "Medium",
+      "Action": "Complex"
+    }
+  }
+}

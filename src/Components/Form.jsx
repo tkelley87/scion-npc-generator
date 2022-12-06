@@ -6,7 +6,7 @@ import APIService from "../Components/APIService";
 const Form = (props) => {
   // State
   const [pantheon, setPantheon] = useState("norse");
-  const [type, setType] = useState("mook");
+  const [type, setType] = useState("Mook");
   const [human, setHuman] = useState("yes");
   const [nameGeneric, setNameGeneric] = useState("yes");
 
@@ -36,8 +36,8 @@ const Form = (props) => {
           Type
         </label>
         <select onChange={(e) => setType(e.target.value)}>
-          <option value="mook">Mook</option>
-          <option value="professional">Professional</option>
+          <option value="Mook">Mook</option>
+          <option value="Professional">Professional</option>
         </select>
 
         <label htmlFor="human" className="form-label">
