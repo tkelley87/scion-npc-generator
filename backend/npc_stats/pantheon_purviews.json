@@ -1,202 +1,172 @@
 {
   "norse": {
     "Name": "Wyrd",
-    "Innate Power": "",
+    "Innate Power": "You have a personal fate that you know you are destined to meet. This might be a death whose circumstances mirror those of your divine parent’s fated doom in Ragnarok, a betrayal by those closest to you, the failure of an ambition, or some similar dramatic downfall. Whenever you encounter narrative difficulties that advance your fate or echo its circumstances, or because you are trying to avoid your fate, add 1 Momentum to the pool.",
     "Cast the Runes": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
+      "Description": "Once per session, you may perform a divination by casting runes etched onto stones, strips of bark, or other objects in a ritual that takes a handful of minutes to complete. The Storyguide gives you a lead or a clue about what will happen in the near future (i.e. what they expect to happen in the current session). If you use a Boon or marvel later in the same session, and the Storyguide agrees that it will help in bringing about the foretold events, you may draw on the divination to waive the cost of imbuing or spending a single point of Legend. Each use of this Boon only provides this benefit once.",
+      "Duration": "One Session",
       "Action": "Complex"
     },
     "Spin the Thread": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
+      "Description": "You use the art of seiðr to lay a blessing or curse on another character, entering into a ritual trance that lasts one scene and envisioning their future. You predict a specific triumph or downfall the character will face, and impose a Condition that represents this destiny on them. If an action is likely to bring about the foretold fate, the Condition provides Enhancement 2. Actions that struggle against this destiny have their Difficulty increased by 1, or by 2 if they would make it outright impossible for it to come to fruition. These effects cut both ways — a blessing might make it more difficult for a warrior to undertake a plan if it would lead to his defeat, while a curse might give a foe an Enhancement on actions that lead to their downfall. This Condition resolves once the outcome you have predicted comes to pass, the Storyguide deems that it is no longer capable of being fulfilled, or you reclaim the Legend imbued in this Boon. It can also be lifted by magic capable of altering destiny, such as marvels of this Purview or the Fortune Purview.",
+      "Duration": "Condition",
+      "Subject": "One character",
+      "Range": "Infinite",
       "Action": "Complex"
     }
   },
   "deva": {
     "Name": "Yoga",
-    "Innate Power": "",
+    "Innate Power": "Once per scene, when you act selflessly despite hardships in order to uphold a duty or serve someone else, you may allow another player to spend Momentum on an action without having to draw on one of their Virtues. Every point of Momentum they spend also adds another free die, as though they had the Virtuous Condition.",
     "Devotion's Reward": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
+      "Description": "You call upon the power of a Devá through an act of devotion that lasts at least a scene: undergoing austerities, putting on an artistic performance, making sacrificial offerings pleasing to the God (even one’s own limbs), or performing some other passionate act of devotion. You may choose to gain a specific power or make an open-ended request for a Devá’s favor. If you make a specific request, you must contend with a limitation imposed its use by the Devá — a gift of invulnerability might apply against Gods, Titans, and their progeny, but not against mortals, while a loaned weapon might cease to work if you treat a child with less than full respect. If you make an open-ended request, the Storyguide chooses the power you receive, but it carries no restrictions. Usually, power granted by a Devá comes in the form of one of their Purviews’ Boons, one of their Callings’ knacks, or the temporary usage of one of their Relics, all of which last for one session. The Storyguide can also offer customized blessings. You can’t gain a power beyond your ability to learn normally, such as a God Boon while you are only a Hero. This Boon can also be used to call upon the favor of an asura (i.e. a Titan that possesses one of the Devá Pantheon Virtues). At the Storyguide’s discretion, it is possible to gain the favor of Gods and Titans from other pantheons with this Boon, although you may need to research what would please them or convince them to reciprocate your devotion.",
+      "Duration": "One Session",
+      "Subject": "Self",
       "Action": "Complex"
     },
     "Eyes of Knowledge": {
-      "Description": "",
+      "Description": "Ask the Storyguide one of the following questions about a God, Scion, Titan, titanspawn, or other divine being you can see: • What do they intend to do? • How are they really feeling? • What do they wish I’d do? • How could I get them to do [a certain thing]? The Storyguide should try to give this answer in the form of a spontaneous, in-character poetic speech, villainous monologue, or other form of expository dialogue by the character in question (but they can just give you the answer out of character if that’s too much work). Following whatever guidance this reveals provides Enhancement 3 on applicable rolls for the duration of this Boon.",
       "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Subject": "Self",
+      "Action": "Simple"
     }
   },
   "kami": {
     "Name": "Yaoyorozu-No-Kamigami",
-    "Innate Power": "",
+    "Innate Power": "You can speak with the kami of objects and animals, allowing you to communicate and attempt to influence them. They have Attitude 2 towards you by default. The kami of objects have a limited degree of agency, primarily taking unrolled actions to do things the object might have done anyway. Sweet talking the kami of a car could convince it to start without keys, but not to drive around by itself.",
     "Appeasing the Kami": {
-      "Description": "",
+      "Description": "You entreat the kami of an object with a show of respect and decorum. The object’s Enhancement is increased by one point when you or an ally uses it. When an enemy uses it, they face a +2 Complication. Failure to buy off the Complication causes the object to “misbehave,” avoiding causing harm or disadvantage to you.",
       "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Subject": "One Object",
+      "Range": "Short",
+      "Action": "Simple"
     },
     "The Watchful Spirit": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You can ask the kami of an object or animal to watch for intruders, keep a lookout for a specific person or event, or perform some other passive task. Once the kami finds what it is looking for or otherwise completes its task, it can notify you regardless of distance, either whispering into your ear or sending a divine portent. This warning or sign can provide +2 Enhancement if it benefits an action. If you use this Boon again before the watchful kami has completed its task, its duty is discharged and the previous use of this Boon ends.",
+      "Duration": "Until task is completed",
+      "Subject": "One Kami",
+      "Range": "Close",
+      "Action": "Simple"
     }
   },
   "orisha": {
     "Name": "Cheval/Gun",
-    "Innate Power": "",
+    "Innate Power": "You can tell whether any mortal you see is possessed by a spirit or deity and identify the nature of the possessing entity. You can attempt to drive out a possessing enemy with a Clash of Wills using Presence + Legend against its Resolve + Legend.",
     "Dance with the Divine": {
-      "Description": "",
+      "Description": "You invite one of the Gods of your pantheon to share your body at the end of a scene-long ritual. You choose one of the God’s Purviews, gaining access to its innate powers and marvels. Alternatively, you can invite possession by one of your ancestor spirits — called égún by the Òrìshà and ghede by the Loa — to gain the benefits of having them as a Guide. In exchange, the spirit can experience the World vicariously through you, although they won’t actually interfere with your control over your body. You can only end this Boon once the spirit is ready to leave you. They never overstay their welcome out of malice, but some will press for just one more meal or one last smoke. The usual method for dealing with these spirits is to go off somewhere calm and quiet with a priest (or one of your bandmates, in a pinch), who can politely ask them to depart.",
       "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
+      "Subject": "Self",
       "Action": "Complex"
     },
     "Mounting the Horse": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You send a part of your spirit and consciousness into the body of a mortal who’s willing to share. You can use their senses to experience the world, dictate their actions, and even use your Boons and knacks through them. The mortal remains aware of what’s going on, and can communicate mentally with you. You retain consciousness and control of your body while possessing someone else, and can take actions through either body, sometimes simultaneously: If you’re wrestling a rival Scion while guiding a possessed mortal through a first date, you’ll need to roll for both of them as a mixed action. This Boon can be used with infinite range — even across realms of existence — if the target is Fatebound to you or is a member of your cult and invites you in with a scene-long ritual.",
+      "Duration": "One Day",
+      "Subject": "One Willing Mortal Character",
+      "Range": "Long",
+      "Action": "Simple"
     }
   },
   "monitou": {
     "Name": "Dodaem",
-    "Innate Power": "",
+    "Innate Power": "Once each scene, you can ask a manitou for its favor as a simple action. It grants Enhancement 3 on relevant rolls for the scene, such as those to hunt a bear or pass through a forest safely. In exchange, it will either ask you for a favor (e.g. the bear’s manitou needs a new charge after the hunt) or impose a restriction (e.g. the forest manitou forbids you from harming living things). You lose the Enhancement if you don’t honor the bargain, and the offended manitou may favor your foes until you make amends with it.",
     "Dream Quest": {
-      "Description": "",
+      "Description": "As you sleep, your dodaem manitou shows you meaningful visions. Ask the Storyguide one of the following questions: • Where do I need to be? • What should I be on the lookout for? • What is the cause of this problem? • What is disturbing the dodaem manitou of this area? Following the Storyguide’s answer provides Enhancement 3 on actions that help get you to where you need to be in order to do what you must, but not on rolls to actually do it. If your dreams show you that you must slay a wendigo, the Enhancement would apply on rolls to investigate its victims and track it down, but not to do battle with it.",
       "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
+      "Subject": "Self",
       "Action": "Complex"
     },
     "Sacred Medicine": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
+      "Description": "You tend to someone’s physical, mental, or spiritual health by appealing to their dodaem manitou in a scene-long ritual. This can resolve any Condition that character is currently suffering from, including Injury Conditions. However, in exchange for the manitou’s aid, it will request a favor from or impose a restriction on either you or that character (if that character is a PC, the responsibility is almost always on them). Failure to abide by this request either causes the cured ailment to return in full force, or imposes a Condition that represents the manitou’s disfavor.",
+      "Duration": "Instant",
+      "Subject": "One character",
+      "Range": "Close",
       "Action": "Complex"
     }
   },
   "netjar": {
-    "Name": "Wyrd",
-    "Innate Power": "",
+    "Name": "Heku",
+    "Innate Power": "You hold power over those whose ren, or true name, you know. For most mortals, this is their full given name, while the ren of mythical beings, cautious occultists, or Gods require more extensive research or subterfuge to uncover. Knowledge of a character’s ren grants Enhancement 2 on rolls to gain knowledge or understanding of them.",
     "Ren Harvest": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "As your name spreads across mortal lips and thoughts, your Legend grows. Once per session, when you hear someone talk about you by name and describe your exploits, you gain 1 Legend. Reading a published written description of your exploits that attributes them to you by name in a newspaper, blog, or other similar document can also trigger this reward. In order for you to use Ren Harvest, the speaker or writer must be praising you out of genuine awe or admiration. Attempting to coerce or trick someone into praising you won’t trigger it.",
+      "Duration": "Instant",
+      "Subject": "Self",
+      "Action": "Reflexive"
     },
     "Sekhem Blaze": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
+      "Description": "You manifest the power and energy of your living soul as a brilliant light shining in your eyes, exerting your dominance over all you behold. The target must either flee from, or is cowed into submission and ceases hostilities — your choice. If you know their ren, you treat their Attitude as two points higher for the rest of the scene. This does not stack with other magical Attitude bonuses.",
+      "Duration": "One Scene",
+      "Subject": "One character",
+      "Clash": "Presence + Legend vs. Resolve + Legend",
       "Range": "Medium",
-      "Action": "Complex"
+      "Action": "Simple"
     }
   },
   "shen": {
     "Name": "Tianming",
-    "Innate Power": "",
+    "Innate Power": "You ignore all Complications from bureaucratic delay, corrupt officials, missing paperwork, long lines at the DMV, or similar obstacles that impede the right functioning of bureaucratic and official institutions.",
     "Celestial Promotion": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You name yourself or another with a title imbued with the authority of heaven: “Great Sage, Equal to Heaven,” “Protector of Dogs,” “That One God No One Likes,” or something similar. The bestowed title is a Condition. The target’s title is self-evident to anyone who meets him, and people who need aid related to the title’s duties will tend to come to them for help. The title provides Enhancement 2 on rolls to influence characters or form plans whenever the target is able to take advantage of it, but imposes Complication 2 where it incurs the displeasure of those they’re working with — cats don’t like the Protector of Dogs, and no one likes That One God No One Likes. A character who finds their title disagreeable can resolve this Condition by undertaking a dramatic action that carries significant potential consequences in the service of their title’s duties, finally releasing themselves from its obligations. A spurned lover named “King of the Poorly Endowed Assholes” might resolve the Condition by rounding up a gang of fellow assholes and establishing authority over them with shows of strength and intimidation. If the Scion recovers the Legend imbued in this Boon, the Condition also resolves.",
+      "Duration": "Condition",
+      "Subject": "Self or One Character",
+      "Range": "Short",
+      "Action": "Simple"
     },
     "Vermillion Tape": {
-      "Description": "",
+      "Description": "You place a curse on a bureaucracy or similarly structured organization from within range of either its leader or its headquarters. Any member of the organization conducting its official business faces a +4 Complication. If the Complication is not bought off, the task either takes significantly longer than intended — enough that it occurs narratively “too late” — or it turns out to be misunderstood, resulting in an end product or accomplishment that is not what the character originally intended. When you use this Boon, you can specify a behavior, such as holding weekly prayer rituals or wearing fancy suits, that lets a character ignore this Complication.",
       "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Subject": "One Organization",
+      "Range": "Long",
+      "Action": "Simple"
     }
   },
   "teotl": {
     "Name": "Nextlahualli",
-    "Innate Power": "",
+    "Innate Power": "Each time you gain Legend from sacrifice, add 1 Momentum to the pool. Whenever you helping mortals who have sacrificed to you directly or the Teōtl causes narrative difficulties for you, you also add 1 Momentum to it.",
     "Flesh of the World": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "Sacrifice sustains your vital essence as well as your Legend. Once per session, when you receive Legend from a major sacrifice, you may resolve a single Condition affecting you. Additionally, you can survive off sacrifice alone, ignoring any harm or Complications from starvation, dehydration, or suffocation in a session where you have received at least 1 Legend from sacrifice.",
+      "Duration": "Instant",
+      "Subject": "Self",
+      "Action": "Reflexive"
     },
     "Repay the Debt": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "Whenever a mortal makes a sacrifice to one of the Teōtl or directly to you within (Legend x 25) miles or at one of your Sanctums, you become aware of their identity and their reason for the offering. You can answer the request by using a Boon or marvel, extending its range to the location of the sacrifice. Once per session, you may reduce the cost of a Boon or marvel used in response to a sacrifice by one point of imbued or spent Legend.",
+      "Duration": "Instant",
+      "Action": "Reflexive"
     }
   },
   "theoi": {
     "Name": "Metamorphosis",
-    "Innate Power": "",
+    "Innate Power": "Your mutable nature lends itself to disguise. When you conceal your identity by any means, trivial characters automatically fail to see through your deception. When you roll to disguise yourself or present yourself as someone else, you ignore any Complications from changing height, size, race, sex, or even species.",
     "Change Shape": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You take on a form that is symbolically associated with one of your other Purviews. For example, Zeus drew on the associations of the Sky Purview to become all sorts of birds, a shower of gold, and a bull (which sounds a great deal like thunder, up close). This transformation is perfect in the details and undetectable through non-magical means, but doesn’t alter any of your Attributes, Skills, or other traits. However, depending on the form you assume, you can gain the following benefits: • +1 Scale on all actions with a single Physical Attribute of your choice • Any special forms of movement that shape possesses. • Any natural attacks that shape possesses. • Any miscellaneous abilities the Storyguide decides the shape should have, like a cloud being able to rain.",
+      "Duration": "One Scene",
+      "Subject": "Self",
+      "Action": "Simple"
     },
     "Transfigure": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You transform another character into an animal or a similar animate form, as long as it does not completely prevent a character from acting (like being turned into stone) or effectively kill them (like being turned into a fish on dry land). Using this Boon on trivial characters is free, and they can be turned into trees, statuary, or other forms that incapacitate them. Transformed characters retain their normal traits, but face Complications if they attempt a task their form is unsuited to: using a computer keyboard as a chimpanzee faces a +1 Complication, while firing a machine gun as a dog incurs a +4 Complication. The advantages of the character’s new form, such as a dog’s sense of smell, can provide Enhancement 1-3 on actions they apply to. At the end of this Boon, Scions and other characters with Legend 1+ instantly revert to their true form. Mortals gain the Transformed Condition, which they must be resolved through magic before they return to normal. Trivial targets can be transformed permanently.",
+      "Duration": "Instant",
+      "Subject": "One character",
+      "Clash": "Cunning + Legend vs. Resolve + Legend",
+      "Range": "Short",
+      "Action": "Simple"
     }
   },
   "tuatha": {
     "Name": "Geasa",
-    "Innate Power": "",
+    "Innate Power": "You are under a geis. If you break it or otherwise resolve the Condition, the Storyguide should arrange for you to fall under another — either from a Tuatha or fellow Scion, one of the sidhe, the biting words of a poet, or simply mythic circumstance. You take on a second such geis upon becoming a Demigod, and a third upon becoming a God.",
     "Lay Geis": {
-      "Description": "",
-      "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Description": "You place a geis on another character, speaking to them to explain the prohibition or obligation they must now obey. The only limitation on the geis is that the target must be capable of upholding it at the time you place it — if someone’s currently wearing a red shirt, you can’t geis them not to wear red. You regain the Legend spent on this Boon once the geis is broken.",
+      "Duration": "Condition",
+      "Subject": "One character",
+      "Range": "Short",
+      "Action": "Simple"
     },
     "Tongue of the Bard": {
-      "Description": "",
+      "Description": "Your bard’s tongue speaks of a character’s prowess and deeds. Ask the Storyguide one of the following questions about a character you can see: • What is this character’s lineage (mortal and divine)? • What is a geis they are under? • What is a Deed they are best known for, are currently working on, or want to hide? • What is a Quality or Knack that they possess? In order to receive the answer, you must speak it aloud. The Storyguide gives you an answer in the form of a speech or poem that you can perform. This information grants Enhancement 3 to any actions that benefit from it. Discovering that a good-looking stranger in a bar is descended from the Theoi would give an Enhancement on a roll to work out which of the Gods he is descended from, but not on a roll to impress him with a pick-up line. Against trivial targets, you may use this Boon for free.",
       "Duration": "Indefinite",
-      "Subject": "All characters",
-      "Clash": "Presence + Legend vs. Composure + Legend",
-      "Range": "Medium",
-      "Action": "Complex"
+      "Subject": "One character",
+      "Action": "Simple"
     }
   }
 }
