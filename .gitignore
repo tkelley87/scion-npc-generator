@@ -24,5 +24,9 @@ yarn-error.log*
 venv
 
 .vscode/*
+.vscode
 backend/venv
 backend/__pycache__
+backend/config.py
+dynamo
+dynamo/*

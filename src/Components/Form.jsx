@@ -9,11 +9,16 @@ const Form = (props) => {
   const [type, setType] = useState("Mook");
   const [human, setHuman] = useState("yes");
   const [nameGeneric, setNameGeneric] = useState("yes");
+  const [currentNpc, setCurrentNpc] = useState("");
 
-  const insertArticle = () => {
-    APIService.InsertForm({ pantheon, type, human, nameGeneric })
-      .then((response) => props.insertedArticle(response))
-      .catch((error) => console.log("error", error));
+  const insertArticle = async () => {
+    try {
+      let response = await APIService({ pantheon, type, human, nameGeneric });
+      props.insertedArticle(response);
+      setCurrentNpc(response.id);
+    } catch (e) {
+      console.log("error", e);
+    }
   };
 
   const handleSubmit = (event) => {
@@ -58,6 +63,8 @@ const Form = (props) => {
 
         <button className="btn btn-primary mt-2">Submit</button>
       </form>
+      {/* Remove below div when done */}
+      <div>id:{currentNpc}</div>
     </>
   );
 };

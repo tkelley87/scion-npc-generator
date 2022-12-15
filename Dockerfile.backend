@@ -1,0 +1,19 @@
+# This Dockerfile builds the Backend only.
+
+FROM python:3.9
+WORKDIR /app
+
+COPY backend/requirements.txt backend/base.py backend/.flaskenv \
+backend/config.py backend/controller.py ./
+COPY backend/creatures_folder ./creatures_folder
+COPY backend/names_folder ./names_folder
+COPY backend/npc_stats ./npc_stats
+RUN pip install -r ./requirements.txt
+# RUN cd /usr/local/bin
+# ARG aws_access_key_id dummy
+# ARG aws_secret_access_key dummy
+# ARG default.region dummy
+ENV FLASK_ENV production
+
+EXPOSE 5005
+CMD ["gunicorn", "-b", ":5000", "base:app"]
