@@ -75,24 +75,24 @@ def main():
         name_list = file_list_into_var(
             "names_folder/{}_{}_names.txt".format(given_pantheon, gender), "txt"
         )
-    character_profile["Name"] = random_with_list(name_list)
-    character_profile["Gender"] = gender
-    character_profile["Traits"] = random_with_list(
+    character_profile["name"] = random_with_list(name_list)
+    character_profile["gender"] = gender
+    character_profile["traits"] = random_with_list(
         traits_data_into_list, selected_count=3
     )
-    character_profile["Drive"] = random_with_list(drives_data_into_list)
-    character_profile["Pantheon"] = given_pantheon
-    character_profile["Attitude towards player"] = random_with_list(
+    character_profile["drive"] = random_with_list(drives_data_into_list)
+    character_profile["pantheon"] = given_pantheon
+    character_profile["attitude_towards_player"] = random_with_list(
         attitude_list, weighting=(2, 4, 10, 20, 30, 15, 30, 20, 10, 4, 2)
     )
     if human == "yes":
-        character_profile["Apart of Cult?"] = random_with_list(
+        character_profile["apart_of_cult?"] = random_with_list(
             cult_types, weighting=(2, 20, 3, 20, 10, 15, 40, 40, 150)
         )
     else:
-        character_profile["Creature Type"] = random_with_list(creature_list)
-    character_profile["Stats"] = npc_base_stats[npc_type]
-    character_profile["Qualities"] = qualities_list["Combat"][
+        character_profile["creature_type"] = random_with_list(creature_list)
+    character_profile["stats"] = npc_base_stats[npc_type]
+    character_profile["qualities"] = qualities_list["Combat"][
         random.randint(0, len(qualities_list["Combat"]) - 1)
     ]
 
@@ -104,23 +104,14 @@ def main():
     return {"msg": "Some error occurred", "response": response}
 
 
-@app.route("/npc/<id>", methods=["GET"])
+@app.route("/api/npc/<id>", methods=["GET"])
 def get_npc(id):
     response = dynamodb.get_npc_gen_by_id(id)
     if response["ResponseMetadata"]["HTTPStatusCode"] == 200:
         if "Item" in response:
-            return {"npc": response["Item"]}
+            return {"npc": [response["Item"]]}
         return {"msg": "Item not found!"}
     return {"msg": "Some error occurred", "response": response}
-
-
-# @app.route("/")
-# def getTable():
-#     try:
-#         dynamodb.create_table_npc_gen()
-#         return {"msg": "Table has been created for you."}
-#     except:
-#         return {"msg": "Table already exist."}
 
 @app.before_first_request
 def getTable():
@@ -131,14 +122,5 @@ def getTable():
     except:
         return {"msg": "Table already exist."}
 
-# @manager.command
-# def run_server():
-#     getTable()
-#     app.run()
-
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
-#     # manager.run()
-#     # manager.run(FLASK_DEBUG=1, host="0.0.0.0", port=5000)
-#     print(f'{app} is running.')
-#     app.run()

@@ -1,7 +1,8 @@
 // React
 import { useState } from "react";
 // Component imports
-import APIService from "../Components/APIService";
+import { postBody } from "../Components/APIService";
+import NpcTable from "./NpcTable";
 
 const Form = (props) => {
   // State
@@ -13,7 +14,7 @@ const Form = (props) => {
 
   const insertArticle = async () => {
     try {
-      let response = await APIService({ pantheon, type, human, nameGeneric });
+      let response = await postBody({ pantheon, type, human, nameGeneric });
       props.insertedArticle(response);
       setCurrentNpc(response.id);
     } catch (e) {
@@ -65,6 +66,7 @@ const Form = (props) => {
       </form>
       {/* Remove below div when done */}
       <div>id:{currentNpc}</div>
+      <NpcTable currentNpc={currentNpc} />
     </>
   );
 };
