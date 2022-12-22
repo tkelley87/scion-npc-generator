@@ -86,7 +86,7 @@ def main():
         attitude_list, weighting=(2, 4, 10, 20, 30, 15, 30, 20, 10, 4, 2)
     )
     if human == "yes":
-        character_profile["apart_of_cult?"] = random_with_list(
+        character_profile["apart_of_cult"] = random_with_list(
             cult_types, weighting=(2, 20, 3, 20, 10, 15, 40, 40, 150)
         )
     else:
@@ -109,7 +109,8 @@ def get_npc(id):
     response = dynamodb.get_npc_gen_by_id(id)
     if response["ResponseMetadata"]["HTTPStatusCode"] == 200:
         if "Item" in response:
-            return {"npc": [response["Item"]]}
+            # print(response["Item"][0])
+            return response["Item"]["npc"]
         return {"msg": "Item not found!"}
     return {"msg": "Some error occurred", "response": response}
 
