@@ -149,8 +149,8 @@ def main():
         sorcery_value = sorcery_list[sorcery_key]
         character_profile["Sorcery"] = {sorcery_key: sorcery_value}
     for quality in character_profile["Qualities"]:
-        if "Base Stat Changes" in quality[next(iter(quality))]:
-            stats_changes = quality[next(iter(quality))]["Base Stat Changes"]
+        if "base_stat_changes" in quality[next(iter(quality))]:
+            stats_changes = quality[next(iter(quality))]["base_stat_changes"]
             for item in stats_changes.items():
                 if item[0] in character_profile["Stats"]:
                     character_profile["Stats"][item[0]] += item[1]

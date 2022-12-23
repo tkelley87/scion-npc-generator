@@ -78,5 +78,5 @@ def get_npc_gen_by_id(id):
             "npc",
         ],
     )
-    print('This is response back => ', response["Item"]["npc"])
+    # print('This is response back => ', response["Item"]["npc"])
     return response

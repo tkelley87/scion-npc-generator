@@ -1,69 +1,151 @@
-// import { useEffect, useState } from "react";
-import { List, ListItem, ListItemText } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  Container,
+  Grid,
+  List,
+} from "@mui/material";
 import { useEffect, useState } from "react";
+import Stats from "./Stats";
+import Traits from "./Traits";
+import Qualities from "./Qualities";
+import Flairs from "./Flairs";
+import Drawbacks from "./Drawbacks";
+import Toxic from "./Toxic";
 
 function Npc(props) {
   // State
   const [char, setChar] = useState({});
-  const [quals, setQuals] = useState([]);
-  const [status, setStatus] = useState([]);
+  const [qualities, setQualities] = useState([]);
+  const [stats, setStats] = useState([]);
+  const [traits, setTraits] = useState([]);
+  const [flairs, setFlairs] = useState([]);
+  const [drawbacks, setDrawbacks] = useState([]);
+  const [toxic, setToxic] = useState([]);
 
-  const jsonDOM = (json) => {
-    console.log(`what is json =>`, json);
-    return Object.keys(json).map((key) => {
-      return Object.keys(json[key]).map((child) => {
-        return (
-          <>
-            <ListItemText>{child}</ListItemText>
-            <ListItemText>{json[key][child]}</ListItemText>
-          </>
-        );
-      });
-    });
-  };
   useEffect(() => {
     if (props.npc) {
       setChar(props.npc);
-      setStatus(char.stats);
     }
-    if (char) {
-      console.log(`What is this stats => `, char.stats);
-      for (let key in char.qualities) {
-        console.log(`This is key: ${key}`);
-        console.log(`This is value: ${JSON.stringify(char.qualities[key])}`);
-        setQuals([key, JSON.stringify(char.qualities[key])]);
-        console.log(`quals => `, quals);
-      }
-    }
-  }, [props.npc, char.qualities]);
+  }, [props.npc, char]);
 
   useEffect(() => {
-    if (status) {
-    //   jsonDOM(status);
-        console.log((status))
-    }
-  }, [status]);
+    setToxic([]);
+    if (char) {
 
-  if (!props.npc) return "Loading into the Matrix";
+      if (char["Traits"]) {
+        setTraits([]);
+        setTraits(char["Traits"]);
+      }
+      if (char["Stats"]) {
+        setStats([]);
+        setStats(char["Stats"]);
+      }
+      if (char["Qualities"]) {
+        setQualities();
+        setQualities(char["Qualities"][0]);
+      }
+      if (char["Flairs"]) {
+        setFlairs([]);
+        setFlairs(char["Flairs"][0]);
+      }
+      if (char["Drawbacks"]) {
+        setDrawbacks([]);
+        setDrawbacks(char["Drawbacks"][0]);
+      }
+      if (char["Toxic"]) {
+        setToxic([]);
+        setToxic(char["Toxic"]);
+      }
+    }
+  }, [char]);
+
+  if (!props.npc) return "";
 
   return (
     <>
-      <List>
-        <ListItemText>Apart of Cult?: {char.apart_of_cult}</ListItemText>
-        <ListItemText>
-          Attitude Towards Player: {char.attitude_towards_player}
-        </ListItemText>
-        <ListItemText>Drive: {char.drive}</ListItemText>
-        <ListItemText>Gender: {char.gender}</ListItemText>
-        <ListItemText>Name: {char.name}</ListItemText>
-        <ListItemText>Pantheon: {char.pantheon}</ListItemText>
-        <ListItemText>
-          Qualities: {quals[0]} {quals[1]}
-        </ListItemText>
-        <ListItem></ListItem>
+      <Container sx={{ paddingTop: 12 }}>
+        <Grid container item spacing={3}>
+          <List>
+            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+              <Card>
+                <CardHeader title={"Name: "} />
+                <CardContent>{char["Name"]}</CardContent>
+              </Card>
+            </Grid>
 
-        <ListItemText>Stats: {}</ListItemText>
-      </List>
+            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+              <Card>
+                <CardHeader title={"Gender: "} />
+                <CardContent>{char["Gender"]}</CardContent>
+              </Card>
+            </Grid>
+
+            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+              <Card>
+                <CardHeader title={"Pantheon: "} />
+                <CardContent>
+                  {char["Pantheon"]?.charAt(0).toUpperCase() +
+                    char["Pantheon"]?.slice(1)}
+                </CardContent>
+              </Card>
+            </Grid>
+
+            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+              <Card>
+                <CardHeader title={"Drive: "} />
+                <CardContent>{char["Drive"]}</CardContent>
+              </Card>
+            </Grid>
+
+            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+              <Card>
+                <CardHeader title={"Apart of Cult?: "} />
+                <CardContent>{char["Apart of Cult?"]}</CardContent>
+              </Card>
+            </Grid>
+
+            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+              <Card>
+                <CardHeader title={"Attitude Towards Player: "} />
+                <CardContent>{char["Attitude towards player"]}</CardContent>
+              </Card>
+            </Grid>
+
+            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+              <Stats stats={stats} />
+            </Grid>
+
+            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+              <Qualities qualities={qualities} />
+            </Grid>
+
+            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+              <Drawbacks drawbacks={drawbacks} />
+            </Grid>
+
+            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+              <Flairs flairs={flairs} />
+            </Grid>
+
+            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+              <Traits traits={traits} />
+            </Grid>
+
+            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+              {Object.keys(toxic).length > 0 ? <Toxic toxic={toxic} /> : ""}
+            </Grid>
+
+            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+              <Card>
+                <CardHeader title={"Vulnerability:"} />
+                <CardContent>{char["Vulnerability"]}</CardContent>
+              </Card>
+            </Grid>
+          </List>
+        </Grid>
+      </Container>
     </>
   );
 }
