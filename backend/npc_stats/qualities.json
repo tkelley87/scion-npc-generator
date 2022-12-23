@@ -3,7 +3,7 @@
     {
       "Group Tactics": {
         "Description": "If the leader is taken out, remove this Quality from all other Antagonists under their command. Antagonists with Group Tactics receive +1 Defense, +1 Health, and a +1 Enhancement to any combat action when two or more Antagonists with Group Tactics attack a single target during the same turn.",
-        "Base Stat Changes": {
+        "base_stat_changes": {
           "Defense": 1,
           "Health": 1,
           "Enhancement": 1
@@ -13,7 +13,7 @@
     {
       "Martial Artist": {
         "Description": "Mortal Martial Artists receive a +1 Enhancement to Barehanded Combat. Select a specific weapon, such as a tonfa or a sword. This weapon counts as barehanded for the purposes of this Enhancement. They also receive +1 Defense and +1 Health.",
-        "Base Stat Changes": {
+        "base_stat_changes": {
           "Defense": 1,
           "Health": 1,
           "Enhancement": 1
@@ -28,7 +28,7 @@
     {
       "Sniper": {
         "Description": "However, as a consequence of keeping their enemies at arms’ length, they are somewhat less accustomed to physical punishment, and have −1 Health as a result.  All ranged weapons wielded by Snipers consider their range to be one greater than it actually is.",
-        "Base Stat Changes": {
+        "base_stat_changes": {
           "Health": -1
         }
       }
@@ -36,7 +36,7 @@
     {
       "Super Soldier": {
         "Description": "In any case, a  Super Soldier is an extremely dangerous foe, and likely to be a master of whatever techniques she has devoted herself to. She receives a +1 Enhancement to any Combat  Ability, +1 Armor (choose Hard or Soft), and +2 Health.",
-        "Base Stat Changes": {
+        "base_stat_changes": {
           "Health": 2,
           "Armor": 1,
           "Enhancement": 1
@@ -46,7 +46,7 @@
     {
       "Twitchy": {
         "Description": "The Antagonist’s Initiative Pool receives a +2 Enhancement.",
-        "Base Stat Changes": {
+        "base_stat_changes": {
           "Enhancement": 2
         }
       }
@@ -54,7 +54,7 @@
     {
       "Heavily Armored": {
         "Description": "The Antagonist has +3 Armor. Split this between Hard and Soft Armor.",
-        "Base Stat Changes": {
+        "base_stat_changes": {
           "Armor": 3
         }
       }

@@ -1,7 +1,8 @@
 // React
 import { useState } from "react";
 // Component imports
-import APIService from "../Components/APIService";
+import { postBody } from "../Components/APIService";
+import NpcTable from "./NpcTable";
 
 const Form = (props) => {
   // State
@@ -9,11 +10,18 @@ const Form = (props) => {
   const [type, setType] = useState("Mook");
   const [human, setHuman] = useState("yes");
   const [nameGeneric, setNameGeneric] = useState("yes");
+  const [npcFavoredArena, setNpcFavoredArena] = useState("Combat")
   const [currentNpc, setCurrentNpc] = useState("");
 
   const insertArticle = async () => {
     try {
-      let response = await APIService({ pantheon, type, human, nameGeneric });
+      let response = await postBody({
+        pantheon,
+        type,
+        human,
+        nameGeneric,
+        npcFavoredArena,
+      });
       props.insertedArticle(response);
       setCurrentNpc(response.id);
     } catch (e) {
@@ -61,10 +69,21 @@ const Form = (props) => {
           <option value="no">No</option>
         </select>
 
+        <label htmlFor="npcFavoredArena" className="form-label">
+          NPC Favored Arena
+        </label>
+        <select onChange={(e) => setNpcFavoredArena(e.target.value)}>
+          <option value="Combat">Combat</option>
+          <option value="Social">Social</option>
+          <option value="Combat_focused">Combat Focused</option>
+          <option value="Social_focused">Social Focused</option>
+        </select>
+
         <button className="btn btn-primary mt-2">Submit</button>
       </form>
       {/* Remove below div when done */}
       <div>id:{currentNpc}</div>
+      <NpcTable currentNpc={currentNpc} />
     </>
   );
 };
