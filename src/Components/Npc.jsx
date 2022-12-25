@@ -23,43 +23,58 @@ function Npc(props) {
   const [flairs, setFlairs] = useState([]);
   const [drawbacks, setDrawbacks] = useState([]);
   const [toxic, setToxic] = useState([]);
+  const [vul, setVul] = useState([]);
+  const [human, setHuman] = useState(false);
 
   useEffect(() => {
     if (props.npc) {
+      setChar([]);
       setChar(props.npc);
     }
   }, [props.npc, char]);
 
   useEffect(() => {
-    setToxic([]);
     if (char) {
+      setVul([]);
+      setTraits([]);
+      setStats([]);
+      setQualities([]);
+      setFlairs([]);
+      setDrawbacks([]);
+      setToxic([]);
+      setHuman(false);
 
+      if (char["Human"] === "yes") {
+        setHuman(true);
+      }
+      if (char["Vulnerability"]) {
+        setVul(char["Vulnerability"]);
+      }
       if (char["Traits"]) {
-        setTraits([]);
         setTraits(char["Traits"]);
       }
       if (char["Stats"]) {
-        setStats([]);
         setStats(char["Stats"]);
       }
       if (char["Qualities"]) {
-        setQualities();
-        setQualities(char["Qualities"][0]);
+        setQualities(char["Qualities"]);
       }
       if (char["Flairs"]) {
-        setFlairs([]);
-        setFlairs(char["Flairs"][0]);
+        setFlairs(char["Flairs"]);
       }
       if (char["Drawbacks"]) {
-        setDrawbacks([]);
         setDrawbacks(char["Drawbacks"][0]);
       }
       if (char["Toxic"]) {
-        setToxic([]);
         setToxic(char["Toxic"]);
       }
     }
   }, [char]);
+
+  useEffect(() => {
+    setVul([]);
+    setVul(char["Vulnerability"]);
+  }, [setVul, vul, char]);
 
   if (!props.npc) return "";
 
@@ -83,6 +98,10 @@ function Npc(props) {
             </Grid>
 
             <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+              <Traits traits={traits} />
+            </Grid>
+
+            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
               <Card>
                 <CardHeader title={"Pantheon: "} />
                 <CardContent>
@@ -99,12 +118,16 @@ function Npc(props) {
               </Card>
             </Grid>
 
-            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
-              <Card>
-                <CardHeader title={"Apart of Cult?: "} />
-                <CardContent>{char["Apart of Cult?"]}</CardContent>
-              </Card>
-            </Grid>
+            {human ? (
+              <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+                <Card>
+                  <CardHeader title={"Apart of Cult?: "} />
+                  <CardContent>{char["Apart of Cult?"]}</CardContent>
+                </Card>
+              </Grid>
+            ) : (
+              ""
+            )}
 
             <Grid item sm={12} md={12} sx={{ padding: 1 }}>
               <Card>
@@ -130,19 +153,18 @@ function Npc(props) {
             </Grid>
 
             <Grid item sm={12} md={12} sx={{ padding: 1 }}>
-              <Traits traits={traits} />
-            </Grid>
-
-            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
               {Object.keys(toxic).length > 0 ? <Toxic toxic={toxic} /> : ""}
             </Grid>
-
-            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
-              <Card>
-                <CardHeader title={"Vulnerability:"} />
-                <CardContent>{char["Vulnerability"]}</CardContent>
-              </Card>
-            </Grid>
+            {vul ? (
+              <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+                <Card>
+                  <CardHeader title={"Vulnerability:"} />
+                  <CardContent>{vul}</CardContent>
+                </Card>
+              </Grid>
+            ) : (
+              ""
+            )}
           </List>
         </Grid>
       </Container>
