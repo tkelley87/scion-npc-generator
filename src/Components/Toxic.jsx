@@ -7,12 +7,15 @@ import {
 import { useEffect, useState } from "react";
 
 function Toxic(toxic) {
+    // console.log(`This is toxic => `, toxic.toxic)
   const [toxics, setToxics] = useState([]);
   useEffect(() => {
     if (toxic.toxic) {
-      setToxics(toxic.toxic);
+        setToxics(toxic.toxic);
+        // console.log(toxic)
     }
   }, [toxic.toxic, toxics]);
+
   if (!toxic.toxic) return "";
   return (
     <>
