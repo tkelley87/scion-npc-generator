@@ -2,31 +2,35 @@ import { Card, CardContent, CardHeader, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
 function Drawbacks(drawbacks) {
-  const [draw, setDraw] = useState("");
-  const [description, setDescription] = useState("");
-  const [index, setIndex] = useState(0);
+  const [draw, setDraw] = useState([]);
 
   useEffect(() => {
     if (drawbacks?.drawbacks) {
-      Object.entries(drawbacks.drawbacks).forEach((key, idx) => {
-        setIndex(idx);
-        setDraw(key[0]);
-        setDescription(key[1]["Description"]);
-      });
+      setDraw(drawbacks.drawbacks);
     }
   }, [drawbacks.drawbacks]);
+
+  let results = [];
+  draw.forEach((object, idx) => {
+    let quality = Object.keys(object);
+    quality.forEach((qual) => {
+      let description = object[qual]?.Description;
+      results.push(
+        <CardContent key={idx}>
+          <Typography>{qual}:</Typography>
+          <Typography>{description}</Typography>
+        </CardContent>
+      );
+    });
+  });
 
   if (!drawbacks.drawbacks) return "";
 
   return (
     <>
-      <Card key={index}>
+      <Card>
         <CardHeader title={"Drawbacks:"} />
-        <CardContent>
-          <Typography>
-            {draw}: {description}
-          </Typography>
-        </CardContent>
+        {results}
       </Card>
     </>
   );

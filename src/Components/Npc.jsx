@@ -63,7 +63,7 @@ function Npc(props) {
         setFlairs(char["Flairs"]);
       }
       if (char["Drawbacks"]) {
-        setDrawbacks(char["Drawbacks"][0]);
+        setDrawbacks(char["Drawbacks"]);
       }
       if (char["Toxic"]) {
         setToxic(char["Toxic"]);
