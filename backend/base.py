@@ -75,6 +75,8 @@ def main():
     print(request.json)
     print(request)
 
+    character_profile["Human"] = request.json["human"]
+
     given_pantheon = request.json["pantheon"]
     npc_type = request.json["type"]
     human = request.json["human"]
