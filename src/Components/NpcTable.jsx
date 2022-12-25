@@ -9,8 +9,10 @@ const NpcTable = (props) => {
   useEffect(() => {
     const getNpc = async () => {
       try {
+        // setNpc([])
         const npcChar = await getNpcById(props.currentNpc);
         setNpc(npcChar.data);
+        // console.log(`This is npc`, npc)
       } catch (error) {
         console.log(`Sorry, we couldn't get your npc.`, error);
       }
