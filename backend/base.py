@@ -45,10 +45,6 @@ def random_with_list(given_list, weighting=None, selected_count=None):
         return random.choices(given_list)[0]
 
 
-def add_qualities_and_flairs(npc_archetype):
-    return npc_archetype
-
-
 def add_qualities_and_flairs(
     npc_base_stats,
     npc_archetype,
