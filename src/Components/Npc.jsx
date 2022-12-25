@@ -144,9 +144,13 @@ function Npc(props) {
               <Qualities qualities={qualities} />
             </Grid>
 
-            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
-              <Drawbacks drawbacks={drawbacks} />
-            </Grid>
+            {drawbacks.length > 0 ? (
+              <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+                <Drawbacks drawbacks={drawbacks} />
+              </Grid>
+            ) : (
+              ""
+            )}
 
             <Grid item sm={12} md={12} sx={{ padding: 1 }}>
               <Flairs flairs={flairs} />
