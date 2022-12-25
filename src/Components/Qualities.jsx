@@ -1,37 +1,36 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  Typography,
-} from "@mui/material";
+import { Card, CardContent, CardHeader, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
 function Qualities(qualities) {
-  const [quality, setQuality] = useState("");
-  const [description, setDescription] = useState("");
-  const [index, setIndex] = useState(0)
+  const [quality, setQuality] = useState([]);
 
   useEffect(() => {
     if (qualities?.qualities) {
-      Object.entries(qualities.qualities).forEach((key, idx) => {
-        setIndex(idx);
-        setQuality(key[0]);
-        setDescription(key[1]["Description"]);
-      });
+      setQuality(qualities.qualities);
     }
-  }, [qualities.qualities, quality, description]);
+  }, [qualities.qualities]);
+
+  let results = []
+  quality.forEach((object, idx) => {
+    let quality = Object.keys(object);
+    quality.forEach((qual) => {
+      let description = object[qual]?.Description;
+      results.push(
+        <CardContent key={idx}>
+          <Typography>{qual}:</Typography>
+          <Typography>{description}</Typography>
+        </CardContent>
+      );
+    });
+  });
 
   if (!qualities.qualities) return "";
 
   return (
     <>
-      <Card key={index}>
+      <Card>
         <CardHeader title={"Qualities: "} />
-        <CardContent>
-          <Typography>
-            {quality}: {description}
-          </Typography>
-        </CardContent>
+        {results}
       </Card>
     </>
   );
