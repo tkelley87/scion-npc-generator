@@ -1,8 +1,19 @@
 // React
 import { useState } from "react";
 
+// MUI
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+
 // Component imports
 import Form from "./Components/Form";
+
+// App specific functions
+const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
 
 /**
  * most basic level:
@@ -23,7 +34,10 @@ function App() {
 
   return (
     <>
-      <Form insertedArticle={insertedArticle} />
+      <ThemeProvider theme={darkTheme}>
+        <Form insertedArticle={insertedArticle} />
+        <CssBaseline />
+      </ThemeProvider>
     </>
   );
 }
