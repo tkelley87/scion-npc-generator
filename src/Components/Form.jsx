@@ -51,6 +51,8 @@ const Form = (props) => {
         <select onChange={(e) => setType(e.target.value)}>
           <option value="Mook">Mook</option>
           <option value="Professional">Professional</option>
+          <option value="Villian">Villian</option>
+          <option value="Monster">Monster</option>
         </select>
 
         <label htmlFor="human" className="form-label">

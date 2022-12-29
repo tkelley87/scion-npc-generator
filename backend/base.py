@@ -9,7 +9,6 @@ from flask_cors import CORS
 app = Flask(__name__, static_folder="../build", static_url_path="/")
 cors = CORS(app)
 
-character_profile = {}
 gender_list = ["male", "female"]
 attitude_list = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
 cult_types = [
@@ -71,6 +70,7 @@ def add_qualities_and_flairs(
 
 @app.route("/api/form", methods=["POST", "OPTIONS"])
 def main():
+    character_profile = {}
     print("Got your request, processing....")
     print(request.json)
     print(request)

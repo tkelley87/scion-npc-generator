@@ -1,18 +1,20 @@
-import { Card, CardHeader, CardContent, Typography } from "@mui/material";
+import { Card, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
 function Flairs(flairs) {
-
   const [flair, setFlair] = useState([]);
-  const [stat, setStat] = useState("")
+  const [stat, setStat] = useState("");
 
   useEffect(() => {
+    setFlair([]);
+    setStat("");
+
     if (flairs?.flairs) {
       setFlair(flairs.flairs);
       let name =
         Object.entries(flairs)[0][0].charAt(0).toUpperCase() +
         Object.entries(flairs)[0][0].slice(1);
-      setStat(name)
+      setStat(name);
     }
   }, [flairs.flairs, flairs]);
 
@@ -20,12 +22,27 @@ function Flairs(flairs) {
   flair.forEach((object, idx) => {
     let quality = Object.keys(object);
     quality.forEach((qual) => {
+      let action = object[qual]?.Action;
+      let cooldown = object[qual]?.Cooldown;
+      let cost = object[qual]?.Cost;
       let description = object[qual]?.Description;
+      let duration = object[qual]?.Duration;
+      let range = object[qual]?.Range;
+      let subject = object[qual]?.Subject;
+
       results.push(
-        <CardContent key={idx}>
-          <Typography>{qual}:</Typography>
-          <Typography>{description}</Typography>
-        </CardContent>
+        <Typography key={idx} sx={{ p: 1 }}>
+          <Typography >{qual}:</Typography>
+            <Typography sx={{pl: 1, pt: .5}}>Action: {action}</Typography>
+            <Typography sx={{pl: 1, pt: .5}}>Cooldown: {cooldown}</Typography>
+            <Typography sx={{pl: 1, pt: .5}}>Cost: {cost}</Typography>
+            <Typography sx={{pl: 1, pt: .5}}>
+              Description: {description}
+            </Typography>
+            <Typography sx={{pl: 1, pt: .5}}>Duration: {duration}</Typography>
+            <Typography sx={{pl: 1, pt: .5}}>Range: {range}</Typography>
+            <Typography sx={{pl: 1, pt: .5}}>Subject: {subject}</Typography>
+        </Typography>
       );
     });
   });
@@ -34,8 +51,8 @@ function Flairs(flairs) {
 
   return (
     <>
-      <Card>
-        <CardHeader title={`${stat}`} />
+      <Card sx={{ padding: 1 }}>
+        <Typography >{`${stat}: `} </Typography>
         {results}
       </Card>
     </>

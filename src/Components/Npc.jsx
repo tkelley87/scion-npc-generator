@@ -1,18 +1,10 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  Container,
-  Grid,
-  List,
-} from "@mui/material";
+import { Divider, Grid, Paper, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import Stats from "./Stats";
 import Traits from "./Traits";
 import Qualities from "./Qualities";
 import Flairs from "./Flairs";
 import Drawbacks from "./Drawbacks";
-import Toxic from "./Toxic";
 
 function Npc(props) {
   // State
@@ -74,104 +66,78 @@ function Npc(props) {
   useEffect(() => {
     setVul([]);
     setVul(char["Vulnerability"]);
-  }, [setVul, vul, char]);
+  }, [vul, char]);
 
   if (!props.npc) return "";
 
   return (
     <>
-      <Container sx={{ paddingTop: 12 }}>
-        <Grid container item spacing={3}>
-          <List>
-            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
-              <Card>
-                <CardHeader title={"Name: "} />
-                <CardContent>{char["Name"]}</CardContent>
-              </Card>
-            </Grid>
-
-            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
-              <Card>
-                <CardHeader title={"Gender: "} />
-                <CardContent>{char["Gender"]}</CardContent>
-              </Card>
-            </Grid>
-
-            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+      <Grid
+        container
+        spacing={1}
+        xs={12}
+        justifyContent="center"
+        sx={{ paddingTop: 3 }}
+      >
+        <Paper sx={{ width: 900, padding: 1, border: "none" }}>
+          <Grid
+            container
+            spacing={3}
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Grid item xs={9} spacing={1}>
+              <Typography sx={{ padding: 0.5 }}>
+                Name: {char["Name"]}
+              </Typography>
+              <Typography sx={{ padding: 0.5 }}>
+                Gender: {char["Gender"]}
+              </Typography>
               <Traits traits={traits} />
+              <Typography sx={{ padding: 0.5 }}>
+                Pantheon:{" "}
+                {char["Pantheon"]?.charAt(0).toUpperCase() +
+                  char["Pantheon"]?.slice(1)}
+              </Typography>
+              <Typography sx={{ padding: 0.5 }}>
+                Drive: {char["Drive"]}
+              </Typography>
+              <Typography sx={{ padding: 0.5 }}>
+                Attitude Towards Player: {char["Attitude towards player"]}
+              </Typography>
+
+              {human ? (
+                <Typography sx={{ padding: 0.5 }}>
+                  Apart of Cult?: {char["Apart of Cult?"]}
+                </Typography>
+              ) : (
+                <Typography
+                  sx={{ display: { xs: "block", sm: "block" } }}
+                ></Typography>
+              )}
             </Grid>
 
-            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
-              <Card>
-                <CardHeader title={"Pantheon: "} />
-                <CardContent>
-                  {char["Pantheon"]?.charAt(0).toUpperCase() +
-                    char["Pantheon"]?.slice(1)}
-                </CardContent>
-              </Card>
-            </Grid>
-
-            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
-              <Card>
-                <CardHeader title={"Drive: "} />
-                <CardContent>{char["Drive"]}</CardContent>
-              </Card>
-            </Grid>
-
-            {human ? (
-              <Grid item sm={12} md={12} sx={{ padding: 1 }}>
-                <Card>
-                  <CardHeader title={"Apart of Cult?: "} />
-                  <CardContent>{char["Apart of Cult?"]}</CardContent>
-                </Card>
-              </Grid>
-            ) : (
-              ""
-            )}
-
-            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
-              <Card>
-                <CardHeader title={"Attitude Towards Player: "} />
-                <CardContent>{char["Attitude towards player"]}</CardContent>
-              </Card>
-            </Grid>
-
-            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+            <Grid item xs={3}>
               <Stats stats={stats} />
             </Grid>
+          </Grid>
 
-            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
-              <Qualities qualities={qualities} />
-            </Grid>
+          <Divider />
 
-            {drawbacks.length > 0 ? (
-              <Grid item sm={12} md={12} sx={{ padding: 1 }}>
-                <Drawbacks drawbacks={drawbacks} />
-              </Grid>
-            ) : (
-              ""
-            )}
-
-            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
+          <Grid container>
+            <Grid item>
+              <Qualities qualities={qualities} toxic={toxic} />
+              <Divider />
               <Flairs flairs={flairs} />
+              {drawbacks.length > 0 ? (
+                <Drawbacks drawbacks={drawbacks} vul={ vul } />
+              ) : (
+                ""
+              )}
             </Grid>
-
-            <Grid item sm={12} md={12} sx={{ padding: 1 }}>
-              {Object.keys(toxic).length > 0 ? <Toxic toxic={toxic} /> : ""}
-            </Grid>
-            {vul ? (
-              <Grid item sm={12} md={12} sx={{ padding: 1 }}>
-                <Card>
-                  <CardHeader title={"Vulnerability:"} />
-                  <CardContent>{vul}</CardContent>
-                </Card>
-              </Grid>
-            ) : (
-              ""
-            )}
-          </List>
-        </Grid>
-      </Container>
+          </Grid>
+        </Paper>
+      </Grid>
     </>
   );
 }

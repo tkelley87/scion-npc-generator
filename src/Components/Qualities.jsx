@@ -1,35 +1,60 @@
-import { Card, CardContent, CardHeader, Typography } from "@mui/material";
+import { Card, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
-function Qualities(qualities) {
+function Qualities(props) {
   const [quality, setQuality] = useState([]);
+  const [toxics, setToxics] = useState([]);
 
   useEffect(() => {
-    if (qualities?.qualities) {
-      setQuality(qualities.qualities);
+    if (props.qualities) {
+      setQuality(props.qualities);
     }
-  }, [qualities.qualities]);
+  }, [props.qualities]);
 
-  let results = []
+  useEffect(() => {
+    if (props.toxic) {
+      setToxics(props.toxic);
+    }
+  }, [props.toxic, toxics]);
+
+  let results = [];
   quality.forEach((object, idx) => {
     let quality = Object.keys(object);
     quality.forEach((qual) => {
       let description = object[qual]?.Description;
-      results.push(
-        <CardContent key={idx}>
-          <Typography>{qual}:</Typography>
-          <Typography>{description}</Typography>
-        </CardContent>
-      );
+      if (qual === "Toxic") {
+        results.push(
+          <Typography key={idx} sx={{ p: 1 }}>
+            <Typography>{qual}:</Typography>
+            <Typography sx={{ pl: 1, pt: 0.5 }}>
+              Description: {description}
+            </Typography>
+            {Object.entries(toxics).map((key, idx) => (
+              <Typography key={idx} sx={{ pl: 1, pt: 0.5 }}>
+                {key[0]}: {key[1]}
+              </Typography>
+            ))}
+          </Typography>
+        );
+      } else {
+              results.push(
+                <Typography key={idx} sx={{ p: 1 }}>
+                  <Typography>{qual}:</Typography>
+                  <Typography sx={{ pl: 1, pt: 0.5 }}>
+                    Description: {description}
+                  </Typography>
+                </Typography>
+              );
+      }
     });
   });
 
-  if (!qualities.qualities) return "";
+  if (!props.qualities) return "";
 
   return (
     <>
       <Card>
-        <CardHeader title={"Qualities: "} />
+        <Typography sx={{ p: 0.5 }}>Qualities: </Typography>
         {results}
       </Card>
     </>
