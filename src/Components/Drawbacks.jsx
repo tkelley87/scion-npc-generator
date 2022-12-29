@@ -1,35 +1,49 @@
-import { Card, CardContent, CardHeader, Typography } from "@mui/material";
+import { Card, Divider, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
-function Drawbacks(drawbacks) {
+function Drawbacks(props) {
   const [draw, setDraw] = useState([]);
-
   useEffect(() => {
-    if (drawbacks?.drawbacks) {
-      setDraw(drawbacks.drawbacks);
+    if (props.drawbacks) {
+      setDraw(props.drawbacks);
     }
-  }, [drawbacks.drawbacks]);
+  }, [props]);
 
   let results = [];
   draw.forEach((object, idx) => {
     let quality = Object.keys(object);
     quality.forEach((qual) => {
       let description = object[qual]?.Description;
-      results.push(
-        <CardContent key={idx}>
-          <Typography>{qual}:</Typography>
-          <Typography>{description}</Typography>
-        </CardContent>
-      );
+      if (qual === "Vulnerability") {
+        results.push(
+          <Typography key={idx} sx={{ p: 1 }}>
+            <Typography sx={{ pl: 1, pt: 0.5 }}>{qual}:</Typography>
+            <Typography sx={{ pl: 2, pt: 0.5 }}>
+              {props?.vul ? props.vul : ""}:
+            </Typography>
+            <Typography sx={{ pl: 3, pt: 0.5 }}>{description}</Typography>
+          </Typography>
+        );
+      } else {
+        results.push(
+          <Typography key={idx} sx={{ p: 1 }}>
+            <Typography sx={{ pl: 1, pt: 0.5 }}>{qual}:</Typography>
+            <Typography sx={{ pl: 2, pt: 0.5 }}>
+              {description}
+            </Typography>
+          </Typography>
+        );
+      }
     });
   });
 
-  if (!drawbacks.drawbacks) return "";
+  if (!props.drawbacks) return "";
 
   return (
     <>
+      <Divider />
       <Card>
-        <CardHeader title={"Drawbacks:"} />
+        <Typography>{"Drawbacks:"}</Typography>
         {results}
       </Card>
     </>
