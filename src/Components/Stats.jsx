@@ -1,16 +1,36 @@
-import { Divider, Typography } from "@mui/material";
+import { Divider, Grid, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 function Stats(stats) {
+  const theme = useTheme();
+
   if (!stats.stats) return "";
 
   return (
     <>
-      <Typography sx={{ textAlign: "center" }}>{"Stats"}</Typography>
+      <Typography fontFamily={theme.typography.b} sx={{ textAlign: "center" }}>
+        {"Stats"}
+      </Typography>
       <Divider />
       {Object.entries(stats?.stats).map((key, idx) => (
-        <Typography key={idx} sx={{ pl: 2, py: 0.25 }}>
-          {key[0]}: {key[1]}
-        </Typography>
+        <Grid container sx={{ display: "flex" }} alignItems="center" key={idx}>
+          <Grid item>
+            <Typography
+              fontFamily={theme.typography.a}
+              sx={{ pl: 0.75, pt: 0.25 }}
+            >
+              {key[0]}:
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography
+              fontFamily={theme.typography.b}
+              sx={{ pl: 0.4, pt: 0.25 }}
+            >
+              {key[1]}
+            </Typography>
+          </Grid>
+        </Grid>
       ))}
     </>
   );

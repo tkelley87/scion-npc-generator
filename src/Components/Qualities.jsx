@@ -1,7 +1,11 @@
 import { Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+
 import React, { useEffect, useState } from "react";
 
 function Qualities(props) {
+  const theme = useTheme();
+
   const [quality, setQuality] = useState([]);
   const [toxics, setToxics] = useState([]);
 
@@ -25,12 +29,16 @@ function Qualities(props) {
       if (qual === "Toxic") {
         results.push(
           <Typography key={idx} sx={{ p: 1 }} component="div">
-            <Typography>{qual}:</Typography>
-            <Typography sx={{ pl: 1, pt: 0.5 }}>
+            <Typography fontFamily={theme.typography.c}>{qual}:</Typography>
+            <Typography fontFamily={theme.typography.b} sx={{ pl: 1, pt: 0.5 }}>
               Description: {description}
             </Typography>
             {Object.entries(toxics).map((key, idx) => (
-              <Typography key={idx} sx={{ pl: 1, pt: 0.5 }}>
+              <Typography
+                fontFamily={theme.typography.b}
+                key={idx}
+                sx={{ pl: 1, pt: 0.5 }}
+              >
                 {key[0]}: {key[1]}
               </Typography>
             ))}
@@ -39,9 +47,14 @@ function Qualities(props) {
       } else {
               results.push(
                 <Typography key={idx} sx={{ p: 1 }} component="div">
-                  <Typography>{qual}:</Typography>
-                  <Typography sx={{ pl: 1, pt: 0.5 }}>
-                    Description: {description}
+                  <Typography fontFamily={theme.typography.c}>
+                    {qual}:
+                  </Typography>
+                  <Typography
+                    fontFamily={theme.typography.b}
+                    sx={{ pl: 1, pt: 0.5 }}
+                  >
+                    {description}
                   </Typography>
                 </Typography>
               );
@@ -53,8 +66,10 @@ function Qualities(props) {
 
   return (
     <>
-        <Typography sx={{ p: 0.5 }}>Qualities: </Typography>
-        {results}
+      <Typography fontFamily={theme.typography.a} sx={{ p: 0.5 }}>
+        Qualities:{" "}
+      </Typography>
+      {results}
     </>
   );
 }
