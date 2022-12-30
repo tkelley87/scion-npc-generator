@@ -13,6 +13,20 @@ const darkTheme = createTheme({
   palette: {
     mode: "dark",
   },
+  typography: {
+    a: {
+      fontWeight: "bold",
+      fontFamily: ["Marcellus"].join(","),
+      fontSize: "1.1em",
+    },
+    b: {
+      fontFamily: ["Marcellus SC"].join(","),
+    },
+    c: {
+      fontFamily: ["Marcellus"].join(","),
+      fontSize: "1.25em",
+    },
+  },
 });
 
 /**

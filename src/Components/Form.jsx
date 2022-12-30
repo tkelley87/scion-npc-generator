@@ -1,3 +1,5 @@
+import { useTheme } from "@mui/material/styles";
+
 // React
 import {
   Button,
@@ -13,6 +15,8 @@ import { postBody } from "../Components/APIService";
 import NpcTable from "./NpcTable";
 
 const Form = (props) => {
+  const theme = useTheme();
+
   // State
   const [pantheon, setPantheon] = useState("norse");
   const [type, setType] = useState("Mook");
@@ -48,79 +52,102 @@ const Form = (props) => {
         <Grid container justifyContent="center" spacing={1} sx={{ pt: 3 }}>
           <FormControl sx={{ m: 1, minWidth: 120 }}>
             <Grid item xs={6}>
-              <InputLabel>Pantheon</InputLabel>
+              <InputLabel
+                sx={{ fontFamily: theme.typography.c }}
+                fontFamily={theme.typography.a}
+              >
+                Pantheon
+              </InputLabel>
               <Select
                 label="Pantheon"
                 onChange={(e) => setPantheon(e.target.value)}
-                sx={{ m: 1, minWidth: 175 }}
+                sx={{
+                  m: 1,
+                  minWidth: 175,
+                  fontFamily: theme.typography.a,
+                }}
                 value={pantheon}
               >
-                <MenuItem value="norse">Norse</MenuItem>
-                <MenuItem value="theoi">Theoi</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="norse">
+                  Norse
+                </MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="theoi">
+                  Theoi
+                </MenuItem>
               </Select>
             </Grid>
           </FormControl>
 
           <FormControl sx={{ m: 1, minWidth: 120 }}>
             <Grid item xs={6}>
-              <InputLabel>Type</InputLabel>
+              <InputLabel sx={{ fontFamily: theme.typography.c }}>
+                Type
+              </InputLabel>
               <Select
                 label="Type"
                 onChange={(e) => setType(e.target.value)}
-                sx={{ m: 1, minWidth: 175 }}
+                sx={{ m: 1, minWidth: 175, fontFamily: theme.typography.a }}
                 value={type}
               >
-                <MenuItem value="Mook">Mook</MenuItem>
-                <MenuItem value="Professional">Professional</MenuItem>
-                <MenuItem value="Villian">Villian</MenuItem>
-                <MenuItem value="Monster">Monster</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Mook">
+                  Mook
+                </MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Professional">Professional</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Villian">Villian</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Monster">Monster</MenuItem>
               </Select>
             </Grid>
           </FormControl>
 
           <FormControl sx={{ m: 1, minWidth: 120 }}>
             <Grid item xs={6}>
-              <InputLabel>Human</InputLabel>
+              <InputLabel sx={{ fontFamily: theme.typography.c }}>
+                Human
+              </InputLabel>
               <Select
                 label="Human"
                 onChange={(e) => setHuman(e.target.value)}
-                sx={{ m: 1, minWidth: 175 }}
+                sx={{ m: 1, minWidth: 175, fontFamily: theme.typography.a }}
                 value={human}
               >
-                <MenuItem value="yes">Yes</MenuItem>
-                <MenuItem value="no">No</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="yes">Yes</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="no">No</MenuItem>
               </Select>
             </Grid>
           </FormControl>
 
           <FormControl sx={{ m: 1, minWidth: 120 }}>
             <Grid item xs={6}>
-              <InputLabel>Is name generic?</InputLabel>
+              <InputLabel sx={{ fontFamily: theme.typography.c }}>
+                Is name generic?
+              </InputLabel>
               <Select
                 label="nameGeneric"
                 onChange={(e) => setNameGeneric(e.target.value)}
-                sx={{ m: 1, minWidth: 175 }}
+                sx={{ m: 1, minWidth: 175, fontFamily: theme.typography.a }}
                 value={nameGeneric}
               >
-                <MenuItem value="yes">Yes</MenuItem>
-                <MenuItem value="no">No</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="yes">Yes</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="no">No</MenuItem>
               </Select>
             </Grid>
           </FormControl>
 
           <FormControl sx={{ m: 1, minWidth: 120 }}>
             <Grid item xs={6}>
-              <InputLabel>NPC Favored Arena</InputLabel>
+              <InputLabel sx={{ fontFamily: theme.typography.c }}>
+                NPC Favored Arena
+              </InputLabel>
               <Select
                 label="npcFavoredArena"
                 onChange={(e) => setNpcFavoredArena(e.target.value)}
-                sx={{ m: 1, minWidth: 175 }}
+                sx={{ m: 1, minWidth: 175, fontFamily: theme.typography.a }}
                 value={npcFavoredArena}
               >
-                <MenuItem value="Combat">Combat</MenuItem>
-                <MenuItem value="Social">Social</MenuItem>
-                <MenuItem value="Combat_focused">Combat Focused</MenuItem>
-                <MenuItem value="Social_focused">Social Focused</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Combat">Combat</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Social">Social</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Combat_focused">Combat Focused</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Social_focused">Social Focused</MenuItem>
               </Select>
             </Grid>
           </FormControl>
@@ -133,6 +160,7 @@ const Form = (props) => {
                 sx={{
                   backgroundColor: "rgba(255, 255, 255, 0.05)",
                   color: "#fff",
+                  fontFamily: ["Marcellus SC"].join(","),
                 }}
               >
                 Generate NPC
