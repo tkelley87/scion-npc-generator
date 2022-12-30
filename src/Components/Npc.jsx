@@ -76,7 +76,7 @@ function Npc(props) {
 
   return (
     <>
-      <Grid container spacing={1} justifyContent="center" sx={{ pt: 3 }}>
+      <Grid container spacing={1} justifyContent="center" sx={{ pt: 3, pb: 2 }}>
         <Paper sx={{ width: 900, padding: 1, border: "none" }}>
           <Grid
             container
