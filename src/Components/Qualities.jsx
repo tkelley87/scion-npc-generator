@@ -1,4 +1,4 @@
-import { Card, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
 function Qualities(props) {
@@ -24,7 +24,7 @@ function Qualities(props) {
       let description = object[qual]?.Description;
       if (qual === "Toxic") {
         results.push(
-          <Typography key={idx} sx={{ p: 1 }}>
+          <Typography key={idx} sx={{ p: 1 }} component="div">
             <Typography>{qual}:</Typography>
             <Typography sx={{ pl: 1, pt: 0.5 }}>
               Description: {description}
@@ -38,7 +38,7 @@ function Qualities(props) {
         );
       } else {
               results.push(
-                <Typography key={idx} sx={{ p: 1 }}>
+                <Typography key={idx} sx={{ p: 1 }} component="div">
                   <Typography>{qual}:</Typography>
                   <Typography sx={{ pl: 1, pt: 0.5 }}>
                     Description: {description}
@@ -53,10 +53,8 @@ function Qualities(props) {
 
   return (
     <>
-      <Card>
         <Typography sx={{ p: 0.5 }}>Qualities: </Typography>
         {results}
-      </Card>
     </>
   );
 }

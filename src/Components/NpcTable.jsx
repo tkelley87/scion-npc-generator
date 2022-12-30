@@ -17,10 +17,12 @@ const NpcTable = (props) => {
         console.log(`Sorry, we couldn't get your npc.`, error);
       }
     };
-    getNpc();
+    if (props.currentNpc) {
+      getNpc();
+    }
   }, [props.currentNpc]);
 
-  if (!props.currentNpc) return "Waiting for Npc";
+  if (!props.currentNpc) return "";
 
   return <>{npc ? <Npc npc={npc} /> : ""}</>;
 };
