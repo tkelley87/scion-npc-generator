@@ -1,4 +1,5 @@
 // React
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
 // MUI
@@ -49,7 +50,15 @@ function App() {
   return (
     <>
       <ThemeProvider theme={darkTheme}>
-        <Form insertedArticle={insertedArticle} />
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={<Form insertedArticle={insertedArticle} />}
+            ></Route>
+          </Routes>
+        </BrowserRouter>
+
         <CssBaseline />
       </ThemeProvider>
     </>
