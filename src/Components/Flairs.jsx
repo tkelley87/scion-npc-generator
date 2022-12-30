@@ -1,4 +1,4 @@
-import { Card, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
 function Flairs(flairs) {
@@ -31,17 +31,17 @@ function Flairs(flairs) {
       let subject = object[qual]?.Subject;
 
       results.push(
-        <Typography key={idx} sx={{ p: 1 }}>
-          <Typography >{qual}:</Typography>
-            <Typography sx={{pl: 1, pt: .5}}>Action: {action}</Typography>
-            <Typography sx={{pl: 1, pt: .5}}>Cooldown: {cooldown}</Typography>
-            <Typography sx={{pl: 1, pt: .5}}>Cost: {cost}</Typography>
-            <Typography sx={{pl: 1, pt: .5}}>
-              Description: {description}
-            </Typography>
-            <Typography sx={{pl: 1, pt: .5}}>Duration: {duration}</Typography>
-            <Typography sx={{pl: 1, pt: .5}}>Range: {range}</Typography>
-            <Typography sx={{pl: 1, pt: .5}}>Subject: {subject}</Typography>
+        <Typography key={idx} sx={{ p: 1 }} component="div">
+          <Typography>{qual}:</Typography>
+          <Typography sx={{ pl: 1, pt: 0.5 }}>Action: {action}</Typography>
+          <Typography sx={{ pl: 1, pt: 0.5 }}>Cooldown: {cooldown}</Typography>
+          <Typography sx={{ pl: 1, pt: 0.5 }}>Cost: {cost}</Typography>
+          <Typography sx={{ pl: 1, pt: 0.5 }}>
+            Description: {description}
+          </Typography>
+          <Typography sx={{ pl: 1, pt: 0.5 }}>Duration: {duration}</Typography>
+          <Typography sx={{ pl: 1, pt: 0.5 }}>Range: {range}</Typography>
+          <Typography sx={{ pl: 1, pt: 0.5 }}>Subject: {subject}</Typography>
         </Typography>
       );
     });
@@ -51,10 +51,8 @@ function Flairs(flairs) {
 
   return (
     <>
-      <Card sx={{ padding: 1 }}>
         <Typography >{`${stat}: `} </Typography>
         {results}
-      </Card>
     </>
   );
 }

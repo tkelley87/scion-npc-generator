@@ -10,7 +10,7 @@ async function postBody(body) {
     });
     return await response.json();
   } catch (error) {
-    return console.log(error);
+    return {"msg": "We had an error getting data", "error": error};
   }
 }
 

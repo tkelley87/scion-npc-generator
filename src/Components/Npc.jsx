@@ -75,9 +75,8 @@ function Npc(props) {
       <Grid
         container
         spacing={1}
-        xs={12}
         justifyContent="center"
-        sx={{ paddingTop: 3 }}
+        sx={{ pt: 3 }}
       >
         <Paper sx={{ width: 900, padding: 1, border: "none" }}>
           <Grid
@@ -86,7 +85,7 @@ function Npc(props) {
             justifyContent="center"
             alignItems="center"
           >
-            <Grid item xs={9} spacing={1}>
+            <Grid item xs={9}>
               <Typography sx={{ padding: 0.5 }}>
                 Name: {char["Name"]}
               </Typography>
@@ -111,9 +110,7 @@ function Npc(props) {
                   Apart of Cult?: {char["Apart of Cult?"]}
                 </Typography>
               ) : (
-                <Typography
-                  sx={{ display: { xs: "block", sm: "block" } }}
-                ></Typography>
+                ""
               )}
             </Grid>
 

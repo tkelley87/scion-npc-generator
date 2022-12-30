@@ -1,4 +1,4 @@
-import { Card, Divider, Typography } from "@mui/material";
+import { Divider, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
 function Drawbacks(props) {
@@ -16,7 +16,7 @@ function Drawbacks(props) {
       let description = object[qual]?.Description;
       if (qual === "Vulnerability") {
         results.push(
-          <Typography key={idx} sx={{ p: 1 }}>
+          <Typography key={idx} sx={{ p: 1 }} component="div">
             <Typography sx={{ pl: 1, pt: 0.5 }}>{qual}:</Typography>
             <Typography sx={{ pl: 2, pt: 0.5 }}>
               {props?.vul ? props.vul : ""}:
@@ -26,11 +26,9 @@ function Drawbacks(props) {
         );
       } else {
         results.push(
-          <Typography key={idx} sx={{ p: 1 }}>
+          <Typography key={idx} sx={{ p: 1 }} component="div">
             <Typography sx={{ pl: 1, pt: 0.5 }}>{qual}:</Typography>
-            <Typography sx={{ pl: 2, pt: 0.5 }}>
-              {description}
-            </Typography>
+            <Typography sx={{ pl: 2, pt: 0.5 }}>{description}</Typography>
           </Typography>
         );
       }
@@ -42,10 +40,8 @@ function Drawbacks(props) {
   return (
     <>
       <Divider />
-      <Card>
         <Typography>{"Drawbacks:"}</Typography>
         {results}
-      </Card>
     </>
   );
 }
