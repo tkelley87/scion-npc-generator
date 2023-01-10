@@ -55,6 +55,7 @@ function App() {
             <Route
               path="/"
               element={<Form insertedArticle={insertedArticle} />}
+              exact
             ></Route>
           </Routes>
         </BrowserRouter>
