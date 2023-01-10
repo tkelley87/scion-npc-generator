@@ -4,6 +4,7 @@ import { useTheme } from "@mui/material/styles";
 function Stats(stats) {
   const theme = useTheme();
 
+  console.log(`Stats => `, stats.stats)
   if (!stats.stats) return "";
 
   return (
@@ -19,7 +20,7 @@ function Stats(stats) {
               fontFamily={theme.typography.a}
               sx={{ pl: 0.75, pt: 0.25 }}
             >
-              {key[0]}:
+              {key[1][0]}:
             </Typography>
           </Grid>
           <Grid item>
@@ -27,7 +28,7 @@ function Stats(stats) {
               fontFamily={theme.typography.b}
               sx={{ pl: 0.4, pt: 0.25 }}
             >
-              {key[1]}
+              {key[1][1]}
             </Typography>
           </Grid>
         </Grid>
