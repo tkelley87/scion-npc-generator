@@ -9,17 +9,19 @@ services:
     volumes:
       - "./dynamo/dynamodb:/home/dynamodblocal/data"
     working_dir: /home/dynamodblocal
-  # api:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile.backend
-  #   image: react-flask-app-api
-  #   links:
-  #     - "dynamodb-local:db"
-  # client:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile.client
-  #   image: react-flask-app-client
-  #   ports:
-  #     - "3000:80"
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    image: react-flask-app-api
+    depends_on:
+      - dynamodb-local
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    image: react-flask-app-client
+    ports:
+      - "3000:80"
+    depends_on:
+      - dynamodb-local

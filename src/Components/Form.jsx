@@ -93,7 +93,7 @@ const Form = (props) => {
                   Mook
                 </MenuItem>
                 <MenuItem sx={{ fontFamily: theme.typography.b }} value="Professional">Professional</MenuItem>
-                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Villian">Villian</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Villain">Villain</MenuItem>
                 <MenuItem sx={{ fontFamily: theme.typography.b }} value="Monster">Monster</MenuItem>
               </Select>
             </Grid>

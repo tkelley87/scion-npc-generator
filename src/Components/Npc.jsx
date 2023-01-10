@@ -181,33 +181,6 @@ function Npc(props) {
               ) : (
                 ""
               )}
-
-              {/* <Typography sx={{ padding: 0.5 }}>
-                Name: {char["Name"]}
-              </Typography> */}
-              {/* <Typography sx={{ padding: 0.5 }}>
-                Gender: {char["Gender"]}
-              </Typography> */}
-              {/* <Traits traits={traits} /> */}
-              {/* <Typography sx={{ padding: 0.5 }}>
-                Pantheon:{" "}
-                {char["Pantheon"]?.charAt(0).toUpperCase() +
-                  char["Pantheon"]?.slice(1)}
-              </Typography> */}
-              {/* <Typography sx={{ padding: 0.5 }}>
-                Drive: {char["Drive"]}
-              </Typography> */}
-              {/* <Typography sx={{ padding: 0.5 }}>
-                Attitude Towards Player: {char["Attitude towards player"]}
-              </Typography> */}
-
-              {/* {human ? (
-                <Typography sx={{ padding: 0.5 }}>
-                  Apart of Cult?: {char["Apart of Cult?"]}
-                </Typography>
-              ) : (
-                ""
-              )} */}
             </Grid>
 
             <Grid item xs={3}>
