@@ -1,28 +1,23 @@
+from flask import request, redirect, url_for, current_app, abort
 from boto3 import resource
 
-import config
 import boto3
-
-AWS_ACCESS_KEY_ID = config.AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY = config.AWS_SECRET_ACCESS_KEY
-REGION_NAME = config.REGION_NAME
-DYNAMODB_URI=config.DYNAMODB_URI
 
 resource = resource(
     "dynamodb",
-    endpoint_url=DYNAMODB_URI,
-    aws_access_key_id=AWS_ACCESS_KEY_ID,
-    aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
-    region_name=REGION_NAME,
+    endpoint_url=current_app.config["DYNAMODB_URI"],
+    aws_access_key_id=current_app.config["AWS_ACCESS_KEY_ID"],
+    aws_secret_access_key=current_app.config["AWS_SECRET_ACCESS_KEY"],
+    region_name=current_app.config["REGION_NAME"],
     verify=False,
 )
 
 dynamodb_client = boto3.client(
     "dynamodb",
-    endpoint_url=DYNAMODB_URI,
-    aws_access_key_id=AWS_ACCESS_KEY_ID,
-    aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
-    region_name=REGION_NAME,
+    endpoint_url=current_app.config["DYNAMODB_URI"],
+    aws_access_key_id=current_app.config["AWS_ACCESS_KEY_ID"],
+    aws_secret_access_key=current_app.config["AWS_SECRET_ACCESS_KEY"],
+    region_name=current_app.config["REGION_NAME"],
     verify=False,
 )
 

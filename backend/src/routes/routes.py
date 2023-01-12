@@ -1,84 +1,48 @@
+from flask import request, current_app
+from . import routes_blueprint
+
 import json
 import random
 import uuid
+import os
 
-import controller as dynamodb
-from flask import Flask, request
-from flask_cors import CORS
+import src.routes.controllers.controllers as dynamodb
+import src.utilities.utilities as utilities
 
-
-app = Flask(__name__, static_folder="../build", static_url_path="/")
-cors = CORS(app)
-
-
-gender_list = ["male", "female"]
-attitude_list = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
-cult_types = [
-    "Coven",
-    "Guild",
-    "Family Tradition",
-    "Historian",
-    "Mystery Society",
-    "Reliquarian",
-    "Social Club",
-    "Temple",
-    "No",
-]
+# Current directory is different machine to machine,
+# this gives us a way to set it dynamically
+set_static_files_location = os.getcwd() + "/src/routes/"
 
 
-def file_list_into_var(filepath, file_type):
-    file = open(filepath, "r")
-    if file_type == "txt":
-        file_data = file.read()
-        return file_data.split("\n")
-    elif file_type == "json":
-        return json.load(file)
+@routes_blueprint.route("/form", methods=["POST", "OPTIONS"])
+def post_npc():
+    """
+    Route to post NPC based off of inputs from FE
+    """
 
+    # Function Scoped variables
+    attitude_list = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+    gender_list = ["male", "female"]
+    cult_types = [
+        "Coven",
+        "Guild",
+        "Family Tradition",
+        "Historian",
+        "Mystery Society",
+        "Reliquarian",
+        "Social Club",
+        "Temple",
+        "No",
+    ]
 
-def random_with_list(given_list, weighting=None, selected_count=None):
-    if weighting and selected_count:
-        return random.choices(given_list, weights=weighting, k=selected_count)
-    elif weighting:
-        return random.choices(given_list, weights=weighting)[0]
-    elif selected_count:
-        return random.choices(given_list, k=selected_count)
-    else:
-        return random.choices(given_list)[0]
-
-
-def add_qualities_and_flairs(
-    npc_base_stats,
-    npc_archetype,
-    quality_type_from_stats,
-    quality_from_list,
-    qualities_list,
-    count_amount,
-):
-    quality_type_count = npc_base_stats[npc_archetype][quality_type_from_stats]
-    if quality_type_count > 0:
-        if count_amount == "Full":
-            return random.sample(
-                qualities_list[quality_from_list], k=quality_type_count
-            )
-        elif count_amount == "Major":
-            return random.sample(
-                qualities_list[quality_from_list], k=quality_type_count - 1
-            )
-        elif count_amount == "Minor":
-            return random.sample(qualities_list[quality_from_list], k=1)
-    else:
-        return []
-
-
-@app.route("/api/form", methods=["POST", "OPTIONS"])
-def main():
+    # Character Object to save to DynamoDB
     character_profile = {}
     print("Got your request, processing....")
     print(request.json)
     print(request)
 
+    # Inputs from FE
     character_profile["Human"] = request.json["human"]
-
     given_pantheon = request.json["pantheon"]
     npc_type = request.json["type"]
     human = request.json["human"]
@@ -86,15 +50,28 @@ def main():
     npc_favored_arena = request.json["npcFavoredArena"]
     shortened_npc_favored_arena = request.json["npcFavoredArena"].split("_")[0]
 
-    gender = random_with_list(gender_list)
-    drives_data_into_list = file_list_into_var("npc_stats/drives.txt", "txt")
-    traits_data_into_list = file_list_into_var("npc_stats/traits.txt", "txt")
-    creature_list = file_list_into_var(
-        "creatures_folder/{}_creatures.txt".format(given_pantheon), "txt"
+    # Beginning of making character_profile stats
+    gender = utilities.random_with_list(gender_list)
+    drives_data_into_list = utilities.file_list_into_var(
+        set_static_files_location + "npc_stats/drives.txt", "txt"
     )
-    npc_base_stats = file_list_into_var("npc_stats/base_stats.json", "json")
-    qualities_list = file_list_into_var("npc_stats/qualities.json", "json")
-    flairs_list = file_list_into_var("npc_stats/flairs.json", "json")
+    traits_data_into_list = utilities.file_list_into_var(
+        set_static_files_location + "npc_stats/traits.txt", "txt"
+    )
+    creature_list = utilities.file_list_into_var(
+        set_static_files_location
+        + "creatures_folder/{}_creatures.txt".format(given_pantheon),
+        "txt",
+    )
+    npc_base_stats = utilities.file_list_into_var(
+        set_static_files_location + "npc_stats/base_stats.json", "json"
+    )
+    qualities_list = utilities.file_list_into_var(
+        set_static_files_location + "npc_stats/qualities.json", "json"
+    )
+    flairs_list = utilities.file_list_into_var(
+        set_static_files_location + "npc_stats/flairs.json", "json"
+    )
 
     if shortened_npc_favored_arena == "Combat":
         nonfavored_arena = "Social"
@@ -124,80 +101,84 @@ def main():
         flairs_list[nonfavored_arena].extend(flairs_list["Villain_" + nonfavored_arena])
 
     if is_name_generic == "yes":
-        name_list = file_list_into_var(
-            "names_folder/generic_{}_names.txt".format(gender), "txt"
+        name_list = utilities.file_list_into_var(
+            set_static_files_location
+            + "names_folder/generic_{}_names.txt".format(gender),
+            "txt",
         )
     else:
-        name_list = file_list_into_var(
-            "names_folder/{}_{}_names.txt".format(given_pantheon, gender), "txt"
+        name_list = utilities.file_list_into_var(
+            set_static_files_location
+            + "names_folder/{}_{}_names.txt".format(given_pantheon, gender),
+            "txt",
         )
 
     if npc_type == "Professional" and npc_favored_arena == "Social":
         npc_base_stats[npc_type]["Flairs"] = 1
 
-    character_profile["Name"] = random_with_list(name_list)
+    character_profile["Name"] = utilities.random_with_list(name_list)
     character_profile["Gender"] = gender.capitalize()
-    character_profile["Traits"] = random_with_list(
+    character_profile["Traits"] = utilities.random_with_list(
         traits_data_into_list, selected_count=3
     )
-    character_profile["Drive"] = random_with_list(drives_data_into_list)
+    character_profile["Drive"] = utilities.random_with_list(drives_data_into_list)
     character_profile["Pantheon"] = given_pantheon
-    character_profile["Attitude towards player"] = random_with_list(
+    character_profile["Attitude towards player"] = utilities.random_with_list(
         attitude_list, weighting=(2, 4, 10, 20, 30, 15, 30, 20, 10, 4, 2)
     )
     if human == "yes":
-        character_profile["Apart of Cult?"] = random_with_list(
+        character_profile["Apart of Cult?"] = utilities.random_with_list(
             cult_types, weighting=(2, 20, 3, 20, 10, 15, 40, 40, 150)
         )
     else:
-        character_profile["Creature Type"] = random_with_list(creature_list)
+        character_profile["Creature Type"] = utilities.random_with_list(creature_list)
 
     character_profile["Stats"] = npc_base_stats[npc_type]
-    character_profile["Drawbacks"] = add_qualities_and_flairs(
+    character_profile["Drawbacks"] = utilities.add_qualities_and_flairs(
         npc_base_stats, npc_type, "Drawbacks", "Drawbacks", qualities_list, "Full"
     )
     if npc_favored_arena == "Combat":
-        character_profile["Qualities"] = add_qualities_and_flairs(
+        character_profile["Qualities"] = utilities.add_qualities_and_flairs(
             npc_base_stats, npc_type, "Qualities", "Combat", qualities_list, "Full"
         )
     elif npc_favored_arena == "Social":
-        character_profile["Qualities"] = add_qualities_and_flairs(
+        character_profile["Qualities"] = utilities.add_qualities_and_flairs(
             npc_base_stats, npc_type, "Qualities", "Social", qualities_list, "Full"
         )
     elif npc_favored_arena == "Combat_focused":
-        character_profile["Qualities"] = add_qualities_and_flairs(
+        character_profile["Qualities"] = utilities.add_qualities_and_flairs(
             npc_base_stats, npc_type, "Qualities", "Combat", qualities_list, "Major"
         )
-        character_profile["Qualities"] += add_qualities_and_flairs(
+        character_profile["Qualities"] += utilities.add_qualities_and_flairs(
             npc_base_stats, npc_type, "Qualities", "Social", qualities_list, "Minor"
         )
     elif npc_favored_arena == "Social_focused":
-        character_profile["Qualities"] = add_qualities_and_flairs(
+        character_profile["Qualities"] = utilities.add_qualities_and_flairs(
             npc_base_stats, npc_type, "Qualities", "Social", qualities_list, "Major"
         )
-        character_profile["Qualities"] += add_qualities_and_flairs(
+        character_profile["Qualities"] += utilities.add_qualities_and_flairs(
             npc_base_stats, npc_type, "Qualities", "Combat", qualities_list, "Minor"
         )
     if npc_favored_arena == "Combat":
-        character_profile["Flairs"] = add_qualities_and_flairs(
+        character_profile["Flairs"] = utilities.add_qualities_and_flairs(
             npc_base_stats, npc_type, "Flairs", "Combat", flairs_list, "Full"
         )
     elif npc_favored_arena == "Social":
-        character_profile["Flairs"] = add_qualities_and_flairs(
+        character_profile["Flairs"] = utilities.add_qualities_and_flairs(
             npc_base_stats, npc_type, "Flairs", "Social", flairs_list, "Full"
         )
     elif npc_favored_arena == "Combat_focused":
-        character_profile["Flairs"] = add_qualities_and_flairs(
+        character_profile["Flairs"] = utilities.add_qualities_and_flairs(
             npc_base_stats, npc_type, "Flairs", "Combat", flairs_list, "Major"
         )
-        character_profile["Flairs"] += add_qualities_and_flairs(
+        character_profile["Flairs"] += utilities.add_qualities_and_flairs(
             npc_base_stats, npc_type, "Flairs", "Social", flairs_list, "Minor"
         )
     elif npc_favored_arena == "Social_focused":
-        character_profile["Flairs"] = add_qualities_and_flairs(
+        character_profile["Flairs"] = utilities.add_qualities_and_flairs(
             npc_base_stats, npc_type, "Flairs", "Social", flairs_list, "Major"
         )
-        character_profile["Flairs"] += add_qualities_and_flairs(
+        character_profile["Flairs"] += utilities.add_qualities_and_flairs(
             npc_base_stats, npc_type, "Flairs", "Combat", flairs_list, "Minor"
         )
     add_vulnerability = any(
@@ -209,9 +190,11 @@ def main():
     toxic_exists = any("Toxic" in d for d in character_profile["Qualities"])
 
     if toxic_exists:
-        toxic_vectors = file_list_into_var("npc_stats/toxic_vectors.txt", "txt")
+        toxic_vectors = utilities.file_list_into_var(
+            set_static_files_location + "npc_stats/toxic_vectors.txt", "txt"
+        )
         character_profile["Toxic"] = {
-            "Vector": random_with_list(toxic_vectors),
+            "Vector": utilities.random_with_list(toxic_vectors),
             "Duration": "Successes in Rounds",
             "Condition": "Inflict Damage Stunt",
             "Note": "Simple action Resolve + Sta roll to end effect early",
@@ -222,15 +205,21 @@ def main():
     )
 
     if vulnerability_exists:
-        vulnerability_list = file_list_into_var("npc_stats/vulnerabilities.txt", "txt")
-        character_profile["Vulnerability"] = random_with_list(vulnerability_list)
+        vulnerability_list = utilities.file_list_into_var(
+            set_static_files_location + "npc_stats/vulnerabilities.txt", "txt"
+        )
+        character_profile["Vulnerability"] = utilities.random_with_list(
+            vulnerability_list
+        )
 
     sorcery_exists = any("Sorcery" in d for d in character_profile["Flairs"])
 
     if sorcery_exists:
-        sorcery_list = file_list_into_var("npc_stats/purviews.json", "json")
-        pantheon_sorcery_list = file_list_into_var(
-            "npc_stats/pantheon_purviews.json", "json"
+        sorcery_list = utilities.file_list_into_var(
+            set_static_files_location + "npc_stats/purviews.json", "json"
+        )
+        pantheon_sorcery_list = utilities.file_list_into_var(
+            set_static_files_location + "npc_stats/pantheon_purviews.json", "json"
         )
         pantheon_purview_sorcery = {
             given_pantheon: pantheon_sorcery_list[given_pantheon]
@@ -250,14 +239,19 @@ def main():
                     character_profile["Stats"][item[0]] = item[1]
 
     id = uuid.uuid4().hex
+    character_profile["id"] = id
     response = dynamodb.write_to_npc_gen(id, character_profile)
     if response["ResponseMetadata"]["HTTPStatusCode"] == 200:
         return {"msg": "Added npc successfully", "id": id, "char": character_profile}
     return {"msg": "Some error occurred", "response": response}
 
 
-@app.route("/api/npc/<id>", methods=["GET"])
+@routes_blueprint.route("/npc/<id>", methods=["GET"])
 def get_npc(id):
+    """
+    Get NPC from DB based off of their ID
+    """
+
     response = dynamodb.get_npc_gen_by_id(id)
     if response["ResponseMetadata"]["HTTPStatusCode"] == 200:
         if "Item" in response:
@@ -266,15 +260,18 @@ def get_npc(id):
     return {"msg": "Some error occurred", "response": response}
 
 
-@app.before_first_request
+@routes_blueprint.before_app_first_request
 def getTable():
+    """
+    Before first request, check to see if table exists or not.
+    If table doesn't, this function provides a way to create the
+    table before making first request to it.
+    """
+
     try:
         dynamodb.create_table_npc_gen()
-        print({"msg": "Table has been created for you."})
+        current_app.logger.info("\n\n**** Table has been created for you ****\n")
         return {"msg": "Table has been created for you."}
     except:
+        current_app.logger.info("\n\n**** Table already exist ****\n")
         return {"msg": "Table already exist."}
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
