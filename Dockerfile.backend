@@ -3,13 +3,10 @@
 FROM python:3.9
 WORKDIR /app
 
-COPY backend/requirements.txt backend/base.py backend/.flaskenv \
-backend/config.py backend/controller.py ./
-COPY backend/creatures_folder ./creatures_folder
-COPY backend/names_folder ./names_folder
-COPY backend/npc_stats ./npc_stats
+COPY /backend/requirements.txt ./requirements.txt
 RUN pip3 install -r ./requirements.txt
-ENV FLASK_ENV prod
+
+COPY /backend/ .
 
 EXPOSE 5000
-CMD ["gunicorn", "-b", ":5000", "base:app"]
+CMD ["gunicorn", "-b", ":5000", "app:app"]
