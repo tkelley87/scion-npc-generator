@@ -1,4 +1,0 @@
-touch
-consumption
-fluid transfer
-aerosol
