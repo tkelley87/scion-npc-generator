@@ -11,6 +11,7 @@ def create_app():
     with app.app_context():
 
         CONFIG_TYPE = os.getenv("CONFIG_TYPE", default="config.localDockerConfig")
+        print('This is content type => ', CONFIG_TYPE)
         app.config.from_object(CONFIG_TYPE)
 
         # Register Blueprints
