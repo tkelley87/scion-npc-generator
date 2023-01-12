@@ -2,6 +2,8 @@ import os
 from flask import Flask
 from flask_cors import CORS
 
+from dotenv import dotenv_values
+config = dotenv_values(".env")
 
 def create_app():
 
@@ -10,13 +12,20 @@ def create_app():
 
     with app.app_context():
 
-        CONFIG_TYPE = os.getenv("CONFIG_TYPE", default="config.localDockerConfig")
-        app.config.from_object(CONFIG_TYPE)
+        config_type = config["CONFIG_TYPE"]
+        app.config.from_object(config_type)
 
         # Register Blueprints
         register_blueprints(app)
 
-        print("\n**** Welcome to Scion's Backend ****\n****       Enjoy your stay      ****\n")
+        app.logger.info(
+            f"""
+            \n
+            **** Welcome to Scion's Backend ****
+            ****       Enjoy your stay      ****\n
+            CONTENT_TYPE = {config_type}
+            """
+        )
 
         return app
 
