@@ -9,4 +9,7 @@ RUN pip3 install -r ./requirements.txt
 COPY /backend/ .
 
 EXPOSE 5000
-CMD ["gunicorn", "-b", ":5000", "app:app"]
+RUN chmod +x ./docker_entrypoint.sh
+RUN chmod +x ./.env
+
+CMD ./docker_entrypoint.sh
