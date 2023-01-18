@@ -1,6 +1,6 @@
 # This Dockerfile builds the Backend only.
 
-FROM python:3.9
+FROM python:3.9.16-alpine3.17
 WORKDIR /app
 
 COPY /backend/requirements.txt ./requirements.txt
@@ -9,4 +9,8 @@ RUN pip3 install -r ./requirements.txt
 COPY /backend/ .
 
 EXPOSE 5000
-CMD ["gunicorn", "-b", ":5000", "app:app"]
+RUN chmod +x ./docker_entrypoint.sh
+RUN chmod +x ./.env
+
+ENTRYPOINT ["./docker_entrypoint.sh"]
+CMD ["run"]
