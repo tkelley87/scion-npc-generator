@@ -1,7 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
 ### BEGINNING ###
-### This is simulating getting the secrets from secrets manager
+### This is simulating getting the secrets from secrets manager.
+
+### These secrets are injected into the Task Definition before
+### the container begins building from the image.
 export AWS_ACCESS_KEY_ID=dummy
 export AWS_SECRET_ACCESS_KEY=dummy
 export REGION_NAME=dummy
