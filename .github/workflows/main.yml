@@ -25,6 +25,9 @@ jobs:
       
   build:
     name: Building images
+    permissions:
+     id-token: write
+     contents: read
     needs: login-to-amazon-ecr
     runs-on: ubuntu-latest
     steps:
