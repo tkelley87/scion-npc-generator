@@ -40,6 +40,7 @@ jobs:
           role-session-name: MySessionName
           mask-aws-account-id: "true"
 
+      # Adding sleep
       - name: Sleep for 3 seconds
         run: sleep 3s
 
