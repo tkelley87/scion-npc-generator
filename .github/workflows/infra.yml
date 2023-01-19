@@ -52,7 +52,7 @@ jobs:
 
       - name: Terraform init
         id: init
-        run: terraform init -backend-config="bucket=scion-npc-gen-tf-states-us-east-1/state/terraform.tfstate"
+        run: terraform init -backend-config="bucket=scion-npc-gen-tf-states-us-east-1/state/"
 
       - name: Terraform format
         id: fmt
