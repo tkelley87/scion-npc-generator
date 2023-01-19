@@ -3,12 +3,12 @@ name: Deploy AWS Infra
 on:
   push:
     branches:
-      - main
+      - feat/infra
     paths:
       - _infra/**
   pull_request:
     branches:
-      - main
+      - feat/infra
     paths:
       - _infra/**
 
