@@ -40,6 +40,9 @@ jobs:
           role-session-name: MySessionName
           mask-aws-account-id: "true"
 
+      - name: Sleep for 3 seconds
+        run: sleep 3s
+
       - name: Checkout
         uses: actions/checkout@v2
 
