@@ -30,6 +30,9 @@ jobs:
         # working-directory: _infra
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1-node16
         with:
@@ -41,9 +44,6 @@ jobs:
       # Adding sleep
       - name: Sleep for 3 seconds
         run: sleep 3s
-
-      - name: Checkout
-        uses: actions/checkout@v2
 
       - name: Setup Terraform with specified version on the runner
         uses: hashicorp/setup-terraform@v2
@@ -62,11 +62,11 @@ jobs:
         id: validate
         run: terraform validate
 
-      # - name: Terraform plan
-      #   id: plan
-      #   if: github.event_name == 'pull_request'
-      #   run: terraform plan -no-color -input=false
-      #   continue-on-error: true
+      - name: Terraform plan
+        id: plan
+        if: github.event_name == 'pull_request'
+        run: terraform plan -no-color -input=false
+        continue-on-error: true
 
       # - uses: actions/github-script@v6
       #   if: github.event_name == 'pull_request'
