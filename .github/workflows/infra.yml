@@ -37,7 +37,7 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/github-actions-role
           aws-region: us-east-1
-          role-session-name: MySessionName2
+          role-session-name: MySessionName
           mask-aws-account-id: "true"
 
       - name: Checkout
