@@ -1,9 +1,10 @@
 name: Deploy to ECR
 on:
-
   push:
     branches: [ githubActions ]
-
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
   build:
