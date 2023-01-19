@@ -29,7 +29,7 @@ jobs:
       run:
         shell: bash
         # We keep Terraform files in the terraform directory.
-        working-directory: ./_infra
+        working-directory: _infra
 
     steps:
       - name: Configure AWS credentials
