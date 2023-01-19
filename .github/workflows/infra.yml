@@ -26,12 +26,17 @@ jobs:
     defaults:
       run:
         shell: bash
-        # # We keep Terraform files in the terraform directory.
-        # working-directory: _infra
+        # We keep Terraform files in the terraform directory.
+        working-directory: _infra
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Setup Terraform with specified version on the runner
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.3.7
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1-node16
@@ -44,11 +49,6 @@ jobs:
       # Adding sleep
       - name: Sleep for 3 seconds
         run: sleep 3s
-
-      - name: Setup Terraform with specified version on the runner
-        uses: hashicorp/setup-terraform@v2
-        with:
-          terraform_version: 1.3.7
 
       - name: Terraform init
         id: init
