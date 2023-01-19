@@ -52,7 +52,7 @@ jobs:
 
       - name: Terraform init
         id: init
-        run: terraform init -backend-config="bucket=$BUCKET_TF_STATE"
+        run: terraform init -backend-config="bucket=scion-npc-gen-tf-states-us-east-1/state/terraform.tfstate"
 
       - name: Terraform format
         id: fmt
@@ -95,9 +95,9 @@ jobs:
       #         body: output
       #       })
 
-      # - name: Terraform Plan Status
-      #   if: steps.plan.outcome == 'failure'
-      #   run: exit 1
+      - name: Terraform Plan Status
+        if: steps.plan.outcome == 'failure'
+        run: exit 1
 
       # - name: Terraform Apply
       #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
