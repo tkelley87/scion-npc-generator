@@ -32,5 +32,5 @@ jobs:
 
     outputs:
       registry: ${{ steps.login-ecr.outputs.registry }}
-      docker_username: ${{ steps.login-ecr.outputs.docker_username_339352267472_dkr_ecr_us_east_1_amazonaws_com }}
-      docker_password: ${{ steps.login-ecr.outputs.docker_password_339352267472_dkr_ecr_us_east_1_amazonaws_com }}
+      docker_username: ${{ steps.login-ecr.outputs.docker_username_${{ secrets.AWS_ACCOUNT_ID }}_dkr_ecr_us_east_1_amazonaws_com }}
+      docker_password: ${{ steps.login-ecr.outputs.docker_password_${{ secrets.AWS_ACCOUNT_ID }}_dkr_ecr_us_east_1_amazonaws_com }}
