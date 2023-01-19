@@ -15,7 +15,7 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/github-actions-role
           aws-region: us-east-1
-          mask-aws-account-id: 'true'
+          mask-aws-account-id: 'false'
 
       - name: Login to Amazon ECR Private
         id: login-ecr
@@ -32,4 +32,3 @@ jobs:
 
     outputs:
       registry: ${{ steps.login-ecr.outputs.registry }}
-      
