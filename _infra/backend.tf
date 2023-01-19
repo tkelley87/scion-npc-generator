@@ -6,7 +6,7 @@ terraform {
     encrypt        = true
     kms_key_id     = "alias/terraform-bucket-key"
     dynamodb_table = "terraform-state"
-    region         = var.region
+    region         = "us-east-1"
   }
   required_providers {
     aws = {
