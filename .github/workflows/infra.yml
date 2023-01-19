@@ -12,6 +12,10 @@ on:
     paths:
       - _infra/**
 
+permissions:
+  id-token: write
+  contents: read
+
 env:
   # Verbosity setting for Terraform logs
   TF_LOG: INFO
