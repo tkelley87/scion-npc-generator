@@ -50,6 +50,7 @@ jobs:
       - name: Sleep for 3 seconds
         run: sleep 3s
 
+      # Test
       - name: Terraform init
         id: init
         run: terraform init -backend-config="bucket=$BUCKET_TF_STATE" -backend-config=dynamodb_table=terraform-state
