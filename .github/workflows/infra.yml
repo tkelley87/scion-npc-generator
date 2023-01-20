@@ -100,8 +100,6 @@ jobs:
         run: exit 1
 
       - name: Terraform Apply
-        if: github.event_name == 'push'
+        if: github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve -input=false
 
-
-# Put on line 103 => `github.ref == 'refs/heads/main' &&`

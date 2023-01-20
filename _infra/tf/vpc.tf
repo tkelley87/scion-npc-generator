@@ -8,6 +8,12 @@ resource "aws_internet_gateway" "main" {
   vpc_id = aws_vpc.main.id
 }
 
+# AZs
+variable "availability_zones" {
+  description = "a comma-separated list of availability zones, defaults to all AZ of the region, if set to something other than the defaults, both private_subnets and public_subnets have to be defined as well"
+  default     = ["us-east-1a", "us-east-1b", "us-east-1c"]
+}
+
 # Public Subnets
 resource "aws_subnet" "public" {
   vpc_id                  = aws_vpc.main.id
