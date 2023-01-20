@@ -2,9 +2,9 @@ variable "region" {
   default = "us-east-1"
 }
 
-variable "container_environment_variables" {
-  description = "Container environment variables added to Fargate container definition"
-}
+# variable "container_environment_variables" {
+#   description = "Container environment variables added to Fargate container definition"
+# }
 
 variable "cidr" {
   description = "The CIDR block for the VPC."
@@ -23,7 +23,6 @@ variable "private_subnets" {
 
 // INJECTED AT BUILD TIME VARIABLES
 
-variable "stack_name" {}
-variable "docker_name" {}
-variable "docker_version" {}
-
+# variable "stack_name" {}
+# variable "docker_name" {}
+# variable "docker_version" {}
