@@ -1,4 +1,4 @@
-
+# Test
 resource "aws_ecs_cluster" "scion-npc-gen" {
   name = "scion-npc-gen" # Naming the cluster
 }
