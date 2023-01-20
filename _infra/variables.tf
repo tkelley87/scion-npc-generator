@@ -26,4 +26,4 @@ variable "private_subnets" {
 variable "stack_name" {}
 variable "docker_name" {}
 variable "docker_version" {}
-variable "region" {}
+
