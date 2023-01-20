@@ -3,7 +3,7 @@ name: Deploy AWS Infra
 on:
   push:
     branches:
-      - "*"
+      - "**"
     paths:
       - _infra/**
   pull_request:
@@ -50,9 +50,10 @@ jobs:
       - name: Sleep for 3 seconds
         run: sleep 3s
 
+      # Test
       - name: Terraform init
         id: init
-        run: terraform init -backend-config="bucket=$BUCKET_TF_STATE" -backend-config=dynamodb_table=terraform-state
+        run: terraform init -backend-config="bucket=$BUCKET_TF_STATE"
 
       - name: Terraform format
         id: fmt
