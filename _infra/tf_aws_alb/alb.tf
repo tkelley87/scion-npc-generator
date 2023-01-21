@@ -6,6 +6,11 @@ resource "aws_lb" "scion-npc-gen" {
   subnets            = var.subnets.*.id
 
   enable_deletion_protection = false
+
+  tags = {
+    Name        = "${var.name}-alb-${var.environment}"
+    Environment = var.environment
+  }
 }
 
 resource "aws_alb_target_group" "scion-npc-gen" {
@@ -23,6 +28,11 @@ resource "aws_alb_target_group" "scion-npc-gen" {
     timeout             = "3"
     path                = var.health_check_path
     unhealthy_threshold = "2"
+  }
+
+  tags = {
+    Name        = "${var.name}-tg-${var.environment}"
+    Environment = var.environment
   }
 }
 

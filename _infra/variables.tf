@@ -16,6 +16,8 @@ variable "environment" {
   default = "test"
 }
 
+health_check_path {}
+
 variable "name" {
   default = "scion-npc-gen"
 }
