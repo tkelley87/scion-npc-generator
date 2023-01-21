@@ -12,9 +12,9 @@ variable "cidr" {
   default     = "10.0.0.0/16"
 }
 
-# variable "environment" {
-#   default = "test"
-# }
+variable "environment" {
+  default = "test"
+}
 
 variable "name" {
   default = "scion-npc-gen"
