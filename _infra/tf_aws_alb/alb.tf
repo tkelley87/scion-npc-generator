@@ -56,3 +56,7 @@ resource "aws_alb_listener" "http" {
 #     type             = "forward"
 #   }
 # }
+
+output "aws_alb_target_group_arn" {
+  value = aws_alb_target_group.main.arn
+}

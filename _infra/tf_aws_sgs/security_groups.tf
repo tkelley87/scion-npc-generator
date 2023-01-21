@@ -31,3 +31,7 @@ resource "aws_security_group" "alb" {
     Environment = var.environment
   }
 }
+
+output "alb" {
+  value = aws_security_group.alb.id
+}
