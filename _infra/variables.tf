@@ -1,3 +1,8 @@
+variable "availability_zones" {
+  description = "a comma-separated list of availability zones, defaults to all AZ of the region, if set to something other than the defaults, both private_subnets and public_subnets have to be defined as well"
+  default     = ["us-east-1a", "us-east-1b", "us-east-1c"]
+}
+
 # variable "container_environment_variables" {
 #   description = "Container environment variables added to Fargate container definition"
 # }
