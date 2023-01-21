@@ -68,5 +68,5 @@ resource "aws_alb_target_group" "scion-npc-gen" {
 # }
 
 output "aws_alb_target_group_arn" {
-  value = aws_alb_target_group.main.arn
+  value = aws_alb_target_group.scion-npc-gen.arn
 }
