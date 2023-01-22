@@ -20,11 +20,6 @@ env:
   TF_LOG: INFO
   # S3 bucket for the Terraform state
   BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
-  # KEY: "state/terraform.tfstate"
-  # ENCRYPT: true
-  # KMS_KEY_ID: "alias/terraform-bucket-key"
-  # DYNANODB_TABLE: "terraform-state"
-  # REGION: "us-east-1"
 
 jobs:
   deploy:
@@ -56,16 +51,9 @@ jobs:
       - name: Sleep for 3 seconds
         run: sleep 3s
 
-      # Test
       - name: Terraform init
         id: init
         run: terraform init -backend-config="bucket=$BUCKET_TF_STATE"
-          # -backend-config="key=$KEY" \
-          # -backend-config="encrypt=$ENCRYPT" \
-          # -backend-config="kms_key_id=$KMS_KEY_ID" \
-          # -backend-config="dynamodb_table=$DYNANODB_TABLE" \
-          # -backend-config="region=$REGION"
-
 
       - name: Terraform format
         id: fmt
