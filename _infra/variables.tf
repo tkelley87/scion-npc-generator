@@ -17,6 +17,21 @@ variable "container_image" {
   default     = "339352267472.dkr.ecr.us-east-1.amazonaws.com/scion-npc-gen-client"
 }
 
+variable "container_port" {
+  description = "Container port"
+  default     = "3000"
+}
+
+variable "container_cpu" {
+  description = "The number of cpu units used by the task"
+  default = "256"
+}
+
+variable "container_memory" {
+  description = "The amount (in MiB) of memory used by the task"
+  default = "256"
+}
+
 variable "environment" {
   default = "test"
 }
