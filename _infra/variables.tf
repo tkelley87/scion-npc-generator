@@ -24,12 +24,12 @@ variable "container_port" {
 
 variable "container_cpu" {
   description = "The number of cpu units used by the task"
-  default = "256"
+  default     = "256"
 }
 
 variable "container_memory" {
   description = "The amount (in MiB) of memory used by the task"
-  default = "256"
+  default     = "256"
 }
 
 variable "environment" {
