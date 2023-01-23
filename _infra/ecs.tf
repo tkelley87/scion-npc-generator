@@ -8,6 +8,7 @@ module "ecs" {
   ecs_service_security_groups = [module.security_groups.ecs_tasks]
   container_port              = var.container_port
   container_cpu               = var.container_cpu
+  container_image             = var.container_image
   container_memory            = var.container_memory
   service_desired_count       = var.service_desired_count
   container_environment = [
@@ -16,6 +17,13 @@ module "ecs" {
     { name = "PORT",
     value = var.container_port }
   ]
-  container_secrets      = module.secrets.secrets_map
-  container_secrets_arns = module.secrets.application_secrets_arn
+
+  # container_environment_variables = {
+
+  # }
+
+  # container_secret_environment_variables = {
+  #   DATABASE : "${data.aws_secretsmanager_secret.secrets_npc_gen.arn}:DATABASE::"
+  #   PORT : "${data.aws_secretsmanager_secret.secrets_npc_gen.arn}:PORT::"
+  # }
 }

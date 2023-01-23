@@ -28,12 +28,12 @@ resource "aws_ecs_task_definition" "scion-npc-gen" {
         awslogs-region        = var.region
       }
     }
-    environment : [
-      for k, v in var.container_environment_variables : { name : k, value : v }
-    ]
-    secrets : [
-      for k, v in var.container_secret_environment_variables : { name : k, valueFrom : v }
-    ]
+    # environment : [
+    #   for k, v in var.container_environment_variables : { name : k, value : v }
+    # ]
+    # secrets : [
+    #   for k, v in var.container_secret_environment_variables : { name : k, valueFrom : v }
+    # ]
   }])
 
   tags = {

@@ -12,6 +12,11 @@ variable "cidr" {
   default     = "10.0.0.0/16"
 }
 
+variable "container_image" {
+  description = "ECR Image to use"
+  default     = "339352267472.dkr.ecr.us-east-1.amazonaws.com/scion-npc-gen-client"
+}
+
 variable "environment" {
   default = "test"
 }
