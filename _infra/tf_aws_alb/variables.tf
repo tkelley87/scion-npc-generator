@@ -6,6 +6,11 @@ variable "environment" {
   description = "the name of your environment, e.g. \"prod\""
 }
 
+variable "service_desired_count" {
+  description = "Number of tasks running in parallel"
+  default     = 1
+}
+
 variable "subnets" {
   description = "Comma separated list of subnet IDs"
 }
