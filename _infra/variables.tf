@@ -59,6 +59,11 @@ variable "region" {
   default = "us-east-1"
 }
 
+variable "service_desired_count" {
+  description = "Number of tasks running in parallel"
+  default     = 1
+}
+
 # // INJECTED AT BUILD TIME VARIABLES
 
 # # variable "stack_name" {}
