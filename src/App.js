@@ -52,11 +52,17 @@ function App() {
       <ThemeProvider theme={darkTheme}>
         <BrowserRouter>
           <Routes>
+            {/* App Health Check Endpoint */}
+            <Route path="/health">
+              <h1>Need an NPC? Well App is Healthy</h1>
+            </Route>
+
+            {/* Main Route into App */}
             <Route
               path="/"
               element={<Form insertedArticle={insertedArticle} />}
               exact
-            ></Route>
+            />
           </Routes>
         </BrowserRouter>
 
