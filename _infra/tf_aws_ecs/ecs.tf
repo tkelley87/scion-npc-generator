@@ -11,15 +11,16 @@ resource "aws_ecs_task_definition" "scion-npc-gen" {
   execution_role_arn       = aws_iam_role.ecs_task_execution_role.arn
   task_role_arn            = aws_iam_role.ecs_task_role.arn
   container_definitions = jsonencode([{
-    name        = "${var.name}-container-${var.environment}"
-    image       = "${var.container_image}:latest"
-    essential   = true
-    environment = var.container_environment
-    portMappings = [{
-      protocol      = "tcp"
-      containerPort = var.container_port
-      hostPort      = var.container_port
+    name : "${var.name}-container-${var.environment}"
+    image : "${var.container_image}:latest"
+    essential : true
+    environment : var.container_environment
+    portMappings : [{
+      protocol : "tcp"
+      containerPort : var.container_port
+      hostPort : var.container_port
     }]
+    networkMode : "awsvpc"
     # logConfiguration = {
     #   logDriver = "awslogs"
     #   options = {
