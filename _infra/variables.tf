@@ -19,7 +19,7 @@ variable "container_image" {
 
 variable "container_port" {
   description = "Container port"
-  default     = 3000
+  default     = 80
 }
 
 variable "container_cpu" {
