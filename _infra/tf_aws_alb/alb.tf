@@ -14,10 +14,11 @@ resource "aws_lb" "scion-npc-gen" {
 }
 
 resource "aws_alb_target_group" "scion-npc-gen" {
-  name     = "${var.name}-tg-${var.environment}"
-  port     = 80
-  protocol = "HTTP"
-  vpc_id   = var.vpc_id
+  name        = "${var.name}-tg-${var.environment}"
+  port        = 80
+  protocol    = "HTTP"
+  vpc_id      = var.vpc_id
+  target_type = "alb"
 
   health_check {
     healthy_threshold   = "3"
