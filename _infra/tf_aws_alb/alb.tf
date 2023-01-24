@@ -18,7 +18,7 @@ resource "aws_alb_target_group" "scion-npc-gen" {
   port        = 80
   protocol    = "HTTP"
   vpc_id      = var.vpc_id
-  target_type = "alb"
+  target_type = "ip"
 
   health_check {
     healthy_threshold   = "3"
