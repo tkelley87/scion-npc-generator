@@ -12,6 +12,26 @@ variable "cidr" {
   default     = "10.0.0.0/16"
 }
 
+variable "container_image" {
+  description = "ECR Image to use"
+  default     = "339352267472.dkr.ecr.us-east-1.amazonaws.com/scion-npc-gen-client"
+}
+
+variable "container_port" {
+  description = "Container port"
+  default     = 3000
+}
+
+variable "container_cpu" {
+  description = "The number of cpu units used by the task"
+  default     = 256
+}
+
+variable "container_memory" {
+  description = "The amount (in MiB) of memory used by the task"
+  default     = 512
+}
+
 variable "environment" {
   default = "test"
 }
@@ -37,6 +57,11 @@ variable "private_subnets" {
 
 variable "region" {
   default = "us-east-1"
+}
+
+variable "service_desired_count" {
+  description = "Number of tasks running in parallel"
+  default     = 1
 }
 
 # // INJECTED AT BUILD TIME VARIABLES

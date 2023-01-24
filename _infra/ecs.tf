@@ -1,31 +1,29 @@
-# Test
-# resource "aws_ecs_cluster" "scion-npc-gen" {
-#   name = "scion-npc-gen" # Naming the cluster
-# }
+module "ecs" {
+  source                      = "./tf_aws_ecs"
+  name                        = var.name
+  environment                 = var.environment
+  region                      = var.region
+  subnets                     = module.vpc.private_subnets
+  aws_alb_target_group_arn    = module.alb.aws_alb_target_group_arn
+  ecs_service_security_groups = [module.security_groups.ecs_tasks]
+  container_port              = var.container_port
+  container_cpu               = var.container_cpu
+  container_image             = var.container_image
+  container_memory            = var.container_memory
+  service_desired_count       = var.service_desired_count
+  container_environment = [
+    { name = "LOG_LEVEL",
+    value = "DEBUG" },
+    { name = "PORT",
+    value = var.container_port }
+  ]
 
-# resource "aws_ecs_service" "scion-npc-gen-client" {
-#  name                               = "${var.name}-service-${var.environment}"
-#  cluster                            = aws_ecs_cluster.scion-npc-gen.id
-#  task_definition                    = aws_ecs_task_definition.scion-npc-gen.arn
-#  desired_count                      = 2
-#  deployment_minimum_healthy_percent = 50
-#  deployment_maximum_percent         = 200
-#  launch_type                        = "FARGATE"
-#  scheduling_strategy                = "REPLICA"
+  # container_environment_variables = {
 
-#  network_configuration {
-#    security_groups  = var.ecs_service_security_groups
-#    subnets          = var.subnets.*.id
-#    assign_public_ip = false
-#  }
+  # }
 
-#  load_balancer {
-#    target_group_arn = var.aws_alb_target_group_arn
-#    container_name   = "${var.name}-container-${var.environment}"
-#    container_port   = var.container_port
-#  }
-
-#  lifecycle {
-#    ignore_changes = [task_definition, desired_count]
-#  }
-# }
+  # container_secret_environment_variables = {
+  #   DATABASE : "${data.aws_secretsmanager_secret.secrets_npc_gen.arn}:DATABASE::"
+  #   PORT : "${data.aws_secretsmanager_secret.secrets_npc_gen.arn}:PORT::"
+  # }
+}
