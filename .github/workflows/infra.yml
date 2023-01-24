@@ -1,11 +1,11 @@
 name: Deploy AWS Infra
 
 on:
-  # workflow_run:
-  #   workflows:
-  #     - "Deploy to ECR"
-  #   types:
-  #     - completed
+  workflow_run:
+    workflows:
+      - "Deploy to ECR"
+    types:
+      - completed
   push:
     branches:
       - "**"
