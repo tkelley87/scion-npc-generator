@@ -44,6 +44,8 @@ resource "aws_alb_listener" "http" {
     target_group_arn = aws_alb_target_group.scion-npc-gen.id
     type             = "forward"
   }
+
+  depends_on = [aws_alb_target_group.scion-npc-gen]
 }
 
 # This listener need SSL to be un-commented out
