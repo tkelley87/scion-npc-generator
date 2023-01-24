@@ -16,7 +16,7 @@ on:
     branches:
       - main
     paths:
-      - "**"
+      - _infra/**
 
 permissions: write-all
 
