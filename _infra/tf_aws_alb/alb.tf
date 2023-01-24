@@ -14,10 +14,10 @@ resource "aws_lb" "scion-npc-gen" {
 }
 
 resource "aws_alb_target_group" "scion-npc-gen" {
-  name        = "${var.name}-tg-${var.environment}"
-  port        = 80
-  protocol    = "HTTP"
-  vpc_id      = var.vpc_id
+  name     = "${var.name}-tg-${var.environment}"
+  port     = 80
+  protocol = "HTTP"
+  vpc_id   = var.vpc_id
 
   health_check {
     healthy_threshold   = "3"
@@ -40,15 +40,10 @@ resource "aws_alb_listener" "http" {
   port              = 80
   protocol          = "HTTP"
 
-  # default_action {
-  #   type = "redirect"
-
-  #   redirect {
-  #     port        = 443
-  #     protocol    = "HTTPS"
-  #     status_code = "HTTP_301"
-  #   }
-  # }
+  default_action {
+    target_group_arn = aws_alb_target_group.scion-npc-gen.id
+    type             = "forward"
+  }
 }
 
 # This listener need SSL to be un-commented out
