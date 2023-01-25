@@ -21,9 +21,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.client
+      args:
+        - APP_ENV=$APP_ENV
     image: react-flask-app-client
     container_name: client
     ports:
       - "3000:80"
-    depends_on:
-      - dynamodb-local

@@ -1,7 +1,7 @@
 name: Deploy to ECR
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 permissions:
   id-token: write
   contents: read
@@ -19,7 +19,7 @@ jobs:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/github-actions-role
           aws-region: us-east-1
           role-session-name: MySessionName
-          mask-aws-account-id: 'true'
+          mask-aws-account-id: "true"
 
       - name: Login to Amazon ECR Private
         id: login-ecr
@@ -42,6 +42,7 @@ jobs:
           ECR_REPOSITORY: scion-npc-gen-client
           LATEST_TAG: latest
           IMAGE_TAG: ${{ github.sha }}
+          APP_ENV: prod
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$LATEST_TAG -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f ./Dockerfile.client .
           echo "Pushing $ECR_REPOSITORY to ECR..."
