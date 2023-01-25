@@ -8,6 +8,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 // Component imports
 import Form from "./Components/Form";
+import Health from "./Components/Health";
 
 // App specific functions
 const darkTheme = createTheme({
@@ -53,9 +54,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             {/* App Health Check Endpoint */}
-            <Route path="/health">
-              <h1>Need an NPC? Well App is Healthy</h1>
-            </Route>
+            <Route path="/health" element={<Health />} />
 
             {/* Main Route into App */}
             <Route
