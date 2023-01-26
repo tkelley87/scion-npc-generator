@@ -44,7 +44,7 @@ jobs:
           IMAGE_TAG: ${{ github.sha }}
           APP_ENV: prod
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$LATEST_TAG -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f ./Dockerfile.client .
+          docker build --build-arg APP_ENV=$APP_ENV -t $ECR_REGISTRY/$ECR_REPOSITORY:$LATEST_TAG -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f ./Dockerfile.client .
           echo "Pushing $ECR_REPOSITORY to ECR..."
           docker push --all-tags $ECR_REGISTRY/$ECR_REPOSITORY
 
