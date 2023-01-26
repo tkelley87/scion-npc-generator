@@ -1,22 +1,22 @@
 name: Deploy AWS Infra
 
 on:
-  workflow_run:
-    workflows:
-      - "Deploy to ECR"
-    types:
-      - completed
-    push:
-      branches:
-        - "**"
-      paths:
-        # - _infra/**
-        - "**"
-    pull_request:
-      branches:
-        - main
-      paths:
-        - "**"
+  # workflow_run:
+  #   workflows:
+  #     - "Deploy to ECR"
+  #   types:
+  #     - completed
+  push:
+    branches:
+      - "**"
+    paths:
+      # - _infra/**
+      - "**"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "**"
 
 permissions: write-all
 
@@ -106,5 +106,5 @@ jobs:
         run: exit 1
 
       - name: Terraform Apply
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        # if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve -input=false
