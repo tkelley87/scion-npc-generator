@@ -1,6 +1,5 @@
 module "ecs" {
   source = "./tf_aws_ecs"
-  cidr   = module.vpc.vpc_cidr
   vpc_id = module.vpc.vpc_id
 }
 
