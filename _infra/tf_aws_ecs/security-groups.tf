@@ -1,5 +1,5 @@
 resource "aws_security_group" "ecs" {
-  name        = "ECS Security Groups"
+  name        = var.name
   description = "Container Allowed Ports"
   vpc_id      = var.vpc_id
 

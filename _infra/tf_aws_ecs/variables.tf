@@ -1,5 +1,5 @@
-
-# variable "name" {}
+variable "environment" {}
+variable "name" {}
 variable "vpc_id" {}
 
 # variable "environment" {
