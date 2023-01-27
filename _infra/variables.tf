@@ -32,10 +32,10 @@ variable "environment" {
   default = "test"
 }
 
-# variable "health_check_path" {
-#   description = "Http path for task health check"
-#   default     = "/health"
-# }
+variable "health_check_path" {
+  description = "Http path for task health check"
+  default     = "/health"
+}
 
 variable "name" {
   default = "scion-npc-gen"
