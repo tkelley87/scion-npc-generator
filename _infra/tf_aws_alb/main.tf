@@ -17,41 +17,19 @@ resource "aws_lb" "scion-npc-gen" {
   }
 }
 
-resource "aws_alb_target_group" "scion-npc-gen" {
-  name        = "${var.name}-tg-${var.environment}"
-  port        = 80
-  protocol    = "HTTP"
-  vpc_id      = var.vpc_id
-  target_type = "ip"
 
-  health_check {
-    healthy_threshold   = "3"
-    interval            = "30"
-    protocol            = "HTTP"
-    matcher             = "200"
-    timeout             = "3"
-    path                = var.health_check_path
-    unhealthy_threshold = "2"
-  }
+# resource "aws_alb_listener" "http" {
+#   load_balancer_arn = aws_lb.scion-npc-gen.id
+#   port              = 80
+#   protocol          = "HTTP"
 
-  tags = {
-    Name        = "${var.name}-tg-${var.environment}"
-    Environment = var.environment
-  }
-}
+#   default_action {
+#     target_group_arn = aws_alb_target_group.scion-npc-gen.id
+#     type             = "forward"
+#   }
 
-resource "aws_alb_listener" "http" {
-  load_balancer_arn = aws_lb.scion-npc-gen.id
-  port              = 80
-  protocol          = "HTTP"
-
-  default_action {
-    target_group_arn = aws_alb_target_group.scion-npc-gen.id
-    type             = "forward"
-  }
-
-  depends_on = [aws_alb_target_group.scion-npc-gen]
-}
+#   depends_on = [aws_alb_target_group.scion-npc-gen]
+# }
 
 # This listener need SSL to be un-commented out
 # resource "aws_alb_listener" "https" {
@@ -67,4 +45,3 @@ resource "aws_alb_listener" "http" {
 #     type             = "forward"
 #   }
 # }
-

@@ -13,10 +13,9 @@ variable "cidr" {
 #   default     = "339352267472.dkr.ecr.us-east-1.amazonaws.com/scion-npc-gen-client"
 # }
 
-# variable "container_port" {
-#   description = "Container port"
-#   default     = 80
-# }
+variable "container_port" {
+  description = "Container port"
+}
 
 # variable "container_cpu" {
 #   description = "The number of cpu units used by the task"
@@ -32,10 +31,7 @@ variable "environment" {
   default = "test"
 }
 
-variable "health_check_path" {
-  description = "Http path for task health check"
-  default     = "/health"
-}
+variable "health_check_path" {}
 
 variable "name" {
   default = "scion-npc-gen"
