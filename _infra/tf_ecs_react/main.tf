@@ -77,7 +77,7 @@ resource "aws_alb_target_group" "scion-npc-gen" {
     Environment = var.environment
   }
 }
-
+  
 resource "aws_lb_listener_rule" "client" {
   load_balancer_arn = aws_alb_target_group
 

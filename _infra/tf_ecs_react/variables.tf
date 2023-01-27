@@ -11,7 +11,18 @@ variable "path_pattern" {
   type        = string
 }
 
-variable "aws_alb_target_group_arn" {}
+variable "container_cpu" {
+  description = "The number of cpu units used by the task"
+  default     = 256
+}
+variable "container_image" {
+  description = "ECR Image to use"
+  default     = "339352267472.dkr.ecr.us-east-1.amazonaws.com/scion-npc-gen-client"
+}
+variable "container_memory" {
+  description = "The amount (in MiB) of memory used by the task"
+  default     = 512
+}
 variable "container_port" {
   description = "Container Port"
   default     = 80
