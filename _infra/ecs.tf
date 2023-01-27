@@ -1,6 +1,7 @@
 module "ecs" {
-  source = "./tf_aws_ecs"
-  vpc_id = module.vpc.vpc_id
+  source      = "./tf_aws_ecs"
+  environment = var.environment
+  vpc_id      = module.vpc.vpc_id
 }
 
 # module "ecs" {
