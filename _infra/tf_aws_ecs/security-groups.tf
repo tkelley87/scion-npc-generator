@@ -4,7 +4,7 @@ resource "aws_security_group" "ecs" {
   vpc_id      = var.vpc_id
 
   tags = {
-    Name = "ecsSGs"
+    Name = "${var.name}-sg-ecs-${var.environment}"
   }
 
   lifecycle {
