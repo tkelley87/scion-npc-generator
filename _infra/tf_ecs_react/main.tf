@@ -51,7 +51,7 @@ resource "aws_security_group" "ecs_tasks" {
   }
 
   tags = {
-    Name = "${var.name}-${var.docker_name}-alb-ingress-sg"
+    Name = "${var.name}-alb-ingress-sg"
   }
 }
 
