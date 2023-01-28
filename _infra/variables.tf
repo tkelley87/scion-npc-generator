@@ -13,9 +13,9 @@ variable "cidr" {
 #   default     = "339352267472.dkr.ecr.us-east-1.amazonaws.com/scion-npc-gen-client"
 # }
 
-variable "container_port" {
-  description = "Container port"
-}
+# variable "container_port" {
+#   description = "Container port"
+# }
 
 # variable "container_cpu" {
 #   description = "The number of cpu units used by the task"
