@@ -8,7 +8,7 @@ module "fe-react" {
   environment           = var.environment
   health_check_path     = var.health_check_path
   name                  = var.name
-  private_subnets       = var.private_subnets
+  private_subnets       = module.vpc.public_subnets
   scion_npc_gen_alb_arn = module.alb.scion_npc_gen_alb_arn
   vpc_id                = module.vpc.vpc_id
 }
