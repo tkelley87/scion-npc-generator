@@ -1,10 +1,6 @@
 
 
-variable "health_check_path" {
-  description = "URL path to health endpoint"
-  default     = "/health"
-  type        = string
-}
+variable "health_check_path" {}
 
 variable "path_pattern" {
   description = "ALB path pattern to route requests to service"

@@ -31,7 +31,11 @@ variable "environment" {
   default = "test"
 }
 
-# variable "health_check_path" {}
+variable "health_check_path" {
+  description = "URL path to health endpoint"
+  default     = "/health"
+  type        = string
+}
 
 variable "name" {
   default = "scion-npc-gen"
