@@ -10,7 +10,7 @@ resource "aws_ecs_service" "scion-npc-gen-client" {
 
   network_configuration {
     security_groups  = [aws_security_group.ecs_tasks.id]
-    subnets          = var.subnets.*.id
+    subnets          = var.private_subnets
     assign_public_ip = false
   }
 
