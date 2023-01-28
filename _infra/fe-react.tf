@@ -7,6 +7,7 @@ module "fe-react" {
   ecs_cluster_id        = module.ecs.ecs_cluster_id
   environment           = var.environment
   name                  = var.name
+  private_subnets       = var.private_subnets
   scion_npc_gen_alb_arn = module.alb.scion_npc_gen_alb_arn
   vpc_id                = module.vpc.vpc_id
 }
