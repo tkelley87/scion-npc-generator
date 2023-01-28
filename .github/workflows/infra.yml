@@ -27,7 +27,7 @@ env:
   BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
 
 jobs:
-  deploy:
+  Deploy:
     runs-on: ubuntu-latest
     defaults:
       run:
