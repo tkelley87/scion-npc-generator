@@ -30,4 +30,5 @@ variable "container_port" {
 variable "ecs_cluster_id" {}
 variable "environment" {}
 variable "name" {}
+variable "scion_npc_gen_alb_arn" {}
 variable "vpc_id" {}

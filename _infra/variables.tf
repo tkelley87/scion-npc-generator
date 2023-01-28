@@ -55,3 +55,5 @@ variable "region" {
 #   description = "Number of tasks running in parallel"
 #   default     = 1
 # }
+
+variable "scion_npc_gen_alb_arn" {}

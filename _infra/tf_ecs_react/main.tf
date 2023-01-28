@@ -32,7 +32,7 @@ resource "aws_ecs_service" "scion-npc-gen-client" {
 }
 
 resource "aws_security_group" "ecs_tasks" {
-  name        = "${var.stack_name}-${var.docker_name}-alb-ingress-sg"
+  name        = "${var.name}-alb-ingress-sg"
   description = "The SG to control all ingress access to the ELB"
   vpc_id      = var.vpc_id
 
@@ -77,9 +77,9 @@ resource "aws_alb_target_group" "scion-npc-gen" {
     Environment = var.environment
   }
 }
-  
+
 resource "aws_lb_listener_rule" "client" {
-  load_balancer_arn = aws_alb_target_group
+  listener_arn = var.scion_npc_gen_alb_arn
 
   action {
     target_group_arn = aws_alb_target_group.scion-npc-gen.arn

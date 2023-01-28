@@ -1,3 +1,3 @@
-output "aws_alb_target_group_arn" {
-  value = aws_alb_target_group.scion-npc-gen.arn
+output "scion_npc_gen_alb_arn" {
+  value = aws_lb.scion-npc-gen.arn
 }
