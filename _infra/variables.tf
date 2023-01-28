@@ -31,7 +31,7 @@ variable "environment" {
   default = "test"
 }
 
-variable "health_check_path" {}
+# variable "health_check_path" {}
 
 variable "name" {
   default = "scion-npc-gen"
@@ -56,4 +56,4 @@ variable "region" {
 #   default     = 1
 # }
 
-variable "scion_npc_gen_alb_arn" {}
+# variable "scion_npc_gen_alb_arn" {}
