@@ -30,6 +30,6 @@ variable "container_port" {
 variable "ecs_cluster_id" {}
 variable "environment" {}
 variable "name" {}
-varaible "private_subnets" {}
+variable "private_subnets" {}
 variable "scion_npc_gen_alb_arn" {}
 variable "vpc_id" {}
