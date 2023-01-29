@@ -33,5 +33,9 @@ backend/src/routes/controllers/__pycache__
 backend/src/utilities/__pycache__
 .env
 
+# Terraform
+_infra/.Terraform
+_infra/.terraform.*
+
 dynamo
 dynamo/*
