@@ -7,7 +7,7 @@ module "fe-react" {
     { name = "LOG_LEVEL",
     value = "DEBUG" },
     { name = "PORT",
-    value = var.container_port }
+    value = 80 }
   ]
   ecs_cluster_id        = module.ecs.ecs_cluster_id
   ecs_sg_id             = module.ecs.ecs_sg_id
