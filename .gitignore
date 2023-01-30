@@ -36,6 +36,7 @@ backend/src/utilities/__pycache__
 # Terraform
 _infra/.Terraform
 _infra/.terraform.*
+_infra/plan.tf
 
 dynamo
 dynamo/*
