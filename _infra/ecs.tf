@@ -3,7 +3,7 @@ module "ecs" {
   environment = var.environment
   name        = var.name
   vpc_id      = module.vpc.vpc_id
-  ecs_sg_id   = module.tf_aws_ecs.ecs_sg_id
+  # ecs_sg_id   = module.tf_aws_ecs.ecs_sg_id
 }
 
 # module "ecs" {
