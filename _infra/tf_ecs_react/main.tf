@@ -91,16 +91,3 @@ resource "aws_alb_listener" "scion_npc_gen_client" {
 
   depends_on = [aws_alb_target_group.scion-npc-gen]
 }
-
-# resource "aws_alb_listener" "http" {
-#   load_balancer_arn = var.scion_npc_gen_alb_arn
-#   port              = 80
-#   protocol          = "HTTP"
-
-#   default_action {
-#     target_group_arn = aws_alb_target_group.scion-npc-gen.id
-#     type             = "forward"
-#   }
-
-#   depends_on = [aws_alb_target_group.scion-npc-gen]
-# }

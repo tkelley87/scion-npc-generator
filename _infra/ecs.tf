@@ -3,6 +3,12 @@ module "ecs" {
   environment = var.environment
   name        = var.name
   vpc_id      = module.vpc.vpc_id
+  container_environment = [
+    { name = "LOG_LEVEL",
+    value = "DEBUG" },
+    { name = "PORT",
+    value = var.container_port }
+  ]
 }
 
 # module "ecs" {
