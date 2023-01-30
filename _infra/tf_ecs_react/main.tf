@@ -21,14 +21,14 @@ resource "aws_ecs_service" "scion-npc-gen-client" {
   }
 
   lifecycle {
-    create_before_destroy = true
-    # ignore_changes = [task_definition, desired_count]
+    # create_before_destroy = true
+    ignore_changes = [task_definition, desired_count]
   }
 
-  depends_on = [
-    aws_alb_target_group.scion-npc-gen,
-    aws_lb_listener_rule.client
-  ]
+  # depends_on = [
+  #   aws_alb_target_group.scion-npc-gen,
+  #   aws_lb_listener_rule.client
+  # ]
 }
 
 resource "aws_security_group" "ecs_tasks" {
@@ -51,7 +51,8 @@ resource "aws_security_group" "ecs_tasks" {
   }
 
   tags = {
-    Name = "${var.name}-alb-ingress-sg"
+    Name        = "${var.name}-sg-task-${var.environment}"
+    Environment = var.environment
   }
 }
 
@@ -78,6 +79,19 @@ resource "aws_alb_target_group" "scion-npc-gen" {
   }
 }
 
+resource "aws_alb_listener" "scion_npc_gen_client" {
+  load_balancer_arn = var.scion_npc_gen_alb_arn
+  port              = var.container_port
+  protocol          = "HTTP"
+
+  default_action {
+    target_group_arn = aws_alb_target_group.scion-npc-gen.id
+    type             = "forward"
+  }
+
+  depends_on = [aws_alb_target_group.scion-npc-gen]
+}
+
 # resource "aws_alb_listener" "http" {
 #   load_balancer_arn = var.scion_npc_gen_alb_arn
 #   port              = 80
@@ -90,20 +104,3 @@ resource "aws_alb_target_group" "scion-npc-gen" {
 
 #   depends_on = [aws_alb_target_group.scion-npc-gen]
 # }
-
-resource "aws_lb_listener_rule" "client" {
-  listener_arn = var.scion_npc_gen_alb_arn
-
-  action {
-    target_group_arn = aws_alb_target_group.scion-npc-gen.arn
-    type             = "forward"
-  }
-
-  condition {
-    path_pattern {
-      values = [var.path_pattern]
-    }
-  }
-
-  depends_on = [aws_alb_target_group.scion-npc-gen]
-}

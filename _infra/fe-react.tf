@@ -2,7 +2,7 @@ module "fe-react" {
   source = "./tf_ecs_react"
 
   // Service Variables
-  path_pattern = "/"
+  # path_pattern = "/"
 
   ecs_cluster_id        = module.ecs.ecs_cluster_id
   environment           = var.environment

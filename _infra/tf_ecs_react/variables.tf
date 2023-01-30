@@ -2,10 +2,10 @@
 
 variable "health_check_path" {}
 
-variable "path_pattern" {
-  description = "ALB path pattern to route requests to service"
-  type        = string
-}
+# variable "path_pattern" {
+#   description = "ALB path pattern to route requests to service"
+#   type        = string
+# }
 
 variable "container_cpu" {
   description = "The number of cpu units used by the task"

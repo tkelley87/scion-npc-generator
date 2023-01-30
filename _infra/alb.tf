@@ -6,6 +6,5 @@ module "alb" {
   subnets           = module.vpc.public_subnets
   environment       = var.environment
   health_check_path = var.health_check_path
-  scion_npc_gen_tg  = var.scion_npc_gen_tg
   # alb_tls_cert_arn  = var.tsl_certificate_arn
 }

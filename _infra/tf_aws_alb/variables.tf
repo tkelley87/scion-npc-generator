@@ -27,5 +27,3 @@ variable "vpc_id" {
 # variable "alb_tls_cert_arn" {
 #   description = "The ARN of the certificate that the ALB uses for https"
 # }
-
-variable "scion_npc_gen_tg" {}

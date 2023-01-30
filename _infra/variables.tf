@@ -60,5 +60,6 @@ variable "region" {
 #   default     = 1
 # }
 
-variable "scion_npc_gen_alb_arn" {}
-variable "scion_npc_gen_tg" {}
+variable "scion_npc_gen_alb_arn" {
+  default = "arn:aws:elasticloadbalancing:us-east-1:339352267472:loadbalancer/app/scion-npc-gen-alb-test/5e6bcf65b99e8518"
+}
