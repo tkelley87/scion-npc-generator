@@ -11,6 +11,8 @@ variable "container_cpu" {
   description = "The number of cpu units used by the task"
   default     = 256
 }
+
+variable "container_environment" {}
 variable "container_image" {
   description = "ECR Image to use"
   default     = "339352267472.dkr.ecr.us-east-1.amazonaws.com/scion-npc-gen-client"
