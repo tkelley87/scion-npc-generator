@@ -10,7 +10,7 @@ resource "aws_ecs_service" "scion-npc-gen-client" {
 
   network_configuration {
     security_groups  = [aws_security_group.ecs_tasks.id]
-    subnets          = var.private_subnets
+    subnets          = var.private_subnets.*.id
     assign_public_ip = false
   }
 
@@ -77,6 +77,19 @@ resource "aws_alb_target_group" "scion-npc-gen" {
     Environment = var.environment
   }
 }
+
+# resource "aws_alb_listener" "http" {
+#   load_balancer_arn = var.scion_npc_gen_alb_arn
+#   port              = 80
+#   protocol          = "HTTP"
+
+#   default_action {
+#     target_group_arn = aws_alb_target_group.scion-npc-gen.id
+#     type             = "forward"
+#   }
+
+#   depends_on = [aws_alb_target_group.scion-npc-gen]
+# }
 
 resource "aws_lb_listener_rule" "client" {
   listener_arn = var.scion_npc_gen_alb_arn

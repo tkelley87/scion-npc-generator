@@ -60,4 +60,5 @@ variable "region" {
 #   default     = 1
 # }
 
-# variable "scion_npc_gen_alb_arn" {}
+variable "scion_npc_gen_alb_arn" {}
+variable "scion_npc_gen_tg" {}
