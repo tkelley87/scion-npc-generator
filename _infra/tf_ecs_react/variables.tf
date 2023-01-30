@@ -12,7 +12,10 @@ variable "container_cpu" {
   default     = 256
 }
 
-variable "container_environment" {}
+variable "container_environment" {
+  description = "The container environmnent variables"
+  type        = list(any)
+}
 variable "container_image" {
   description = "ECR Image to use"
   default     = "339352267472.dkr.ecr.us-east-1.amazonaws.com/scion-npc-gen-client"
