@@ -58,8 +58,8 @@ resource "aws_security_group" "ecs_tasks" {
 
 resource "aws_security_group_rule" "sg_rule" {
   type                     = "ingress"
-  from_port                = 32766
-  to_port                  = 65535
+  from_port                = var.container_port
+  to_port                  = var.container_port
   protocol                 = "tcp"
   source_security_group_id = aws_security_group.ecs_tasks.id
   security_group_id        = var.ecs_sg_id
