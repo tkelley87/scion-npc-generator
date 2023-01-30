@@ -24,6 +24,7 @@ variable "container_port" {
   default     = 80
 }
 variable "ecs_cluster_id" {}
+variable "ecs_sg_id" {}
 variable "environment" {}
 variable "name" {}
 variable "private_subnets" {}
