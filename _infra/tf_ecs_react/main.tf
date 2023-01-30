@@ -56,6 +56,15 @@ resource "aws_security_group" "ecs_tasks" {
   }
 }
 
+resource "aws_security_group_rule" "sg_rule" {
+  type                     = "ingress"
+  from_port                = 32766
+  to_port                  = 65535
+  protocol                 = "tcp"
+  source_security_group_id = aws_security_group.ecs_tasks.id
+  security_group_id        = var.ecs_sg_id
+}
+
 resource "aws_alb_target_group" "scion-npc-gen" {
   name        = "${var.name}-tg-${var.environment}"
   port        = 80
