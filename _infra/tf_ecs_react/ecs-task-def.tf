@@ -11,7 +11,7 @@ resource "aws_ecs_task_definition" "scion-npc-gen" {
     name : "${var.name}-container-${var.environment}"
     image : "${var.container_image}:latest"
     essential : true
-    # environment : "test"
+    environment : var.environment
     portMappings : [{
       protocol : "tcp"
       containerPort : var.container_port
