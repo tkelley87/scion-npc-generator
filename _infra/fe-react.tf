@@ -2,13 +2,14 @@ module "fe-react" {
   source = "./tf_ecs_react"
 
   // Service Variables
-  # path_pattern = "/"
   container_environment = [
     { name = "LOG_LEVEL",
     value = "DEBUG" },
     { name = "PORT",
     value = 80 }
   ]
+
+  cidr                  = module.vpc.vpc_cidr
   ecs_cluster_id        = module.ecs.ecs_cluster_id
   ecs_sg_id             = module.ecs.ecs_sg_id
   environment           = var.environment

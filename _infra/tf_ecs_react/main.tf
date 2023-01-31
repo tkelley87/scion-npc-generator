@@ -39,7 +39,7 @@ resource "aws_security_group" "ecs_tasks" {
     protocol         = "tcp"
     from_port        = var.container_port
     to_port          = var.container_port
-    cidr_blocks      = ["0.0.0.0/0"]
+    cidr_blocks      = ["10.0.0.0/8"]
     ipv6_cidr_blocks = ["::/0"]
   }
 
@@ -62,15 +62,6 @@ resource "aws_security_group_rule" "sg_rule" {
   from_port                = var.container_port
   to_port                  = var.container_port
   protocol                 = "tcp"
-  source_security_group_id = aws_security_group.ecs_tasks.id
-  security_group_id        = var.ecs_sg_id
-}
-
-resource "aws_security_group_rule" "sg_rule_out" {
-  type                     = "egress"
-  to_port                  = 0
-  from_port                = 0
-  protocol                 = "-1"
   source_security_group_id = aws_security_group.ecs_tasks.id
   security_group_id        = var.ecs_sg_id
 }

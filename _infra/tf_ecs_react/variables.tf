@@ -1,12 +1,3 @@
-
-
-variable "health_check_path" {}
-
-# variable "path_pattern" {
-#   description = "ALB path pattern to route requests to service"
-#   type        = string
-# }
-
 variable "container_cpu" {
   description = "The number of cpu units used by the task"
   default     = 256
@@ -28,9 +19,12 @@ variable "container_port" {
   description = "Container Port"
   default     = 80
 }
+
+variable "cidr" {}
 variable "ecs_cluster_id" {}
 variable "ecs_sg_id" {}
 variable "environment" {}
+variable "health_check_path" {}
 variable "name" {}
 variable "private_subnets" {}
 variable "scion_npc_gen_alb_arn" {}
