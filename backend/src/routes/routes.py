@@ -98,7 +98,8 @@ def post_npc():
         flairs_list[nonfavored_arena].extend(
             flairs_list["Professional_" + nonfavored_arena]
         )
-        flairs_list[nonfavored_arena].extend(flairs_list["Villain_" + nonfavored_arena])
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Villain_" + nonfavored_arena])
 
     if is_name_generic == "yes":
         name_list = utilities.file_list_into_var(
@@ -121,7 +122,8 @@ def post_npc():
     character_profile["Traits"] = utilities.random_with_list(
         traits_data_into_list, selected_count=3
     )
-    character_profile["Drive"] = utilities.random_with_list(drives_data_into_list)
+    character_profile["Drive"] = utilities.random_with_list(
+        drives_data_into_list)
     character_profile["Pantheon"] = given_pantheon
     character_profile["Attitude towards player"] = utilities.random_with_list(
         attitude_list, weighting=(2, 4, 10, 20, 30, 15, 30, 20, 10, 4, 2)
@@ -131,7 +133,8 @@ def post_npc():
             cult_types, weighting=(2, 20, 3, 20, 10, 15, 40, 40, 150)
         )
     else:
-        character_profile["Creature Type"] = utilities.random_with_list(creature_list)
+        character_profile["Creature Type"] = utilities.random_with_list(
+            creature_list)
 
     character_profile["Stats"] = npc_base_stats[npc_type]
     character_profile["Drawbacks"] = utilities.add_qualities_and_flairs(
@@ -260,18 +263,26 @@ def get_npc(id):
     return {"msg": "Some error occurred", "response": response}
 
 
-@routes_blueprint.before_app_first_request
-def getTable():
+@routes_blueprint.route("/health", methods=["GET"])
+def get_health_check():
     """
-    Before first request, check to see if table exists or not.
-    If table doesn't, this function provides a way to create the
-    table before making first request to it.
+    Simple health check
     """
+    return {"msg": "200 OK"}
 
-    try:
-        dynamodb.create_table_npc_gen()
-        current_app.logger.info("\n\n**** Table has been created for you ****\n")
-        return {"msg": "Table has been created for you."}
-    except:
-        current_app.logger.info("\n\n**** Table already exist ****\n")
-        return {"msg": "Table already exist."}
+# TODO - This needs re-work for AWS deployment
+# @routes_blueprint.before_app_first_request
+# def getTable():
+#     """
+#     Before first request, check to see if table exists or not.
+#     If table doesn't, this function provides a way to create the
+#     table before making first request to it.
+#     """
+
+#     try:
+#         dynamodb.create_table_npc_gen()
+#         current_app.logger.info("\n\n**** Table has been created for you ****\n")
+#         return {"msg": "Table has been created for you."}
+#     except:
+#         current_app.logger.info("\n\n**** Table already exist ****\n")
+#         return {"msg": "Table already exist."}

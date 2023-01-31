@@ -1,10 +1,10 @@
 module "alb" {
-  source              = "./tf_aws_alb"
-  name                = var.name
-  vpc_id              = module.vpc.id
-  subnets             = module.vpc.public_subnets
-  environment         = var.environment
-  alb_security_groups = [module.security_groups.alb]
-  # alb_tls_cert_arn    = var.tsl_certificate_arn
+  source            = "./tf_aws_alb"
+  ecs_sg_id         = module.ecs.ecs_sg_id
+  name              = var.name
+  vpc_id            = module.vpc.vpc_id
+  subnets           = module.vpc.public_subnets
+  environment       = var.environment
   health_check_path = var.health_check_path
+  # alb_tls_cert_arn  = var.tsl_certificate_arn
 }
