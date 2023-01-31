@@ -65,6 +65,15 @@ resource "aws_security_group_rule" "sg_rule" {
   security_group_id        = var.ecs_sg_id
 }
 
+resource "aws_security_group_rule" "sg_rule_out" {
+  type                     = "egress"
+  to_port                  = 0
+  from_port                = 0
+  protocol                 = "-1"
+  source_security_group_id = aws_security_group.ecs_tasks.id
+  security_group_id        = var.ecs_sg_id
+}
+
 resource "aws_alb_target_group" "scion-npc-gen" {
   name        = "${var.name}-tg-${var.environment}"
   port        = 80
