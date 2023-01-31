@@ -9,7 +9,7 @@ resource "aws_ecs_service" "scion-npc-gen-client" {
   scheduling_strategy                = "REPLICA"
 
   network_configuration {
-    security_groups  = [aws_security_group.ecs_tasks.id]
+    security_groups  = [var.ecs_sg_id]
     subnets          = var.private_subnets.*.id
     assign_public_ip = false
   }

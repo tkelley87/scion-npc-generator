@@ -27,6 +27,8 @@ variable "cidr" {
 #   default     = 512
 # }
 
+# variable "ecs_sg_id" {}
+
 variable "environment" {
   default = "test"
 }
