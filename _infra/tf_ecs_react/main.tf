@@ -9,7 +9,7 @@ resource "aws_ecs_service" "scion-npc-gen-client" {
   scheduling_strategy                = "REPLICA"
 
   network_configuration {
-    security_groups  = [var.ecs_sg_id]
+    security_groups  = [aws_security_group.ecs_tasks.id]
     subnets          = var.private_subnets.*.id
     assign_public_ip = false
   }
@@ -32,22 +32,23 @@ resource "aws_ecs_service" "scion-npc-gen-client" {
 }
 
 resource "aws_security_group" "ecs_tasks" {
-  name        = "${var.name}-alb-ingress-sg"
-  description = "The SG to control all ingress access to the ELB"
-  vpc_id      = var.vpc_id
+  name   = "${var.name}-sg-task-${var.environment}"
+  vpc_id = var.vpc_id
 
   ingress {
-    from_port   = var.container_port
-    to_port     = var.container_port
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    protocol         = "tcp"
+    from_port        = var.container_port
+    to_port          = var.container_port
+    cidr_blocks      = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
   }
 
   egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
+    protocol         = "-1"
+    from_port        = 0
+    to_port          = 0
+    cidr_blocks      = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
   }
 
   tags = {
@@ -103,7 +104,7 @@ resource "aws_alb_listener" "scion_npc_gen_client" {
   protocol          = "HTTP"
 
   default_action {
-    target_group_arn = aws_alb_target_group.scion-npc-gen.id
+    target_group_arn = aws_alb_target_group.scion-npc-gen.arn
     type             = "forward"
   }
 
