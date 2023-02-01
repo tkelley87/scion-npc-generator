@@ -1,4 +1,4 @@
-resource "aws_ecs_service" "scion-npc-gen-client" {
+resource "aws_ecs_service" "scion-npc-gen-api" {
   name                               = "${var.service_name}-service-${var.environment}"
   cluster                            = var.ecs_cluster_id
   task_definition                    = aws_ecs_task_definition.scion-npc-gen.arn
@@ -21,7 +21,6 @@ resource "aws_ecs_service" "scion-npc-gen-client" {
   }
 
   lifecycle {
-    # create_before_destroy = true
     ignore_changes = [task_definition, desired_count]
   }
 

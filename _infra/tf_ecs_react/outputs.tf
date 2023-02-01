@@ -1,3 +1,3 @@
-output "scion_npc_gen_tg" {
-  value = aws_alb_target_group.scion-npc-gen.id
+output "ecs_service_name" {
+  value = aws_ecs_service.scion-npc-gen-client.name
 }
