@@ -1,4 +1,4 @@
-resource "aws_ecs_service" "scion-npc-gen-client" {
+resource "aws_ecs_service" "scion-npc-gen-api" {
   name                               = "${var.service_name}-service-${var.environment}"
   cluster                            = var.ecs_cluster_id
   task_definition                    = aws_ecs_task_definition.scion-npc-gen.arn
@@ -6,7 +6,6 @@ resource "aws_ecs_service" "scion-npc-gen-client" {
   deployment_minimum_healthy_percent = 50
   deployment_maximum_percent         = 200
   enable_execute_command             = true
-  health_check_grace_period_seconds  = 30
   launch_type                        = "FARGATE"
   scheduling_strategy                = "REPLICA"
 
@@ -16,14 +15,7 @@ resource "aws_ecs_service" "scion-npc-gen-client" {
     assign_public_ip = false
   }
 
-  load_balancer {
-    target_group_arn = aws_alb_target_group.scion-npc-gen.arn
-    container_name   = "${var.service_name}-container-${var.environment}"
-    container_port   = var.container_port
-  }
-
   lifecycle {
-    # create_before_destroy = true
     ignore_changes = [task_definition, desired_count]
   }
 
@@ -87,7 +79,7 @@ resource "aws_security_group_rule" "sg_rule" {
 
 resource "aws_alb_target_group" "scion-npc-gen" {
   name        = "${var.service_name}-tg-${var.environment}"
-  port        = 80
+  port        = 5000
   protocol    = "HTTP"
   vpc_id      = var.vpc_id
   target_type = "ip"
@@ -108,15 +100,15 @@ resource "aws_alb_target_group" "scion-npc-gen" {
   }
 }
 
-resource "aws_alb_listener" "scion_npc_gen_client" {
-  load_balancer_arn = var.scion_npc_gen_alb_arn
-  port              = var.container_port
-  protocol          = "HTTP"
+# resource "aws_alb_listener" "scion_npc_gen_client" {
+#   load_balancer_arn = var.scion_npc_gen_alb_arn
+#   port              = var.container_port
+#   protocol          = "HTTP"
 
-  default_action {
-    target_group_arn = aws_alb_target_group.scion-npc-gen.arn
-    type             = "forward"
-  }
+#   default_action {
+#     target_group_arn = aws_alb_target_group.scion-npc-gen.arn
+#     type             = "forward"
+#   }
 
-  depends_on = [aws_alb_target_group.scion-npc-gen]
-}
+#   depends_on = [aws_alb_target_group.scion-npc-gen]
+# }

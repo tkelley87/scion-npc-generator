@@ -1,13 +1,19 @@
-module "fe-react" {
-  source = "./tf_ecs_react"
+module "be-flask" {
+  source = "./tf_ecs_flask"
 
   // Service Variables
   container_environment = [
     { name = "LOG_LEVEL",
     value = "DEBUG" },
     { name = "PORT",
-    value = 80 }
+    value = 5000 }
   ]
+
+  container_secret_environment_variables = {
+    CONFIG_TYPE : "${data.aws_secretsmanager_secret.scion.arn}:CONFIG_TYPE::"
+    REGION_NAME : "${data.aws_secretsmanager_secret.scion.arn}:REGION_NAME::"
+    FLASK_APP : "${data.aws_secretsmanager_secret.scion.arn}:FLASK_APP::"
+  }
 
   cidr                           = module.vpc.vpc_cidr
   ecs_cluster_id                 = module.ecs.ecs_cluster_id

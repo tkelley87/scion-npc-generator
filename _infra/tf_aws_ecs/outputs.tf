@@ -9,3 +9,7 @@ output "ecs_cluster_id" {
 output "ecs_sg_id" {
   value = aws_security_group.ecs.id
 }
+
+output "service_discovery_namespace_id" {
+  value = aws_service_discovery_private_dns_namespace.service.id
+}

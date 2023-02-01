@@ -18,3 +18,7 @@ terraform {
 provider "aws" {
   region = var.region
 }
+
+data "aws_secretsmanager_secret" "scion" {
+  name = "${var.environment}/scion"
+}

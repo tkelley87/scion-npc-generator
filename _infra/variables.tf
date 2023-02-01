@@ -8,26 +8,9 @@ variable "cidr" {
   default     = "10.0.0.0/16"
 }
 
-# variable "container_image" {
-#   description = "ECR Image to use"
-#   default     = "339352267472.dkr.ecr.us-east-1.amazonaws.com/scion-npc-gen-client"
-# }
-
-# variable "container_port" {
-#   description = "Container port"
-# }
-
-# variable "container_cpu" {
-#   description = "The number of cpu units used by the task"
-#   default     = 256
-# }
-
-# variable "container_memory" {
-#   description = "The amount (in MiB) of memory used by the task"
-#   default     = 512
-# }
-
-# variable "ecs_sg_id" {}
+variable "domain_name_internal" {
+  default = "sng.internal"
+}
 
 variable "environment" {
   default = "test"
@@ -56,11 +39,6 @@ variable "private_subnets" {
 variable "region" {
   default = "us-east-1"
 }
-
-# variable "service_desired_count" {
-#   description = "Number of tasks running in parallel"
-#   default     = 1
-# }
 
 variable "scion_npc_gen_alb_arn" {
   default = "arn:aws:elasticloadbalancing:us-east-1:339352267472:loadbalancer/app/scion-npc-gen-alb-test/5e6bcf65b99e8518"

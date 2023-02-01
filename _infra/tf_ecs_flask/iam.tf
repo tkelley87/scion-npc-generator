@@ -48,6 +48,28 @@ resource "aws_iam_policy" "dynamodb" {
           "Effect": "Allow",
           "Action": "ecs:ExecuteCommand",
           "Resource": "*"
+      },
+      {
+          "Sid": "SecretsAccess",
+          "Effect": "Allow",
+          "Action": [
+            "secretsmanager:GetSecretValue"
+          ],
+          "Resource": "arn:aws:secretsmanager:us-east-1:339352267472:secret:test/*"
+      },
+      {
+          "Sid": "SecretsAccessKms",
+          "Effect": "Allow",
+          "Action": [
+            "kms:DescribeKey",
+            "kms:Decrypt"
+          ],
+          "Condition": {
+            "ForAnyValue:StringLike": {
+              "kms:ResourceAliases": "aws/secretsmanager"
+            }
+          },
+          "Resource": "*"
       }
   ]
 }
