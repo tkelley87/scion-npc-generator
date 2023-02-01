@@ -32,3 +32,6 @@ variable "private_subnets" {}
 variable "scion_npc_gen_alb_arn" {}
 variable "service_discovery_namespace_id" {}
 variable "vpc_id" {}
+variable "container_secret_environment_variables" {
+  description = "Container secret environment variables added to Fargate container definition"
+}

@@ -2,9 +2,9 @@ from flask import request, current_app
 from . import routes_blueprint
 
 import json
+import os
 import random
 import uuid
-import os
 
 import src.routes.controllers.controllers as dynamodb
 import src.utilities.utilities as utilities

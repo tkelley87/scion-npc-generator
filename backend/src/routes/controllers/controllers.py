@@ -2,14 +2,15 @@ from flask import request, redirect, url_for, current_app, abort
 from boto3 import resource
 
 import boto3
+import time
 
 resource = resource(
     "dynamodb",
-    endpoint_url=current_app.config["DYNAMODB_URI"],
-    aws_access_key_id=current_app.config["AWS_ACCESS_KEY_ID"],
-    aws_secret_access_key=current_app.config["AWS_SECRET_ACCESS_KEY"],
+    # endpoint_url=current_app.config["DYNAMODB_URI"],
+    # aws_access_key_id=current_app.config["AWS_ACCESS_KEY_ID"],
+    # aws_secret_access_key=current_app.config["AWS_SECRET_ACCESS_KEY"],
     region_name=current_app.config["REGION_NAME"],
-    verify=False,
+    # verify=False,
 )
 
 dynamodb_client = boto3.client(
@@ -38,7 +39,8 @@ def create_table_npc_gen():
                     "AttributeType": "S",  # N = Number (S = String, B= Binary)
                 }
             ],
-            ProvisionedThroughput={"ReadCapacityUnits": 10, "WriteCapacityUnits": 10},
+            ProvisionedThroughput={
+                "ReadCapacityUnits": 10, "WriteCapacityUnits": 10},
         )
         return table
     except dynamodb_client.exceptions.ResourceInUseException as error:
@@ -58,10 +60,13 @@ def write_to_npc_gen(id, NPC):
     """
     Function to add npc generated to dynamo
     """
+    six_hour_ttl = int(time.time()) + 21_600
+
     response = NpcGenTable.put_item(
         Item={
             "id": id,
             "npc": NPC,
+            "ttl": six_hour_ttl,
         }
     )
     return response
