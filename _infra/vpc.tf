@@ -1,6 +1,6 @@
 module "vpc" {
-  source             = "./tf_aws_vpc"
-  
+  source = "./tf_aws_vpc"
+
   name               = var.name
   cidr               = var.cidr
   private_subnets    = var.private_subnets
