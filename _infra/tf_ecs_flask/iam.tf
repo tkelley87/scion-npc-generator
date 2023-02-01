@@ -42,6 +42,12 @@ resource "aws_iam_policy" "dynamodb" {
               "dynamodb:UpdateTable"
           ],
           "Resource": "*"
+      },
+      {
+          "Sid": "UserAccessToECSExecuteCommand",
+          "Effect": "Allow",
+          "Action": "ecs:ExecuteCommand",
+          "Resource": "*"
       }
   ]
 }
@@ -51,6 +57,34 @@ EOF
 resource "aws_iam_role_policy_attachment" "ecs-task-role-policy-attachment" {
   role       = aws_iam_role.ecs_task_role.name
   policy_arn = aws_iam_policy.dynamodb.arn
+}
+
+resource "aws_iam_policy" "ssm_task" {
+  name        = "${var.service_name}-task-policy-ssm"
+  description = "Policy that allows access to SSM"
+
+  policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ssmmessages:CreateControlChannel",
+        "ssmmessages:CreateDataChannel",
+        "ssmmessages:OpenControlChannel",
+        "ssmmessages:OpenDataChannel"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+EOF
+}
+
+resource "aws_iam_role_policy_attachment" "ssm_task" {
+  role       = aws_iam_role.ecs_task_role.name
+  policy_arn = aws_iam_policy.ssm_task.arn
 }
 
 resource "aws_iam_role" "ecs_task_execution_role" {
