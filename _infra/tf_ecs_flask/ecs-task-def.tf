@@ -15,6 +15,7 @@ resource "aws_ecs_task_definition" "scion-npc-gen" {
     portMappings : [{
       protocol : "tcp"
       containerPort : var.container_port
+      hostPort : var.container_port
     }]
     networkMode : "awsvpc"
     # logConfiguration = {
