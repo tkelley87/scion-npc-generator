@@ -17,20 +17,15 @@ resource "aws_ecs_task_definition" "scion-npc-gen" {
       containerPort : var.container_port
     }]
     networkMode : "awsvpc"
-    logConfiguration = {
-      logDriver = "awslogs"
-      options = {
-        awslogs-group         = "${var.service_name}-container"
-        awslogs-stream-prefix = "ecs"
-        awslogs-region        = var.region
+    logConfiguration : {
+      logDriver : "awslogs"
+      options : {
+        "awslogs-create-group" : "true"
+        "awslogs-group" : "${var.service_name}-container"
+        "awslogs-stream-prefix" : "ecs"
+        "awslogs-region" : "${var.region}"
       }
     }
-    # environment : [
-    #   for k, v in var.container_environment_variables : { name : k, value : v }
-    # ]
-    # secrets : [
-    #   for k, v in var.container_secret_environment_variables : { name : k, valueFrom : v }
-    # ]
   }])
 
   tags = {

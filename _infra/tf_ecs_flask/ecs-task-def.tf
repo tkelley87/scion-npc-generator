@@ -18,12 +18,13 @@ resource "aws_ecs_task_definition" "scion-npc-gen" {
       hostPort : var.container_port
     }]
     networkMode : "awsvpc"
-    logConfiguration = {
-      logDriver = "awslogs"
-      options = {
-        awslogs-group         = "${var.service_name}-container"
-        awslogs-stream-prefix = "ecs"
-        awslogs-region        = var.region
+    logConfiguration : {
+      logDriver : "awslogs"
+      options : {
+        "awslogs-create-group" : "true"
+        "awslogs-group" : "${var.service_name}-container"
+        "awslogs-stream-prefix" : "ecs"
+        "awslogs-region" : "${var.region}"
       }
     }
     # environment : [
