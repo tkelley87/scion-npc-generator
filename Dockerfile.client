@@ -12,6 +12,7 @@ RUN npm run build
 
 # Build step #2: build an nginx container
 FROM nginx:stable-alpine
+RUN apk update && apk add --no-cache curl nano wget
 # Makes APP_ENV arg available to this build step.
 ARG APP_ENV
 # ENV APP_ENV=$APP_ENV
