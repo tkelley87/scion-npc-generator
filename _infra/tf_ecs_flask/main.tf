@@ -37,8 +37,10 @@ resource "aws_service_discovery_service" "service" {
     }
   }
 
-  health_check_custom_config {
+  health_check_config {
     failure_threshold = 5
+    resource_path     = "/health"
+    type              = "HTTP"
   }
 
 }

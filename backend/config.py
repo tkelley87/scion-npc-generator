@@ -19,8 +19,8 @@ class ProdConfig(Config):
     Prod Config Class
     """
     # DynamoDB env vars
-    # AWS_ACCESS_KEY_ID = config["AWS_ACCESS_KEY_ID"]
-    # AWS_SECRET_ACCESS_KEY = config["AWS_SECRET_ACCESS_KEY"]
+    AWS_ACCESS_KEY_ID = config["AWS_ACCESS_KEY_ID"]
+    AWS_SECRET_ACCESS_KEY = config["AWS_SECRET_ACCESS_KEY"]
     REGION_NAME = config["REGION_NAME"]
     DYNAMODB_URI = config["DYNAMODB_URI"]
     FLASK_APP = config["FLASK_APP"]
