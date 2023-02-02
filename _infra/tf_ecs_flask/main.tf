@@ -36,13 +36,6 @@ resource "aws_service_discovery_service" "service" {
       type = "A"
     }
   }
-
-  health_check_config {
-    failure_threshold = 5
-    resource_path     = "/health"
-    type              = "HTTP"
-  }
-
 }
 
 resource "aws_security_group" "ecs_tasks" {
