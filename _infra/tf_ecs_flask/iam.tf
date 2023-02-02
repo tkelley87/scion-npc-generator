@@ -39,7 +39,8 @@ resource "aws_iam_policy" "dynamodb" {
               "dynamodb:Scan",
               "dynamodb:Query",
               "dynamodb:UpdateItem",
-              "dynamodb:UpdateTable"
+              "dynamodb:UpdateTable",
+              "logs:CreateLogGroup"
           ],
           "Resource": "*"
       },
