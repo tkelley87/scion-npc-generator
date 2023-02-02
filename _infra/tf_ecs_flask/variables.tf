@@ -29,6 +29,7 @@ variable "service_name" {
   default = "flask-be"
 }
 variable "private_subnets" {}
+variable "region" {}
 variable "scion_npc_gen_alb_arn" {}
 variable "service_discovery_namespace_id" {}
 variable "vpc_id" {}

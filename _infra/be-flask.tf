@@ -21,6 +21,7 @@ module "be-flask" {
   environment                    = var.environment
   health_check_path              = var.health_check_path
   private_subnets                = module.vpc.private_subnets
+  region                         = var.region
   scion_npc_gen_alb_arn          = module.alb.scion_npc_gen_alb_arn
   service_discovery_namespace_id = module.ecs.service_discovery_namespace_id
   vpc_id                         = module.vpc.vpc_id
