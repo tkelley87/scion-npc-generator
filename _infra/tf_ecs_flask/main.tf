@@ -16,7 +16,8 @@ resource "aws_ecs_service" "scion-npc-gen-api" {
   }
 
   lifecycle {
-    ignore_changes = [task_definition, desired_count]
+    create_before_destroy = true
+    ignore_changes        = [desired_count]
   }
 
   service_registries {
