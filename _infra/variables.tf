@@ -9,7 +9,7 @@ variable "cidr" {
 }
 
 variable "domain_name_internal" {
-  default = "sng.internal"
+  default = "sng.net"
 }
 
 variable "environment" {
