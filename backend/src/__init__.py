@@ -5,6 +5,7 @@ from flask_cors import CORS
 from dotenv import dotenv_values
 config = dotenv_values(".env")
 
+
 def create_app():
 
     app = Flask(__name__)

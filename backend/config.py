@@ -25,7 +25,7 @@ class ProdConfig(Config):
     DYNAMODB_URI = config["DYNAMODB_URI"]
     FLASK_APP = config["FLASK_APP"]
     FLASK_ENV = "production"
-    DEBUG = False
+    DEBUG = True
 
 
 class DevConfig(Config):
