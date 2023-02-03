@@ -45,4 +45,4 @@ sleep 0.5
 echo "Sleeping for 0.5 seconds..."
 sleep 0.5
 
-exec gunicorn -b :5000 app:app
+exec gunicorn -b :5000 --log-level=debug app:app
