@@ -60,7 +60,7 @@ def write_to_npc_gen(id, NPC):
     """
     Function to add npc generated to dynamo
     """
-    six_hour_ttl = int(time.time()) + 21_600
+    one_hour_ttl = int(time.time()) + 3_600
 
     response = NpcGenTable.put_item(
         Item={
