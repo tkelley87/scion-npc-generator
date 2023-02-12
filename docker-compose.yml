@@ -13,6 +13,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.backend
+      args:
+        - APP_ENV=local
     image: react-flask-app-api
     container_name: api
     depends_on:
@@ -22,7 +24,7 @@ services:
       context: .
       dockerfile: Dockerfile.client
       args:
-        - APP_ENV=$APP_ENV
+        - APP_ENV=local
     image: react-flask-app-client
     container_name: client
     ports:

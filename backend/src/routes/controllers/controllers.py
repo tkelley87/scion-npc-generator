@@ -3,24 +3,35 @@ from boto3 import resource
 
 import boto3
 import time
+from dotenv import dotenv_values
 
-resource = resource(
-    "dynamodb",
-    # endpoint_url=current_app.config["DYNAMODB_URI"],
-    # aws_access_key_id=current_app.config["AWS_ACCESS_KEY_ID"],
-    # aws_secret_access_key=current_app.config["AWS_SECRET_ACCESS_KEY"],
-    region_name=current_app.config["REGION_NAME"],
-    # verify=False,
-)
 
-# dynamodb_client = boto3.client(
-#     "dynamodb",
-#     endpoint_url=current_app.config["DYNAMODB_URI"],
-#     aws_access_key_id=current_app.config["AWS_ACCESS_KEY_ID"],
-#     aws_secret_access_key=current_app.config["AWS_SECRET_ACCESS_KEY"],
-#     region_name=current_app.config["REGION_NAME"],
-#     verify=False,
-# )
+config = dotenv_values(".env")
+
+
+if config["CONFIG_TYPE"] == 'config.ProdConfig':
+    resource = resource(
+        "dynamodb",
+        region_name=current_app.config["REGION_NAME"],
+    )
+else:
+    resource = resource(
+        "dynamodb",
+        endpoint_url=current_app.config["DYNAMODB_URI"],
+        aws_access_key_id=current_app.config["AWS_ACCESS_KEY_ID"],
+        aws_secret_access_key=current_app.config["AWS_SECRET_ACCESS_KEY"],
+        region_name=current_app.config["REGION_NAME"],
+        verify=False,
+    )
+
+    dynamodb_client = boto3.client(
+        "dynamodb",
+        endpoint_url=current_app.config["DYNAMODB_URI"],
+        aws_access_key_id=current_app.config["AWS_ACCESS_KEY_ID"],
+        aws_secret_access_key=current_app.config["AWS_SECRET_ACCESS_KEY"],
+        region_name=current_app.config["REGION_NAME"],
+        verify=False,
+    )
 
 
 def create_table_npc_gen():
@@ -66,7 +77,7 @@ def write_to_npc_gen(id, NPC):
         Item={
             "id": id,
             "npc": NPC,
-            "ttl": six_hour_ttl,
+            "ttl": one_hour_ttl,
         }
     )
     return response
