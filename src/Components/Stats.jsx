@@ -4,7 +4,6 @@ import { useTheme } from "@mui/material/styles";
 function Stats(stats) {
   const theme = useTheme();
 
-  console.log(`Stats => `, stats.stats)
   if (!stats.stats) return "";
 
   return (
@@ -12,7 +11,7 @@ function Stats(stats) {
       <Typography fontFamily={theme.typography.b} sx={{ textAlign: "center" }}>
         {"Stats"}
       </Typography>
-      <Divider />
+      <Divider flexItem="true" variant="fullWidth" />
       {Object.entries(stats?.stats).map((key, idx) => (
         <Grid container sx={{ display: "flex" }} alignItems="center" key={idx}>
           <Grid item>

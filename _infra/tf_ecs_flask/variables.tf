@@ -7,6 +7,8 @@ variable "container_environment" {
   description = "The container environmnent variables"
   type        = list(any)
 }
+
+# TODO Move this var to secrets
 variable "container_image" {
   description = "ECR Image to use"
   default     = "339352267472.dkr.ecr.us-east-1.amazonaws.com/scion-npc-gen-api"

@@ -22,10 +22,6 @@ variable "health_check_path" {
   type        = string
 }
 
-variable "hosted_zone_id" {
-  default = "Z01410081ZF8HDJEJP76I"
-}
-
 variable "name" {
   default = "scion-npc-gen"
 }
@@ -42,6 +38,11 @@ variable "private_subnets" {
 
 variable "region" {
   default = "us-east-1"
+}
+
+# TODO Need to store these vars in secrets.
+variable "hosted_zone_id" {
+  default = "Z01410081ZF8HDJEJP76I"
 }
 
 variable "scion_npc_gen_alb_arn" {

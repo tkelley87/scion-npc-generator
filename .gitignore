@@ -13,7 +13,6 @@
 
 # misc
 .DS_Store
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
@@ -31,7 +30,6 @@ backend/src/__pycache__
 backend/src/routes/__pycache__
 backend/src/routes/controllers/__pycache__
 backend/src/utilities/__pycache__
-.env
 
 # Terraform
 _infra/.Terraform

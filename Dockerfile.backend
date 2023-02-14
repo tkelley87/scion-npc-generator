@@ -3,6 +3,11 @@
 FROM python:3.9.16-alpine3.17
 WORKDIR /app
 
+ARG APP_ENV
+
+COPY deployment/$APP_ENV.docker_entrypoint.sh ./docker_entrypoint.sh
+COPY deployment/.env.$APP_ENV ./.env
+
 COPY /backend/requirements.txt ./requirements.txt
 RUN pip3 install -r ./requirements.txt
 

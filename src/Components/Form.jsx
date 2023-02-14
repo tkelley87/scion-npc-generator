@@ -92,9 +92,24 @@ const Form = (props) => {
                 <MenuItem sx={{ fontFamily: theme.typography.b }} value="Mook">
                   Mook
                 </MenuItem>
-                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Professional">Professional</MenuItem>
-                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Villain">Villain</MenuItem>
-                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Monster">Monster</MenuItem>
+                <MenuItem
+                  sx={{ fontFamily: theme.typography.b }}
+                  value="Professional"
+                >
+                  Professional
+                </MenuItem>
+                <MenuItem
+                  sx={{ fontFamily: theme.typography.b }}
+                  value="Villain"
+                >
+                  Villain
+                </MenuItem>
+                <MenuItem
+                  sx={{ fontFamily: theme.typography.b }}
+                  value="Monster"
+                >
+                  Monster
+                </MenuItem>
               </Select>
             </Grid>
           </FormControl>
@@ -110,8 +125,12 @@ const Form = (props) => {
                 sx={{ m: 1, minWidth: 175, fontFamily: theme.typography.a }}
                 value={human}
               >
-                <MenuItem sx={{ fontFamily: theme.typography.b }} value="yes">Yes</MenuItem>
-                <MenuItem sx={{ fontFamily: theme.typography.b }} value="no">No</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="yes">
+                  Yes
+                </MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="no">
+                  No
+                </MenuItem>
               </Select>
             </Grid>
           </FormControl>
@@ -127,8 +146,12 @@ const Form = (props) => {
                 sx={{ m: 1, minWidth: 175, fontFamily: theme.typography.a }}
                 value={nameGeneric}
               >
-                <MenuItem sx={{ fontFamily: theme.typography.b }} value="yes">Yes</MenuItem>
-                <MenuItem sx={{ fontFamily: theme.typography.b }} value="no">No</MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="yes">
+                  Yes
+                </MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="no">
+                  No
+                </MenuItem>
               </Select>
             </Grid>
           </FormControl>
@@ -144,10 +167,30 @@ const Form = (props) => {
                 sx={{ m: 1, minWidth: 175, fontFamily: theme.typography.a }}
                 value={npcFavoredArena}
               >
-                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Combat">Combat</MenuItem>
-                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Social">Social</MenuItem>
-                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Combat_focused">Combat Focused</MenuItem>
-                <MenuItem sx={{ fontFamily: theme.typography.b }} value="Social_focused">Social Focused</MenuItem>
+                <MenuItem
+                  sx={{ fontFamily: theme.typography.b }}
+                  value="Combat"
+                >
+                  Combat
+                </MenuItem>
+                <MenuItem
+                  sx={{ fontFamily: theme.typography.b }}
+                  value="Social"
+                >
+                  Social
+                </MenuItem>
+                <MenuItem
+                  sx={{ fontFamily: theme.typography.b }}
+                  value="Combat_focused"
+                >
+                  Combat Focused
+                </MenuItem>
+                <MenuItem
+                  sx={{ fontFamily: theme.typography.b }}
+                  value="Social_focused"
+                >
+                  Social Focused
+                </MenuItem>
               </Select>
             </Grid>
           </FormControl>
@@ -161,6 +204,10 @@ const Form = (props) => {
                   backgroundColor: "rgba(255, 255, 255, 0.05)",
                   color: "#fff",
                   fontFamily: ["Marcellus SC"].join(","),
+                  ":hover": {
+                    bgcolor: "white",
+                    color: "black",
+                  },
                 }}
               >
                 Generate NPC
