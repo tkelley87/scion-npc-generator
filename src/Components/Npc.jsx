@@ -100,12 +100,14 @@ function Npc(props) {
 
   return (
     <>
-      <Grid container spacing={1} justifyContent="center" sx={{ py: 3, px: 3 }}>
+      <Grid
+        container
+        spacing={1}
+        justifyContent="center"
+        sx={{ py: 3, pr: 1, pl: 2 }}
+      >
         <Paper sx={{ padding: 1, border: "none" }}>
-          <Grid
-            container
-            sx={{ flexDirection: { xs: "column", sm: "row" }, p: 1 }}
-          >
+          <Grid container sx={{ flexDirection: { xs: "column", sm: "row" } }}>
             <Grid item xs={12} sm={8}>
               <Grid container sx={{ display: "flex" }} alignItems="center">
                 <Grid item>
