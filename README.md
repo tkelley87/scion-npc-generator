@@ -1,14 +1,14 @@
 # Scion NPC Generator
 
-## Terraform/Github Actions deployment
+### Terraform/Github Actions deployment
 
-Following this guide: [https://engineering.finleap.com/posts/2020-02-20-ecs-fargate-terraform/](https://engineering.finleap.com/posts/2020-02-20-ecs-fargate-terraform/)
+- Following this guide: [https://engineering.finleap.com/posts/2020-02-20-ecs-fargate-terraform/](https://engineering.finleap.com/posts/2020-02-20-ecs-fargate-terraform/)
 
-## How to connect Flask to ReactJs
+### How to connect Flask to ReactJs
 
-Following this guide: [https://dev.to/nagatodev/how-to-connect-flask-to-reactjs-1k8i](https://dev.to/nagatodev/how-to-connect-flask-to-reactjs-1k8i)
+- Following this guide: [https://dev.to/nagatodev/how-to-connect-flask-to-reactjs-1k8i](https://dev.to/nagatodev/how-to-connect-flask-to-reactjs-1k8i)
 
-### Setting up project venv
+##### Setting up project venv
 
 1. Setup Python Virtual Environment
    - `python3 -m venv venv`
@@ -19,15 +19,26 @@ Following this guide: [https://dev.to/nagatodev/how-to-connect-flask-to-reactjs-
 4. Getting packages from flask and setting them to requirements.txt
    - `pip3 freeze > requirements.txt`
 
-### Running FE/BE after venv setup
+##### Running FE/BE after venv setup
 
-1. Have two terminals open for easy debugging, first terminal to start
-   React with this command - `npm start`
-2. Within the second terminal to start our Flask App
-   - `npm run start-backend`
+- ###### Running individual services without Docker
+   1) To run React, open terminal at root directory of project.
+      - `npm start`
 
-### Running app with Docker Compose
+   2) To run Flask, from project root directory.
+      - `cd backend && ./venv/bin/flask run --no-debugger`
 
-1. `docker compose up`
-   - To bring docker down
+##### Running complete app with Docker Compose
+
+- Bring docker up and check for changes in images.
+   - `docker compose up --build`
+- To bring docker down **- Important!**
      - `docker compose down`
+
+##### Run individual service with Docker Compose
+
+1. `docker compose up -d <insert service name from docker-compose.yml>`
+   - e.g.
+     - `docker compose up -d client`
+     - `docker compose up -d api`
+     - `docker compose up -d dynamodb-local`
