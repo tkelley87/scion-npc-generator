@@ -50,11 +50,9 @@ function Npc(props) {
         setTraits(char["Traits"]);
       }
       if (char["Stats"]) {
-
         let newObj = [];
 
         for (let i in char["Stats"]) {
-
           let element = [`${i}`, `${char["Stats"][i]}`];
 
           if (
@@ -71,14 +69,12 @@ function Npc(props) {
             if (i === "Desperation Pool") {
               newObj.push(element);
             }
-
           } else {
             newObj.unshift(element);
           }
         }
 
         setStats(newObj);
-
       }
       if (char["Qualities"]) {
         setQualities(char["Qualities"]);
@@ -104,15 +100,13 @@ function Npc(props) {
 
   return (
     <>
-      <Grid container spacing={1} justifyContent="center" sx={{ pt: 3, pb: 2 }}>
-        <Paper sx={{ width: 900, padding: 1, border: "none" }}>
+      <Grid container spacing={1} justifyContent="center" sx={{ py: 3, px: 3 }}>
+        <Paper sx={{ padding: 1, border: "none" }}>
           <Grid
             container
-            spacing={3}
-            justifyContent="center"
-            alignItems="center"
+            sx={{ flexDirection: { xs: "column", sm: "row" }, p: 1 }}
           >
-            <Grid item xs={9}>
+            <Grid item xs={12} sm={8}>
               <Grid container sx={{ display: "flex" }} alignItems="center">
                 <Grid item>
                   <Typography fontFamily={theme.typography.a} sx={{ pl: 0.5 }}>
@@ -211,7 +205,7 @@ function Npc(props) {
               )}
             </Grid>
 
-            <Grid item xs={3}>
+            <Grid item xs={12} sm={4}>
               <Stats stats={stats} />
             </Grid>
           </Grid>
