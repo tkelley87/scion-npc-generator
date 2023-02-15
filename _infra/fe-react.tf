@@ -9,13 +9,14 @@ module "fe-react" {
     value = 80 }
   ]
 
-  alb_scion_cert_arn               = var.alb_scion_cert_arn
+  alb_scion_cert_arn               = jsondecode(data.aws_secretsmanager_secret_version.current.secret_string)["AWS_ACM_CERT"]
   cidr                             = module.vpc.vpc_cidr
+  container_image                  = jsondecode(data.aws_secretsmanager_secret_version.current.secret_string)["REACT_IMAGE"]
   ecs_cluster_id                   = module.ecs.ecs_cluster_id
   ecs_sg_id                        = module.ecs.ecs_sg_id
   environment                      = var.environment
   health_check_path                = var.health_check_path
-  hosted_zone_id                   = var.hosted_zone_id
+  hosted_zone_id                   = jsondecode(data.aws_secretsmanager_secret_version.current.secret_string)["HOSTED_ZONE_ID"]
   private_subnets                  = module.vpc.private_subnets
   region                           = var.region
   scion_npc_gen_alb_arn            = module.alb.scion_npc_gen_alb_arn

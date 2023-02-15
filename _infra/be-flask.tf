@@ -16,6 +16,7 @@ module "be-flask" {
   }
 
   cidr                           = module.vpc.vpc_cidr
+  container_image                = jsondecode(data.aws_secretsmanager_secret_version.current.secret_string)["FLASK_IMAGE"]
   ecs_cluster_id                 = module.ecs.ecs_cluster_id
   ecs_sg_id                      = module.ecs.ecs_sg_id
   environment                    = var.environment

@@ -8,11 +8,7 @@ variable "container_environment" {
   type        = list(any)
 }
 
-# TODO Move this var to secrets
-variable "container_image" {
-  description = "ECR Image to use"
-  default     = "339352267472.dkr.ecr.us-east-1.amazonaws.com/scion-npc-gen-client"
-}
+variable "container_image" {}
 variable "container_memory" {
   description = "The amount (in MiB) of memory used by the task"
   default     = 512
