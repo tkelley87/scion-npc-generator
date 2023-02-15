@@ -106,7 +106,7 @@ function Npc(props) {
         justifyContent="center"
         sx={{ py: 3, pr: 1, pl: 2 }}
       >
-        <Paper sx={{ padding: 1, border: "none" }}>
+        <Paper sx={{ maxWidth: 900, padding: 1, border: "none" }}>
           <Grid container sx={{ flexDirection: { xs: "column", sm: "row" } }}>
             <Grid item xs={12} sm={8}>
               <Grid container sx={{ display: "flex" }} alignItems="center">
