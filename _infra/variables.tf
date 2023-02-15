@@ -39,18 +39,3 @@ variable "private_subnets" {
 variable "region" {
   default = "us-east-1"
 }
-
-# TODO Need to store these vars in secrets.
-variable "hosted_zone_id" {
-  default = "Z01410081ZF8HDJEJP76I"
-}
-
-variable "scion_npc_gen_alb_arn" {
-  description = "ALB arn"
-  default     = "arn:aws:elasticloadbalancing:us-east-1:339352267472:loadbalancer/app/scion-npc-gen-alb-test/5e6bcf65b99e8518"
-}
-
-variable "alb_scion_cert_arn" {
-  description = "ACM Certificate arn"
-  default     = "arn:aws:acm:us-east-1:339352267472:certificate/8477bad7-9000-45cf-a477-004eb2917328"
-}

@@ -22,3 +22,7 @@ provider "aws" {
 data "aws_secretsmanager_secret" "scion" {
   name = "${var.environment}/scion"
 }
+
+data "aws_secretsmanager_secret_version" "current" {
+  secret_id = data.aws_secretsmanager_secret.scion.id
+}
