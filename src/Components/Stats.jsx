@@ -11,12 +11,12 @@ function Stats(stats) {
       <Typography fontFamily={theme.typography.b} sx={{ textAlign: "center" }}>
         {"Stats"}
       </Typography>
-      <Divider flexItem="true" variant="fullWidth" />
+      <Divider flexItem={true} variant="fullWidth" />
       {Object.entries(stats?.stats).map((key, idx) => (
         <Grid container sx={{ display: "flex" }} alignItems="center" key={idx}>
           <Grid item>
             <Typography
-              fontFamily={theme.typography.a}
+              fontFamily={theme.typography.flairs.b}
               sx={{ pl: 0.75, pt: 0.25 }}
             >
               {key[1][0]}:

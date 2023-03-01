@@ -1,7 +1,6 @@
 import { Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
-
 function Traits(traits) {
   const theme = useTheme();
 
@@ -9,8 +8,8 @@ function Traits(traits) {
 
   return (
     <>
-      <Typography fontFamily={theme.typography.a} sx={{ padding: 0.5 }}>
-        {"Traits: "}
+      <Typography fontFamily={theme.typography.flairs.b} sx={{ pl: 0.5 }}>
+        {"Traits - "}
       </Typography>
       {traits?.traits?.map((key, idx) => (
         <Typography

@@ -10,37 +10,14 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Form from "./Components/Form";
 import Health from "./Components/Health";
 
-// App specific functions
-const darkTheme = createTheme({
-  palette: {
-    mode: "dark",
-  },
-  typography: {
-    a: {
-      fontWeight: "bold",
-      fontFamily: ["Marcellus"].join(","),
-      fontSize: "1.1em",
-    },
-    b: {
-      fontFamily: ["Marcellus SC"].join(","),
-    },
-    c: {
-      fontFamily: ["Marcellus"].join(","),
-      fontSize: "1.25em",
-    },
-  },
-});
+// Config imports
+import config_mui from "./config/mui_config";
 
-/**
- * most basic level:
- * web page with 2 options
- * pantheon: norse, greek
- * type: mook, professional
- * human: yes, no
- */
+// App specific functions
+const darkTheme = createTheme(config_mui);
 
 function App() {
-  // State - TODO change these names
+  // State
   const [npcGenerators, setNpcGenerator] = useState([]);
 
   const insertedArticle = (option) => {
