@@ -1,6 +1,6 @@
 variable "availability_zones" {
   description = "a comma-separated list of availability zones, defaults to all AZ of the region, if set to something other than the defaults, both private_subnets and public_subnets have to be defined as well"
-  default     = ["us-east-1a", "us-east-1b"] # ADD back in for HA => , "us-east-1c"
+  default     = ["us-west-2a", "us-west-2b"] # ADD back in for HA => , "us-east-1c"
 }
 
 variable "cidr" {
@@ -37,5 +37,5 @@ variable "private_subnets" {
 }
 
 variable "region" {
-  default = "us-east-1"
+  default = "us-west-2"
 }
