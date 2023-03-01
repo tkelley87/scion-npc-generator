@@ -1,11 +1,11 @@
 terraform {
   backend "s3" {
-    bucket         = "scion-npc-gen-tf-states-us-east-1"
-    key            = "state/test.terraform.tfstate"
+    bucket         = "tkelley-tf-states-us-west-2"
+    key            = "scion-npc-gen.tfstate"
     encrypt        = true
-    kms_key_id     = "alias/scion-npc-gen-tf-states-us-east-1-bucket-key"
+    kms_key_id     = "alias/tk-dev"
     dynamodb_table = "terraform-state"
-    region         = "us-east-1"
+    region         = "us-west-2"
   }
   required_providers {
     aws = {

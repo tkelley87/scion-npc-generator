@@ -147,11 +147,12 @@ resource "aws_alb_listener" "alb_redirect" {
 
 resource "aws_route53_record" "name" {
   zone_id = var.hosted_zone_id
-  name    = "scion-npc-gen.ninja"
-  type    = "A"
+  #TODO un-hardcode record name
+  name    = "scion-npc-gen.tkelley.tv"
+  type    = "C"
 
   alias {
-    name                   = "dualstack.${var.scion_npc_gen_alb_dns_name}"
+    name                   = var.scion_npc_gen_alb_dns_name
     zone_id                = var.scion_npc_gen_alb_hosted_zone_id
     evaluate_target_health = true
   }
