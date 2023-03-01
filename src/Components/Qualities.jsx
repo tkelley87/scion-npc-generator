@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import React, { useEffect, useState } from "react";
@@ -29,35 +29,49 @@ function Qualities(props) {
       if (qual === "Toxic") {
         results.push(
           <Typography key={idx} sx={{ p: 1 }} component="div">
-            <Typography fontFamily={theme.typography.c}>{qual}:</Typography>
-            <Typography fontFamily={theme.typography.b} sx={{ pl: 1, pt: 0.5 }}>
-              Description: {description}
+            <Typography fontFamily={theme.typography.qualities.c}>
+              {qual} -
+            </Typography>
+            <Typography
+              fontFamily={theme.typography.qualities.b}
+              sx={{ pl: 1, pt: 0.5 }}
+            >
+              {description}
             </Typography>
             {Object.entries(toxics).map((key, idx) => (
-              <Typography
-                fontFamily={theme.typography.b}
-                key={idx}
-                sx={{ pl: 1, pt: 0.5 }}
-              >
-                {key[0]}: {key[1]}
-              </Typography>
+              <>
+                <Grid container direction="row" key={idx}>
+                  <Box sx={{ fontFamily: theme.typography.b, pl: 2, pt: 0.5 }}>
+                    {key[0]}:
+                  </Box>
+                  <Box
+                    sx={{
+                      fontFamily: theme.typography.qualities.b,
+                      pl: 0.5,
+                      pt: 0.5,
+                    }}
+                  >
+                    {key[1]}
+                  </Box>
+                </Grid>
+              </>
             ))}
           </Typography>
         );
       } else {
-              results.push(
-                <Typography key={idx} sx={{ p: 1 }} component="div">
-                  <Typography fontFamily={theme.typography.c}>
-                    {qual}:
-                  </Typography>
-                  <Typography
-                    fontFamily={theme.typography.b}
-                    sx={{ pl: 1, pt: 0.5 }}
-                  >
-                    {description}
-                  </Typography>
-                </Typography>
-              );
+        results.unshift(
+          <Typography key={idx} sx={{ p: 1 }} component="div">
+            <Typography fontFamily={theme.typography.qualities.c}>
+              {qual} -
+            </Typography>
+            <Typography
+              fontFamily={theme.typography.qualities.b}
+              sx={{ pl: 1, pt: 0.5 }}
+            >
+              {description}
+            </Typography>
+          </Typography>
+        );
       }
     });
   });
@@ -66,7 +80,7 @@ function Qualities(props) {
 
   return (
     <>
-      <Typography fontFamily={theme.typography.a} sx={{ p: 0.5 }}>
+      <Typography fontFamily={theme.typography.qualities.a} sx={{ p: 0.5 }}>
         Qualities:{" "}
       </Typography>
       {results}

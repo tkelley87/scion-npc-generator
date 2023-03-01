@@ -37,11 +37,13 @@ function Flairs(flairs) {
       results.push(
         <Typography key={idx} sx={{ p: 1 }} component="div">
           <Grid container sx={{ display: "flex" }}>
-            <Typography fontFamily={theme.typography.c}>{qual}:</Typography>
+            <Typography fontFamily={theme.typography.flairs.c}>
+              {qual} -
+            </Typography>
             <Grid container>
               <Grid item>
                 <Typography
-                  fontFamily={theme.typography.a}
+                  fontFamily={theme.typography.flairs.b}
                   sx={{ pl: 1, pt: 0.5 }}
                 >
                   Action:
@@ -49,8 +51,8 @@ function Flairs(flairs) {
               </Grid>
               <Grid item>
                 <Typography
-                  fontFamily={theme.typography.b}
-                  sx={{ pl: 1, pt: 0.75 }}
+                  fontFamily={theme.typography.flairs.d}
+                  sx={{ pl: .35, pt: 0.75 }}
                 >
                   {action}
                 </Typography>
@@ -60,7 +62,7 @@ function Flairs(flairs) {
             <Grid container>
               <Grid item>
                 <Typography
-                  fontFamily={theme.typography.a}
+                  fontFamily={theme.typography.flairs.b}
                   sx={{ pl: 1, pt: 0.5 }}
                 >
                   Cooldown:
@@ -68,8 +70,8 @@ function Flairs(flairs) {
               </Grid>
               <Grid item>
                 <Typography
-                  fontFamily={theme.typography.b}
-                  sx={{ pl: 1, pt: 0.75 }}
+                  fontFamily={theme.typography.flairs.d}
+                  sx={{ pl: .35, pt: 0.75 }}
                 >
                   {cooldown}
                 </Typography>
@@ -79,7 +81,7 @@ function Flairs(flairs) {
             <Grid container>
               <Grid item>
                 <Typography
-                  fontFamily={theme.typography.a}
+                  fontFamily={theme.typography.flairs.b}
                   sx={{ pl: 1, pt: 0.5 }}
                 >
                   Cost:
@@ -87,8 +89,8 @@ function Flairs(flairs) {
               </Grid>
               <Grid item>
                 <Typography
-                  fontFamily={theme.typography.b}
-                  sx={{ pl: 1, pt: 0.75 }}
+                  fontFamily={theme.typography.flairs.d}
+                  sx={{ pl: .35, pt: 0.75 }}
                 >
                   {cost}
                 </Typography>
@@ -98,7 +100,7 @@ function Flairs(flairs) {
             <Grid container>
               <Grid item>
                 <Typography
-                  fontFamily={theme.typography.a}
+                  fontFamily={theme.typography.flairs.b}
                   sx={{ pl: 1, pt: 0.5 }}
                 >
                   Duration:
@@ -106,8 +108,8 @@ function Flairs(flairs) {
               </Grid>
               <Grid item>
                 <Typography
-                  fontFamily={theme.typography.b}
-                  sx={{ pl: 1, pt: 0.75 }}
+                  fontFamily={theme.typography.flairs.d}
+                  sx={{ pl: .35, pt: 0.75 }}
                 >
                   {duration}
                 </Typography>
@@ -117,7 +119,7 @@ function Flairs(flairs) {
             <Grid container>
               <Grid item>
                 <Typography
-                  fontFamily={theme.typography.a}
+                  fontFamily={theme.typography.flairs.b}
                   sx={{ pl: 1, pt: 0.5 }}
                 >
                   Range:
@@ -125,8 +127,8 @@ function Flairs(flairs) {
               </Grid>
               <Grid item>
                 <Typography
-                  fontFamily={theme.typography.b}
-                  sx={{ pl: 1, pt: 0.75 }}
+                  fontFamily={theme.typography.flairs.d}
+                  sx={{ pl: .35, pt: 0.75 }}
                 >
                   {range}
                 </Typography>
@@ -136,7 +138,7 @@ function Flairs(flairs) {
             <Grid container>
               <Grid item>
                 <Typography
-                  fontFamily={theme.typography.a}
+                  fontFamily={theme.typography.flairs.b}
                   sx={{ pl: 1, pt: 0.5 }}
                 >
                   Subject:
@@ -144,36 +146,24 @@ function Flairs(flairs) {
               </Grid>
               <Grid item>
                 <Typography
-                  fontFamily={theme.typography.b}
-                  sx={{ pl: 1, pt: 0.75 }}
+                  fontFamily={theme.typography.flairs.d}
+                  sx={{ pl: .35, pt: 0.75 }}
                 >
                   {subject}
                 </Typography>
               </Grid>
             </Grid>
 
-            <Grid container sx={{ display: "flex" }}>
-              <Grid
-                item
-                sx={{ flex: 1 }}
-                justifyContent="flex-start"
-                alignItems="flex-start"
+            <Grid container>
+              <Typography
+                fontFamily={theme.typography.flairs.d}
+                sx={{
+                  pl: 2.25,
+                  pt: 0.87,
+                }}
               >
-                <Typography
-                  fontFamily={theme.typography.a}
-                  sx={{ pl: 1, pt: 0.5 }}
-                >
-                  Description:
-                </Typography>
-              </Grid>
-              <Grid item sx={{ flex: 7 }}>
-                <Typography
-                  fontFamily={theme.typography.b}
-                  sx={{ pl: 1, pt: 0.75 }}
-                >
-                  {description}
-                </Typography>
-              </Grid>
+                {description}
+              </Typography>
             </Grid>
           </Grid>
         </Typography>
@@ -185,7 +175,10 @@ function Flairs(flairs) {
 
   return (
     <>
-      <Typography fontFamily={theme.typography.a} sx={{ padding: 0.5 }}>
+      <Typography
+        fontFamily={theme.typography.flairs.a}
+        sx={{ padding: 0.5 }}
+      >
         {`${stat}: `}{" "}
       </Typography>
       {results}

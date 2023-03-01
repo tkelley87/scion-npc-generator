@@ -111,7 +111,10 @@ function Npc(props) {
             <Grid item xs={12} sm={8}>
               <Grid container sx={{ display: "flex" }} alignItems="center">
                 <Grid item>
-                  <Typography fontFamily={theme.typography.a} sx={{ pl: 0.5 }}>
+                  <Typography
+                    fontFamily={theme.typography.flairs.b}
+                    sx={{ pl: 0.5 }}
+                  >
                     Name:{" "}
                   </Typography>
                 </Grid>
@@ -125,7 +128,10 @@ function Npc(props) {
 
               <Grid container sx={{ display: "flex" }} alignItems="center">
                 <Grid item>
-                  <Typography fontFamily={theme.typography.a} sx={{ pl: 0.5 }}>
+                  <Typography
+                    fontFamily={theme.typography.flairs.b}
+                    sx={{ pl: 0.5 }}
+                  >
                     Gender:{" "}
                   </Typography>
                 </Grid>
@@ -137,11 +143,12 @@ function Npc(props) {
                 </Grid>
               </Grid>
 
-              <Traits traits={traits} />
-
               <Grid container sx={{ display: "flex" }} alignItems="center">
                 <Grid item>
-                  <Typography fontFamily={theme.typography.a} sx={{ pl: 0.5 }}>
+                  <Typography
+                    fontFamily={theme.typography.flairs.b}
+                    sx={{ pl: 0.5 }}
+                  >
                     Pantheon:{" "}
                   </Typography>
                 </Grid>
@@ -156,7 +163,10 @@ function Npc(props) {
 
               <Grid container sx={{ display: "flex" }} alignItems="center">
                 <Grid item>
-                  <Typography fontFamily={theme.typography.a} sx={{ pl: 0.5 }}>
+                  <Typography
+                    fontFamily={theme.typography.flairs.b}
+                    sx={{ pl: 0.5 }}
+                  >
                     Drive:{" "}
                   </Typography>
                 </Grid>
@@ -170,7 +180,10 @@ function Npc(props) {
 
               <Grid container sx={{ display: "flex" }} alignItems="center">
                 <Grid item>
-                  <Typography fontFamily={theme.typography.a} sx={{ pl: 0.5 }}>
+                  <Typography
+                    fontFamily={theme.typography.flairs.b}
+                    sx={{ pl: 0.5 }}
+                  >
                     Attitude Towards Player:{" "}
                   </Typography>
                 </Grid>
@@ -186,7 +199,7 @@ function Npc(props) {
                 <Grid container sx={{ display: "flex" }} alignItems="center">
                   <Grid item>
                     <Typography
-                      fontFamily={theme.typography.a}
+                      fontFamily={theme.typography.flairs.b}
                       sx={{ pl: 0.5 }}
                     >
                       Apart of Cult?:{" "}
@@ -205,6 +218,8 @@ function Npc(props) {
               ) : (
                 ""
               )}
+
+              <Traits traits={traits} />
             </Grid>
 
             <Grid item xs={12} sm={4}>
