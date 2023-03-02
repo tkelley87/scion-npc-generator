@@ -56,7 +56,7 @@ resource "aws_iam_policy" "dynamodb" {
           "Action": [
             "secretsmanager:GetSecretValue"
           ],
-          "Resource": "arn:aws:secretsmanager:us-east-1:339352267472:secret:test/*"
+          "Resource": "arn:aws:secretsmanager:us-west-2:402604694984:secret:test/*"
       },
       {
           "Sid": "SecretsAccessKms",
