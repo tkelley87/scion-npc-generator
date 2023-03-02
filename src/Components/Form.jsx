@@ -18,7 +18,7 @@ const Form = (props) => {
   const theme = useTheme();
 
   // State
-  const [pantheon, setPantheon] = useState("norse");
+  const [pantheon, setPantheon] = useState("aesir");
   const [type, setType] = useState("Mook");
   const [human, setHuman] = useState("yes");
   const [nameGeneric, setNameGeneric] = useState("yes");
@@ -68,11 +68,35 @@ const Form = (props) => {
                 }}
                 value={pantheon}
               >
-                <MenuItem sx={{ fontFamily: theme.typography.b }} value="norse">
-                  Norse
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="aesir">
+                  Aesir
+                </MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="deva">
+                  Deva
+                </MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="kami">
+                  Kami
+                </MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="manitou">
+                  Manitou
+                </MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="netjar">
+                  Netjar
+                </MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="orisha">
+                  Orisha
+                </MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="shen">
+                  Shen
+                </MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="teotl">
+                  Teotl
                 </MenuItem>
                 <MenuItem sx={{ fontFamily: theme.typography.b }} value="theoi">
                   Theoi
+                </MenuItem>
+                <MenuItem sx={{ fontFamily: theme.typography.b }} value="tuatha">
+                  Tuatha
                 </MenuItem>
               </Select>
             </Grid>

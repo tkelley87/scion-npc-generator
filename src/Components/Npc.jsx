@@ -161,6 +161,28 @@ function Npc(props) {
                 </Grid>
               </Grid>
 
+              { char["Creature Type"] ? (
+                <Grid container sx={{ display: "flex" }} alignItems="center">
+                  <Grid item>
+                    <Typography
+                        fontFamily={theme.typography.flairs.b}
+                        sx={{ pl: 0.5 }}
+                    >
+                      Creature Type:{" "}
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography fontFamily={theme.typography.b} sx={{ pl: 0.5 }}>
+                      {" "}
+                      {char["Creature Type"]?.charAt(0).toUpperCase() +
+                      char["Creature Type"]?.slice(1)}
+                    </Typography>
+                  </Grid>
+                </Grid>
+              ) : (
+              ""
+              )}
+
               <Grid container sx={{ display: "flex" }} alignItems="center">
                 <Grid item>
                   <Typography
