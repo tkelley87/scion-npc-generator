@@ -149,7 +149,7 @@ resource "aws_route53_record" "name" {
   zone_id = var.hosted_zone_id
   #TODO un-hardcode record name
   name    = "scion-npc-gen.tkelley.tv"
-  type    = "C"
+  type    = "CNAME"
 
   alias {
     name                   = var.scion_npc_gen_alb_dns_name
