@@ -42,5 +42,93 @@
     "Qualities": 3,
     "Flairs": 3,
     "Drawbacks": 1
+  },
+  "Foe": {
+    "Primary Pool": 7,
+    "Secondary Pool": 5,
+    "Desperation Pool": 3,
+    "Health": 1,
+    "Defense": 1,
+    "Initiative": 4,
+    "Qualities": 1,
+    "Flairs": 1,
+    "Drawbacks": 0
+  },
+  "Rival": {
+    "Primary Pool": 9,
+    "Secondary Pool": 7,
+    "Desperation Pool": 5,
+    "Health": 3,
+    "Defense": 3,
+    "Initiative": 6,
+    "Qualities": 2,
+    "Flairs": 2,
+    "Drawbacks": 1
+  },
+  "Nemesis": {
+    "Primary Pool": 11,
+    "Secondary Pool": 9,
+    "Desperation Pool": 6,
+    "Health": 5,
+    "Defense": 4,
+    "Initiative": 9,
+    "Qualities": 2,
+    "Flairs": 3,
+    "Drawbacks": 1
+  },
+  "Titanspawn": {
+    "Primary Pool": 13,
+    "Secondary Pool": 11,
+    "Desperation Pool": 7,
+    "Health": 10,
+    "Defense": 4,
+    "Initiative": 10,
+    "Qualities": 3,
+    "Flairs": 3,
+    "Drawbacks": 1
+  },
+  "Paragon": {
+    "Primary Pool": 8,
+    "Secondary Pool": 6,
+    "Desperation Pool": 5,
+    "Health": 1,
+    "Defense": 3,
+    "Initiative": 4,
+    "Qualities": 1,
+    "Flairs": 1,
+    "Drawbacks": 0
+  },
+  "Mythic": {
+    "Primary Pool": 8,
+    "Secondary Pool": 6,
+    "Desperation Pool": 5,
+    "Health": 4,
+    "Defense": 4,
+    "Initiative": 5,
+    "Qualities": 2,
+    "Flairs": 2,
+    "Drawbacks": 1
+  },
+  "Transcendent": {
+    "Primary Pool": 9,
+    "Secondary Pool": 7,
+    "Desperation Pool": 5,
+    "Health": 5,
+    "Defense": 5,
+    "Initiative": 6,
+    "Qualities": 2,
+    "Flairs": 3,
+    "Drawbacks": 1
+  },
+  "Avatar": {
+    "Primary Pool": 10,
+    "Secondary Pool": 8,
+    "Desperation Pool": 6,
+    "Health": 6,
+    "Defense": 5,
+    "Initiative": 5,
+    "Qualities": 3,
+    "Flairs": 3,
+    "Drawbacks": 1
   }
 }
