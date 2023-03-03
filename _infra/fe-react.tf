@@ -12,6 +12,7 @@ module "fe-react" {
   alb_scion_cert_arn               = jsondecode(data.aws_secretsmanager_secret_version.current.secret_string)["AWS_ACM_CERT"]
   cidr                             = module.vpc.vpc_cidr
   container_image                  = jsondecode(data.aws_secretsmanager_secret_version.current.secret_string)["REACT_IMAGE"]
+  dns_name                         = jsondecode(data.aws_secretsmanager_secret_version.current.secret_string)["DNS_NAME"]
   ecs_cluster_id                   = module.ecs.ecs_cluster_id
   ecs_sg_id                        = module.ecs.ecs_sg_id
   environment                      = var.environment
