@@ -7,8 +7,12 @@ resource "aws_ecs_service" "scion-npc-gen-client" {
   deployment_maximum_percent         = 200
   enable_execute_command             = true
   health_check_grace_period_seconds  = 30
-  launch_type                        = "FARGATE"
   scheduling_strategy                = "REPLICA"
+
+  capacity_provider_strategy {
+    capacity_provider = "FARGATE_SPOT"
+    weight            = 1
+  }
 
   network_configuration {
     security_groups  = [aws_security_group.ecs_tasks.id]
@@ -147,8 +151,7 @@ resource "aws_alb_listener" "alb_redirect" {
 
 resource "aws_route53_record" "name" {
   zone_id = var.hosted_zone_id
-  #TODO un-hardcode record name
-  name    = "scion-npc-gen.tkelley.tv"
+  name    = var.dns_name
   type    = "CNAME"
   ttl     = "30"
   records = [var.scion_npc_gen_alb_dns_name]
