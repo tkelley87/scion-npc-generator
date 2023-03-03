@@ -5,7 +5,7 @@ resource "aws_ecs_cluster" "scion-npc-gen" {
 resource "aws_ecs_cluster_capacity_providers" "scion-npc-gen" {
   cluster_name = aws_ecs_cluster.scion-npc-gen.name
 
-  capacity_providers = ["FARGATE_SPOT", "FARGATE"]
+  capacity_providers = ["FARGATE_SPOT"]
 
   default_capacity_provider_strategy {
     base              = 1

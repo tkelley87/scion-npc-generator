@@ -9,6 +9,11 @@ resource "aws_ecs_service" "scion-npc-gen-api" {
   launch_type                        = "FARGATE"
   scheduling_strategy                = "REPLICA"
 
+  capacity_provider_strategy {
+    capacity_provider = "FARGATE_SPOT"
+    weight            = 1
+  }
+
   network_configuration {
     security_groups  = [aws_security_group.ecs_tasks.id]
     subnets          = var.private_subnets.*.id
