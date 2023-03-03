@@ -88,6 +88,59 @@ def post_npc():
         flairs_list[nonfavored_arena].extend(
             flairs_list["Professional_" + nonfavored_arena]
         )
+    elif npc_type == "Villain" or npc_type == "Monster":
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Professional_" + shortened_npc_favored_arena]
+        )
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Villain_" + shortened_npc_favored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Professional_" + nonfavored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Villain_" + nonfavored_arena])
+    elif npc_type == "Foe":
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Professional_" + shortened_npc_favored_arena]
+        )
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Villain_" + shortened_npc_favored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Professional_" + nonfavored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Villain_" + nonfavored_arena])
+
+        qualities_list[shortened_npc_favored_arena].extend(
+            qualities_list["Foe_" + shortened_npc_favored_arena]
+        )
+        qualities_list[nonfavored_arena].extend(
+            qualities_list["Foe_" + nonfavored_arena])
+    elif npc_type == "Rival":
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Professional_" + shortened_npc_favored_arena]
+        )
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Villain_" + shortened_npc_favored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Professional_" + nonfavored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Villain_" + nonfavored_arena])
+
+        qualities_list[shortened_npc_favored_arena].extend(
+            qualities_list["Foe_" + shortened_npc_favored_arena]
+        )
+        qualities_list[shortened_npc_favored_arena].extend(
+            qualities_list["Rival_" + shortened_npc_favored_arena]
+        )
+        qualities_list[nonfavored_arena].extend(
+            qualities_list["Foe_" + nonfavored_arena])
+        qualities_list[nonfavored_arena].extend(
+            qualities_list["Rival_" + nonfavored_arena])
     else:
         flairs_list[shortened_npc_favored_arena].extend(
             flairs_list["Professional_" + shortened_npc_favored_arena]
@@ -100,6 +153,22 @@ def post_npc():
         )
         flairs_list[nonfavored_arena].extend(
             flairs_list["Villain_" + nonfavored_arena])
+
+        qualities_list[shortened_npc_favored_arena].extend(
+            qualities_list["Foe_" + shortened_npc_favored_arena]
+        )
+        qualities_list[shortened_npc_favored_arena].extend(
+            qualities_list["Rival_" + shortened_npc_favored_arena]
+        )
+        qualities_list[shortened_npc_favored_arena].extend(
+            qualities_list["Nemesis_" + shortened_npc_favored_arena]
+        )
+        qualities_list[nonfavored_arena].extend(
+            qualities_list["Foe_" + nonfavored_arena])
+        qualities_list[nonfavored_arena].extend(
+            qualities_list["Rival_" + nonfavored_arena])
+        qualities_list[nonfavored_arena].extend(
+            qualities_list["Nemesis_" + nonfavored_arena])
 
     if is_name_generic == "yes":
         name_list = utilities.file_list_into_var(
@@ -185,7 +254,7 @@ def post_npc():
             npc_base_stats, npc_type, "Flairs", "Combat", flairs_list, "Minor"
         )
     add_vulnerability = any(
-        "Incorporeality" in d for d in character_profile["Qualities"]
+        "Incorporeality" or "Regeneration" or "Unseen" in d for d in character_profile["Qualities"]
     ) and not any("Vulnerability" in d for d in character_profile["Drawbacks"])
     if add_vulnerability:
         character_profile["Drawbacks"].append(qualities_list["Drawbacks"][0])
@@ -231,6 +300,23 @@ def post_npc():
         sorcery_key = random.choices(list(sorcery_list))[0]
         sorcery_value = sorcery_list[sorcery_key]
         character_profile["Sorcery"] = {sorcery_key: sorcery_value}
+
+    relic_exists = any("Mystic Arsenal" in d for d in character_profile["Qualities"])
+
+    if relic_exists:
+        relic_list = utilities.file_list_into_var(
+            set_static_files_location + "npc_stats/purviews.json", "json"
+        )
+        pantheon_relic_list = utilities.file_list_into_var(
+            set_static_files_location + "npc_stats/pantheon_purviews.json", "json"
+        )
+        pantheon_purview_relic = {
+            given_pantheon: pantheon_relic_list[given_pantheon]
+        }
+        relic_list.update(pantheon_purview_relic)
+        relic_key = random.choices(list(relic_list))[0]
+        relic_value = relic_list[relic_key]
+        character_profile["Relic"] = {relic_key: relic_value}
 
     for quality in character_profile["Qualities"]:
         if "base_stat_changes" in quality[next(iter(quality))]:

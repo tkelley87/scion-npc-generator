@@ -134,6 +134,54 @@ const Form = (props) => {
                 >
                   Monster
                 </MenuItem>
+                <MenuItem
+                    sx={{ fontFamily: theme.typography.b }}
+                    value="Foe"
+                >
+                  Foe
+                </MenuItem>
+                <MenuItem
+                    sx={{ fontFamily: theme.typography.b }}
+                    value="Rival"
+                >
+                  Rival
+                </MenuItem>
+                <MenuItem
+                    sx={{ fontFamily: theme.typography.b }}
+                    value="Nemesis"
+                >
+                  Nemesis
+                </MenuItem>
+                <MenuItem
+                    sx={{ fontFamily: theme.typography.b }}
+                    value="Titanspawn"
+                >
+                  Titanspawn
+                </MenuItem>
+                <MenuItem
+                    sx={{ fontFamily: theme.typography.b }}
+                    value="Paragon"
+                >
+                  Paragon
+                </MenuItem>
+                <MenuItem
+                    sx={{ fontFamily: theme.typography.b }}
+                    value="Mythic"
+                >
+                  Mythic
+                </MenuItem>
+                <MenuItem
+                    sx={{ fontFamily: theme.typography.b }}
+                    value="Transcendent"
+                >
+                  Transcendent
+                </MenuItem>
+                <MenuItem
+                    sx={{ fontFamily: theme.typography.b }}
+                    value="Avatar"
+                >
+                  Avatar
+                </MenuItem>
               </Select>
             </Grid>
           </FormControl>

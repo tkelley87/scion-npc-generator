@@ -100,6 +100,109 @@
       }
     }
   ],
+  "Foe_Combat": [
+    {
+      "Martial Artist (Heroic)": {
+        "Description": "The Antagonist’s martial-arts training goes beyond the mundane application of force and enters the realm of the fantastic. In addition to the benefits listed below, choose an effect associated with the Antagonist’s attacks, such as causing flame to erupt wherever her punches land or being able to strike foes in near range as though they were in close range. This effect is always on — it is a natural ability that the Antagonist has honed until it has become second nature. She gains a +2 Enhancement to Barehanded Combat. Select a specific weapon, such as a tonfa or a sword. This weapon counts as barehanded for the purposes of this Enhancement. She also gains +1 Defense and +2 Health.",
+        "base_stat_changes": {
+          "Health": 2,
+          "Defense": 1,
+          "Enhancement": 2
+        }
+      }
+    },
+    {
+      "Perfected Soldier": {
+        "Description": "Even among legendary warriors, there are those who inspire awe or terror. Beyond the level of Super Soldier, the Perfected Soldier Antagonist is a terrifying thing to behold. She gains a +2 Enhancement to any Combat Ability, Soft Armor, and +3 Health. In addition, whenever she successfully inflicts damage, she may reflexively inspire a nearby ally, giving them a +1 Enhancement toward their next action.",
+        "base_stat_changes": {
+          "Health": 3,
+          "Armor": 1,
+          "Enhancement": 2
+        }
+      }
+    },
+    {
+      "Swarm": {
+        "Description": "The Antagonist is not a single being, but a swarm of smaller creatures. Damage to this Antagonist’s Health boxes represents individual creatures dying or the swarm being dispersed. Normal attacks against Swarm Antagonists suffer a +2 Complication to the Inflict Damage stunt, unless the attack strikes an area or is suitably broad in scope (a Molotov cocktail would work, for example, as would a shotgun at close range)."
+      }
+    },
+    {
+      "Flight": {
+        "Description": "This Antagonist ignores any Difficult or Dangerous Terrain, unless that Terrain represents atmospheric conditions. Additionally, if this Antagonist chooses to Disengage vertically, she cannot be followed unless the pursuer has some means of matching her, such as flight or superhuman leaping abilities."
+      }
+    },
+    {
+      "Unseen": {
+        "Description": "The Antagonist is invisible. She cannot be detected by visual means. She receives +3 Defense and a +3 Enhancement to any stealth action. If other characters employ some method of tracking the Antagonist (throwing flour into the air, for example, or using superhuman hearing to follow her heartbeat), her Defense and Stealth Enhancement drop to +1. For 1 Tension, the Antagonist may make a surprise attack even after combat has started. All Antagonists with this Quality must take the Vulnerability Quality (Scion: Origin, p. 149) — in the presence of their weakness, this Quality does not function.",
+        "base_stat_changes": {
+          "Defense": 3,
+          "Enhancement": 3
+        }
+      }
+    },
+    {
+      "Wall Walker": {
+        "Description": "The Antagonist may Move up vertical surfaces at normal speed, and may even move across ceilings or other such overhangs. Attacks while clinging to such surfaces must be made as a Mixed Action if the Antagonist is attempting to Move while doing so."
+      }
+    },
+    {
+      "Baleful Touch": {
+        "Description": "The Antagonist seethes with some kind of energy or substance inimical to life — anything from fire to acid to the touch of death itself. Any attack made by this Antagonist fills in an additional Health box, unless that Health box would inflict an Injury Complication greater than the one marked normally. For example, if a character only had one Bruised and one Injured Condition remaining, she would only mark Bruised. For 1 Tension, the effect lingers — the target’s clothes catch on fire, the acid clings and keeps eating away, etc. If the target does not take an action on her next turn to ameliorate the effects (which can be Mixed), she will take one additional damage."
+      }
+    }
+  ],
+  "Rival_Combat": [
+    {
+      "Armor Piercing": {
+        "Description": "Attacks made by the Antagonist do not suffer increased Difficulty to Inflict Damage due to Soft Armor."
+      }
+    },
+    {
+      "Collateral Damage": {
+        "Description": "Whenever the Antagonist successfully deals damage, the surrounding area out to Short Range automatically becomes Difficult Terrain, as the ground is torn up, walls collapse, and so on. The Storyguide may spend 1 Tension to completely destroy any object or structure (up to the size of a house or small apartment building) using such an attack, and is encouraged to give florid descriptions of the aftermath."
+      }
+    },
+    {
+      "Life Drain": {
+        "Description": "The Antagonist’s blows drain the life out of victims, sapping their strength even as it kills them, and em- powering the Antagonist to boot! Whenever a charac- ter takes damage from the Antagonist’s Close Combat attacks, the following occurs: The target character suffers marks off a Health box as usual, and suffers a cumulative +1 Complication on all rolls involving physical exertion for the remainder of the scene for each blow taken (this does not include attack rolls). The Antagonist gains a +1 Enhancement to any Close Combat roll for every successful attack made, to a cap of the number of player characters in the scene.",
+        "base_stat_changes": {
+          "Enhancement": 1
+        }
+      }
+    },
+    {
+      "Unstoppable": {
+        "Description": "The Antagonist is blessed with a truly massive physical form, likely standing at least eight or nine feet tall and at least half that across. She automatically succeeds on any Feat of Strength rolls appropriate to her Tier. Additionally, any allied characters within close range of the Antagonist receive the benefit of the Antagonist’s Armor (but not her Defense)."
+      }
+    },
+    {
+      "Tough As Nails": {
+        "Description": "When the Antagonist takes damage, raise the Antagonist’s Defense by 1 for a number of turns equal to the number of Health boxes currently filled. If she takes damage again before her Defense returns to normal, reset the countdown."
+      }
+    },
+    {
+      "Apocalyptic Presence": {
+        "Description": "The Antagonist is something deeply otherworldly — there is no way it can pass itself off as a something mundane, let alone mortal. It is terrifying and wondrous to behold, an awesome-in-the-literal-sense revelation that leaves even the most stalwart of mortals utterly befuddled. Only beings with a Legend rating (or those doing so from a great distance, where proper apprehension of the Antagonist is impossible) may oppose or attack the Antagonist."
+      }
+    },
+    {
+      "Mystic Arsenal": {
+        "Description": "The Antagonist is experienced with mythic forces, wielding them like the finest and most sophisticated of weapons. She likely possesses a Relic — if not, she has some other form of signature weapon or item that greatly empowers her. Any actions undertaken with this item receive a +2 Enhancement, and if the Storyguide spends 1 Tension, she may raise that to +4 for a single action. Choose a Purview — when wielding the item, she may channel it to create marvels at the cost of 1 Tension. Play fair — if the player characters defeat the Antagonist and take her stuff, they get a totally cool Relic or other mystical object. No takebacks. Of course, that doesn’t mean the Antagonist’s friends won’t try to get it back! Work with the players to design an appropriate Relic using the rules provided for player characters."
+      }
+    }
+  ],
+  "Nemesis_Combat": [
+    {
+      "Disembodied": {
+        "Description": "The Antagonist lacks a body — instead, she uses the bodies of others, hopping between them the way most people change their socks. This may be dangerous or even deadly to the victim being ridden — this is left to Storyguide discretion. Killing the ridden victim will not kill the Antagonist, only force her to take a new body. However, exorcism rituals can force the Antagonist out, bindings can trap her, and purification rituals may be able to destroy her. Antagonists with this Quality may not possess player characters."
+      }
+    },
+    {
+      "Vengeful Blood": {
+        "Description": "Whenever the Antagonist takes damage from a source that would spill blood (typically blades, but also bullets or particularly vicious beatings), create a num- ber of Foes equal to the number of the Health boxes currently filled. Such beings (who may or may not be human) often spring from the very ground wherever the drops of blood fall."
+      }
+    }
+  ],
   "Social": [
     {
       "A Cage of Words": {
@@ -156,6 +259,37 @@
     {
       "Unnatural Hunger/Behavior": {
         "Description": "The Antagonist is compelled to do something or consume something outside the bounds of what is considered normal. To resist this impulse (for example, to attempt to hide their true nature), the Antagonist must succeed on a difficulty 2 Desperation Pool roll. Failure does not necessarily mean immediate indulgence (this is left to the Storyguide’s discretion), but some behavioral quirk shines through. An Occult roll (difficulty 2) is necessary to discern the Antagonist’s nature if the  Antagonist attempts to restrain themselves; if they indulge, the roll is difficulty 1 instead. If the Antagonist has one or more Flairs on Cooldown, indulgence of the Antagonist’s Unnatural Hunger counts as satisfying one Cooldown condition —  Storyguide’s pick."
+      }
+    }
+  ],
+  "Foe_Social": [
+    {
+      "A Thousand Ships": {
+        "Description": "The Antagonist is stunningly beautiful — whatever that may mean for the present cultural milieu. While wars are no longer typically fought over extremely attractive individuals, competition for the Antagonist’s affections is practically certain, and bitter hostility between competitors is not unlikely. The Antagonist may induce any two Storyguide characters to come to blows over their besotted passions, or for 1 Tension cause a Storyguide character to attack a player character, even in situations where violence would not normally be expected or tolerated."
+      }
+    }
+  ],
+  "Rival_Social": [
+    {
+      "Diplomythic Immunity": {
+        "Description": "The player characters may be the children of Gods, but some people are still off limits. The Antagonist is related to someone — almost certainly a God — who is powerful, dangerous, or well-connected. Whatever the reason, others will be unwilling to give evidence about her, higher-ups in the player characters’ own pantheon will discourage further investigation, and so on. All intervals spent directly investigating the Antagonist incur a +2 Complication. This Quality may be specified to include only a single pantheon, and will only affect intervals relying on anything associated with that pantheon."
+      }
+    },
+    {
+      "Obligation": {
+        "Description": "The Antagonist is steeped in the power of reciprocity, of exchange and obligation. Any agreement made with her is supernaturally binding. When used against player characters, the Storyguide may spend 1 Tension to force the issue in a number of ways — Fate will con- spire to see the accord carried out, the character feels a compulsion to do so (represented by a Condition such as Addiction), or retribution awaits the oathbreaker."
+      }
+    },
+    {
+      "Willful": {
+        "Description": "The Antagonist is made of sterner stuff than her fellows. When she engages in a Clash of Wills, she adds three dice to her Desperation Pool."
+      }
+    }
+  ],
+  "Nemesis_Social": [
+    {
+      "By Divine Right": {
+        "Description": "The Antagonist is a leader or ruler, perhaps of a Worldly sect or nation, perhaps from Terra Incognita. In any case, she has tremendous resources to draw upon — if she needs something, she has it, unless it’s one of a kind and already claimed or plot-important (in which case, she’s probably coming for it as part of the story!). In addition, she has bodyguards — two Rivals and three Foes, whose design is at Storyguide discretion. For 1 Tension, she can instantly summon these bodyguards even in situations where it wouldn’t be reasonable for them to be at hand."
       }
     }
   ]
