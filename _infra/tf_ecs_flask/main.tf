@@ -6,7 +6,6 @@ resource "aws_ecs_service" "scion-npc-gen-api" {
   deployment_minimum_healthy_percent = 50
   deployment_maximum_percent         = 200
   enable_execute_command             = true
-  launch_type                        = "FARGATE"
   scheduling_strategy                = "REPLICA"
 
   capacity_provider_strategy {

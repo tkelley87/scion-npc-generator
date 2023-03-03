@@ -7,7 +7,6 @@ resource "aws_ecs_service" "scion-npc-gen-client" {
   deployment_maximum_percent         = 200
   enable_execute_command             = true
   health_check_grace_period_seconds  = 30
-  launch_type                        = "FARGATE"
   scheduling_strategy                = "REPLICA"
 
   capacity_provider_strategy {
