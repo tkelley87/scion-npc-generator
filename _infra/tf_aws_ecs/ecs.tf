@@ -8,6 +8,7 @@ resource "aws_ecs_cluster_capacity_providers" "scion-npc-gen" {
   capacity_providers = ["FARGATE_SPOT", "FARGATE"]
 
   default_capacity_provider_strategy {
+    base              = 1
     capacity_provider = "FARGATE_SPOT"
   }
 }
