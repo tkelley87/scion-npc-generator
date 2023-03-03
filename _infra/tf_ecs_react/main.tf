@@ -147,8 +147,7 @@ resource "aws_alb_listener" "alb_redirect" {
 
 resource "aws_route53_record" "name" {
   zone_id = var.hosted_zone_id
-  #TODO un-hardcode record name
-  name    = "scion-npc-gen.tkelley.tv"
+  name    = var.dns_name
   type    = "CNAME"
   ttl     = "30"
   records = [var.scion_npc_gen_alb_dns_name]

@@ -1,3 +1,5 @@
+variable "alb_scion_cert_arn" {}
+variable "cidr" {}
 variable "container_cpu" {
   description = "The number of cpu units used by the task"
   default     = 256
@@ -18,8 +20,7 @@ variable "container_port" {
   default     = 80
 }
 
-variable "alb_scion_cert_arn" {}
-variable "cidr" {}
+variable "dns_name" {}
 variable "ecs_cluster_id" {}
 variable "ecs_sg_id" {}
 variable "environment" {}
