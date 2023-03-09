@@ -28,11 +28,15 @@ function Qualities(props) {
       let description = object[qual]?.Description;
       if (qual === "Toxic") {
         results.push(
-          <Typography key={idx} sx={{ p: 1 }} component="div">
-            <Typography fontFamily={theme.typography.qualities.c}>
+          <Box key={idx} sx={{ p: 1 }}>
+            <Typography
+              key={idx + qual}
+              fontFamily={theme.typography.qualities.c}
+            >
               {qual} -
             </Typography>
             <Typography
+              key={idx + description}
               fontFamily={theme.typography.qualities.b}
               sx={{ pl: 1, pt: 0.5 }}
             >
@@ -40,11 +44,15 @@ function Qualities(props) {
             </Typography>
             {Object.entries(toxics).map((key, idx) => (
               <>
-                <Grid container direction="row" key={idx}>
-                  <Box sx={{ fontFamily: theme.typography.b, pl: 2, pt: 0.5 }}>
+                <Grid container direction="row">
+                  <Box
+                    key={idx + key[0]}
+                    sx={{ fontFamily: theme.typography.b, pl: 2, pt: 0.5 }}
+                  >
                     {key[0]}:
                   </Box>
                   <Box
+                    key={idx + key[1]}
                     sx={{
                       fontFamily: theme.typography.qualities.b,
                       pl: 0.5,
@@ -56,21 +64,25 @@ function Qualities(props) {
                 </Grid>
               </>
             ))}
-          </Typography>
+          </Box>
         );
       } else {
         results.unshift(
-          <Typography key={idx} sx={{ p: 1 }} component="div">
-            <Typography fontFamily={theme.typography.qualities.c}>
+          <Box key={idx} sx={{ p: 1 }}>
+            <Typography
+              key={idx + qual}
+              fontFamily={theme.typography.qualities.c}
+            >
               {qual} -
             </Typography>
             <Typography
+              key={idx + description}
               fontFamily={theme.typography.qualities.b}
               sx={{ pl: 1, pt: 0.5 }}
             >
               {description}
             </Typography>
-          </Typography>
+          </Box>
         );
       }
     });
