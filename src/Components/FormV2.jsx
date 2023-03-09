@@ -1,5 +1,5 @@
 // React
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 // MUI imports
 import { useTheme } from "@mui/material/styles";
