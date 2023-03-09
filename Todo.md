@@ -2,5 +2,6 @@
 
 ### Priorities
 
-1.  Re-create state file and dynamodb table
-2.  Deploy infra with new state file
+ID: 20230309 ---
+
+1. `Qualities` Component has a warning to fix `unique` key issue
