@@ -10,9 +10,6 @@ class Config:
     Base configuration class. Contains default configuration settings + configuration settings applicable to all environments.
     """
 
-    DEBUG = False
-    TESTING = False
-
 
 class ProdConfig(Config):
     """
