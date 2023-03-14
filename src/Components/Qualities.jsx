@@ -22,21 +22,21 @@ function Qualities(props) {
   }, [props.toxic, toxics]);
 
   let results = [];
-  quality.forEach((object, idx) => {
+  quality.forEach((object, index) => {
     let quality = Object.keys(object);
-    quality.forEach((qual) => {
+    quality.forEach((qual, i) => {
       let description = object[qual]?.Description;
       if (qual === "Toxic") {
         results.push(
-          <Box key={idx} sx={{ p: 1 }}>
+          <Box sx={{ p: 1 }}>
             <Typography
-              key={idx + qual}
+              key={i + qual}
               fontFamily={theme.typography.qualities.c}
             >
               {qual} -
             </Typography>
             <Typography
-              key={idx + description}
+              key={i + description}
               fontFamily={theme.typography.qualities.b}
               sx={{ pl: 1, pt: 0.5 }}
             >
@@ -47,7 +47,11 @@ function Qualities(props) {
                 <Grid container direction="row">
                   <Box
                     key={idx + key[0]}
-                    sx={{ fontFamily: theme.typography.b, pl: 2, pt: 0.5 }}
+                    sx={{
+                      fontFamily: theme.typography.qualities.d,
+                      pl: 2,
+                      pt: 0.5,
+                    }}
                   >
                     {key[0]}:
                   </Box>
@@ -68,15 +72,15 @@ function Qualities(props) {
         );
       } else {
         results.unshift(
-          <Box key={idx} sx={{ p: 1 }}>
+          <Box sx={{ p: 1 }}>
             <Typography
-              key={idx + qual}
+              key={index + qual}
               fontFamily={theme.typography.qualities.c}
             >
               {qual} -
             </Typography>
             <Typography
-              key={idx + description}
+              key={index + description}
               fontFamily={theme.typography.qualities.b}
               sx={{ pl: 1, pt: 0.5 }}
             >
@@ -89,6 +93,8 @@ function Qualities(props) {
   });
 
   if (!props.qualities) return "";
+
+  console.log(`Qualities within Component =>`, props);
 
   return (
     <>
