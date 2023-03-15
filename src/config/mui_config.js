@@ -37,6 +37,7 @@ const config_mui = {
         fontSize: "1.05em",
       },
       d: {
+        fontWeight: "bold",
         fontFamily: ["Marcellus SC"].join(","),
         fontSize: ".95em",
       },
