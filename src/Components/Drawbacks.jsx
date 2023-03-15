@@ -46,9 +46,9 @@ function Drawbacks(props) {
             <Grid container>
               <Typography
                 fontFamily={theme.typography.drawbacks.c}
-                sx={{ pl: 1}}
+                sx={{ pl: 1 }}
               >
-                {qual}
+                {qual} -
               </Typography>
               <Typography
                 fontFamily={theme.typography.drawbacks.d}
