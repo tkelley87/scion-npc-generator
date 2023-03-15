@@ -13,7 +13,6 @@ function Stats(stats) {
       </Typography>
       <Divider flexItem={true} variant="fullWidth" />
       {Object.entries(stats?.stats).map((key, idx) => (
-        <>
           <Grid
             container
             sx={{ display: "flex" }}
@@ -42,7 +41,6 @@ function Stats(stats) {
               </Grid>
             </Grid>
           </Grid>
-        </>
       ))}
     </>
   );
