@@ -13,24 +13,36 @@ function Stats(stats) {
       </Typography>
       <Divider flexItem={true} variant="fullWidth" />
       {Object.entries(stats?.stats).map((key, idx) => (
-        <Grid container sx={{ display: "flex" }} alignItems="center" key={idx}>
-          <Grid item>
-            <Typography
-              fontFamily={theme.typography.flairs.b}
-              sx={{ pl: 0.75, pt: 0.25 }}
-            >
-              {key[1][0]}:
-            </Typography>
+        <>
+          <Grid
+            container
+            sx={{ display: "flex" }}
+            alignItems="center"
+            justifyContent="space-between"
+            key={idx}
+          >
+            <Grid item>
+              <Typography
+                fontFamily={theme.typography.flairs.b}
+                sx={{ pl: 1.5, pt: 0.25 }}
+              >
+                {key[1][0]}:
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Grid container>
+                <Grid item>
+                  <Typography
+                    fontFamily={theme.typography.b}
+                    sx={{ pr: 1.5, pt: 0.25 }}
+                  >
+                    {key[1][1]}
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
           </Grid>
-          <Grid item>
-            <Typography
-              fontFamily={theme.typography.b}
-              sx={{ pl: 0.4, pt: 0.25 }}
-            >
-              {key[1][1]}
-            </Typography>
-          </Grid>
-        </Grid>
+        </>
       ))}
     </>
   );
