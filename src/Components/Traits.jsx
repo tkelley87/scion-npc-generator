@@ -15,7 +15,7 @@ function Traits(traits) {
         <Typography
           fontFamily={theme.typography.b}
           key={idx}
-          sx={{ pl: 2, py: 0.25 }}
+          sx={{ pl: 2, pr: 5, py: 0.25 }}
         >
           {key}
         </Typography>

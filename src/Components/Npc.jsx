@@ -107,7 +107,13 @@ function Npc(props) {
         sx={{ py: 3, pr: 1, pl: 2 }}
       >
         <Paper sx={{ maxWidth: 900, padding: 1, border: "none" }}>
-          <Grid container sx={{ flexDirection: { xs: "column", sm: "row" } }}>
+          <Grid
+            container
+            sx={{
+              flexDirection: { xs: "column", sm: "row" },
+              alignItems: { sm: "center" },
+            }}
+          >
             <Grid item xs={12} sm={8}>
               <Grid container sx={{ display: "flex" }} alignItems="center">
                 <Grid item>
@@ -161,26 +167,29 @@ function Npc(props) {
                 </Grid>
               </Grid>
 
-              { char["Creature Type"] ? (
+              {char["Creature Type"] ? (
                 <Grid container sx={{ display: "flex" }} alignItems="center">
                   <Grid item>
                     <Typography
-                        fontFamily={theme.typography.flairs.b}
-                        sx={{ pl: 0.5 }}
+                      fontFamily={theme.typography.flairs.b}
+                      sx={{ pl: 0.5 }}
                     >
                       Creature Type:{" "}
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Typography fontFamily={theme.typography.b} sx={{ pl: 0.5 }}>
+                    <Typography
+                      fontFamily={theme.typography.b}
+                      sx={{ pl: 0.5 }}
+                    >
                       {" "}
                       {char["Creature Type"]?.charAt(0).toUpperCase() +
-                      char["Creature Type"]?.slice(1)}
+                        char["Creature Type"]?.slice(1)}
                     </Typography>
                   </Grid>
                 </Grid>
               ) : (
-              ""
+                ""
               )}
 
               <Grid container sx={{ display: "flex" }} alignItems="center">
