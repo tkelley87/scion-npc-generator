@@ -44,7 +44,7 @@ def post_npc():
     # Inputs from FE
     character_profile["Human"] = request.json["human"]
     given_pantheon = request.json["pantheon"]
-    npc_type = request.json["type"]
+    npc_type = request.json["npcType"]
     human = request.json["human"]
     is_name_generic = request.json["nameGeneric"]
     npc_favored_arena = request.json["npcFavoredArena"]

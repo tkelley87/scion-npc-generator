@@ -7,7 +7,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
 // Component imports
-import Form from "./Components/Form";
+import FormV2 from "./Components/FormV2";
 import Health from "./Components/Health";
 
 // Config imports
@@ -36,7 +36,7 @@ function App() {
             {/* Main Route into App */}
             <Route
               path="/"
-              element={<Form insertedArticle={insertedArticle} />}
+              element={<FormV2 insertedArticle={insertedArticle} />}
               exact
             />
           </Routes>
