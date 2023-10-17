@@ -107,12 +107,18 @@ def post_npc():
         flairs_list[shortened_npc_favored_arena].extend(
             flairs_list["Villain_" + shortened_npc_favored_arena]
         )
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Foe_" + shortened_npc_favored_arena]
+        )
         flairs_list[nonfavored_arena].extend(
             flairs_list["Professional_" + nonfavored_arena]
         )
         flairs_list[nonfavored_arena].extend(
-            flairs_list["Villain_" + nonfavored_arena])
-
+            flairs_list["Villain_" + nonfavored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Foe_" + nonfavored_arena]
+        )
         qualities_list[shortened_npc_favored_arena].extend(
             qualities_list["Foe_" + shortened_npc_favored_arena]
         )
@@ -125,12 +131,24 @@ def post_npc():
         flairs_list[shortened_npc_favored_arena].extend(
             flairs_list["Villain_" + shortened_npc_favored_arena]
         )
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Foe_" + shortened_npc_favored_arena]
+        )
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Rival_" + shortened_npc_favored_arena]
+        )
         flairs_list[nonfavored_arena].extend(
             flairs_list["Professional_" + nonfavored_arena]
         )
         flairs_list[nonfavored_arena].extend(
-            flairs_list["Villain_" + nonfavored_arena])
-
+            flairs_list["Villain_" + nonfavored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Foe_" + nonfavored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Rival_" + nonfavored_arena]
+        )
         qualities_list[shortened_npc_favored_arena].extend(
             qualities_list["Foe_" + shortened_npc_favored_arena]
         )
@@ -141,19 +159,37 @@ def post_npc():
             qualities_list["Foe_" + nonfavored_arena])
         qualities_list[nonfavored_arena].extend(
             qualities_list["Rival_" + nonfavored_arena])
-    else:
+    elif npc_type == "Nemesis" or npc_type == "Titanspawn":
         flairs_list[shortened_npc_favored_arena].extend(
             flairs_list["Professional_" + shortened_npc_favored_arena]
         )
         flairs_list[shortened_npc_favored_arena].extend(
             flairs_list["Villain_" + shortened_npc_favored_arena]
         )
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Foe_" + shortened_npc_favored_arena]
+        )
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Rival_" + shortened_npc_favored_arena]
+        )
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Nemesis_" + shortened_npc_favored_arena]
+        )
         flairs_list[nonfavored_arena].extend(
             flairs_list["Professional_" + nonfavored_arena]
         )
         flairs_list[nonfavored_arena].extend(
-            flairs_list["Villain_" + nonfavored_arena])
-
+            flairs_list["Villain_" + nonfavored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Foe_" + nonfavored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Rival_" + nonfavored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Nemesis_" + nonfavored_arena]
+        )
         qualities_list[shortened_npc_favored_arena].extend(
             qualities_list["Foe_" + shortened_npc_favored_arena]
         )
@@ -169,6 +205,61 @@ def post_npc():
             qualities_list["Rival_" + nonfavored_arena])
         qualities_list[nonfavored_arena].extend(
             qualities_list["Nemesis_" + nonfavored_arena])
+    else:
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Professional_" + shortened_npc_favored_arena]
+        )
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Villain_" + shortened_npc_favored_arena]
+        )
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Foe_" + shortened_npc_favored_arena]
+        )
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Rival_" + shortened_npc_favored_arena]
+        )
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Nemesis_" + shortened_npc_favored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Professional_" + nonfavored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Villain_" + nonfavored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Foe_" + nonfavored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Rival_" + nonfavored_arena]
+        )
+        flairs_list[nonfavored_arena].extend(
+            flairs_list["Nemesis_" + nonfavored_arena]
+        )
+        flairs_list[shortened_npc_favored_arena].extend(
+            flairs_list["Demigod"]
+        )
+        qualities_list[shortened_npc_favored_arena].extend(
+            qualities_list["Foe_" + shortened_npc_favored_arena]
+        )
+        qualities_list[shortened_npc_favored_arena].extend(
+            qualities_list["Rival_" + shortened_npc_favored_arena]
+        )
+        qualities_list[shortened_npc_favored_arena].extend(
+            qualities_list["Nemesis_" + shortened_npc_favored_arena]
+        )
+        qualities_list[nonfavored_arena].extend(
+            qualities_list["Foe_" + nonfavored_arena]
+        )
+        qualities_list[nonfavored_arena].extend(
+            qualities_list["Rival_" + nonfavored_arena]
+        )
+        qualities_list[nonfavored_arena].extend(
+            qualities_list["Nemesis_" + nonfavored_arena]
+        )
+        qualities_list[shortened_npc_favored_arena].extend(
+            qualities_list["Demigod"]
+        )
 
     if is_name_generic == "yes":
         name_list = utilities.file_list_into_var(
@@ -254,7 +345,7 @@ def post_npc():
             npc_base_stats, npc_type, "Flairs", "Combat", flairs_list, "Minor"
         )
     add_vulnerability = any(
-        "Incorporeality" or "Regeneration" or "Unseen" in d for d in character_profile["Qualities"]
+        "Incorporeality" or "Regeneration" or "Unseen" or "Indestructible" in d for d in character_profile["Qualities"]
     ) and not any("Vulnerability" in d for d in character_profile["Drawbacks"])
     if add_vulnerability:
         character_profile["Drawbacks"].append(qualities_list["Drawbacks"][0])
@@ -272,9 +363,7 @@ def post_npc():
             "Note": "Simple action Resolve + Sta roll to end effect early",
         }
 
-    vulnerability_exists = any(
-        "Vulnerability" in d for d in character_profile["Drawbacks"]
-    )
+    vulnerability_exists = any("Vulnerability" in d for d in character_profile["Drawbacks"])
 
     if vulnerability_exists:
         vulnerability_list = utilities.file_list_into_var(
@@ -300,6 +389,23 @@ def post_npc():
         sorcery_key = random.choices(list(sorcery_list))[0]
         sorcery_value = sorcery_list[sorcery_key]
         character_profile["Sorcery"] = {sorcery_key: sorcery_value}
+
+    dominion_exists = any("Dominion" in d for d in character_profile["Qualities"])
+
+    if dominion_exists:
+        dominion_list = utilities.file_list_into_var(
+            set_static_files_location + "npc_stats/purviews.json", "json"
+        )
+        pantheon_dominion_list = utilities.file_list_into_var(
+            set_static_files_location + "npc_stats/pantheon_purviews.json", "json"
+        )
+        pantheon_purview_dominion = {
+            given_pantheon: pantheon_dominion_list[given_pantheon]
+        }
+        dominion_list.update(pantheon_purview_dominion)
+        dominion_key = random.choices(list(dominion_list))[0]
+        dominion_value = dominion_list[dominion_key]
+        character_profile["Dominion"] = {dominion_key: dominion_value}
 
     relic_exists = any("Mystic Arsenal" in d for d in character_profile["Qualities"])
 

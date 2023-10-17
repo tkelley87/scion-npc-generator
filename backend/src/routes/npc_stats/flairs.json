@@ -229,5 +229,376 @@
         "Cooldown": "One story."
       }
     }
+  ],
+  "Foe_Combat": [
+    {
+      "Curse": {
+        "Description": "The Antagonist is able to place curses on other characters. The effects of the curse may vary, and the Storyguide is encouraged to be highly descriptive. Non-trivial characters may resist Curse with a Clash of Wills. Purifying or healing magic is able to break curses. Possible curse effects might include: \n * Enfeeblement or the feeling of a great weight on one’s body; +2 Complication to all Might and Dexterity actions. \n * Inflicting an Injury Complication directly; the player chooses which Injury Complication is marked, and breaking the curse removes the complication. This cannot Take Out a character. \n * Increase the Difficulty of a specific Stunt by 2.",
+        "Cost": "1 Tension",
+        "Duration": "One Scene",
+        "Subject": "One character",
+        "Range": "Medium",
+        "Action": "Simple",
+        "Cooldown": "End of Scene; or the curse is broken"
+      }
+    },
+    {
+      "Shadow Step": {
+        "Description": "The Antagonist is able to reestablish stealth during combat, allowing her to make a surprise attack on her next turn. She must still succeed at a stealth roll in order to do so — this Flair simply makes it possible.",
+        "Cost": "None",
+        "Duration": "Instant",
+        "Subject": "Self",
+        "Range": "N/A",
+        "Action": "Simple",
+        "Cooldown": "End of Scene; or, the Antagonist’s stealth roll fails."
+      }
+    },
+    {
+      "Penetrator": {
+        "Description": "The Antagonist makes an attack: This attack negates Armor and Defense bonuses from Cover, as it pierces everything in its path. For 1 Tension, this attack can strike a second character, if that character is reason- ably in the line of fire behind the first.",
+        "Cost": "None or 1 Tension",
+        "Duration": "Instant",
+        "Subject": "One Target",
+        "Range": "Long",
+        "Action": "Simple",
+        "Cooldown": "The Antagonist takes damage."
+      }
+    },
+    {
+      "Plague Touch": {
+        "Description": "Most common in Antagonists who are either spirits of ill health or servants of plague and sickness gods, this Flair allows the Antagonist to inflict a disease via simple touch, chosen by the Storyguide when this Flair is assigned. Use the normal rules for disease once the sickness has been delivered.",
+        "Cost": "None",
+        "Duration": "Indefinite",
+        "Subject": "One character",
+        "Range": "Touch",
+        "Action": "Reflexive",
+        "Cooldown": "End of Scene or the Antagonist takes damage."
+      }
+    },
+    {
+      "Mass Concealment": {
+        "Description": "The Antagonist creates a massive shroud, the nature\nof which may vary — a thick fog will do as well as supernatural darkness, for example. This shroud extends to medium range from the Antagonist, and within its bounds all characters gain +2 Defense for the purposes of resisting Ranged Attacks. Additionally, all rolls for stealth within the shroud receive a +2 Enhancement.",
+        "Cost": "None",
+        "Duration": "(Player Legend) + 3 rounds",
+        "Subject": "Self and allies",
+        "Range": "Medium",
+        "Action": "Reflexive",
+        "Cooldown": "The Antagonist exposes or otherwise calls attention to herself unnecessarily — lowering her Defense by 1 for a round."
+      }
+    },
+    {
+      "Mirror, Mirror": {
+        "Description": "When the Antagonist uses this Flair, the attack is resolved as usual, using the Antagonist’s Defense and Armor ratings, but the effects are inflicted upon the attacker rather than the Antagonist.",
+        "Cost": "None",
+        "Duration": "Instant",
+        "Subject": "An attacking character",
+        "Range": "Varies",
+        "Action": "Reflexive",
+        "Cooldown": "The Antagonist evades an attack normally."
+      }
+    },
+    {
+      "Suck It Up": {
+        "Description": "This Flair may be activated when the Antagonist takes damage. The Antagonist gains an Enhancement equal to the number of Health boxes currently marked (to a maximum of +3), and clears the Health box affected by the attack that triggered Suck It Up.",
+        "Cost": "None",
+        "Duration": "3 Rounds",
+        "Subject": "Self",
+        "Range": "Self",
+        "Action": "Reflexive",
+        "Cooldown": "End of Scene; or the Antagonist has a single Health box remaining — when this is marked, she gains the effects of the Flair for 3 turns, then is Taken Out."
+      }
+    },
+    {
+      "Tripwire": {
+        "Description": "The Antagonist may suspend an attack; roll her attack pool and note successes, but don’t apply it to any character. Instead, designate a certain element of the scene, such as a specific car, a doorway, or a ladder — should another character interact with that element, the attack is applied to her immediately, using her Defense and Armor if applicable. For 1 Tension, the attack will continue to persist until triggered a second time. Multiple traps cannot be stacked on a single element. Players may detect a trap with a reflexive Cunning + Subterfuge roll, difficulty of the Antagonist’s successes on the Tripwire roll. If Tripwire is used to prepare an ambush, it can only be used a single time, effectively creating a sneak attack unless noticed by the player characters. When combat begins, Tripwire immediately refreshes.",
+        "Cost": "None or 1 Tension",
+        "Duration": "Indefinite",
+        "Subject": "One element of the scene",
+        "Range": "Close",
+        "Action": "Simple",
+        "Cooldown": "3 Turns"
+      }
+    },
+    {
+      "Under Pressure": {
+        "Description": "The Antagonist may use this Flair if she attacked by two or more characters in a single round, even if those attacks deal no damage. She receives +2 Defense against the second attack, and against all other attacks that round. In the next round, the Antagonist receives a +3 Enhancement to her Primary combat pool.",
+        "Cost": "None",
+        "Duration": "One round",
+        "Subject": "Self",
+        "Range": "Self",
+        "Action": "Reflexive",
+        "Cooldown": "The Antagonist is not attacked at all for one round."
+      }
+    },
+    {
+      "Knockout": {
+        "Description": "The Antagonist makes an attack — if successful, the attack deals no damage, but the target is Taken Out immediately, knocked unconscious. However, any other character may bring the target back into the fight, with a Basic or Mixed action to rouse her taken at close range. If no such action is taken, the target awakens at the end of the scene.",
+        "Cost": "None",
+        "Duration": "Varies",
+        "Subject": "One character",
+        "Range": "Varies; maximum of medium",
+        "Action": "Simple",
+        "Cooldown": "A roused target makes an attack on the Antagonist."
+      }
+    },
+    {
+      "World Shaking": {
+        "Description": "The Antagonist is able to disrupt the ground, transform- ing it into Difficult Terrain out to medium range. She may center the disturbance anywhere within her line of sight. This is not a subtle Flair: Using it significantly damages the ground and any nearby structures.",
+        "Cost": "1 Tension",
+        "Duration": "Indefinite",
+        "Subject": "Terrain",
+        "Range": "Medium",
+        "Action": "Simple",
+        "Cooldown": "End of Scene"
+      }
+    },
+    {
+      "Eye of the Swarm": {
+        "Description": "This Flair generates a number of swarms of small crea- tures (insects, rodents, etc.) equal to the Antagonist’s successes on an appropriate roll — charm or leadership, occult knowledge and summoning, and the like. These swarms function as Foes with the Swarm Quality.",
+        "Cost": "None",
+        "Duration": "One Scene",
+        "Subject": "Summoned swarms",
+        "Range": "Self",
+        "Action": "Simple",
+        "Cooldown": "All summoned swarms are Taken Out."
+      }
+    },
+    {
+      "Molon Labe": {
+        "Description": "The Antagonist gives a defiant sign or speech, which need not be complex — a few words will do. All allied characters receive +1 Health, +2 Defense, and a +2 Enhancement to their Primary combat pool. The nor- mal duration for this Flair is a single round — however, for every character Taken Out while under its effects, the duration is extended for another round. When the effect lapses, all benefits, including extra Health, fade. When marked Health boxes fade, do not shift the damage to other Health boxes. For 1 Tension, extend the effects of this Flair for an additional round.",
+        "Cost": "None or 1 Tension",
+        "Duration": "Varies",
+        "Subject": "All allied characters",
+        "Range": "Medium",
+        "Action": "Reflexive",
+        "Cooldown": "End of Scene"
+      }
+    },
+    {
+      "Molon Labe": {
+        "Description": "The Antagonist clears half the Health track of another Antagonist (round down). For 1 Tension, she may clear the entire Stress track. Not only can this bring Antagonists back into a fight they were Taken Out of, it can even resurrect explicitly dead Antagonists — gaping wounds knit, severed limbs (or heads!) reattach themselves. Resurrecting a Titanspawn-level Antagonist always costs 2 Tension, and only restores half of its Health track.",
+        "Cost": "None; 1 Tension; or 2 Tension",
+        "Duration": "Instant",
+        "Subject": "One ally",
+        "Range": "Touch",
+        "Action": "Simple",
+        "Cooldown": "The Antagonist takes damage"
+      }
+    }
+  ],
+  "Foe_Social": [
+    {
+      "Hail Eris!": {
+        "Description": "The Antagonist is able to reverse normal reactions to social influence and events. A tearjerker movie might cause uproarious laughter, or a heartfelt statement of support might be interpreted as a threat of murder. When determining Attitudes, reverse whatever relationship or belief that Attitude reflects.\nPlayer characters may be affected by this Flair at the cost of 1 Tension. However, they still receive the chance to clear their clouded thoughts with a Cunning + Subterfuge roll. Attitudes regarding Fatebound Storyguide characters cannot be reversed with this Flair.",
+        "Cost": "None; or 1 Tension",
+        "Duration": "One Scene",
+        "Subject": "One social milieu",
+        "Range": "Medium",
+        "Action": "Simple",
+        "Cooldown": "End of Scene; or if a player character rejects the Antagonist’s influence"
+      }
+    }
+  ],
+  "Rival_Combat": [
+    {
+      "Detonation": {
+        "Description": "The Antagonist is capable of making an attack that deals damage to all targets within close, near, and medium Range of the epicenter. The attack may be Ranged or Close Combat — choose one when selecting this Flair. If Close Combat is chosen, the Antagonist is immune to their own attack. This attack cannot be combined with any effect that grants the Shockwave tag.",
+        "Cost": "None",
+        "Duration": "Instant",
+        "Subject": "All opponents within medium range of the target",
+        "Range": "Varies",
+        "Action": "Simple",
+        "Cooldown": "End of Scene; or the Antagonist has only one Health box remaining."
+      }
+    },
+    {
+      "Petrifying Gaze": {
+        "Description": "The Antagonist’s gaze does more than merely shock or stun — it can kill. To use this Flair, the Antagonist must make eye contact with the target, which may necessitate a roll if the target is aware of the Antagonist’s power. Once eye contact is made, the target cannot break it — only the Antagonist may choose to do so. The Antagonist cannot take Mixed actions while using this Flair and cannot Move without using a Basic Action — otherwise, she loses eye contact, and her target is freed. If the Antagonist takes damage while using Petrifying Gaze, she must succeed on a Desperation Pool roll against Difficulty 3 to retain eye contact. For every turn of eye contact, inflict 1 Injury Condition to the target. If the target is Taken Out in this manner, she is turned to stone (or a similarly solid material). Trivial characters are instantly petrified. This is usually fatal, but beings with a Legend score have a talent for bending rules — the remedy for petrification is left to Storyguide discretion, but players should always have the option. Player characters Taken Out by Petrifying Gaze revert to flesh and blood at the end of the scene, but retain their injuries — being turned to stone hurts, and the pebbles and flakes of rock take forever to pull out of the skin.",
+        "Cost": "None",
+        "Duration": "Indefinite",
+        "Subject": "One character",
+        "Range": "Short",
+        "Action": "Simple",
+        "Cooldown": "End of Scene or the Antagonist success- fully petrifies a target."
+      }
+    },
+    {
+      "Second Wind": {
+        "Description": "The Antagonist has hidden reserves of energy she can call on at a moment’s notice, refreshing her and giving her the will to continue even against staggering odds. If all of the Antagonist’s Health boxes are filled save the rightmost one, the Storyguide may spend 1 Tension to clear her entire Health track. When she does so, the Antagonist receives a Enhancement 2 to be assigned at the Storyguide’s discretion, which persists until the end of the scene or until the Antagonist is defeated. If the Antagonist is a Titanspawn Archetype, this Flair’s effect costs 2 Tension.",
+        "Cost": "1 Tension",
+        "Duration": "Instant",
+        "Subject": "Self",
+        "Range": "Self",
+        "Action": "Reflexive",
+        "Cooldown": "One Scene"
+      }
+    }
+  ],
+  "Rival_Social": [
+    {
+      "Reflected Intent": {
+        "Description": "The Antagonist may reflexively activate this Flair when an attack is made against her, regardless of whether she can perceive the attack directly. If the attacker fails the Clash of Wills, he is stunned momentarily, forfeiting his action for the round as he is confronted with an image of his own violent death. Player characters targeted by this Flair who wish to attack the Antagonist on subsequent rounds suffer a +3 Complication; Storyguide Characters remain helpless against the Antagonist for the remainder of the scene. Alternately, the Storyguide may spend 1 Tension, and the at- tacking character, instead of rolling Initiative or for a Surprise Attack as usual, immediately rolls an attack against himself instead, his violent intent rebounding back against him — Armor applies, but Defense does not. Characters compelled to attack themselves do not suffer the scene-long Complication. If the character is Taken Out by his own attack, Reflected Intent immediately refreshes.\nReflected Intent does not function if the Antagonist has openly joined a battle.",
+        "Cost": "None; or 1 Tension",
+        "Duration": "Instant",
+        "Subject": "One attacking character",
+        "Range": "Long",
+        "Action": "Reflexive",
+        "Cooldown": "End of Scene; or a target is Taken Out\nby attacking himself"
+      }
+    },
+    {
+      "Rage of Herakles": {
+        "Description": "The Antagonist is able to inspire blinding fury in another character, effectively bestowing the effects of the Seeing Red Flair (Scion: Origin, p. 149). This is resolved easily enough for Storyguide characters; for 1 Tension, the Storyguide may apply it to a player character, causing the Berserk Condition. The character must make an attack with every action for the duration of the rage — players may choose the targets, but if no enemies are present, they must make an attack nonetheless.",
+        "Cost": "None; or 1 Tension",
+        "Duration": "5 – Composure rounds; minimum 1",
+        "Subject": "One character",
+        "Range": "Long",
+        "Action": "Simple",
+        "Cooldown": "End of Scene or the target of the Flair does not Take Out any characters"
+      }
+    }
+  ],
+  "Nemesis_Combat": [
+    {
+      "Weather Tyrant": {
+        "Description": "The Antagonist can alter the weather, generating dangerous conditions. While in many cases this effect is narrative in scope, in combat it often results in Field Conditions, or may inflict Conditions on player characters per the Storyguide’s discretion.",
+        "Cost": "1 Tension",
+        "Duration": "One Scene",
+        "Subject": "Area",
+        "Range": "Long",
+        "Action": "Simple",
+        "Cooldown": "One Session"
+      }
+    }
+  ],
+  "Nemesis_Social": [
+    {
+      "Mastermind": {
+        "Description": "The Antagonist has shielded themselves from scrutiny, be it through cutouts, agents, or magical means. Investigations looking into her find themselves going subtly awry — they’ll find someone involved, who appears to be directing affairs, certainly, but it will never be the Mastermind herself. For 1 Tension, the Antagonist may alter the clues in a single Investigation, so that they appear to implicate someone working for her rather than the Antagonist herself.",
+        "Cost": "1 Tension",
+        "Duration": "Instant",
+        "Subject": "One investigation",
+        "Range": "Indefinite",
+        "Action": "Simple",
+        "Cooldown": "End of Session; or the player characters confront the Antagonist directly"
+      }
+    },
+    {
+      "Mastermind": {
+        "Description": "Some beings just won’t (or can’t) respect causality — the Antagonist is one of these. For 1 Tension, she may alter the recent past in a subtle way. This can either grant a +3 Enhancement to the Antagonist or a +3 Complication to a targeted character, as things are suddenly not what they seemed to be a moment ago. Non-trivial characters always remember the previous course of events",
+        "Cost": "1 Tension",
+        "Duration": "Indefinite",
+        "Subject": "The World",
+        "Range": "Extreme",
+        "Action": "Simple",
+        "Cooldown": "One Session"
+      }
+    }
+  ],
+  "Demigod": [
+    {
+      "Cause and Effect": {
+        "Description": "The Antagonist sets a specific taboo and the consequences to apply when the taboo is violated. She need not share the details of the taboo, but may halve the amount of Tension needed to invoke the taboo (round up, minimum one) if she does so. She never has to share the consequences, but if the taboo is violated, even accidentally, the details will rapidly become apparent.\nThe taboo and complication take the form of a Boolean if/then statement. For example, “If you cross this line, then you’ll burst into flame.” Consequences are paid for in advance with Tension; if the effect is not triggered, the spent Tension returns to the Tension Pool at the end of the scene. Injury Conditions cost 1 Tension for the first, 2 for the second, etc.\nThe dice pool for Clashing against Cause and Effect is variable; the Storyguide will choose an appropriate Attribute to combine with Legend.",
+        "Cost": "Variable",
+        "Duration": "One Scene",
+        "Action": "Reflexive",
+        "Clash": "Variable vs. Desperation",
+        "Cooldown": "The scene ends; or the effect is triggered."
+      }
+    },
+    {
+      "Death Curse": {
+        "Description": "The Antagonist uses the disturbance their death causes in Fate to lay a powerful death curse, taking the form of a Persistent Complication hanging over the target. When laying the curse, the Storyguide names a situation (i.e., “taking up swords against blood relations”) and may spend Tension up to the Antagonist’s Desperation Pool on her behalf. For each Tension spent, the Complication will occur once, at a point of the Storyguide’s choosing, and at a strength equal to the amount of Tension spent. For example, if the Storyguide spent three Tension, the target would suffer Complication 3 three times in the future, in a situation resonant with the situation named at the time of the Antagonist’s death. Player characters will likely attempt to avoid such circumstances; naturally, Fate (and the Storyguide) conspire to steer the character toward such circumstances.\nThis Flair may only be used if the Antagonist is really, truly dead and has no intention of staging a grand comeback. If, for some reason, the Antagonist is restored to life, the curse is immediately lifted.",
+        "Cost": "Variable",
+        "Duration": "Variable",
+        "Action": "Reflexive",
+        "Clash": "Resolve + Legend vs. Primary"
+      }
+    },
+    {
+      "Divine Command": {
+        "Description": "The Antagonist is charged by divine authority, and can command mortals and creatures of a similar tier. Divine Command can target individuals or groups. Targets are compelled to carry out the commands of the Antagonist unless the effect is successfully Clashed, which can take place at any time Divine Command is active. This requires an impassioned plea, forceful declaration, or similar action on the part of a Demigod.",
+        "Cost": "None",
+        "Duration": "One Scene",
+        "Action": "Simple",
+        "Clash": "Presence + Legend vs. Desperation",
+        "Cooldown": "The scene ends; or targets released from Divine Command’s effects attack the Antagonist"
+      }
+    },
+    {
+      "Dread-er Gaze": {
+        "Description": "The Antagonist’s gaze is a potent weapon, able to slay with a look. To use this Flair, the Antagonist must make eye contact, which may necessitate a roll if the target is aware of the Antagonist’s power. Trivial targets instantly die when eye contact is made; player characters suffer a Complication 5 of “Dead,” which applies to any actions she takes ; failure to buy off the Complication leads to automatic failure as she is a flopping corpse. Each turn, she may attempt to Clash against Dread-er Gaze again; if she is successful, she is no longer “Dead.” Conversely, the player may choose to accept her character’s death, if for example it served her Apotheosis.",
+        "Cost": "3 Tension",
+        "Duration": "One Scene",
+        "Action": "Simple",
+        "Clash": "Stamina + Legend vs. Desperation",
+        "Cooldown": "The scene ends; or the Antagonist kills another character through normal means"
+      }
+    },
+    {
+      "Hall of Mirrors": {
+        "Description": "The Antagonist is able to duplicate herself, spreading herself out across a number of clones equal to her Desperation Pool. All these clones are material and share the same Traits as the original, save for Health — the clones have only a single Health box.",
+        "Cost": "1 Tension",
+        "Duration": "One Scene",
+        "Action": "Simple",
+        "Cooldown": "The scene ends; or a number of rounds equal to the Antagonist’s Desperation Pool pass after all clones have been destroyed"
+      }
+    },
+    {
+      "Invocation": {
+        "Description": "The Antagonist calls upon a divine link to a God, effectively incarnating them in the scene for an instant and allowing their influence to be felt. The effects are always powerful and numinous beyond even the marvels of Heroes or Demigods, and may have wide-reaching effects that linger beyond the presence of the deity in question. In combat, this can be used as an attack against all foes on the field — roll the Antagonist’s Primary Pool once, and apply it to all allied characters.\nTrivial characters exposed to an Invocation are likely to be Fatebound to the invoked God, but this is left to Storyguide discretion — generally speaking, don’t poach a player’s Fatebound companions.",
+        "Cost": "3 Tension (1 Tension for Avatars)",
+        "Duration": "One turn",
+        "Action": "Simple",
+        "Clash": "Presence + Legend vs. Desperation"
+      }
+    },
+    {
+      "Key to the Bifrost": {
+        "Description": "The Antagonist is able to travel instantaneously between the World and a given Terra Incognita. She can return just as easily, and can thus effectively use it as a teleport. If the Antagonist uses Key to the Bifröst, she vanishes for the duration of the next turn. On her initiative the following round (during which time she is crossing the intervening space in Terra Incognita), she returns to the World. Crossing longer distances require more time spent in Terra Incognita.",
+        "Cost": "1 Tension",
+        "Duration": "Instant",
+        "Action": "Simple",
+        "Cooldown": "The scene ends; or the Antagonist suffers more than one Health damage in a single attack."
+      }
+    },
+    {
+      "Player of Games": {
+        "Description": "This Flair allows the Antagonist to temporarily Fatebind others into a contest, which may be as simple as a riddle or as complex as a lengthy game of strategy and subtlety — all that matters is that the game has a win condition that is possible for both parties to achieve. Within the context of the game, there is nothing to prevent cheating, and most Antagonists with this Flair are experts at stacking the deck (literally and metaphorically) against their opponents. The Antagonist always outlines the conditions of the game, but she may be as evasive as she likes when describing the consequences (including the fact that the game will be bound by Fate).\nGames may be played out as a simple or complex action, depending on the depth of the game in question. In either case, the Storyguide will choose the appropriate dice pool for the player character (which may vary between intervals, if the action is complex), while the Antagonist rolls her Primary Pool. Antagonists with this Flair always choose a game they’re highly skilled at. Additional rolls may be required if, for example, the player wishes to cheat (assume that if the Antagonist is cheating it’s factored into their Primary Pool), or to otherwise establish some sort of advantage within the game. Such external advantages grant Enhancement.\nIn simple contests, the objective is simply to roll the most successes. In complex contests, the Storyguide will choose an appropriate number of Milestones for both the player character and the Antagonist to pass, and characters may spend successes to cancel out the successes of their opponents.\nThe consequences of the game may vary, but Antagonists will usually choose a single consequence to be visited upon the loser (such as the Sphinx’s riddle, for example). This consequences must be paid for in advance by the Storyguide in Tension, wagered on the outcome, at a discounted rate of two-for-one (rounding up, minimum one). Injury Conditions wagered on the game cost 1 Tension for the first, 2 for the second, etc.\nIf the Antagonist wins the contest, the terms she outlined happen immediately, targeting whoever lost the game.",
+        "Cost": "Variable",
+        "Duration": "Variable",
+        "Action": "Simple",
+        "Cooldown": "The scene ends; or the Antagonist is victorious in the game"
+      }
+    },
+    {
+      "Sanctification": {
+        "Description": "The Antagonist sanctifies the terrain, charging it with mystical energy through their Dominion. Choose a Purview over which the Antagonist has Dominion when creating the Antagonist. For the remainder of the scene, any expression of divine magic in tune with the Sanctified Purview (fire attacks in an area under Fire Sanctification, for example) gain +2 Enhancement. Furthermore, opposing elements (for instance, water in the aforementioned example) suffer +3 Complication, with a penalty of reduced effect or damage to the surrounding area.\nStoryguides may spend additional Tension to apply specific Dominion Stunts on a one-for-one basis, subject to the normal limitations of Dominion Stunts. These stunts are available both to Antagonists and player characters.\nWhile Sanctification is most obvious when applied to basic elemental Purviews such as Fire, Water, etc., there’s no reason it couldn’t be applied to any Purview, given sufficient imagination. Artistry (Music) Sanctification, for example, could drag the field of battle into a musical number, and anyone not in-step with the music would suffer the Complication.",
+        "Cost": "2 Tension",
+        "Duration": "One Scene",
+        "Action": "Simple",
+        "Clash": "Intellect + Legend vs. Desperation",
+        "Cooldown": "The scene ends; or after a successful Clash of Wills by another character"
+      }
+    },
+    {
+      "Shadow-Strike": {
+        "Description": "The Antagonist can attack others through their shadows, wounds appearing seemingly from nowhere. If the Antagonist uses Shadow-Strike to grapple, Shadow-Strike lasts the duration of the grapple.",
+        "Cost": "1 Tension",
+        "Duration": "Instant",
+        "Action": "Instant",
+        "Cooldown": "The scene ends; or the Antagonist deals Health damage to a target normally"
+      }
+    },
+    {
+      "Transformation": {
+        "Description": "The Antagonist transforms a being of lesser Tier, granting them an Archetype Promotion in the process (the cost of which is paid for with this Flair). The transformed being is under the Antagonist’s control, and the transformation is generally irreversible (for exceptions, see below). In addition to the Archetype Promotion, assign relevant Qualities or Flairs to the transformed Antagonist as appropriate.\nGenerally speaking, player character allies should not be targeted, with the following exceptions: If the target is a Fatebound Canary, and if the target’s transformation would help catalyze a Divine Deed. If a potential target qualifies for both, definitely use them. Reversing the transformation, if the players decide to do so, should be difficult, but not impossible; this can make an excellent seed for an appropriate Divine Deed.",
+        "Cost": "2 Tension",
+        "Duration": "Instant",
+        "Action": "Simple",
+        "Clash": "Stamina + Legend vs. Desperation",
+        "Cooldown": "The scene ends; or a number of turns equal to Desperation after the Transformed Antagonist is defeated."
+      }
+    }
   ]
 }

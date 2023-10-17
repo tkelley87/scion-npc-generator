@@ -2,10 +2,7 @@ const config_form = {
   bookOptions: [
     { label: "Origin", value: ["Mook", "Professional", "Villain", "Monster"] },
     { label: "Hero", value: ["Foe", "Rival", "Nemesis", "Titanspawn"] },
-    {
-      label: "Demigod",
-      value: ["Paragon", "Mythic", "Transcendent", "Avatar"],
-    },
+    { label: "Demigod", value: ["Paragon", "Mythic", "Transcendent", "Avatar"] },
   ],
   pantheonOptions: [
     { label: "Aesir", value: "aesir" },

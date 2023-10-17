@@ -225,6 +225,79 @@
       }
     }
   ],
+  "Foe_Social": [
+    {
+      "A Thousand Ships": {
+        "Description": "The Antagonist is stunningly beautiful — whatever that may mean for the present cultural milieu. While wars are no longer typically fought over extremely attractive individuals, competition for the Antagonist’s affections is practically certain, and bitter hostility between competitors is not unlikely. The Antagonist may induce any two Storyguide characters to come to blows over their besotted passions, or for 1 Tension cause a Storyguide character to attack a player character, even in situations where violence would not normally be expected or tolerated."
+      }
+    }
+  ],
+  "Rival_Social": [
+    {
+      "Diplomythic Immunity": {
+        "Description": "The player characters may be the children of Gods, but some people are still off limits. The Antagonist is related to someone — almost certainly a God — who is powerful, dangerous, or well-connected. Whatever the reason, others will be unwilling to give evidence about her, higher-ups in the player characters’ own pantheon will discourage further investigation, and so on. All intervals spent directly investigating the Antagonist incur a +2 Complication. This Quality may be specified to include only a single pantheon, and will only affect intervals relying on anything associated with that pantheon."
+      }
+    },
+    {
+      "Obligation": {
+        "Description": "The Antagonist is steeped in the power of reciprocity, of exchange and obligation. Any agreement made with her is supernaturally binding. When used against player characters, the Storyguide may spend 1 Tension to force the issue in a number of ways — Fate will con- spire to see the accord carried out, the character feels a compulsion to do so (represented by a Condition such as Addiction), or retribution awaits the oathbreaker."
+      }
+    },
+    {
+      "Willful": {
+        "Description": "The Antagonist is made of sterner stuff than her fellows. When she engages in a Clash of Wills, she adds three dice to her Desperation Pool."
+      }
+    }
+  ],
+  "Nemesis_Social": [
+    {
+      "By Divine Right": {
+        "Description": "The Antagonist is a leader or ruler, perhaps of a Worldly sect or nation, perhaps from Terra Incognita. In any case, she has tremendous resources to draw upon — if she needs something, she has it, unless it’s one of a kind and already claimed or plot-important (in which case, she’s probably coming for it as part of the story!). In addition, she has bodyguards — two Rivals and three Foes, whose design is at Storyguide discretion. For 1 Tension, she can instantly summon these bodyguards even in situations where it wouldn’t be reasonable for them to be at hand."
+      }
+    }
+  ],
+  "Demigod": [
+    {
+      "Astride the World": {
+        "Description": "Many semi-divine beings possess a sense of power and size wildly out of step with their true shape. They may seem to fill a room despite being no larger than a mortal, so tall that their head scrapes the very vault of the heavens — but nonetheless, they can pass through a normal door like anyone else. Antagonists with this Quality gain Narrative Scale against trivial characters and surroundings. This Quality may be purchased multiple times, each granting a level of Scale."
+      }
+    },
+    {
+      "Dominion": {
+        "Description": "The Antagonist has attained Dominion over a specific Purview. She may gain Divinity Dice by taking action that either strengths or resonates with the Purview, and may use those Divine Dice in the same manner as player characters. She may create marvels of the Purview as a Simple Action without spending Tension to do so."
+      }
+    },
+    {
+      "Immortal-ish": {
+        "Description": "The Antagonist can be killed, but will inevitably return to life, whether by reanimating their body, reincarnating, or whatever method is appropriate. Choose a source of damage (fire, arrows, drowning, etc.) that can permanently kill the Antagonist, preferably something thematic such as antivenom for a venomous or otherwise toxic Antagonist.\nThis Quality does not apply if the Antagonist was slain by a being of greater Tier, or if the Antagonist has completed the Descent Deed of Apotheosis."
+      }
+    },
+    {
+      "Indestructible": {
+        "Description": "Choose a source of damage. This source of damage is the only one the Antagonist marks Health boxes from suffering. Storyguides should resist the urge to make Antagonists, even ones that are load-bearing for the ongoing story, vulnerable only to things that are practically impossible to get, like weapons-grade nuclear material or the atmosphere of Saturn."
+      }
+    },
+    {
+      "Interference": {
+        "Description": "The Antagonist possesses a powerful Fate. At the Storyguide’s discretion, she can Fatebind other Storyguide characters who are not already Fatebound to a player character, replenishing one Tension if she does so. Fate is warped in the Antagonist’s immediate presence, reducing the strength of other Fatebindings by 1 for the duration unless the character to whom the Storyguide character is Fatebound has a Legend higher than the Antagonist’s Desperation Pool."
+      }
+    },
+    {
+      "Load-Bearing Villain": {
+        "Description": "A structure (preferably but not always the one the confrontation is taking place in) is inextricably bound up with the Antagonist. The Antagonist is aware of what happens inside the structure, gaining a +2 Enhancement for tracking, perception, and associated rolls. When the Antagonist suffers Health damage, the structure begins to shake itself apart or is otherwise compromised; if the Antagonist dies, the structure collapses or is otherwise destroyed."
+      }
+    },
+    {
+      "Omni-Oracular": {
+        "Description": "The Antagonist is gifted with an on-demand prophetic sense; regardless of how she does so, she is able to do it reliably, even amid combat. As long as the Antagonist is able to communicate with her allies, those allies gain a general +2 Enhancement."
+      }
+    },
+    {
+      "Physiological Void": {
+        "Description": "The Antagonist is only embodied in the most tenuous of senses, and does not depend upon her flesh and blood to sustain her existence, much less to remain active. The cost of the Inflict Damage stunt is raised by 1 success for all physical attacks (spiritual or magical attacks, including those made with relics, pay the normal rate) made against the Antagonist, and she does not suffer Injury Conditions."
+      }
+    }
+  ],
   "Drawbacks": [
     {
       "Vulnerability": {
@@ -259,37 +332,6 @@
     {
       "Unnatural Hunger/Behavior": {
         "Description": "The Antagonist is compelled to do something or consume something outside the bounds of what is considered normal. To resist this impulse (for example, to attempt to hide their true nature), the Antagonist must succeed on a difficulty 2 Desperation Pool roll. Failure does not necessarily mean immediate indulgence (this is left to the Storyguide’s discretion), but some behavioral quirk shines through. An Occult roll (difficulty 2) is necessary to discern the Antagonist’s nature if the  Antagonist attempts to restrain themselves; if they indulge, the roll is difficulty 1 instead. If the Antagonist has one or more Flairs on Cooldown, indulgence of the Antagonist’s Unnatural Hunger counts as satisfying one Cooldown condition —  Storyguide’s pick."
-      }
-    }
-  ],
-  "Foe_Social": [
-    {
-      "A Thousand Ships": {
-        "Description": "The Antagonist is stunningly beautiful — whatever that may mean for the present cultural milieu. While wars are no longer typically fought over extremely attractive individuals, competition for the Antagonist’s affections is practically certain, and bitter hostility between competitors is not unlikely. The Antagonist may induce any two Storyguide characters to come to blows over their besotted passions, or for 1 Tension cause a Storyguide character to attack a player character, even in situations where violence would not normally be expected or tolerated."
-      }
-    }
-  ],
-  "Rival_Social": [
-    {
-      "Diplomythic Immunity": {
-        "Description": "The player characters may be the children of Gods, but some people are still off limits. The Antagonist is related to someone — almost certainly a God — who is powerful, dangerous, or well-connected. Whatever the reason, others will be unwilling to give evidence about her, higher-ups in the player characters’ own pantheon will discourage further investigation, and so on. All intervals spent directly investigating the Antagonist incur a +2 Complication. This Quality may be specified to include only a single pantheon, and will only affect intervals relying on anything associated with that pantheon."
-      }
-    },
-    {
-      "Obligation": {
-        "Description": "The Antagonist is steeped in the power of reciprocity, of exchange and obligation. Any agreement made with her is supernaturally binding. When used against player characters, the Storyguide may spend 1 Tension to force the issue in a number of ways — Fate will con- spire to see the accord carried out, the character feels a compulsion to do so (represented by a Condition such as Addiction), or retribution awaits the oathbreaker."
-      }
-    },
-    {
-      "Willful": {
-        "Description": "The Antagonist is made of sterner stuff than her fellows. When she engages in a Clash of Wills, she adds three dice to her Desperation Pool."
-      }
-    }
-  ],
-  "Nemesis_Social": [
-    {
-      "By Divine Right": {
-        "Description": "The Antagonist is a leader or ruler, perhaps of a Worldly sect or nation, perhaps from Terra Incognita. In any case, she has tremendous resources to draw upon — if she needs something, she has it, unless it’s one of a kind and already claimed or plot-important (in which case, she’s probably coming for it as part of the story!). In addition, she has bodyguards — two Rivals and three Foes, whose design is at Storyguide discretion. For 1 Tension, she can instantly summon these bodyguards even in situations where it wouldn’t be reasonable for them to be at hand."
       }
     }
   ]
