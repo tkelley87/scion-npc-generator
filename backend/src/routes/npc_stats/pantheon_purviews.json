@@ -15,6 +15,72 @@
       "Action": "Complex"
     }
   },
+  "annuna": {
+    "Name": "Shuila",
+    "Innate Power": "When speaking or issuing instructions from a position of authority (which need not be official or even acknowledged by the Scion), Trivial characters cannot offer offense or leave without being given permission to do so, nor can their Attitude go negative within your presence. In addition, when giving an order to an underling (someone who acknowledges the divine Authority of the Scion), the underling gains that Order as a Short-Term Deed, and +1 Enhancement towards carrying out that order. The Scion will know when the order has been carried out.",
+    "Take the Reins": {
+      "Description": "You take control of an organization, displacing its immediate leader in its hierarchy — if it has no defined leader, you take control outright. All members of the organization acknowledge your authority and follow your directions as appropriate for the organization: the staff of a bank won’t spontaneously become an army at your direction, for example, but you could certainly order security to remove someone from the premises. This Boon does not function on player characters without their player’s permission.",
+      "Duration": "One Scene",
+      "Subject": "An organization, formal or otherwise",
+      "Action": "Simple"
+    },
+    "Me of the Deed": {
+      "Description": "All possible actions have a physical me, recording the precise and proper way of doing things. By linking her understanding of individual me together in sequence, an Annuna may intuit a perfect method with an assured chance of success. So long as an Annuna has planned out actions in support of a Deed and has generated successes on an information-gathering challenge, she may purchase enhance stunts in sup- port of the Deed (Origin p. 67) that affect the same Skill and Attribute combination that generated the threshold successes, with an additional success, up to the standard soft and hard caps on Enhancements. If an Annuna fails at a roll crucial to the success of the Deed, she may accept a Consolation of success at a cost of future Complications to related rolls.",
+      "Duration": "Indefinite",
+      "Subject": "Self",
+      "Action": "Simple"
+    }
+  },
+  "apu": {
+    "Name": "Pachakutic",
+    "Innate Power": "You may sense huacas, or sacred sites, within (Legend) miles. These sites include Touchstones, sacred spaces of another pantheon or shrines to other Scions or Gods, but also a general awareness situational Sanctums and an understanding of the conditions neces- sary to generate those Sanctums. You may also sense the flow of energies through the earth and sky, allowing you to perfectly determine the weather. When in the presence of the sacred and making an appropriate sacrifice (Hero p. 188; this Purview grants you intuitive knowledge of what an appropriate sacrifice entails), you may benefit from minor sacrifices once per short-term Deed rather than once per story arc. This innate power will not reveal gates or axes mundi.",
+    "Kallpa": {
+      "Description": "By attuning to the divine energies with- in the huaca, you may wield miraculous power. When performing a sacrificial ritual, you may choose to use the huaca itself as a Relic locale, allowing you the use of a single Purview (typically Earth, Sky, Water, Sun, or Fire, though stranger Purviews are possible depending on the site’s nature at the Storyguide’s dis- cretion). This grants access to the innate powers of the Purview as normal and allows for channeling marvels through the Pachakutic motif within the confines of the huaca’s sacred space.\n If the huaca is particularly sacred to you (a Sanctum), you may work with the Storyguide to devise appro- priate Realm Birthrights, even if the site is within The World and not a Terra Incognita. These Birthrights are purchased normally and may be tailored to the player’s preferences, remaining accessible so long as Legend remains imbued in this Boon. If you stop imbuing Legend, you must return to the huaca to re-attune.",
+      "Duration": "One Scene",
+      "Subject": "One Huaca",
+      "Action": "Simple",
+      "Range": "Self"
+    },
+    "Churay": {
+      "Description": "Energies collect and reside within hua- ca; through practice, you may channel and contribute to sacred power. Upon performing an appropriate sacrifice at a huaca, you may regain an additional point of Legend. You may infuse the huaca with that point of Legend, allowing you and only you to later withdraw the point from that site without performing a sacrifice. You may even do this after performing a sacrifice at another pantheon’s sacred site, although it allows any member of the other pantheon with a Legend trait to withdraw the point. \n If your huaca is also your Sanctum, you may infuse points of Legend up to the Sanctum’s rating and withdraw them at will from anywhere in The World (though not within a Terra Incognita or otherworld). If you also possess the Kallpa Boon, you may choose to imbue one of the infused points of Legend to maintain access to natural Purviews and Realm Birthrights.",
+      "Duration": "Indefinite",
+      "Subject": "Self",
+      "Action": "Simple"
+    }
+  },
+  "atua": {
+    "Name": "Mana",
+    "Innate Power": "You gain Enhancement 2 on any roll to scrutinize or reveal Bonds and determine the social standing of a group, or on rolls to gauge the power, scope, and causal relationships of a natural event or weather phenomenon. If an action or location is tapu or otherwise socially forbidden in another culture, you recognize it immediately and know the corresponding required noa. You may also intuit Bonds and relationships towards actors who are not present, such as the sorcerer causing an earthquake via a ritual, or the lingering respect and fear a family feels towards an overbearing patriarch. Once per session, when you acknowledge these relationships aloud, add two Momentum to the pool. You may only acknowledge a given Bond once per story.",
+    "Kumara's Sweetness": {
+      "Description": "Through righteous actions, you may gain mana, and recognize it within others. Once per session, whenever you successfully complete a Deed, or when you perform a scene-long action that falls within the conceptual scope of the Fertility or War Purviews, you may choose to either regain one point of Legend or add four Momentum to the pool. Completion of a Failure Deed, even a success- ful completion, does not award these benefits.",
+      "Duration": "Instant",
+      "Subject": "Self",
+      "Action": "Reflexive"
+    },
+    "Pono": {
+      "Description": "Pono is synonymous with righteousness and balance, and an Atua Scion may empower others through this sense of balance. This Boon activates when a Scion resolves the Virtuous Condition and confers the following benefits for the rest of the scene:\n• The Collateral Pool loses up to three dice. This effect only occurs once per scene.\n• The character may choose another character with whom they have a Bond and “share” one of their Legendary Titles; by imbuing 1 Legend, actions taken in line with the Legendary Title may benefit from the Atua Scion’s Scale. Either the Atua Scion or the beneficiary may pay this Legend cost.\n• As a final benefit, while under the effects of this Boon, your player may grant two Momentum per turn to another player per turn rather than one.",
+      "Duration": "Indefinite or One Scene",
+      "Subject": "Self or one vehicle",
+      "Action": "Simple"
+    }
+  },
+  "bogovi": {
+    "Name": "Dvoeverie",
+    "Innate Power": "You may communicate with virtually anyone or anything, regardless of linguistic barriers; the character only suffers Complication 1 on any resulting rolls. This even applies to inanimate objects of an organic nature, such as plant life, though they will only have an opinion on topics of import to them (i.e. a tree could communicate concern about a Scion with Fire Dominion in the forest, or how much sun it’s been getting, but couldn’t answer questions of a temporal nature or the details of a search party in the forest). In addition, you may immediately scrutinize the Virtues of other beings once their divine nature has been revealed to you, and the innate meaning and conflict inherent to those Virtues. When you resolve the Virtuous Condition, regain a point of Legend.",
+    "Volevoi": {
+      "Description": "When in the presence of a Bog with the strongest convictions, others find themselves blistering against their strength of purpose. You radiate an aura causing one character or multiple trivial characters to be unable to look at you. An affected character suffers a 3-point Complication on any action that can bring you physical harm; this also applies to Clash rolls, as it’s difficult to work miracles in the face of the Bog’s unnerving certitude. If you are in the Virtuous Condition, this effect adds +1 defensive Scale instead. Should you attack an affected target, the effect ends immediately.",
+      "Duration": "One scene or until ended",
+      "Subject": "One character or multiple trivial characters",
+      "Action": "Simple",
+      "Range": "Medium"
+    },
+    "Mnogoverie": {
+      "Description": "The Bogovi are masters of adaptation, adept at reconciling their faith and magics with those of a foreign bent. Choose a Scion, God, Titan, or other entity possessing a Virtue trait. By imbuing Legend, you may adopt a single foreign Virtue from that entity for the scene regardless of your current Virtue score; the chosen Virtue replaces your Wayward Virtue. This acts in all ways as if it were a standard Virtue. If you are in the Virtuous Condition for your foreign Virtue, you may replace this Boon with a Boon from the modeled pantheon’s Specific Purview, benefitting from the Boon, the PSP motif, and the innate power of the Purview. Resolving the Virtuous Condition on the foreign Virtue ends this Boon’s effects.",
+      "Duration": "One scene or until ended",
+      "Subject": "Self or one divine or Titanic target",
+      "Action": "Simple"
+    }
+  },
   "deva": {
     "Name": "Yoga",
     "Innate Power": "Once per scene, when you act selflessly despite hardships in order to uphold a duty or serve someone else, you may allow another player to spend Momentum on an action without having to draw on one of their Virtues. Every point of Momentum they spend also adds another free die, as though they had the Virtuous Condition.",
@@ -116,6 +182,23 @@
       "Duration": "Indefinite",
       "Subject": "One Organization",
       "Range": "Long",
+      "Action": "Simple"
+    }
+  },
+  "tengri": {
+    "Name": "Qut",
+    "Innate Power": "Qut empowers the will of great leaders, ensuring that Fate brings them and their allies glory. Once per scene, when the Scion’s player spends Momentum to boost the roll of another character or other players spend Momentum to boost the Scion’s roll, the Scion may invoke their Qut. When this happens, each point of Momentum spent on the roll by anyone counts twice.",
+    "Soul's Ransom": {
+      "Description": "You may seize the souls within blood you have spilled, trapping them and gaining power of your foes. The souls are placed inside an onggon talisman (which you are assumed to have on your person already). The target gains the Soulbound condition at an equal level to their current highest Injury Condition. \nYou may choose to release the target’s soul at any time, ending the victim’s Soulbound condition without resolving it. However, regardless of how the Soulbound condition ends, you do not regain your imbued Legend until the end of the story in which it happens. \nThis Boon is not the only way that someone’s souls can be stolen. Shamans and sorcerers wielding the magic of the Tengri are able to perform similar feats, given access to someone’s blood or ghost – it just generally takes them longer and more effort, especially if they lack Legend. In these cases, the Soulbound condition inflicts Complication 2 by default.\nIf someone dies while their souls remain trapped, their souls are not freed. They still need to be rescued. Similarly, a ghost can be trapped and bound into an onggon to force it into servitude. Tengri Heroes are often called on to rescue late family members held prisoner in this way. It should also be noted that because the Tengri say you have multiple souls in your blood, having part of your souls trapped this way does not make you soulless.",
+      "Duration": "Indefinite (Special)",
+      "Subject": "A person you have drawn blood from this scene",
+      "Range": "Close",
+      "Action": "Simple"
+    },
+    "Avarga": {
+      "Description": "The Avarga is the champion of a wrestling tournament, and it is a title that many of the Tengri aspire to. Competition is at the heart of who they are – and no matter who they face, an Avarga puts up a fight. You may use this only in a formal competition, such as a formal duel, wrestling contest, race, speedrunning competition or similar. You have relevant Scale equal to that of your opponent in the contest. (If there are multiple opponents, you have Scale equal to the highest relevant Scale among them.) This can never increase your Scale to higher than your opponent’s.",
+      "Duration": "One scene",
+      "Subject": "Self",
       "Action": "Simple"
     }
   },
