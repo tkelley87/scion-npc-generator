@@ -1,5 +1,6 @@
 version: "3.8"
 services:
+
   dynamodb-local:
     command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
     image: "amazon/dynamodb-local:latest"
@@ -9,23 +10,32 @@ services:
     volumes:
       - "./dynamo/dynamodb:/home/dynamodblocal/data"
     working_dir: /home/dynamodblocal
+
   api:
     build:
       context: .
       dockerfile: Dockerfile.backend
       args:
         - APP_ENV=local
+    entrypoint: ["./docker_entrypoint.sh", "run"]
     image: react-flask-app-api
     container_name: api
     depends_on:
       - dynamodb-local
+    volumes:
+      - ./backend:/app  # bind mount the backend code
+
   client:
     build:
       context: .
-      dockerfile: Dockerfile.client
+      dockerfile: Dockerfile.client.dev
       args:
         - APP_ENV=local
-    image: react-flask-app-client
-    container_name: client
+    image: react-flask-app-client-dev
+    container_name: client-dev
     ports:
-      - "3000:80"
+      - "3000:3000"
+    depends_on:
+      - api
+    volumes:
+      - ./:/app
