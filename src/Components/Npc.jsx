@@ -8,9 +8,13 @@ import Traits from "./Traits";
 import Qualities from "./Qualities";
 import Flairs from "./Flairs";
 import Drawbacks from "./Drawbacks";
+import Sorcery from "./Sorcery";
+
 
 function Npc(props) {
   const theme = useTheme();
+
+
   // State
   const [char, setChar] = useState({});
   const [qualities, setQualities] = useState([]);
@@ -21,6 +25,8 @@ function Npc(props) {
   const [toxic, setToxic] = useState([]);
   const [vul, setVul] = useState([]);
   const [human, setHuman] = useState(false);
+  const [sorcery, setSorcery] = useState({});
+
 
   useEffect(() => {
     if (props.npc) {
@@ -39,6 +45,7 @@ function Npc(props) {
       setDrawbacks([]);
       setToxic([]);
       setHuman(false);
+      setSorcery({});
 
       if (char["Human"] === "yes") {
         setHuman(true);
@@ -81,6 +88,9 @@ function Npc(props) {
       }
       if (char["Flairs"]) {
         setFlairs(char["Flairs"]);
+      }
+      if (char["Sorcery"]) {
+        setSorcery(char["Sorcery"]);
       }
       if (char["Drawbacks"]) {
         setDrawbacks(char["Drawbacks"]);
@@ -265,6 +275,13 @@ function Npc(props) {
               <Qualities qualities={qualities} toxic={toxic} />
               <Divider />
               <Flairs flairs={flairs} />
+              <Divider />
+              {Object.keys(sorcery).length !== 0 ? (
+                <Sorcery sorcery={sorcery} />
+              ) : (
+                ""
+              )}
+              <Divider />
               {drawbacks.length > 0 ? (
                 <Drawbacks drawbacks={drawbacks} vul={vul} />
               ) : (
