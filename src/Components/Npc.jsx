@@ -8,7 +8,7 @@ import Traits from "./Traits";
 import Qualities from "./Qualities";
 import Flairs from "./Flairs";
 import Drawbacks from "./Drawbacks";
-import Sorcery from "./Sorcery";
+import Purviews from "./Purviews";
 
 
 function Npc(props) {
@@ -26,6 +26,9 @@ function Npc(props) {
   const [vul, setVul] = useState([]);
   const [human, setHuman] = useState(false);
   const [sorcery, setSorcery] = useState({});
+  const [dominion, setDominion] = useState({});
+  const [relic, setRelic] = useState({});
+
 
 
   useEffect(() => {
@@ -46,6 +49,9 @@ function Npc(props) {
       setToxic([]);
       setHuman(false);
       setSorcery({});
+      setDominion({});
+      setRelic({});
+
 
       if (char["Human"] === "yes") {
         setHuman(true);
@@ -91,6 +97,12 @@ function Npc(props) {
       }
       if (char["Sorcery"]) {
         setSorcery(char["Sorcery"]);
+      }
+      if (char["Dominion"]) {
+        setDominion(char["Dominion"]);
+      }
+      if (char["Relic"]) {
+        setRelic(char["Relic"]);
       }
       if (char["Drawbacks"]) {
         setDrawbacks(char["Drawbacks"]);
@@ -277,10 +289,16 @@ function Npc(props) {
               <Flairs flairs={flairs} />
               <Divider />
               {Object.keys(sorcery).length !== 0 ? (
-                <Sorcery sorcery={sorcery} />
+                <Purviews data={sorcery} />
               ) : (
                 ""
               )}
+              {Object.keys(dominion).length !== 0 ? (
+                <Purviews data={dominion} />
+              ) : (
+                ""
+              )}
+              {Object.keys(relic).length !== 0 ? <Purviews data={relic} /> : ""}
               <Divider />
               {drawbacks.length > 0 ? (
                 <Drawbacks drawbacks={drawbacks} vul={vul} />
