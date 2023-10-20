@@ -1,3 +1,5 @@
+import character_test from "../testing/char";
+
 async function postBody(body) {
   try {
     const response = await fetch(`/api/form`, {
@@ -25,6 +27,7 @@ async function getNpcById(id) {
     });
     const data = await response.json();
     return { data: data };
+    // return { data: character_test }; // Comment out response to the data return to use test char.
   } catch (error) {
     return console.log(error);
   }
