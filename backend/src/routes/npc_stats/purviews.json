@@ -1,6 +1,8 @@
 {
   "Artistry": {
-    "Innate Power": "You can express yourself through an artistic performance to communicate with those who experience it as though you were speaking to them, even if they don’t share a language. This can also bypass Complications that would apply to rolls made through ordinary conversation, like trying to avoid being overheard, but not to the specific art form you use. Only the intended recipient of the message (which can be “everyone”) can perceive it.",
+    "Innate Power": [
+      "You can express yourself through an artistic performance to communicate with those who experience it as though you were speaking to them, even if they don’t share a language. This can also bypass Complications that would apply to rolls made through ordinary conversation, like trying to avoid being overheard, but not to the specific art form you use. Only the intended recipient of the message (which can be “everyone”) can perceive it."
+    ],
     "Enthralling Performance": {
       "Description": "No one can look away from your art. When you put on a performance, all affected targets in range that witnesses your performance cannot stop paying attention to you. If they wish to take another action, they must do it as a mixed action combined with an Integrity + Resolve roll at Difficulty 2. Putting on a performance with this Boon is a complex action that can last multiple rounds, but doesn’t require a roll.",
       "Duration": "Indefinite",
@@ -26,7 +28,9 @@
     }
   },
   "Beasts": {
-    "Innate Power": "Animals will never attack or harm you, unless they are compelled by magic or Legendary creatures themselves.",
+    "Innate Power": [
+      "Animals will never attack or harm you, unless they are compelled by magic or Legendary creatures themselves."
+    ],
     "Animal Aspect": {
       "Description": "You choose an animal and emulate one of its iconic traits. Pick one of the following benefits: Mobility: You can swim like a dolphin, burrow like a termite, or emulate flight with graceful leaps. You can ignore any dangerous or difficult terrain) or complicated passages, barriers, or hazards that form of movement could reasonably bypass. Senses: Choose a specific circumstance in which the animal’s senses give an advantage — an eagle’s eyes can see clearly from far away, a bat can echolocate in total darkness, while a dog can track by scent for miles. You have Enhancement 3 on sense-based rolls where that advantage applies. Other: Pick a miscellaneous trait, like an octopus’s camouflage, an anglerfish’s bioluminescence, or a peacock’s magnificent plumage. You either have Enhancement 2 on actions that trait benefits, or ignore up to 3 points of Complication it negates, whichever best represents the chosen trait.",
       "Duration": "One Scene",
@@ -47,7 +51,9 @@
     }
   },
   "Beauty": {
-    "Innate Power": "You may attempt a Feat of Scale when you roll to influence a character using your beauty, appearance, and body language. This includes seduction, but also cutting someone down with a withering glare or using body language to convince a guard you’re not a threat.",
+    "Innate Power": [
+      "You may attempt a Feat of Scale when you roll to influence a character using your beauty, appearance, and body language. This includes seduction, but also cutting someone down with a withering glare or using body language to convince a guard you’re not a threat."
+    ],
     "Draw Back the Mask": {
       "Description": "You can bestow blessings that reveal a person’s true beauty, or curses that mar them with ugliness. Your blessing or curse takes the form of a Condition imposed on one character, or on all trivial targets within range. Using this Boon on trivial targets is free. A blessed character may use their beauty once per scene to add Enhancement 2 on any roll made with a Social Attribute. This Condition resolves once its benefit has been applied a total of your (Legend + 1) times. A cursed character suffers a +2 Complication on all Social rolls where their distorted appearance is a disadvantage. This Condition can be resolved by making a sincere and heartfelt apology to someone the target has wronged in a significant way, or with curse-breaking magic.",
       "Duration": "Condition",
@@ -70,7 +76,9 @@
     }
   },
   "Chaos": {
-    "Innate Power": "You walk untouched through chaotic situations, taking no harm from random or haphazard dangers such as debris in a tornado, a freak traffic accident, or being trampled by shoppers on Black Friday. This does not protect you from damage that results from an action performed with intent to cause harm, like gunfire in a shootout, or environmental situations. This immunity extends to any non-magical dangerous terrain, unless a character in the scene actively created that peril with intent to harm. You still face any Complications that such situations would normally impose — you’re simply guaranteed to come through unscathed.",
+    "Innate Power": [
+      "You walk untouched through chaotic situations, taking no harm from random or haphazard dangers such as debris in a tornado, a freak traffic accident, or being trampled by shoppers on Black Friday. This does not protect you from damage that results from an action performed with intent to cause harm, like gunfire in a shootout, or environmental situations. This immunity extends to any non-magical dangerous terrain, unless a character in the scene actively created that peril with intent to harm. You still face any Complications that such situations would normally impose — you’re simply guaranteed to come through unscathed."
+    ],
     "Hornet's Nest": {
       "Description": "You create an instant riot. All trivial characters in range, plus up to (Legend x 3) non-trivial mortals, will stop whatever they’re doing and create a wild and disruptive frenzy, mob, or protest — whichever is most appropriate to the circumstances. If the Storyguide has specific plans for what a mortal character is doing in the scene (for example, the hired security you’re trying to distract with a riot), he can declare them unavailable as targets. You have no control over the mob, but they’re reckless and loud and provide a good distraction.",
       "Duration": "One Scene",
@@ -95,7 +103,9 @@
     }
   },
   "Darkness": {
-    "Innate Power": "You can see in total darkness, even magical darkness. You can also see into someone’s dreams by watching them while they sleep.",
+    "Innate Power": [
+      "You can see in total darkness, even magical darkness. You can also see into someone’s dreams by watching them while they sleep."
+    ],
     "Blinding Veil": {
       "Description": "You can strip away the vision of any number of characters in range, imposing a blinded Condition on them for one scene. If you choose only trivial targets to blind, using this Boon is free.",
       "Duration": "One Scene",
@@ -119,7 +129,9 @@
     }
   },
   "Death": {
-    "Innate Power": "You can see and communicate with ghosts, shades, and other forms of the undead that are normally imperceptible or incomprehensible (the Storyguide should feel free to send plot hooks your way in the form of the dead seeking favors or aid). In addition, you can perceive entryways to the Underworld.",
+    "Innate Power": [
+      "You can see and communicate with ghosts, shades, and other forms of the undead that are normally imperceptible or incomprehensible (the Storyguide should feel free to send plot hooks your way in the form of the dead seeking favors or aid). In addition, you can perceive entryways to the Underworld."
+    ],
     "Unquiet Dead": {
       "Description": "You can cause a corpse to speak, or summon a person’s ghost, shade, or other culturally appropriate remnant (Scion: Origin, p. 31) from the site of their grave for one scene. The corpse or shade cannot act except to speak, but you can try to influence it just like anyone else. It starts with Attitude 3 towards you. The undead retains all memories it had in life, except for a blank space of about five minutes leading up to the time of their death. As long as you imbue Legend in this boon, the undead’s answers provide Enhancement 3 on any applicable rolls, such as tracking down the person who killed them. You can only use this Boon on the same undead once per session.",
       "Duration": "Indefinite",
@@ -142,7 +154,9 @@
     }
   },
   "Deception": {
-    "Innate Power": "Other characters face a +3 Complication on all Empathy rolls and Assess Attitude rolls against you. If they don’t spend enough successes to overcome the Complication, you choose the result they get.",
+    "Innate Power": [
+      "Other characters face a +3 Complication on all Empathy rolls and Assess Attitude rolls against you. If they don’t spend enough successes to overcome the Complication, you choose the result they get."
+    ],
     "Ephemera": {
       "Description": "You create an illusory image of a person, animal, or object, up to the size of a car. The illusion is lifelike and seems completely authentic — a person breathes, a car’s engine throbs, a fire gives off heat — but it has no physical substance and cannot exert force or cause harm. It can move, but must remain within this Boon’s range. A non-trivial character who wins the Clash of Wills can see through the illusion. Attempts to touch or physically interact with an illusion go right through it, letting anyone who sees this recognize it as unreal in the absence of extraordinary circumstances.",
       "Duration": "Indefinite",
@@ -166,7 +180,9 @@
     }
   },
   "Earth": {
-    "Innate Power": "As long as you are standing on the ground (the bottom floor of a building counts) or an earthen surface, you cannot be forcibly moved from your location by any amount of physical force, and gain Enhancement 1 on Might and Stamina rolls.",
+    "Innate Power": [
+      "As long as you are standing on the ground (the bottom floor of a building counts) or an earthen surface, you cannot be forcibly moved from your location by any amount of physical force, and gain Enhancement 1 on Might and Stamina rolls."
+    ],
     "Shaping Hand": {
       "Description": "You can shape and mold stone, metal, and other earthen substances with your bare hands as though it were as malleable as clay. When this assists in an action, like climbing a sheer cliff overhang or pulling a steel wall open, you gain Enhancement 3.",
       "Duration": "One Scene",
@@ -188,7 +204,9 @@
     }
   },
   "Epic Dexterity": {
-    "Innate Power": "So long as you continue to move towards a destination, you walk, run, or leap with effortless grace. Any surfaces solid or liquid hold your weight as if you weighed no more than a feather, and you may effortlessly scale or descend vertical surfaces without a need for a handhold.",
+    "Innate Power": [
+      "So long as you continue to move towards a destination, you walk, run, or leap with effortless grace. Any surfaces solid or liquid hold your weight as if you weighed no more than a feather, and you may effortlessly scale or descend vertical surfaces without a need for a handhold."
+    ],
     "The Falling Star": {
       "Description": "Your speed is a powerful asset in battle. In combat, you can use your reflexive Move action to cross two range bands, and gain Enhancement 3 on rolls to Disengage. You cannot take damage from falling.",
       "Duration": "One Scene",
@@ -209,7 +227,9 @@
     }
   },
   "Epic Stamina": {
-    "Innate Power": "You are immune to poison and disease unless they come from a source whose Legend is equal or greater than yours, and never face Complications or risk death from hunger, thirst, or exhaustion.",
+    "Innate Power": [
+      "You are immune to poison and disease unless they come from a source whose Legend is equal or greater than yours, and never face Complications or risk death from hunger, thirst, or exhaustion."
+    ],
     "Adamant Body": {
       "Description": "Your skin becomes as hard as adamant, granting you +1 soft armor and the benefit of the Resistant armor tag against a specific type of damage, such as bullets, fire, or acid. When you purchase this boon, choose one kind of damage that you are naturally resistant to. You can use it to resist the chosen damage type without having to imbue Legend in it.",
       "Duration": "One Scene",
@@ -230,7 +250,9 @@
     }
   },
   "Epic Strength": {
-    "Innate Power": "You have +1 Scale for purposes of lifting, breaking, or carrying large objects. You can use Might in place of Presence for intimidation, seduction, or building Bonds of camaraderie.",
+    "Innate Power": [
+      "You have +1 Scale for purposes of lifting, breaking, or carrying large objects. You can use Might in place of Presence for intimidation, seduction, or building Bonds of camaraderie."
+    ],
     "Heavy Lifter": {
       "Description": "Add Enhancement 3 on rolls to lift or carry heavy objects. When you attack by throwing an improvised weapon, the range increases by a single band and it gains the Arcing tag. You choose whether it’s Bashing or Lethal.",
       "Duration": "One Scene",
@@ -251,7 +273,9 @@
     }
   },
   "Fertility": {
-    "Innate Power": "Once per session, you can radiate an aura of vitality, causing flowers and other plant life to bloom and grow. All allies out to long range may resolve a single Bruised or Injured Condition. This cannot heal Maimed Conditions.",
+    "Innate Power": [
+      "Once per session, you can radiate an aura of vitality, causing flowers and other plant life to bloom and grow. All allies out to long range may resolve a single Bruised or Injured Condition. This cannot heal Maimed Conditions."
+    ],
     "Blessed Harvest": {
       "Description": "You can confer great vitality on another character with the fruits of Fertility. To use this Boon, you must prepare a meal that your target eats, offer them support in a familial role, or share a moment of physical intimacy. This blessing takes the form of a Condition. Once per scene, the target may call upon the blessing to add Enhancement 3 on a roll made with a Force or Resilience Attribute. This Condition resolves once its benefit has been applied a total of (your Legend + 1) times. A Scion who benefits from this condition may call on it to undertake a Feat of Scale without having to spend a point of Legend. Doing so resolves the condition.",
       "Duration": "Condition",
@@ -275,7 +299,9 @@
     }
   },
   "Fire": {
-    "Innate Power": "You and your personal belongings cannot take damage or suffer any form of harm from fire, heat, or smoke inhalation. You can walk through wildfires or industrial microwaves unharmed, swim in magma for as long as you can hold your breath, and perform similar feats of fireproof heroism. Extreme cold is likewise harmless to you.",
+    "Innate Power": [
+      "You and your personal belongings cannot take damage or suffer any form of harm from fire, heat, or smoke inhalation. You can walk through wildfires or industrial microwaves unharmed, swim in magma for as long as you can hold your breath, and perform similar feats of fireproof heroism. Extreme cold is likewise harmless to you."
+    ],
     "Eternal Flame": {
       "Description": "You imbue a fire with a spark of your divine power, making it a part of yourself. The flame expands, spreading out to the size of a large campfire if smaller. It burns indefinitely without needing additional fuel and can’t be extinguished by non-magical means. As a Simple action, you can extend your senses through the fire, letting you see, hear, and smell things as though you were there. Previous uses of this Boon end if you use it to bless a new fire.",
       "Duration": "Indefinite",
@@ -298,7 +324,9 @@
     }
   },
   "Forge": {
-    "Innate Power": "Your handiwork is infallible. Whenever one of your craft projects would suffer Flaws due to the Complications of delicate work or any other source, subtract one point from the total amount of Flaws, down to a minimum of 0.",
+    "Innate Power": [
+      "Your handiwork is infallible. Whenever one of your craft projects would suffer Flaws due to the Complications of delicate work or any other source, subtract one point from the total amount of Flaws, down to a minimum of 0."
+    ],
     "Celestial Artifice": {
       "Description": "You lower the Tier of a crafting project (Scion: Origin, p. 76) by 1. This doesn’t let you undertake projects of a Tier you normally couldn’t accomplish.",
       "Duration": "Until project is completed",
@@ -319,7 +347,9 @@
     }
   },
   "Fortune": {
-    "Innate Power": "You can sense the presence of Fatebindings when you interact with someone. If you later meet the other “half” of a binding that you have already sensed, you can tell the two characters are bound together. You can also sense when a Prophet or Sorcerer manipulates Fate with their Knacks or other powers, identifying them as the one responsible even if the effect cannot normally be perceived.",
+    "Innate Power": [
+      "You can sense the presence of Fatebindings when you interact with someone. If you later meet the other “half” of a binding that you have already sensed, you can tell the two characters are bound together. You can also sense when a Prophet or Sorcerer manipulates Fate with their Knacks or other powers, identifying them as the one responsible even if the effect cannot normally be perceived."
+    ],
     "Divination": {
       "Description": "You divine a character’s luck in the near future. Out of character, you decide whether they will enjoy good or suffer bad luck as a Condition. Once per scene, before that character makes a roll, you can declare that their luck intervenes — good luck lowers the target number by 1, while bad luck increases it by 1. You can invoke their luck even if your character is not in the scene. A character’s good luck runs out once this benefit has been applied a total of your (Legend + 1) times. Bad luck runs out at the end of a scene where a failure on the penalized roll led to significant consequences, or if the victim accepts a botch offered by the Storyguide on any action.",
       "Duration": "Condition",
@@ -342,7 +372,9 @@
     }
   },
   "Frost": {
-    "Innate Power": "You never suffer harm from extreme cold, nor difficult terrain or Complications due to snow, hail, or ice. You may walk over water or even clouds, as it turns to solid ice underfoot long enough to support you.",
+    "Innate Power": [
+      "You never suffer harm from extreme cold, nor difficult terrain or Complications due to snow, hail, or ice. You may walk over water or even clouds, as it turns to solid ice underfoot long enough to support you."
+    ],
     "Cooler Heads": {
       "Description": "When tempers flare and action comes before thought, you can cool things down. This Boon can be used against characters engaged in combat, intense argument, reckless decision making, or similar emotionally agitating scenarios. They grow cold-hearted, almost emotionless. Whatever they were doing, they stop, and won’t return to it for the rest of the scene — they’ll walk away from brawls, take a moment to reconsider whether they should be having an emotional argument, take the time to think their plans through more thoroughly, or similar. They can still defend themselves if others try to harm them, but will not initiate any kind of hostilities.",
       "Duration": "One Scene",
@@ -367,7 +399,9 @@
     }
   },
   "Health": {
-    "Innate Power": "Once per session, when you successfully provide treatment to a Storyguide character ally that resolves an Injury Condition, Poisoned Condition, or disease, you gain one Legend.",
+    "Innate Power": [
+      "Once per session, when you successfully provide treatment to a Storyguide character ally that resolves an Injury Condition, Poisoned Condition, or disease, you gain one Legend."
+    ],
     "Healing Hands": {
       "Description": "Touching a character, you heal their wounds. This Boon can be used to instantly resolve any Injury Condition a target suffers from, even Maimed Conditions. You can also use this Boon to resolve Conditions such as Poisoned, Disease, or similar ailments of physical or mental health, even if they are inflicted by magic.",
       "Duration": "Instant",
@@ -390,7 +424,9 @@
     }
   },
   "Journeys": {
-    "Innate Power": "You have an unfailing sense of direction, allowing you to find a route that leads to any point in the World as an unrolled action, unless its position is obscured by magic. You can sense the presence of an Axis Mundi or other gate between realms of existence from (Legend) miles away.",
+    "Innate Power": [
+      "You have an unfailing sense of direction, allowing you to find a route that leads to any point in the World as an unrolled action, unless its position is obscured by magic. You can sense the presence of an Axis Mundi or other gate between realms of existence from (Legend) miles away."
+    ],
     "Chariot of the Gods": {
       "Description": "You imbue a vehicle with divine power, raising the Scale of all speed-based actions taken with it by 1. Opposing characters that try to steal, damage, or otherwise impede your chosen chariot face a +2 Complication.",
       "Duration": "One Scene",
@@ -413,7 +449,9 @@
     }
   },
   "Moon": {
-    "Innate Power": "You can radiate an aura of moonlight that cuts through darkness out to long range as a reflexive action. Only you and those you designate can perceive this illumination — others do not benefit from it. You may pay 1 Legend to attempt to reveal the true form of any shapeshifters or other transformed characters within the moonlight, rolling Cunning + Legend against the Manipulation + Legend of a character that wishes to conceal the truth.",
+    "Innate Power": [
+      "You can radiate an aura of moonlight that cuts through darkness out to long range as a reflexive action. Only you and those you designate can perceive this illumination — others do not benefit from it. You may pay 1 Legend to attempt to reveal the true form of any shapeshifters or other transformed characters within the moonlight, rolling Cunning + Legend against the Manipulation + Legend of a character that wishes to conceal the truth."
+    ],
     "Enchanting Evening": {
       "Description": "Cast in the light of the moon, things that once seemed familiar take on new meanings and reveal hidden beauty. The target of this Boon reconsiders their feelings for someone or something they see, gaining Attitude 2 towards the designated person or thing, or changing the rating of an existing Attitude by +2 or −2. The target’s player chooses the exact nature of their change of heart — this Boon simply forces them to make a change. This doesn’t stack with other magical Attitude modifiers, but can cancel out an opposing bonus or penalty.",
       "Duration": "Indefinite",
@@ -437,7 +475,9 @@
     }
   },
   "Order": {
-    "Innate Power": "You can sense the laws that govern any jurisdiction you stand in, letting you tell whether any action you witness or contemplate would be legal according to them. Any mortal law enforcement acting in their official capacity that attempts to take action against you for a lawful act or overreach the bounds of authority is physically unable to do so — their body betrays them in the face of true justice.",
+    "Innate Power": [
+      "You can sense the laws that govern any jurisdiction you stand in, letting you tell whether any action you witness or contemplate would be legal according to them. Any mortal law enforcement acting in their official capacity that attempts to take action against you for a lawful act or overreach the bounds of authority is physically unable to do so — their body betrays them in the face of true justice."
+    ],
     "Code of Heaven": {
       "Description": "When you explain laws to people, as long as you’re truthful and accurate, they know that you are correct. If, as part of your explanation, you declare a person or group to be innocent, then the protection of this Purview’s innate power extends to them for this Boon’s duration. On the other hand, if you condemn someone as guilty, you and those who hear you have Enhancement 2 on any actions taken to bring them to justice.",
       "Duration": "One Scene",
@@ -461,7 +501,9 @@
     }
   },
   "Passion": {
-    "Innate Power": "You see into the hearts of others, gaining Enhancement 3 on Assess Attitude rolls. If you observe someone who has a Bond towards another character present in the scene, you intuit the Bond’s existence.",
+    "Innate Power": [
+      "You see into the hearts of others, gaining Enhancement 3 on Assess Attitude rolls. If you observe someone who has a Bond towards another character present in the scene, you intuit the Bond’s existence."
+    ],
     "Blurt it Out": {
       "Description": "You overwhelm a character with a sudden burst of emotion. They exclaim without realizing it, unwittingly vocalizing whatever they are thinking. Everyone who hears it gains Enhancement 3 on Assess Attitude actions or other Social rolls to understand the utterance’s context for the duration of the Boon.",
       "Duration": "One Scene",
@@ -486,7 +528,9 @@
     }
   },
   "Prosperity": {
-    "Innate Power": "Whenever you exploit your wealth or financial status to influence someone, treat their Attitude towards you as one point higher. This does not stack with other magical Attitude bonuses.",
+    "Innate Power": [
+      "Whenever you exploit your wealth or financial status to influence someone, treat their Attitude towards you as one point higher. This does not stack with other magical Attitude bonuses."
+    ],
     "All that Glitters": {
       "Description": "going unnoticed. You can use this Boon on either a luxury good that you’ve bought this session, like an elegant necklace or brand-new SUV, or an object or locale that you have either concretely or symbolically dedicated to a group of people, like a shrine built for your cult or a shopping mall you’ve cut the ribbon to. The blessed object or location catches the attention of anyone who sees it, and provides Enhancement 2 to influence that plays off a character’s feelings towards it. You could use your shiny new jewelry to seduce a handsome-but-penniless bachelor, or give it away to an enemy, and then convince a crew of notorious thieves to rob their house once they’ve seen the goods.",
       "Duration": "One Session",
@@ -508,7 +552,9 @@
     }
   },
   "Sky": {
-    "Innate Power": "You have perfect foreknowledge of the weather and climate around you up to at least a day in advance, and may ignore any Complications imposed by rain, wind, or other hazardous weather.",
+    "Innate Power": [
+      "You have perfect foreknowledge of the weather and climate around you up to at least a day in advance, and may ignore any Complications imposed by rain, wind, or other hazardous weather."
+    ],
     "Bolt from the Blue": {
       "Description": "You call down a bolt of lightning, rolling an attack with (highest Power Attribute) + Occult. It has the Aggravated, Ranged, and Shockwave tags. You can use this Boon to attack enemies inside a building, but it provides a Defense bonus: from +1 for a one-story building with a light wooden roof to +5 for a skyscraper with a lightning rod affixed to it.",
       "Duration": "Instant",
@@ -530,7 +576,9 @@
     }
   },
   "Stars": {
-    "Innate Power": "As long as you are beneath the open sky, you can take a simple action to shift your senses to a God’s eye view, looking down on yourself and your surroundings out to long range from a top-down perspective.",
+    "Innate Power": [
+      "As long as you are beneath the open sky, you can take a simple action to shift your senses to a God’s eye view, looking down on yourself and your surroundings out to long range from a top-down perspective."
+    ],
     "Cosmic Perspective": {
       "Description": "To look up at the stars is to peer into the past, witnessing light that was shed countless eons ago. You can observe the past, specifying either a point in time or an event that occurred as far back as 1,000 years, but no more recently than the last dawn. If you use this Boon to make an interval roll for an investigation or a similar action, you can ignore up five points of Complication resulting from the passage of time since the event you view occurred.",
       "Duration": "One Scene",
@@ -552,7 +600,9 @@
     }
   },
   "Sun": {
-    "Innate Power": "You can radiate an aura of sunlight that pierces through darkness out to long range as a reflexive action. You may spend 1 Legend to increase this radiance to blinding brilliance, imposing a +2 Complication on any attack rolls against you or an ally within the light.",
+    "Innate Power": [
+      "You can radiate an aura of sunlight that pierces through darkness out to long range as a reflexive action. You may spend 1 Legend to increase this radiance to blinding brilliance, imposing a +2 Complication on any attack rolls against you or an ally within the light."
+    ],
     "Blinding Glory": {
       "Description": "You unleash a flash of brilliant light, inflicting a blinding Condition on all enemies in range. When you spend Legend with this Purview’s innate power, you may also use this Boon reflexively and for free. In addition, if all targets are trivial, this Boon’s cost is waived.",
       "Duration": "Condition",
@@ -573,7 +623,9 @@
     }
   },
   "War": {
-    "Innate Power": "You can grant a group of Heavy followers the Savage tag with your blessing as an ordinary action. This lasts indefinitely, but only one group can benefit from this at a time.",
+    "Innate Power": [
+      "You can grant a group of Heavy followers the Savage tag with your blessing as an ordinary action. This lasts indefinitely, but only one group can benefit from this at a time."
+    ],
     "Herald of Victory": {
       "Description": "Your blessing promises victory. All characters on the side of your choice in a fight (whether physical or not) gain Enhancement 1 on all actions. If you are passively observing a battle between unrelated parties (i.e. none of her allies are involved), you can use this Boon for free to favor one side.",
       "Duration": "One Scene",
@@ -596,7 +648,9 @@
     }
   },
   "Water": {
-    "Innate Power": "You can breathe water like air and swim with flawless grace, ignoring any Complication for moving or acting underwater. You are also immune to harm from the pressure or temperature of water.",
+    "Innate Power": [
+      "You can breathe water like air and swim with flawless grace, ignoring any Complication for moving or acting underwater. You are also immune to harm from the pressure or temperature of water."
+    ],
     "Changing Tides": {
       "Description": "You exert your will over water, controlling the tides or currents that move through it. You can calm all water out to long range, making it still and placid even in the face of a hurricane, or change the direction that currents flow in, letting you reverse the direction of a river or cause a riptide to drag lost swimmers back to shore. Reclaiming the Legend imbued in this Boon causes the water to revert to its natural behavior. Alternatively, if you spend Legend instead of imbuing it, you can call up a great wave to crash down on your foes. You roll this attack with (highest Power Attribute) + Occult. It has the Bashing, Long Range, Pushing, and Shockwave tags.",
       "Duration": "One Scene or Instant",
@@ -619,7 +673,9 @@
     }
   },
   "Wild": {
-    "Innate Power": "You move through the wilderness with a dryad’s grace, ignoring any difficult or dangerous terrain based on dense undergrowth, fallen trees, briar patches, or similar plant-based hazards. Add Enhancement 2 on all rolls to establish stealth while in a wilderness area.",
+    "Innate Power": [
+      "You move through the wilderness with a dryad’s grace, ignoring any difficult or dangerous terrain based on dense undergrowth, fallen trees, briar patches, or similar plant-based hazards. Add Enhancement 2 on all rolls to establish stealth while in a wilderness area."
+    ],
     "Call of the Wild": {
       "Description": "For all that human civilization has progressed, it is not so far from returning to the wild as it might like to think. You can use this Boon on a human, human-like being, or domesticated animal. Alternatively, this Boon can be used against all trivial targets within range for free. You inflict a Condition that awakens atavistic instincts, adding +2 to the Difficulties of all Academics, Culture, Firearms, Medicine, Pilot, Science, and Technology rolls, but grants Enhancement 2 on Athletics, Close Combat, Integrity, and Survival rolls. This Condition resolves when failing a roll with one of the penalized Skills leads to significant consequences.",
       "Duration": "Condition",
