@@ -5,3 +5,5 @@ backend/src/routes/__pycache__
 backend/src/routes/controllers/__pycache__
 backend/src/utilities/__pycache__
 backend/.env
+_infra/
+dynamo/
