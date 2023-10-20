@@ -84,6 +84,27 @@ const config_mui = {
         fontSize: ".85em",
       },
     },
+    purviews: {
+      a: {
+        fontWeight: "bold",
+        fontFamily: ["Marcellus"].join(","),
+        fontSize: "1.18em",
+      },
+      b: {
+        fontFamily: ["Marcellus SC"].join(","),
+        fontSize: ".95em",
+        fontWeight: "bold",
+      },
+      c: {
+        fontWeight: "bold",
+        fontFamily: ["Marcellus"].join(","),
+        fontSize: "1.05em",
+      },
+      d: {
+        fontFamily: ["Marcellus SC"].join(","),
+        fontSize: ".85em",
+      },
+    },
   },
 };
 
