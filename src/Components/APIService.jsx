@@ -18,7 +18,7 @@ async function postBody(body) {
 
 async function getNpcById(id) {
   try {
-    id = "b411ab989e754276845dcf0e3f421342";
+
     const response = await fetch(`/api/npc/${id}`, {
       method: "GET",
       mode: "cors",
