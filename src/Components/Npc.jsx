@@ -63,31 +63,7 @@ function Npc(props) {
         setTraits(char["Traits"]);
       }
       if (char["Stats"]) {
-        let newObj = [];
-
-        for (let i in char["Stats"]) {
-          let element = [`${i}`, `${char["Stats"][i]}`];
-
-          if (
-            i === "Primary Pool" ||
-            i === "Secondary Pool" ||
-            i === "Desperation Pool"
-          ) {
-            if (i === "Primary Pool") {
-              newObj.splice(newObj.length - 1, 0, element);
-            }
-            if (i === "Secondary Pool") {
-              newObj.splice(newObj.length - 1, 0, element);
-            }
-            if (i === "Desperation Pool") {
-              newObj.push(element);
-            }
-          } else {
-            newObj.unshift(element);
-          }
-        }
-
-        setStats(newObj);
+        setStats(char["Stats"]);
       }
       if (char["Qualities"]) {
         setQualities(char["Qualities"]);
@@ -288,18 +264,31 @@ function Npc(props) {
               <Divider />
               <Flairs flairs={flairs} />
               <Divider />
+
               {Object.keys(sorcery).length !== 0 ? (
-                <Purviews data={sorcery} />
+                <>
+                  <Purviews data={sorcery} />
+                  <Divider />
+                </>
               ) : (
                 ""
               )}
               {Object.keys(dominion).length !== 0 ? (
-                <Purviews data={dominion} />
+                <>
+                  <Purviews data={dominion} />
+                  <Divider />
+                </>
               ) : (
                 ""
               )}
-              {Object.keys(relic).length !== 0 ? <Purviews data={relic} /> : ""}
-              <Divider />
+              {Object.keys(relic).length !== 0 ? (
+                <>
+                  <Purviews data={relic} />
+                  <Divider />
+                </>
+              ) : (
+                ""
+              )}
               {drawbacks.length > 0 ? (
                 <Drawbacks drawbacks={drawbacks} vul={vul} />
               ) : (
