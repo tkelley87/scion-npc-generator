@@ -1,4 +1,4 @@
-// import {character_test_relic, character_test_relic_dom} from "../testing/char"; // Un-comment this out to use test character.
+// import {character_test_relic, character_test_relic_dom, character_test_sorc_dom} from "../testing/char"; // Un-comment this out to use test character.
 
 async function postBody(body) {
   try {

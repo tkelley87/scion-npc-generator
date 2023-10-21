@@ -269,4 +269,147 @@ const character_test_relic_dom = {
   "id": "b411ab989e754276845dcf0e3f421342"
 }
 
-export { character_test_relic, character_test_relic_dom };
+
+const character_test_sorc_dom = {
+  "Apart of Cult?": "Temple",
+  "Attitude towards player": "-2",
+  "Dominion": {
+    "Epic Dexterity": {
+      "Heavenly Stride": {
+        "Action": "Reflexive",
+        "Description": "You can cross great distances in a scant matter of minutes, zooming past passersby in a blur of motion. Add Enhancement 3 on Rush actions and any action you take in a race. Once per scene, you may make a Feat of Scale to enhance any action based on physical speed without having to pay a point of Legend.",
+        "Duration": "One Scene",
+        "Subject": "Self"
+      },
+      "Innate Power": [
+        "So long as you continue to move towards a destination, you walk, run, or leap with effortless grace. Any surfaces solid or liquid hold your weight as if you weighed no more than a feather, and you may effortlessly scale or descend vertical surfaces without a need for a handhold."
+      ],
+      "The Falling Star": {
+        "Action": "Reflexive",
+        "Description": "Your speed is a powerful asset in battle. In combat, you can use your reflexive Move action to cross two range bands, and gain Enhancement 3 on rolls to Disengage. You cannot take damage from falling.",
+        "Duration": "One Scene",
+        "Subject": "Self"
+      },
+      "Unerring Flight": {
+        "Action": "Reflexive",
+        "Description": "In your precise hands, ranged weapons become extraordinarily deadly. You may make a ranged attack against any enemy in your line of sight, even out to extreme range. You can roll the attack with Dexterity in place of the Attribute normally associated with that range band, and do not face an increased difficulty for using weapons with the Ranged or Long Range tag at any range band. You can use this boon to attack an enemy behind full cover.",
+        "Duration": "Instant",
+        "Subject": "Self"
+      }
+    }
+  },
+  "Drawbacks": [
+    {
+      "Miasmic Presence": {
+        "Description": "The Antagonist’s very presence contaminates The  World in some way, clearly showing the work of the unusual and mythic. A ghost’s presence may cause mirrors to tarnish or shadows to lengthen unnaturally, while a vampire might cause holy symbols to burst into flame. Select the condition and effect when this Quality is assigned — any character, if successful on an Occult roll (difficulty 2), may immediately recognize the presence of the specific kind of creature she is dealing with."
+      }
+    },
+    {
+      "Vulnerability": {
+        "Description": "Choose a source of damage — for example, fire, salt, silver, etc. When the Antagonist takes any damage from this source, mark a second Health box as well.  If attack is a critical strike, mark four Health boxes instead of two."
+      }
+    }
+  ],
+  "Drive": "Surviving the death of a loved one",
+  "Flairs": [
+    {
+      "Sorcery": {
+        "Action": "Varies",
+        "Cooldown": "One scene",
+        "Cost": "1 Tension",
+        "Description": "Choose a Purview. The Antagonist may channel that Purview to create marvels, at a cost of 1 Tension.",
+        "Duration": "Varies",
+        "Range": "Varies",
+        "Subject": "Varies"
+      }
+    },
+    {
+      "Shape Shifter": {
+        "Action": "Simple",
+        "Cooldown": "The Antagonist returns to her true form.",
+        "Cost": "None",
+        "Description": "The character is able to transform into the shape of a certain animal, chosen by the Storyguide when this Flair is assigned. The transformation is perfect and undetectable through any means save magic. The Antagonist’s pools do not change when this Flair is used. However, if her form has a certain method of travel, such as flying or swimming while breathing underwater, she may use those. Additionally, she has access to whatever natural weapons her new form may have, including teeth, claws, and even venom. Animals larger than humans add a single Health box; smaller animals subtract one.",
+        "Duration": "Infinite",
+        "Range": "Self",
+        "Subject": "Self"
+      }
+    },
+    {
+      "Inspiration": {
+        "Action": "Reflexive",
+        "Cooldown": "End of scene",
+        "Cost": "None",
+        "Description": "The Antagonist’s presence lends strength to her allies. When invoked, all allied characters within near range temporarily remove one Injury Complication, or if they do not currently have one, gain a blanket +1 Enhancement to all actions. The Injury Complications return and the Enhancement fades when the Flair ends, when allies subject to it move out of range of the Antagonist, or when the Antagonist with this Flair is Taken Out. As Antagonists do not use Injury Complications, Antagonists affected by this Flair gain +1 Health, or +1 Enhancement if undamaged.",
+        "Duration": "One scene",
+        "Range": "Medium",
+        "Subject": "All Allies"
+      }
+    }
+  ],
+  "Gender": "Male",
+  "Human": "yes",
+  "Name": "Jalen",
+  "Pantheon": "aesir",
+  "Qualities": [
+    {
+      "Subterranean Movement": {
+        "Description": "The Antagonist may elect to move through the ground rather than over it. Digging into the ground or emerging from under the ground is a basic action. While underground, she cannot be attacked; however, she cannot attack others without emerging. If she emerges beneath another character, treat this as an attack at close range and halve the Antagonist’s Defense until her next turn. If the Antagonist wishes, she may Disengage by digging into the ground and tunneling away, and cannot be followed unless her pursuer also has some means of doing so."
+      }
+    },
+    {
+      "Dominion": {
+        "Description": "The Antagonist has attained Dominion over a specific Purview. She may gain Divinity Dice by taking action that either strengths or resonates with the Purview, and may use those Divine Dice in the same manner as player characters. She may create marvels of the Purview as a Simple Action without spending Tension to do so."
+      }
+    }
+  ],
+  "Sorcery": {
+    "Sun": {
+      "Blinding Glory": {
+        "Action": "Simple",
+        "Description": "You unleash a flash of brilliant light, inflicting a blinding Condition on all enemies in range. When you spend Legend with this Purview’s innate power, you may also use this Boon reflexively and for free. In addition, if all targets are trivial, this Boon’s cost is waived.",
+        "Duration": "Condition",
+        "Range": "Medium"
+      },
+      "Hope Reborn": {
+        "Action": "Simple",
+        "Description": "You embody the glory of the sun and the promise of the dawn. Mortals will instinctively see you as the answer to any hopes they may have, and you have Enhancement 3 when you try to identify these hopes or use them as leverage in influence.",
+        "Duration": "One Day",
+        "Subject": "Self"
+      },
+      "Innate Power": [
+        "You can radiate an aura of sunlight that pierces through darkness out to long range as a reflexive action. You may spend 1 Legend to increase this radiance to blinding brilliance, imposing a +2 Complication on any attack rolls against you or an ally within the light."
+      ],
+      "Penetrating Glare": {
+        "Action": "Reflexive",
+        "Description": "Your see through the darkness of lies and confusion. Add Enhancement 3 on any rolls to determine whether a character is lying, see through a disguise, pierce an illusion, or otherwise see through deceptions. If you face the Misleading complication, its rating is reduced by one point.",
+        "Duration": "One Scene",
+        "Subject": "Self"
+      }
+    }
+  },
+  "Stats": {
+    "Defense": "5",
+    "Desperation Pool": "5",
+    "Drawbacks": "1",
+    "Extras": "Transcendent antagonists have a variety of Qualities and Flairs that replicate certain Boons, and have birthrights",
+    "Flairs": "3",
+    "Health": "5",
+    "Initiative": "6",
+    "Primary Pool": "9",
+    "Qualities": "2",
+    "Secondary Pool": "7"
+  },
+  "Traits": [
+    "This NPC has over-sized ears.",
+    "This NPC has bad acne all over their face.",
+    "This NPC wears torn, dirty clothing."
+  ],
+  "Vulnerability": "Blessed",
+  "id": "899852f2b8b344e796dfd6d52aefb1ce"
+}
+
+export {
+  character_test_relic,
+  character_test_relic_dom,
+  character_test_sorc_dom,
+};

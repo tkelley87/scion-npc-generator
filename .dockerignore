@@ -7,3 +7,4 @@ backend/src/utilities/__pycache__
 backend/.env
 _infra/
 dynamo/
+/backend/docker_entrypoint.sh
