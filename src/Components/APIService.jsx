@@ -1,4 +1,4 @@
-import character_test from "../testing/char";
+// import {character_test_relic, character_test_relic_dom} from "../testing/char"; // Un-comment this out to use test character.
 
 async function postBody(body) {
   try {
@@ -18,6 +18,7 @@ async function postBody(body) {
 
 async function getNpcById(id) {
   try {
+    id = "b411ab989e754276845dcf0e3f421342";
     const response = await fetch(`/api/npc/${id}`, {
       method: "GET",
       mode: "cors",
@@ -26,8 +27,9 @@ async function getNpcById(id) {
       },
     });
     const data = await response.json();
+    console.log(data)
     return { data: data };
-    // return { data: character_test }; // Comment out response to the data return to use test char.
+    // return { data: <CHOOSE CHAR FROM ABOVE IMPORT> }; // Comment out response to the data return to use test char.
   } catch (error) {
     return console.log(error);
   }
