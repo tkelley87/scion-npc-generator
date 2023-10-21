@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper, Typography, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 
@@ -7,8 +7,6 @@ const Purviews = ({ data }) => {
   const theme = useTheme();
 
   if (!data) return null;
-
-  // console.log("Where in Sorcery.jsx", data);
 
   const renderProperties = (obj) => {
     return Object.keys(obj).map((key) => {
