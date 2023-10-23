@@ -43,4 +43,4 @@ def add_qualities_and_flairs(
         elif count_amount == "Minor":
             return random.sample(qualities_list[quality_from_list], k=1)
     else:
-        return None
+        return []
