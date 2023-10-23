@@ -17,7 +17,7 @@ def random_with_list(given_list, weighting=None, selected_count=None):
     elif weighting:
         return random.choices(given_list, weights=weighting)[0]
     elif selected_count:
-        return random.choices(given_list, k=selected_count)
+        return random.sample(given_list, k=selected_count)
     else:
         return random.choices(given_list)[0]
 
@@ -43,4 +43,4 @@ def add_qualities_and_flairs(
         elif count_amount == "Minor":
             return random.sample(qualities_list[quality_from_list], k=1)
     else:
-        return []
+        return None

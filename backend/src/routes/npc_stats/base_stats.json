@@ -6,7 +6,7 @@
     "Health": 1,
     "Defense": 1,
     "Initiative": 3,
-    "Qualities": 1,
+    "Qualities": 0,
     "Flairs": 1,
     "Drawbacks": 0
   },
@@ -17,7 +17,7 @@
     "Health": 2,
     "Defense": 2,
     "Initiative": 5,
-    "Qualities": 2,
+    "Qualities": 1,
     "Flairs": 2,
     "Drawbacks": 1
   },
@@ -29,7 +29,7 @@
     "Defense": 3,
     "Initiative": 7,
     "Qualities": 2,
-    "Flairs": 3,
+    "Flairs": 2,
     "Drawbacks": 1
   },
   "Monster": {
@@ -50,7 +50,7 @@
     "Health": 1,
     "Defense": 1,
     "Initiative": 4,
-    "Qualities": 1,
+    "Qualities": 0,
     "Flairs": 1,
     "Drawbacks": 0,
     "Extras": "+1 Enhancement"
@@ -62,7 +62,7 @@
     "Health": 3,
     "Defense": 3,
     "Initiative": 6,
-    "Qualities": 2,
+    "Qualities": 1,
     "Flairs": 2,
     "Drawbacks": 1,
     "Extras": "+2 Enhancements for Stunts other than Inflict Damage"
@@ -75,7 +75,7 @@
     "Defense": 4,
     "Initiative": 9,
     "Qualities": 2,
-    "Flairs": 3,
+    "Flairs": 2,
     "Drawbacks": 1,
     "Extras": "Mystic Arsenal (if appropriate)"
   },
@@ -98,7 +98,7 @@
     "Health": 1,
     "Defense": 3,
     "Initiative": 4,
-    "Qualities": 1,
+    "Qualities": 0,
     "Flairs": 1,
     "Drawbacks": 0,
     "Extras": "Paragons are Tier 1, and so roll against a target number of 8 rather than 7"
@@ -110,7 +110,7 @@
     "Health": 4,
     "Defense": 4,
     "Initiative": 5,
-    "Qualities": 2,
+    "Qualities": 1,
     "Flairs": 2,
     "Drawbacks": 1,
     "Extras": "Mythic antagonists have a variety of Qualities and Flairs that replicate certain Boons"
@@ -123,7 +123,7 @@
     "Defense": 5,
     "Initiative": 6,
     "Qualities": 2,
-    "Flairs": 3,
+    "Flairs": 2,
     "Drawbacks": 1,
     "Extras": "Transcendent antagonists have a variety of Qualities and Flairs that replicate certain Boons, and have birthrights"
   },
