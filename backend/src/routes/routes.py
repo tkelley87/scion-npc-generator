@@ -383,7 +383,7 @@ def post_npc():
             set_static_files_location + "npc_stats/pantheon_purviews.json", "json"
         )
         pantheon_purview_sorcery = {
-            given_pantheon: pantheon_sorcery_list[given_pantheon]
+            pantheon_sorcery_list[given_pantheon]["Name"]: {key: value for key, value in pantheon_sorcery_list[given_pantheon].items() if key != "Name"}
         }
         sorcery_list.update(pantheon_purview_sorcery)
         sorcery_key = random.choices(list(sorcery_list))[0]
@@ -400,7 +400,7 @@ def post_npc():
             set_static_files_location + "npc_stats/pantheon_purviews.json", "json"
         )
         pantheon_purview_dominion = {
-            given_pantheon: pantheon_dominion_list[given_pantheon]
+            pantheon_dominion_list[given_pantheon]["Name"]: {key: value for key, value in pantheon_dominion_list[given_pantheon].items() if key != "Name"}
         }
         dominion_list.update(pantheon_purview_dominion)
         dominion_key = random.choices(list(dominion_list))[0]
@@ -417,7 +417,7 @@ def post_npc():
             set_static_files_location + "npc_stats/pantheon_purviews.json", "json"
         )
         pantheon_purview_relic = {
-            given_pantheon: pantheon_relic_list[given_pantheon]
+            pantheon_relic_list[given_pantheon]["Name"]: {key: value for key, value in pantheon_relic_list[given_pantheon].items() if key != "Name"}
         }
         relic_list.update(pantheon_purview_relic)
         relic_key = random.choices(list(relic_list))[0]
