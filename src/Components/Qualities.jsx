@@ -1,5 +1,5 @@
 // MUI imports
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 // React
@@ -91,6 +91,7 @@ function Qualities(props) {
         Qualities:{" "}
       </Typography>
       {results}
+      <Divider />
     </>
   );
 }
