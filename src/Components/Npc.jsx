@@ -260,8 +260,7 @@ function Npc(props) {
 
           <Grid container>
             <Grid item>
-              <Qualities qualities={qualities} toxic={toxic} />
-              <Divider />
+              {qualities.length > 0 && <Qualities qualities={qualities} toxic={toxic} />}
               <Flairs flairs={flairs} />
               <Divider />
 
