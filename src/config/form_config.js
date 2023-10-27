@@ -13,7 +13,7 @@ const config_form = {
     { label: "Deva", value: "deva" },
     { label: "Kami", value: "kami" },
     { label: "Manitou", value: "manitou" },
-    { label: "Netjar", value: "netjar" },
+    { label: "Netjer", value: "netjer" },
     { label: "Orisha", value: "orisha" },
     { label: "Shen", value: "shen" },
     { label: "Tengri", value: "tengri" },
